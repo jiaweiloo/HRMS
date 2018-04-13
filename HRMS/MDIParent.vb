@@ -11,7 +11,7 @@ Public Class MDIParent
         m_ChildFormNumber += 1
         ChildForm.Text = "Window " & m_ChildFormNumber
 
-
+        'AA
         ChildForm.Show()
     End Sub
 
