@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class EmpHistoryPayroll
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,32 +22,32 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnGoHome = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnGoHome
         '
-        Me.Button1.AutoSize = True
-        Me.Button1.Location = New System.Drawing.Point(196, 135)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(151, 35)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Go To Emp"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnGoHome.AutoSize = True
+        Me.btnGoHome.Location = New System.Drawing.Point(320, 210)
+        Me.btnGoHome.Name = "btnGoHome"
+        Me.btnGoHome.Size = New System.Drawing.Size(151, 30)
+        Me.btnGoHome.TabIndex = 0
+        Me.btnGoHome.Text = "back to homepage"
+        Me.btnGoHome.UseVisualStyleBackColor = True
         '
-        'Form1
+        'EmpHistoryPayroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(572, 318)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnGoHome)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Form1"
-        Me.Text = "Login"
+        Me.Name = "EmpHistoryPayroll"
+        Me.Text = "EmpHistoryPayroll"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnGoHome As Button
 End Class

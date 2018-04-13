@@ -1,6 +1,6 @@
 ﻿Imports System.Windows.Forms
 
-Public Class MDIParent
+Public Class MDIParent1
 
     Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click
         Dim OpenFileDialog As New OpenFileDialog
@@ -50,4 +50,14 @@ Public Class MDIParent
         'AA
         ChildForm.Show()
     End Sub
+
+
+    Public Sub ShowForm(ChildForm As System.Windows.Forms.Form)
+        For Each OldChildForm As Form In Me.MdiChildren
+            OldChildForm.Close()
+        Next
+        m_ChildFormNumber += 1
+        ChildForm.Show()
+    End Sub
+
 End Class
