@@ -33,13 +33,17 @@ Partial Class MDIParent1
         Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AbsenceLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PayrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TimeAttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip
         '
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.UserManagementToolStripMenuItem, Me.AbsenceLeaveToolStripMenuItem, Me.PayrollToolStripMenuItem, Me.TimeAttendanceToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Padding = New System.Windows.Forms.Padding(9, 3, 0, 3)
@@ -103,7 +107,31 @@ Partial Class MDIParent1
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(205, 30)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
-        'MDIParent
+        'UserManagementToolStripMenuItem
+        '
+        Me.UserManagementToolStripMenuItem.Name = "UserManagementToolStripMenuItem"
+        Me.UserManagementToolStripMenuItem.Size = New System.Drawing.Size(169, 29)
+        Me.UserManagementToolStripMenuItem.Text = "User Management"
+        '
+        'AbsenceLeaveToolStripMenuItem
+        '
+        Me.AbsenceLeaveToolStripMenuItem.Name = "AbsenceLeaveToolStripMenuItem"
+        Me.AbsenceLeaveToolStripMenuItem.Size = New System.Drawing.Size(145, 29)
+        Me.AbsenceLeaveToolStripMenuItem.Text = "Absence & Leave"
+        '
+        'PayrollToolStripMenuItem
+        '
+        Me.PayrollToolStripMenuItem.Name = "PayrollToolStripMenuItem"
+        Me.PayrollToolStripMenuItem.Size = New System.Drawing.Size(76, 29)
+        Me.PayrollToolStripMenuItem.Text = "Payroll"
+        '
+        'TimeAttendanceToolStripMenuItem
+        '
+        Me.TimeAttendanceToolStripMenuItem.Name = "TimeAttendanceToolStripMenuItem"
+        Me.TimeAttendanceToolStripMenuItem.Size = New System.Drawing.Size(162, 29)
+        Me.TimeAttendanceToolStripMenuItem.Text = "Time & Attendance"
+        '
+        'MDIParent1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -112,7 +140,7 @@ Partial Class MDIParent1
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Name = "MDIParent"
+        Me.Name = "MDIParent1"
         Me.Text = "MDIParent"
         Me.MenuStrip.ResumeLayout(False)
         Me.MenuStrip.PerformLayout()
@@ -129,5 +157,8 @@ Partial Class MDIParent1
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents SaveToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuStrip As System.Windows.Forms.MenuStrip
-
+    Friend WithEvents UserManagementToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AbsenceLeaveToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PayrollToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TimeAttendanceToolStripMenuItem As ToolStripMenuItem
 End Class

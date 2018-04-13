@@ -57,7 +57,16 @@ Public Class MDIParent1
             OldChildForm.Close()
         Next
         m_ChildFormNumber += 1
+        ChildForm.MdiParent = Me
+        ChildForm.Dock = DockStyle.Fill
         ChildForm.Show()
     End Sub
 
+    Private Sub UserManagementToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UserManagementToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub PayrollToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PayrollToolStripMenuItem.Click
+        ShowForm(EmpHistoryPayroll)
+    End Sub
 End Class
