@@ -1,4 +1,7 @@
 ﻿
+Imports System.ComponentModel
+Imports System.Text
+
 Public Class Attendance
 
 
@@ -10,7 +13,9 @@ Public Class Attendance
 
     Dim displayDate As Date
 
+    Dim ot As New overtime
 
+    Dim starttime As Date
 
     Private Sub Attendance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If hrrole.Equals("Manager") Then
@@ -18,7 +23,7 @@ Public Class Attendance
         End If
         Timer1.Enabled = True
         Dim peopleObject As People = db.Peoples.FirstOrDefault(Function(o) o.people_id = peopleid)
-        Dim currentdate As Date = New Date(2018, 4, 14)
+        Dim currentdate As Date = Date.Now
 
         Dim rs = From a In db.attends
                  Where a.people_id.Contains(peopleid) And (a.current_date.Date = currentdate.Date)
@@ -79,6 +84,7 @@ Public Class Attendance
             db.SubmitChanges()
             btnLunchIn.Enabled = True
             MessageBox.Show("Check in sucessfully" & vbNewLine & "You may start your work now.", "Attendance", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
         ElseIf att.time_in IsNot Nothing Then
             MessageBox.Show("Cannot check in again" & vbNewLine & "Lunch in time : " & att.time_in.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
@@ -131,4 +137,53 @@ Public Class Attendance
     Private Sub btnAttendance_Click(sender As Object, e As EventArgs) Handles btnAttendance.Click
         AttendanceHistory.ShowDialog()
     End Sub
+
+    Private Sub Attendance_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Dim test = (att.time_out - att.time_in) - (att.lunch_out - att.lunch_in)
+
+
+        Dim tests As String = test.ToString
+        Dim testi As Integer = CInt(tests.Substring(0, 2))
+        MessageBox.Show(test.ToString)
+    End Sub
+
+    Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
+        dlgPreview.Document = doc
+        dlgPreview.ShowDialog(Me)
+    End Sub
+
+    Private Sub doc_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles doc.PrintPage
+        ' (1) Fonts 
+        Dim fontHeader As New Font("Calibri", 24, FontStyle.Bold)
+        Dim fontSubHeader As New Font("Calibri", 12)
+        Dim fontBody As New Font("Consolas", 10)
+
+        ' (2) Prepare header and sub-header 
+        Dim header As String = "Daily Attendance Report"
+        Dim subHeader As String = String.Format("Printed on {0:dd-MMMM-yyyy hh:mm:ss tt}" & vbNewLine &
+                                                "Prepared by " & HRstaffid.hrname, DateTime.Now)
+
+        ' (3) Prepare body 
+        Dim body As New StringBuilder()
+        body.AppendLine("Count  Attendance ID  People ID   People Name  Check In  Lunch In  Lunch Out  Check Out")
+        body.AppendLine("-----  -------------  ---------   -----------  --------  --------  ---------  ---------   ")
+        Dim cnt As Integer = 0
+        Dim parts() As String
+        For Each item In db.attends
+            cnt += 1
+            body.AppendFormat("{0,2} {1,18} {2,9} {3,10} {4,11} {5,10} {6,10} {7,10}" & vbNewLine, cnt, item.attendance_id, item.people_id, db.Peoples.FirstOrDefault(Function(o) o.people_id = item.people_id).people_name, item.time_in, item.lunch_in, item.lunch_out, item.lunch_out)
+        Next
+        body.AppendLine()
+        body.AppendFormat("{0,2} record(s)", cnt)
+
+        ' (4) Print 
+        With e.Graphics
+            '.DrawImage(My.Resources.Erika, 0, 0, 80, 100)
+            .DrawString(header, fontHeader, Brushes.Purple, 100, 0)
+            .DrawString(subHeader, fontSubHeader, Brushes.Black, 100, 40)
+            .DrawString(body.ToString(), fontBody, Brushes.Black, 0, 120)
+        End With
+    End Sub
+
+
 End Class
