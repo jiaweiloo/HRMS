@@ -33,6 +33,7 @@ Partial Class HRMandatoryDdt
         '
         'lblCount
         '
+        Me.lblCount.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lblCount.Location = New System.Drawing.Point(13, 456)
         Me.lblCount.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCount.Name = "lblCount"
