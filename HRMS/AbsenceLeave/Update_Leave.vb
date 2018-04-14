@@ -1,6 +1,7 @@
 ﻿Public Class Update_Leave
     Public manager_id As String
     Public selected_id As String
+    Public peopleID As String
 
     Private Sub resetform()
         Label1.Text = ""
@@ -13,7 +14,8 @@
     End Sub
 
     Private Sub Update_Leave_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
-        lblWelcome.Text = "Welcome back " & manager_id & "Please update the Leave"
+        lblID.Text = HRstaffid.hrstaffid
+        lblName.Text = HRstaffid.hrname
         resetform()
         Dim db As New HRMS_DBLinq2DataContext()
         Dim c As Leave = db.Leaves.FirstOrDefault(Function(o) o.leave_id = selected_id)
@@ -36,6 +38,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Dim db As New HRMS_DBLinq2DataContext()
         Dim c As Leave = db.Leaves.FirstOrDefault(Function(o) o.leave_id = selected_id)
+        Dim emp As People = db.Peoples.FirstOrDefault(Function(a) a.people_id = peopleID)
         If c Is Nothing Then
             MessageBox.Show("Leave Application not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Close()
@@ -44,8 +47,17 @@
         c.Reject_approve_date = CDate(Today.ToShortDateString)
         c.status = If(radRejected.Checked = True, "Rejected", "Approved")
         db.SubmitChanges()
+        If (radApproved.Checked = True) Then
+            emp.leave_num = emp.leave_num - c.leave_duration
+        End If
+        db.SubmitChanges()
         MessageBox.Show("Leave [" & c.leave_id & "]updated", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Me.Close()
 
+    End Sub
+
+    Private Sub Update_Leave_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblID.Text = HRstaffid.hrstaffid
+        lblName.Text = HRstaffid.hrname
     End Sub
 End Class

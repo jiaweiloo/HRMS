@@ -25,15 +25,17 @@ Partial Class DisplayLeave
         Me.lblCount = New System.Windows.Forms.Label()
         Me.dgvLeave = New System.Windows.Forms.DataGridView()
         Me.cboLeave = New System.Windows.Forms.ComboBox()
+        Me.lblID = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
         CType(Me.dgvLeave, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblCount
         '
         Me.lblCount.AutoSize = True
-        Me.lblCount.Location = New System.Drawing.Point(106, 479)
+        Me.lblCount.Location = New System.Drawing.Point(94, 383)
         Me.lblCount.Name = "lblCount"
-        Me.lblCount.Size = New System.Drawing.Size(57, 20)
+        Me.lblCount.Size = New System.Drawing.Size(51, 17)
         Me.lblCount.TabIndex = 5
         Me.lblCount.Text = "Label1"
         '
@@ -47,13 +49,12 @@ Partial Class DisplayLeave
         Me.dgvLeave.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvLeave.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvLeave.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvLeave.Location = New System.Drawing.Point(78, 72)
-        Me.dgvLeave.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.dgvLeave.Location = New System.Drawing.Point(21, 60)
         Me.dgvLeave.Name = "dgvLeave"
         Me.dgvLeave.ReadOnly = True
         Me.dgvLeave.RowTemplate.Height = 24
         Me.dgvLeave.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvLeave.Size = New System.Drawing.Size(861, 372)
+        Me.dgvLeave.Size = New System.Drawing.Size(765, 298)
         Me.dgvLeave.TabIndex = 4
         '
         'cboLeave
@@ -61,20 +62,38 @@ Partial Class DisplayLeave
         Me.cboLeave.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboLeave.FormattingEnabled = True
         Me.cboLeave.Items.AddRange(New Object() {"Pending", "Rejected", "Approved", "All"})
-        Me.cboLeave.Location = New System.Drawing.Point(106, 10)
-        Me.cboLeave.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cboLeave.Location = New System.Drawing.Point(24, 12)
         Me.cboLeave.Name = "cboLeave"
-        Me.cboLeave.Size = New System.Drawing.Size(136, 28)
+        Me.cboLeave.Size = New System.Drawing.Size(121, 24)
         Me.cboLeave.TabIndex = 3
+        '
+        'lblID
+        '
+        Me.lblID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblID.Location = New System.Drawing.Point(245, 18)
+        Me.lblID.Name = "lblID"
+        Me.lblID.Size = New System.Drawing.Size(130, 39)
+        Me.lblID.TabIndex = 6
+        '
+        'lblName
+        '
+        Me.lblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblName.Location = New System.Drawing.Point(469, 19)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(130, 38)
+        Me.lblName.TabIndex = 7
         '
         'DisplayLeave
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1017, 509)
+        Me.ClientSize = New System.Drawing.Size(904, 407)
+        Me.Controls.Add(Me.lblName)
+        Me.Controls.Add(Me.lblID)
         Me.Controls.Add(Me.lblCount)
         Me.Controls.Add(Me.dgvLeave)
         Me.Controls.Add(Me.cboLeave)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "DisplayLeave"
         Me.Text = "DisplayLeave"
         CType(Me.dgvLeave, System.ComponentModel.ISupportInitialize).EndInit()
@@ -86,4 +105,6 @@ Partial Class DisplayLeave
     Friend WithEvents lblCount As Label
     Friend WithEvents dgvLeave As DataGridView
     Friend WithEvents cboLeave As ComboBox
+    Friend WithEvents lblID As Label
+    Friend WithEvents lblName As Label
 End Class

@@ -70,4 +70,8 @@ Public Class MDIParent1
     Private Sub DeleteStaffDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteStaffDetailsToolStripMenuItem.Click
 
     End Sub
+
+    Private Sub UpdateLeaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateLeaveToolStripMenuItem.Click
+        ShowForm(DisplayLeave)
+    End Sub
 End Class
