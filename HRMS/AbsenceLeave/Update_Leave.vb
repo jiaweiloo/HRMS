@@ -9,8 +9,6 @@
         radRejected.Checked = True
         Label7.Text = ""
         Label8.Text = ""
-
-
     End Sub
 
     Private Sub Update_Leave_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
@@ -66,51 +64,56 @@
         End If
         c.Reject_approve_date = CDate(Today.ToShortDateString)
         c.status = If(radRejected.Checked = True, "Rejected", "Approved")
-        db.SubmitChanges()
+        'db.SubmitChanges()
         Dim extra_leave As Integer
-        'Dim charge As Integer
-        Dim type As String = "Extra Leave"
-        Dim format As String = "Salary Decuction"
-        Dim month As Integer = c.leave_date.Month
-        Dim year As Integer = c.leave_date.Year
 
         If (emp.leave_num < c.leave_duration) And radApproved.Checked = True Then
             extra_leave = Math.Abs(emp.leave_num - c.leave_duration)
+
             'Dim deduction As New deduction
             'deduction.deduction_id = Integer.Parse(DeductionID.GetNextId())
             'deduction.deduction_type = type
             'deduction.deduction_value = Math.Abs((emp.extra_leave - emp.leave_num) * 200)
-            'deduction.deduction_month = month
-            'deduction.deduction_year = year
             'deduction.people_id = peopleID
             'deduction.deduction_format = format
             'db.deductions.InsertOnSubmit(deduction)
 
-            emp.extra_leave = extra_leave
-            db.SubmitChanges()
+            Dim deduction As New deduction
+            deduction.deduction_id = Integer.Parse(DeductionID.GetNextId())
+            deduction.deduction_type = "extraholiday"
+            deduction.deduction_value = extra_leave * 9 * emp.hourly_rates
+            deduction.people_id = peopleID
+            deduction.deduction_format = "money"
+            deduction.deduction_date = DateTime.Now
+            db.deductions.InsertOnSubmit(deduction)
+
+            emp.extra_leave = emp.extra_leave + extra_leave
+            emp.leave_num = 0
 
             '    Try
             '        db.SubmitChanges()
             '    Catch ex As Exception
             '        MessageBox.Show("Error: " & ex.Message, "Error")
             '    End Try
-            '    MessageBox.Show("Deduction for " & peopleID & " submitted", "Submit")
+            'MessageBox.Show("Deduction of" & extra_leave.ToString("0") & " for " & peopleID & " submitted", "Submit")
         End If
 
-        If (radApproved.Checked = True) Then
-            emp.leave_num = emp.leave_num - c.leave_duration
-        End If
+        'If (radApproved.Checked = True) Then
+        '    emp.leave_num = emp.leave_num - c.leave_duration
+        'End If
         db.SubmitChanges()
 
-
         MessageBox.Show("Leave [" & c.leave_id & "]updated", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-        Me.Close()
-
+        MDIParent1.ShowForm(DisplayLeave)
+        'Me.Close()
     End Sub
 
     Private Sub Update_Leave_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblID.Text = HRstaffid.hrstaffid
         lblName.Text = HRstaffid.hrname
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        MDIParent1.Close()
     End Sub
 End Class

@@ -42,9 +42,12 @@
             Dim peopleid As String = CStr(dgvLeave.Rows(i).Cells(5).Value)
             Update_Leave.peopleID = peopleid.ToString()
             Update_Leave.selected_id = id
-            Update_Leave.ShowDialog(Me)
-            BindData()
+
+            MDIParent1.ShowForm(Update_Leave)
+            'Update_Leave.Show(Me)
+            'BindData()
         End If
+        MDIStaff.ShowForm(ManagerViewLeave)
     End Sub
 
     Private Sub DisplayLeave_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown

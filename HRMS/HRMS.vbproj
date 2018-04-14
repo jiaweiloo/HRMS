@@ -275,6 +275,9 @@
     <EmbeddedResource Include="AbsenceLeave\Update_Leave.resx">
       <DependentUpon>Update_Leave.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HRHomepage.resx">
+      <DependentUpon>HRHomepage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>

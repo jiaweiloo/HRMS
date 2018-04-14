@@ -6,6 +6,8 @@
         userid = txtUserID.Text
         password = txtPassword.Text
         If ValidateLogin(userid, password) = "Staff" Then
+            'txtUserID.Enabled = False
+            'txtPassword.Enabled = False
             MDIStaff.Show()
             'NormalStaffPage.Show()
         ElseIf ValidateLogin(userid, password) = "HR" Then

@@ -31,9 +31,9 @@ Partial Class HRHomepage
         'btnGoLeave
         '
         Me.btnGoLeave.AutoSize = True
-        Me.btnGoLeave.Location = New System.Drawing.Point(86, 44)
+        Me.btnGoLeave.Location = New System.Drawing.Point(342, 47)
         Me.btnGoLeave.Name = "btnGoLeave"
-        Me.btnGoLeave.Size = New System.Drawing.Size(110, 58)
+        Me.btnGoLeave.Size = New System.Drawing.Size(199, 58)
         Me.btnGoLeave.TabIndex = 0
         Me.btnGoLeave.Text = "Go To Leave"
         Me.btnGoLeave.UseVisualStyleBackColor = True
@@ -41,9 +41,9 @@ Partial Class HRHomepage
         'btnGoPayroll
         '
         Me.btnGoPayroll.AutoSize = True
-        Me.btnGoPayroll.Location = New System.Drawing.Point(328, 44)
+        Me.btnGoPayroll.Location = New System.Drawing.Point(342, 149)
         Me.btnGoPayroll.Name = "btnGoPayroll"
-        Me.btnGoPayroll.Size = New System.Drawing.Size(113, 58)
+        Me.btnGoPayroll.Size = New System.Drawing.Size(199, 58)
         Me.btnGoPayroll.TabIndex = 1
         Me.btnGoPayroll.Text = "Go To Payroll"
         Me.btnGoPayroll.UseVisualStyleBackColor = True
@@ -51,9 +51,9 @@ Partial Class HRHomepage
         'Button3
         '
         Me.Button3.AutoSize = True
-        Me.Button3.Location = New System.Drawing.Point(46, 201)
+        Me.Button3.Location = New System.Drawing.Point(342, 251)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(150, 58)
+        Me.Button3.Size = New System.Drawing.Size(199, 58)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Go To Attendance"
         Me.Button3.UseVisualStyleBackColor = True
@@ -61,24 +61,24 @@ Partial Class HRHomepage
         'Button4
         '
         Me.Button4.AutoSize = True
-        Me.Button4.Location = New System.Drawing.Point(328, 201)
+        Me.Button4.Location = New System.Drawing.Point(342, 353)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(199, 58)
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "Go To User Management"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'Form1
+        'HRHomepage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(572, 318)
+        Me.ClientSize = New System.Drawing.Size(883, 459)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.btnGoPayroll)
         Me.Controls.Add(Me.btnGoLeave)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Form1"
+        Me.Name = "HRHomepage"
         Me.Text = "Login"
         Me.ResumeLayout(False)
         Me.PerformLayout()

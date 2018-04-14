@@ -32,12 +32,12 @@ Partial Class DisplayLeave
         '
         'lblCount
         '
-        Me.lblCount.AutoSize = True
-        Me.lblCount.Location = New System.Drawing.Point(94, 383)
+        Me.lblCount.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblCount.Location = New System.Drawing.Point(23, 407)
         Me.lblCount.Name = "lblCount"
-        Me.lblCount.Size = New System.Drawing.Size(51, 17)
+        Me.lblCount.Size = New System.Drawing.Size(119, 25)
         Me.lblCount.TabIndex = 5
-        Me.lblCount.Text = "Label1"
+        Me.lblCount.Text = "X records(s)"
         '
         'dgvLeave
         '
@@ -49,12 +49,13 @@ Partial Class DisplayLeave
         Me.dgvLeave.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvLeave.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvLeave.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvLeave.Location = New System.Drawing.Point(21, 60)
+        Me.dgvLeave.Location = New System.Drawing.Point(27, 58)
+        Me.dgvLeave.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dgvLeave.Name = "dgvLeave"
         Me.dgvLeave.ReadOnly = True
         Me.dgvLeave.RowTemplate.Height = 24
         Me.dgvLeave.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvLeave.Size = New System.Drawing.Size(765, 298)
+        Me.dgvLeave.Size = New System.Drawing.Size(831, 328)
         Me.dgvLeave.TabIndex = 4
         '
         'cboLeave
@@ -62,43 +63,44 @@ Partial Class DisplayLeave
         Me.cboLeave.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboLeave.FormattingEnabled = True
         Me.cboLeave.Items.AddRange(New Object() {"Pending", "Rejected", "Approved", "All"})
-        Me.cboLeave.Location = New System.Drawing.Point(24, 18)
+        Me.cboLeave.Location = New System.Drawing.Point(27, 22)
+        Me.cboLeave.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboLeave.Name = "cboLeave"
-        Me.cboLeave.Size = New System.Drawing.Size(121, 24)
+        Me.cboLeave.Size = New System.Drawing.Size(136, 28)
         Me.cboLeave.TabIndex = 3
         '
         'lblID
         '
         Me.lblID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblID.Location = New System.Drawing.Point(282, 9)
+        Me.lblID.Location = New System.Drawing.Point(317, 22)
         Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(130, 39)
+        Me.lblID.Size = New System.Drawing.Size(146, 28)
         Me.lblID.TabIndex = 6
         '
         'lblName
         '
         Me.lblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblName.Location = New System.Drawing.Point(469, 10)
+        Me.lblName.Location = New System.Drawing.Point(528, 22)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(130, 38)
+        Me.lblName.Size = New System.Drawing.Size(146, 28)
         Me.lblName.TabIndex = 7
         '
         'DisplayLeave
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(904, 407)
+        Me.ClientSize = New System.Drawing.Size(895, 453)
         Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.lblID)
         Me.Controls.Add(Me.lblCount)
         Me.Controls.Add(Me.dgvLeave)
         Me.Controls.Add(Me.cboLeave)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "DisplayLeave"
         Me.Text = "DisplayLeave"
         CType(Me.dgvLeave, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 

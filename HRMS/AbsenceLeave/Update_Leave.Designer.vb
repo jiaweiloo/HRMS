@@ -35,14 +35,16 @@ Partial Class Update_Leave
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'radApproved
         '
         Me.radApproved.AutoSize = True
-        Me.radApproved.Location = New System.Drawing.Point(270, 115)
+        Me.radApproved.Location = New System.Drawing.Point(308, 106)
+        Me.radApproved.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.radApproved.Name = "radApproved"
-        Me.radApproved.Size = New System.Drawing.Size(90, 21)
+        Me.radApproved.Size = New System.Drawing.Size(102, 24)
         Me.radApproved.TabIndex = 16
         Me.radApproved.TabStop = True
         Me.radApproved.Text = "Approved"
@@ -51,9 +53,10 @@ Partial Class Update_Leave
         'radRejected
         '
         Me.radRejected.AutoSize = True
-        Me.radRejected.Location = New System.Drawing.Point(46, 115)
+        Me.radRejected.Location = New System.Drawing.Point(56, 106)
+        Me.radRejected.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.radRejected.Name = "radRejected"
-        Me.radRejected.Size = New System.Drawing.Size(85, 21)
+        Me.radRejected.Size = New System.Drawing.Size(98, 24)
         Me.radRejected.TabIndex = 15
         Me.radRejected.TabStop = True
         Me.radRejected.Text = "Rejected"
@@ -61,9 +64,10 @@ Partial Class Update_Leave
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(421, 115)
+        Me.btnUpdate.Location = New System.Drawing.Point(476, 99)
+        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(75, 30)
+        Me.btnUpdate.Size = New System.Drawing.Size(84, 38)
         Me.btnUpdate.TabIndex = 14
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.UseVisualStyleBackColor = True
@@ -71,96 +75,107 @@ Partial Class Update_Leave
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(43, 430)
+        Me.Label4.Location = New System.Drawing.Point(128, 368)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(62, 17)
+        Me.Label4.Size = New System.Drawing.Size(70, 20)
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "Duration"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(43, 343)
+        Me.Label3.Location = New System.Drawing.Point(129, 301)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(61, 17)
+        Me.Label3.Size = New System.Drawing.Size(69, 20)
         Me.Label3.TabIndex = 12
         Me.Label3.Text = "Reason:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(43, 252)
+        Me.Label2.Location = New System.Drawing.Point(119, 234)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 17)
+        Me.Label2.Size = New System.Drawing.Size(79, 20)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "People ID"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(43, 166)
+        Me.Label1.Location = New System.Drawing.Point(121, 167)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(68, 17)
+        Me.Label1.Size = New System.Drawing.Size(77, 20)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Leave ID:"
         '
         'lblName
         '
         Me.lblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblName.Location = New System.Drawing.Point(270, 40)
+        Me.lblName.Location = New System.Drawing.Point(304, 30)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(130, 38)
+        Me.lblName.Size = New System.Drawing.Size(146, 47)
         Me.lblName.TabIndex = 18
         '
         'lblID
         '
         Me.lblID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblID.Location = New System.Drawing.Point(46, 39)
+        Me.lblID.Location = New System.Drawing.Point(52, 29)
         Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(130, 39)
+        Me.lblID.Size = New System.Drawing.Size(146, 48)
         Me.lblID.TabIndex = 17
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(270, 166)
+        Me.Label5.Location = New System.Drawing.Point(304, 167)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(51, 17)
+        Me.Label5.Size = New System.Drawing.Size(57, 20)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "Label5"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(270, 263)
+        Me.Label6.Location = New System.Drawing.Point(304, 234)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 17)
+        Me.Label6.Size = New System.Drawing.Size(57, 20)
         Me.Label6.TabIndex = 20
         Me.Label6.Text = "Label6"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(270, 343)
+        Me.Label7.Location = New System.Drawing.Point(304, 301)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(51, 17)
+        Me.Label7.Size = New System.Drawing.Size(57, 20)
         Me.Label7.TabIndex = 21
         Me.Label7.Text = "Label7"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(270, 430)
+        Me.Label8.Location = New System.Drawing.Point(304, 368)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(51, 17)
+        Me.Label8.Size = New System.Drawing.Size(57, 20)
         Me.Label8.TabIndex = 22
         Me.Label8.Text = "Label8"
         '
+        'btnExit
+        '
+        Me.btnExit.AutoSize = True
+        Me.btnExit.Location = New System.Drawing.Point(603, 99)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(89, 38)
+        Me.btnExit.TabIndex = 23
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
         'Update_Leave
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1031, 504)
+        Me.ClientSize = New System.Drawing.Size(815, 454)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -174,6 +189,7 @@ Partial Class Update_Leave
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Update_Leave"
         Me.Text = "Update_Leave"
@@ -195,4 +211,5 @@ Partial Class Update_Leave
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents btnExit As Button
 End Class
