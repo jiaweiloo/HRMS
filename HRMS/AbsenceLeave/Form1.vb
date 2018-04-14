@@ -1,7 +1,7 @@
 ﻿Imports System.Text
 
 Public Class Form1
-    Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
+    Private Sub btnShow_Click(sender As Object, e As EventArgs)
         DisplayLeave.ShowDialog()
     End Sub
 
@@ -109,11 +109,11 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs)
         Update_Leave.ShowDialog()
     End Sub
 
-    Private Sub z(sender As Object, e As EventArgs) Handles txtReason.RightToLeftChanged, lbl_People_ID.RightToLeftChanged, lbl_Leave_ID.RightToLeftChanged, GroupBox1.RightToLeftChanged, err.RightToLeftChanged, chooseDate.RightToLeftChanged, cboDuration.RightToLeftChanged, btnUpdate.RightToLeftChanged, btnSubmit.RightToLeftChanged, btnShow.RightToLeftChanged, btnCancel.RightToLeftChanged
+    Private Sub z(sender As Object, e As EventArgs) Handles txtReason.RightToLeftChanged, lbl_People_ID.RightToLeftChanged, lbl_Leave_ID.RightToLeftChanged, GroupBox1.RightToLeftChanged, err.RightToLeftChanged, chooseDate.RightToLeftChanged, cboDuration.RightToLeftChanged, btnSubmit.RightToLeftChanged, btnCancel.RightToLeftChanged
 
     End Sub
 End Class

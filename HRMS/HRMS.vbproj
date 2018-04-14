@@ -104,6 +104,12 @@
     <Compile Include="AbsenceLeave\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AbsenceLeave\ManagerViewLeave.Designer.vb">
+      <DependentUpon>ManagerViewLeave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AbsenceLeave\ManagerViewLeave.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AbsenceLeave\Update_Leave.Designer.vb">
       <DependentUpon>Update_Leave.vb</DependentUpon>
     </Compile>
@@ -243,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AbsenceLeave\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbsenceLeave\ManagerViewLeave.resx">
+      <DependentUpon>ManagerViewLeave.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AbsenceLeave\Update_Leave.resx">
       <DependentUpon>Update_Leave.vb</DependentUpon>

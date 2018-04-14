@@ -34,7 +34,7 @@
     <Type Name="deduction">
       <Column Name="deduction_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="deduction_type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="deduction_value" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="deduction_value" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
       <Column Name="deduction_format" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="people_id" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
       <Column Name="deduction_month" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />

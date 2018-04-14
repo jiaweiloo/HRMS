@@ -31,9 +31,7 @@ Partial Class Form1
         Me.txtReason = New System.Windows.Forms.TextBox()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnSubmit = New System.Windows.Forms.Button()
-        Me.btnShow = New System.Windows.Forms.Button()
         Me.err = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.err, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -86,7 +84,7 @@ Partial Class Form1
         'txtReason
         '
         Me.txtReason.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtReason.Location = New System.Drawing.Point(286, 99)
+        Me.txtReason.Location = New System.Drawing.Point(315, 99)
         Me.txtReason.MaxLength = 100
         Me.txtReason.Multiline = True
         Me.txtReason.Name = "txtReason"
@@ -95,7 +93,7 @@ Partial Class Form1
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(345, 445)
+        Me.btnCancel.Location = New System.Drawing.Point(558, 445)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 10
@@ -111,28 +109,10 @@ Partial Class Form1
         Me.btnSubmit.Text = "&Submit"
         Me.btnSubmit.UseVisualStyleBackColor = True
         '
-        'btnShow
-        '
-        Me.btnShow.Location = New System.Drawing.Point(203, 445)
-        Me.btnShow.Name = "btnShow"
-        Me.btnShow.Size = New System.Drawing.Size(75, 23)
-        Me.btnShow.TabIndex = 12
-        Me.btnShow.Text = "&go"
-        Me.btnShow.UseVisualStyleBackColor = True
-        '
         'err
         '
         Me.err.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.err.ContainerControl = Me
-        '
-        'btnUpdate
-        '
-        Me.btnUpdate.Location = New System.Drawing.Point(462, 445)
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
-        Me.btnUpdate.TabIndex = 13
-        Me.btnUpdate.Text = "&Update"
-        Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -142,8 +122,6 @@ Partial Class Form1
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSubmit)
-        Me.Controls.Add(Me.btnShow)
-        Me.Controls.Add(Me.btnUpdate)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -162,7 +140,5 @@ Partial Class Form1
     Friend WithEvents txtReason As TextBox
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnSubmit As Button
-    Friend WithEvents btnShow As Button
     Friend WithEvents err As ErrorProvider
-    Friend WithEvents btnUpdate As Button
 End Class

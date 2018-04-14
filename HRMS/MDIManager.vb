@@ -30,4 +30,8 @@ Public Class MDIManager
     Private Sub TimeAndAttendanceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimeAndAttendanceToolStripMenuItem.Click
         ShowForm(Attendance)
     End Sub
+
+    Private Sub ViewTheLeaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewTheLeaveToolStripMenuItem.Click
+        ShowForm(ManagerViewLeave)
+    End Sub
 End Class

@@ -720,7 +720,7 @@ Partial Public Class deduction
 	
 	Private _deduction_type As String
 	
-	Private _deduction_value As Double
+	Private _deduction_value As Decimal
 	
 	Private _deduction_format As String
 	
@@ -745,7 +745,7 @@ Partial Public Class deduction
     End Sub
     Partial Private Sub Ondeduction_typeChanged()
     End Sub
-    Partial Private Sub Ondeduction_valueChanging(value As Double)
+    Partial Private Sub Ondeduction_valueChanging(value As Decimal)
     End Sub
     Partial Private Sub Ondeduction_valueChanged()
     End Sub
@@ -805,8 +805,8 @@ Partial Public Class deduction
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_deduction_value", DbType:="Float NOT NULL")>  _
-	Public Property deduction_value() As Double
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_deduction_value", DbType:="Decimal(18,0) NOT NULL")>  _
+	Public Property deduction_value() As Decimal
 		Get
 			Return Me._deduction_value
 		End Get
