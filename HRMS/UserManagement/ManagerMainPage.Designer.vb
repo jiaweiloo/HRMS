@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form2
+Partial Class ManagerMainPage
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -28,21 +28,21 @@ Partial Class Form2
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(325, 44)
+        Me.Label1.Location = New System.Drawing.Point(320, 215)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(150, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Leave Management"
+        Me.Label1.Size = New System.Drawing.Size(161, 20)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "This is Manager Page"
         '
-        'Form2
+        'ManagerMainPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Form2"
-        Me.Text = "Form2"
+        Me.Name = "ManagerMainPage"
+        Me.Text = "ManagerMainPage"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

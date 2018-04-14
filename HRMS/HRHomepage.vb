@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class HRHomepage
 
     Private Sub btnGoPayroll_Click(sender As Object, e As EventArgs) Handles btnGoPayroll.Click
         MDIParent1.ShowForm(EmpHistoryPayroll)
