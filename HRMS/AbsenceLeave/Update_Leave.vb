@@ -39,19 +39,35 @@
         Dim db As New HRMS_DBLinq2DataContext()
         Dim c As Leave = db.Leaves.FirstOrDefault(Function(o) o.leave_id = selected_id)
         Dim emp As People = db.Peoples.FirstOrDefault(Function(a) a.people_id = peopleID)
+
         If c Is Nothing Then
             MessageBox.Show("Leave Application not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Close()
+            Return
+        End If
+        If emp Is Nothing Then
+            MessageBox.Show("Staff not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Close()
             Return
         End If
         c.Reject_approve_date = CDate(Today.ToShortDateString)
         c.status = If(radRejected.Checked = True, "Rejected", "Approved")
         db.SubmitChanges()
+        Dim extra_leave As Integer
+
+        If (emp.leave_num < c.leave_duration) Then
+            extra_leave = emp.extra_leave - c.leave_duration
+
+        End If
+
         If (radApproved.Checked = True) Then
             emp.leave_num = emp.leave_num - c.leave_duration
         End If
         db.SubmitChanges()
+
+
         MessageBox.Show("Leave [" & c.leave_id & "]updated", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
         Me.Close()
 
     End Sub
