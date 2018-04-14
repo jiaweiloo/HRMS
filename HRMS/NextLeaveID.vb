@@ -16,7 +16,7 @@
 
         Try
             'Return id & (Count).ToString()
-            Return (Count).ToString("13WAR00000")
+            Return (Count).ToString("00000")
         Catch ex As Exception
             Return ex.Message
         End Try

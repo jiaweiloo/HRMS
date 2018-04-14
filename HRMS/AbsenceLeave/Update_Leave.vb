@@ -40,6 +40,7 @@
         Dim c As Leave = db.Leaves.FirstOrDefault(Function(o) o.leave_id = selected_id)
         Dim emp As People = db.Peoples.FirstOrDefault(Function(a) a.people_id = peopleID)
 
+
         If c Is Nothing Then
             MessageBox.Show("Leave Application not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Close()
@@ -54,10 +55,31 @@
         c.status = If(radRejected.Checked = True, "Rejected", "Approved")
         db.SubmitChanges()
         Dim extra_leave As Integer
+        Dim charge As Integer
+        Dim type As String = "Extra Leave"
+        Dim format As String = "Salary Decuction"
+        Dim month As Integer = c.leave_date.Month
+        Dim year As Integer = c.leave_date.Year
 
-        If (emp.leave_num < c.leave_duration) Then
+        If (emp.leave_num < c.leave_duration) And radApproved.Checked = True Then
             extra_leave = emp.extra_leave - c.leave_duration
+            Dim deduction As New deduction
+            deduction.deduction_id = Integer.Parse(DeductionID.GetNextId())
+            deduction.deduction_type = type
+            deduction.deduction_value = extra_leave * 200
+            deduction.deduction_month = month
+            deduction.deduction_year = year
+            deduction.people_id = peopleID
+            deduction.deduction_format = format
+            db.deductions.InsertOnSubmit(deduction)
 
+
+            Try
+                db.SubmitChanges()
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message, "Error")
+            End Try
+            MessageBox.Show("Deduction for " & peopleID & " submitted", "Submit")
         End If
 
         If (radApproved.Checked = True) Then
