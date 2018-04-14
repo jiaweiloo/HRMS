@@ -33,7 +33,7 @@
     End Sub
 
     Private Sub btnDeduction_Click(sender As Object, e As EventArgs) Handles btnDeduction.Click
-
+        MDIParent1.ShowForm(HRDeductionShow)
     End Sub
 
     Private Sub btnPrepPayroll_Click(sender As Object, e As EventArgs) Handles btnPrepPayroll.Click
