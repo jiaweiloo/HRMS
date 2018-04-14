@@ -23,7 +23,7 @@ Partial Class PayrollHomepage
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnCheckMdDdt = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -38,14 +38,14 @@ Partial Class PayrollHomepage
         Me.Button1.Text = "Prepare this month payroll for all"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnCheckMdDdt
         '
-        Me.Button2.Location = New System.Drawing.Point(304, 100)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(192, 52)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Check and Manage Mandatory Deduction"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnCheckMdDdt.Location = New System.Drawing.Point(304, 100)
+        Me.btnCheckMdDdt.Name = "btnCheckMdDdt"
+        Me.btnCheckMdDdt.Size = New System.Drawing.Size(192, 52)
+        Me.btnCheckMdDdt.TabIndex = 1
+        Me.btnCheckMdDdt.Text = "Check and Manage Mandatory Deduction"
+        Me.btnCheckMdDdt.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -85,7 +85,7 @@ Partial Class PayrollHomepage
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnCheckMdDdt)
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "PayrollHomepage"
@@ -96,7 +96,7 @@ Partial Class PayrollHomepage
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnCheckMdDdt As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Label1 As Label
