@@ -726,10 +726,6 @@ Partial Public Class deduction
 	
 	Private _people_id As String
 	
-	Private _deduction_month As System.Nullable(Of Integer)
-	
-	Private _deduction_year As System.Nullable(Of Integer)
-	
 	Private _deduction_date As System.Nullable(Of Date)
 	
     #Region "Extensibility Method Definitions"
@@ -758,14 +754,6 @@ Partial Public Class deduction
     Partial Private Sub Onpeople_idChanging(value As String)
     End Sub
     Partial Private Sub Onpeople_idChanged()
-    End Sub
-    Partial Private Sub Ondeduction_monthChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub Ondeduction_monthChanged()
-    End Sub
-    Partial Private Sub Ondeduction_yearChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub Ondeduction_yearChanged()
     End Sub
     Partial Private Sub Ondeduction_dateChanging(value As System.Nullable(Of Date))
     End Sub
@@ -856,38 +844,6 @@ Partial Public Class deduction
 				Me._people_id = value
 				Me.SendPropertyChanged("people_id")
 				Me.Onpeople_idChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_deduction_month", DbType:="Int")>  _
-	Public Property deduction_month() As System.Nullable(Of Integer)
-		Get
-			Return Me._deduction_month
-		End Get
-		Set
-			If (Me._deduction_month.Equals(value) = false) Then
-				Me.Ondeduction_monthChanging(value)
-				Me.SendPropertyChanging
-				Me._deduction_month = value
-				Me.SendPropertyChanged("deduction_month")
-				Me.Ondeduction_monthChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_deduction_year", DbType:="Int")>  _
-	Public Property deduction_year() As System.Nullable(Of Integer)
-		Get
-			Return Me._deduction_year
-		End Get
-		Set
-			If (Me._deduction_year.Equals(value) = false) Then
-				Me.Ondeduction_yearChanging(value)
-				Me.SendPropertyChanging
-				Me._deduction_year = value
-				Me.SendPropertyChanged("deduction_year")
-				Me.Ondeduction_yearChanged
 			End If
 		End Set
 	End Property
