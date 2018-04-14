@@ -74,4 +74,8 @@ Public Class MDIParent1
     Private Sub UpdateLeaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateLeaveToolStripMenuItem.Click
         ShowForm(DisplayLeave)
     End Sub
+
+    Private Sub TimeAttendanceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimeAttendanceToolStripMenuItem.Click
+        ShowForm(Attendance)
+    End Sub
 End Class

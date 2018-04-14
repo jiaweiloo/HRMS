@@ -1,16 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HRMS_DB" Class="HRMS_DBLinq2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\HRMS_DB.mdf;Integrated Security=True" SettingsObjectName="HRMS.My.MySettings" SettingsPropertyName="HRMS_DBConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.attend" Member="attends">
-    <Type Name="attend">
-      <Column Name="attendance_id" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="people_id" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="[current_date]" Member="current_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="time_in" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="time_out" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="lunch_in" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="lunch_out" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.People" Member="Peoples">
     <Type Name="People">
       <Column Name="people_id" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -76,6 +65,17 @@
       <Column Name="people_id" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Column Name="overtime_duration" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="overtime_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.attend" Member="attends">
+    <Type Name="attend">
+      <Column Name="attendance_id" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="people_id" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="[current_date]" Member="current_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="time_in" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="time_out" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="lunch_in" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="lunch_out" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

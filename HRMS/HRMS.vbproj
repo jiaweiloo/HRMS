@@ -185,6 +185,20 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="peopleid.vb" />
+    <Compile Include="TimeAttendance\Attendance.Designer.vb">
+      <DependentUpon>Attendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TimeAttendance\Attendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeAttendance\AttendanceApp.vb" />
+    <Compile Include="TimeAttendance\AttendanceClass.vb" />
+    <Compile Include="TimeAttendance\AttendanceHistory.Designer.vb">
+      <DependentUpon>AttendanceHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TimeAttendance\AttendanceHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserManagement\AddNewStaff.Designer.vb">
       <DependentUpon>AddNewStaff.vb</DependentUpon>
     </Compile>
@@ -250,6 +264,12 @@
     <EmbeddedResource Include="Payroll\PayrollHomepage.resx">
       <DependentUpon>PayrollHomepage.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TimeAttendance\Attendance.resx">
+      <DependentUpon>Attendance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeAttendance\AttendanceHistory.resx">
+      <DependentUpon>AttendanceHistory.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserManagement\AddNewStaff.resx">
       <DependentUpon>AddNewStaff.vb</DependentUpon>
     </EmbeddedResource>
@@ -286,9 +306,7 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TimeAttendance\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
@@ -305,13 +323,11 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HRMS_DB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="HRMS_DB.mdf" />
     <Content Include="HRMS_DB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>HRMS_DB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\checkinout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

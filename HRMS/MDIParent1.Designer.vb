@@ -39,9 +39,9 @@ Partial Class MDIParent1
         Me.RetrieveStaffDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteStaffDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbsenceLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PayrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimeAttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UpdateLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -150,6 +150,12 @@ Partial Class MDIParent1
         Me.AbsenceLeaveToolStripMenuItem.Size = New System.Drawing.Size(123, 24)
         Me.AbsenceLeaveToolStripMenuItem.Text = "Absence & Leave"
         '
+        'UpdateLeaveToolStripMenuItem
+        '
+        Me.UpdateLeaveToolStripMenuItem.Name = "UpdateLeaveToolStripMenuItem"
+        Me.UpdateLeaveToolStripMenuItem.Size = New System.Drawing.Size(175, 26)
+        Me.UpdateLeaveToolStripMenuItem.Text = "&Update Leave"
+        '
         'PayrollToolStripMenuItem
         '
         Me.PayrollToolStripMenuItem.Name = "PayrollToolStripMenuItem"
@@ -162,12 +168,6 @@ Partial Class MDIParent1
         Me.TimeAttendanceToolStripMenuItem.Size = New System.Drawing.Size(138, 24)
         Me.TimeAttendanceToolStripMenuItem.Text = "Time & Attendance"
         '
-        'UpdateLeaveToolStripMenuItem
-        '
-        Me.UpdateLeaveToolStripMenuItem.Name = "UpdateLeaveToolStripMenuItem"
-        Me.UpdateLeaveToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
-        Me.UpdateLeaveToolStripMenuItem.Text = "&Update Leave"
-        '
         'MDIParent1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -176,7 +176,7 @@ Partial Class MDIParent1
         Me.Controls.Add(Me.MenuStrip)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MDIParent1"
         Me.Text = "MDIParent"
         Me.MenuStrip.ResumeLayout(False)
