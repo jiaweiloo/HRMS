@@ -130,6 +130,12 @@
     <Compile Include="MDIParent1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MDIStaff.Designer.vb">
+      <DependentUpon>MDIStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIStaff.resx">
+      <DependentUpon>MDIStaff.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

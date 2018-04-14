@@ -40,6 +40,7 @@ Partial Class NormalStaffPage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "NormalStaffPage"
         Me.Text = "NormalStaffPage"
         Me.ResumeLayout(False)
