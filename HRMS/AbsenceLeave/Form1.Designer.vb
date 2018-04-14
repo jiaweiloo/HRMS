@@ -45,11 +45,9 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.lbl_Leave_ID)
         Me.GroupBox1.Controls.Add(Me.chooseDate)
         Me.GroupBox1.Controls.Add(Me.txtReason)
-        Me.GroupBox1.Location = New System.Drawing.Point(32, 72)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 58)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(1007, 425)
+        Me.GroupBox1.Size = New System.Drawing.Size(605, 340)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Leave Details"
@@ -58,72 +56,66 @@ Partial Class Form1
         '
         Me.cboDuration.FormattingEnabled = True
         Me.cboDuration.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        Me.cboDuration.Location = New System.Drawing.Point(831, 52)
-        Me.cboDuration.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cboDuration.Location = New System.Drawing.Point(344, 44)
         Me.cboDuration.Name = "cboDuration"
-        Me.cboDuration.Size = New System.Drawing.Size(136, 28)
+        Me.cboDuration.Size = New System.Drawing.Size(121, 24)
         Me.cboDuration.TabIndex = 4
         '
         'lbl_People_ID
         '
         Me.lbl_People_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_People_ID.Location = New System.Drawing.Point(28, 52)
+        Me.lbl_People_ID.Location = New System.Drawing.Point(12, 44)
         Me.lbl_People_ID.Name = "lbl_People_ID"
-        Me.lbl_People_ID.Size = New System.Drawing.Size(130, 28)
+        Me.lbl_People_ID.Size = New System.Drawing.Size(116, 23)
         Me.lbl_People_ID.TabIndex = 0
         '
         'lbl_Leave_ID
         '
         Me.lbl_Leave_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_Leave_ID.Location = New System.Drawing.Point(448, 52)
+        Me.lbl_Leave_ID.Location = New System.Drawing.Point(191, 42)
         Me.lbl_Leave_ID.Name = "lbl_Leave_ID"
-        Me.lbl_Leave_ID.Size = New System.Drawing.Size(140, 28)
+        Me.lbl_Leave_ID.Size = New System.Drawing.Size(125, 23)
         Me.lbl_Leave_ID.TabIndex = 1
         '
         'chooseDate
         '
-        Me.chooseDate.Location = New System.Drawing.Point(28, 120)
-        Me.chooseDate.Margin = New System.Windows.Forms.Padding(10, 11, 10, 11)
+        Me.chooseDate.Location = New System.Drawing.Point(12, 99)
         Me.chooseDate.Name = "chooseDate"
         Me.chooseDate.TabIndex = 2
         '
         'txtReason
         '
         Me.txtReason.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtReason.Location = New System.Drawing.Point(390, 168)
-        Me.txtReason.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtReason.Location = New System.Drawing.Point(286, 99)
         Me.txtReason.MaxLength = 100
         Me.txtReason.Multiline = True
         Me.txtReason.Name = "txtReason"
-        Me.txtReason.Size = New System.Drawing.Size(319, 173)
+        Me.txtReason.Size = New System.Drawing.Size(284, 139)
         Me.txtReason.TabIndex = 3
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(704, 556)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnCancel.Location = New System.Drawing.Point(345, 445)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(84, 29)
+        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 10
         Me.btnCancel.Text = "&Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
         'btnSubmit
         '
-        Me.btnSubmit.Location = New System.Drawing.Point(32, 556)
-        Me.btnSubmit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnSubmit.Location = New System.Drawing.Point(28, 445)
         Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(84, 29)
+        Me.btnSubmit.Size = New System.Drawing.Size(75, 23)
         Me.btnSubmit.TabIndex = 9
         Me.btnSubmit.Text = "&Submit"
         Me.btnSubmit.UseVisualStyleBackColor = True
         '
         'btnShow
         '
-        Me.btnShow.Location = New System.Drawing.Point(320, 556)
-        Me.btnShow.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnShow.Location = New System.Drawing.Point(203, 445)
         Me.btnShow.Name = "btnShow"
-        Me.btnShow.Size = New System.Drawing.Size(84, 29)
+        Me.btnShow.Size = New System.Drawing.Size(75, 23)
         Me.btnShow.TabIndex = 12
         Me.btnShow.Text = "&go"
         Me.btnShow.UseVisualStyleBackColor = True
@@ -135,24 +127,24 @@ Partial Class Form1
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(927, 556)
-        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnUpdate.Location = New System.Drawing.Point(462, 445)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(84, 29)
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
         Me.btnUpdate.TabIndex = 13
         Me.btnUpdate.Text = "&Update"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1070, 657)
+        Me.ClientSize = New System.Drawing.Size(951, 526)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.btnShow)
         Me.Controls.Add(Me.btnUpdate)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.GroupBox1.ResumeLayout(False)

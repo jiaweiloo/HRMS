@@ -23,24 +23,36 @@ Partial Class NormalStaffPage
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnApplyLeave = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(295, 190)
+        Me.Label1.Location = New System.Drawing.Point(280, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(60, 20)
+        Me.Label1.Size = New System.Drawing.Size(51, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "STAFF"
         '
+        'btnApplyLeave
+        '
+        Me.btnApplyLeave.Location = New System.Drawing.Point(261, 144)
+        Me.btnApplyLeave.Name = "btnApplyLeave"
+        Me.btnApplyLeave.Size = New System.Drawing.Size(85, 45)
+        Me.btnApplyLeave.TabIndex = 1
+        Me.btnApplyLeave.Text = "&Apply Leave"
+        Me.btnApplyLeave.UseVisualStyleBackColor = True
+        '
         'NormalStaffPage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(711, 360)
+        Me.Controls.Add(Me.btnApplyLeave)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "NormalStaffPage"
         Me.Text = "NormalStaffPage"
         Me.ResumeLayout(False)
@@ -49,4 +61,5 @@ Partial Class NormalStaffPage
     End Sub
 
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnApplyLeave As Button
 End Class

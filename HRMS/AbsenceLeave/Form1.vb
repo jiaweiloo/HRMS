@@ -14,9 +14,9 @@ Public Class Form1
         Dim duration As Integer
         Dim reason As String
         Dim status As String
-        Dim attempt As Integer
+        ' Dim attempt As Integer
         Try
-            peopleid = "haha"
+            peopleid = lbl_People_ID.Text
             leaveid = lbl_Leave_ID.Text
             apply_date = CDate(Today.ToShortDateString)
             leave_date = CDate(chooseDate.SelectionRange.Start.ToShortDateString())
@@ -82,10 +82,12 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbl_Leave_ID.Text = addleave.GetNextId()
+        lbl_People_ID.Text = HRstaffid.hrstaffid.ToString()
     End Sub
 
     Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         lbl_Leave_ID.Text = addleave.GetNextId()
+        lbl_People_ID.Text = HRstaffid.hrstaffid.ToString()
     End Sub
 
     Private Sub txtReason_TextChanged(sender As Object, e As EventArgs) Handles txtReason.TextChanged
