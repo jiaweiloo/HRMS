@@ -64,7 +64,7 @@ Public Class Form1
         leave.reason = reason
         leave.status = status
         leave.leave_duration = duration
-        leave.leave_attempt = leave.leave_attempt - 1
+
 
         Dim db As New HRMS_DBLinq2DataContext
         db.Leaves.InsertOnSubmit(leave)

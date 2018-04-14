@@ -31,11 +31,11 @@ Partial Public Class HRMS_DBLinq2DataContext
   #Region "Extensibility Method Definitions"
   Partial Private Sub OnCreated()
   End Sub
-  Partial Private Sub Insertattendance(instance As attendance)
+  Partial Private Sub Insertattend(instance As attend)
     End Sub
-  Partial Private Sub Updateattendance(instance As attendance)
+  Partial Private Sub Updateattend(instance As attend)
     End Sub
-  Partial Private Sub Deleteattendance(instance As attendance)
+  Partial Private Sub Deleteattend(instance As attend)
     End Sub
   Partial Private Sub InsertPeople(instance As People)
     End Sub
@@ -100,9 +100,9 @@ Partial Public Class HRMS_DBLinq2DataContext
 		OnCreated
 	End Sub
 	
-	Public ReadOnly Property attendances() As System.Data.Linq.Table(Of attendance)
+	Public ReadOnly Property attends() As System.Data.Linq.Table(Of attend)
 		Get
-			Return Me.GetTable(Of attendance)
+			Return Me.GetTable(Of attend)
 		End Get
 	End Property
 	
@@ -143,25 +143,25 @@ Partial Public Class HRMS_DBLinq2DataContext
 	End Property
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.attendance")>  _
-Partial Public Class attendance
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.attend")>  _
+Partial Public Class attend
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
 	
 	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
 	
-	Private _attendance_id As Integer
+	Private _attendance_id As String
 	
 	Private _people_id As String
 	
-	Private _date As Date
+	Private _current_date As Date
 	
-	Private _time_in As System.Nullable(Of System.TimeSpan)
+	Private _time_in As System.Nullable(Of Date)
 	
-	Private _time_out As System.Nullable(Of System.TimeSpan)
+	Private _time_out As System.Nullable(Of Date)
 	
-	Private _lunch_out As System.Nullable(Of System.TimeSpan)
+	Private _lunch_in As System.Nullable(Of Date)
 	
-	Private _lunch_in As System.Nullable(Of System.TimeSpan)
+	Private _lunch_out As System.Nullable(Of Date)
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -170,7 +170,7 @@ Partial Public Class attendance
     End Sub
     Partial Private Sub OnCreated()
     End Sub
-    Partial Private Sub Onattendance_idChanging(value As Integer)
+    Partial Private Sub Onattendance_idChanging(value As String)
     End Sub
     Partial Private Sub Onattendance_idChanged()
     End Sub
@@ -178,25 +178,25 @@ Partial Public Class attendance
     End Sub
     Partial Private Sub Onpeople_idChanged()
     End Sub
-    Partial Private Sub OndateChanging(value As Date)
+    Partial Private Sub Oncurrent_dateChanging(value As Date)
     End Sub
-    Partial Private Sub OndateChanged()
+    Partial Private Sub Oncurrent_dateChanged()
     End Sub
-    Partial Private Sub Ontime_inChanging(value As System.Nullable(Of System.TimeSpan))
+    Partial Private Sub Ontime_inChanging(value As System.Nullable(Of Date))
     End Sub
     Partial Private Sub Ontime_inChanged()
     End Sub
-    Partial Private Sub Ontime_outChanging(value As System.Nullable(Of System.TimeSpan))
+    Partial Private Sub Ontime_outChanging(value As System.Nullable(Of Date))
     End Sub
     Partial Private Sub Ontime_outChanged()
     End Sub
-    Partial Private Sub Onlunch_outChanging(value As System.Nullable(Of System.TimeSpan))
-    End Sub
-    Partial Private Sub Onlunch_outChanged()
-    End Sub
-    Partial Private Sub Onlunch_inChanging(value As System.Nullable(Of System.TimeSpan))
+    Partial Private Sub Onlunch_inChanging(value As System.Nullable(Of Date))
     End Sub
     Partial Private Sub Onlunch_inChanged()
+    End Sub
+    Partial Private Sub Onlunch_outChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub Onlunch_outChanged()
     End Sub
     #End Region
 	
@@ -205,14 +205,13 @@ Partial Public Class attendance
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_attendance_id", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
-	Public Property attendance_id() As Integer
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_attendance_id", DbType:="VarChar(15) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	Public Property attendance_id() As String
 		Get
 			Return Me._attendance_id
 		End Get
 		Set
-			If ((Me._attendance_id = value)  _
-						= false) Then
+			If (String.Equals(Me._attendance_id, value) = false) Then
 				Me.Onattendance_idChanging(value)
 				Me.SendPropertyChanging
 				Me._attendance_id = value
@@ -238,25 +237,25 @@ Partial Public Class attendance
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Name:="date", Storage:="_date", DbType:="Date NOT NULL")>  _
-	Public Property [date]() As Date
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Name:="[current_date]", Storage:="_current_date", DbType:="Date NOT NULL")>  _
+	Public Property current_date() As Date
 		Get
-			Return Me._date
+			Return Me._current_date
 		End Get
 		Set
-			If ((Me._date = value)  _
+			If ((Me._current_date = value)  _
 						= false) Then
-				Me.OndateChanging(value)
+				Me.Oncurrent_dateChanging(value)
 				Me.SendPropertyChanging
-				Me._date = value
-				Me.SendPropertyChanged("[date]")
-				Me.OndateChanged
+				Me._current_date = value
+				Me.SendPropertyChanged("current_date")
+				Me.Oncurrent_dateChanged
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_time_in", DbType:="Time")>  _
-	Public Property time_in() As System.Nullable(Of System.TimeSpan)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_time_in", DbType:="Date")>  _
+	Public Property time_in() As System.Nullable(Of Date)
 		Get
 			Return Me._time_in
 		End Get
@@ -271,8 +270,8 @@ Partial Public Class attendance
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_time_out", DbType:="Time")>  _
-	Public Property time_out() As System.Nullable(Of System.TimeSpan)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_time_out", DbType:="Date")>  _
+	Public Property time_out() As System.Nullable(Of Date)
 		Get
 			Return Me._time_out
 		End Get
@@ -287,24 +286,8 @@ Partial Public Class attendance
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_lunch_out", DbType:="Time")>  _
-	Public Property lunch_out() As System.Nullable(Of System.TimeSpan)
-		Get
-			Return Me._lunch_out
-		End Get
-		Set
-			If (Me._lunch_out.Equals(value) = false) Then
-				Me.Onlunch_outChanging(value)
-				Me.SendPropertyChanging
-				Me._lunch_out = value
-				Me.SendPropertyChanged("lunch_out")
-				Me.Onlunch_outChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_lunch_in", DbType:="Time")>  _
-	Public Property lunch_in() As System.Nullable(Of System.TimeSpan)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_lunch_in", DbType:="Date")>  _
+	Public Property lunch_in() As System.Nullable(Of Date)
 		Get
 			Return Me._lunch_in
 		End Get
@@ -315,6 +298,22 @@ Partial Public Class attendance
 				Me._lunch_in = value
 				Me.SendPropertyChanged("lunch_in")
 				Me.Onlunch_inChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_lunch_out", DbType:="Date")>  _
+	Public Property lunch_out() As System.Nullable(Of Date)
+		Get
+			Return Me._lunch_out
+		End Get
+		Set
+			If (Me._lunch_out.Equals(value) = false) Then
+				Me.Onlunch_outChanging(value)
+				Me.SendPropertyChanging
+				Me._lunch_out = value
+				Me.SendPropertyChanged("lunch_out")
+				Me.Onlunch_outChanged
 			End If
 		End Set
 	End Property
@@ -926,8 +925,6 @@ Partial Public Class Leave
 	
 	Private _people_id As String
 	
-	Private _leave_attempt As Integer
-	
 	Private _status As String
 	
 	Private _Reject_approve_date As System.Nullable(Of Date)
@@ -962,10 +959,6 @@ Partial Public Class Leave
     Partial Private Sub Onpeople_idChanging(value As String)
     End Sub
     Partial Private Sub Onpeople_idChanged()
-    End Sub
-    Partial Private Sub Onleave_attemptChanging(value As Integer)
-    End Sub
-    Partial Private Sub Onleave_attemptChanged()
     End Sub
     Partial Private Sub OnstatusChanging(value As String)
     End Sub
@@ -1077,23 +1070,6 @@ Partial Public Class Leave
 				Me._people_id = value
 				Me.SendPropertyChanged("people_id")
 				Me.Onpeople_idChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_leave_attempt", DbType:="Int NOT NULL")>  _
-	Public Property leave_attempt() As Integer
-		Get
-			Return Me._leave_attempt
-		End Get
-		Set
-			If ((Me._leave_attempt = value)  _
-						= false) Then
-				Me.Onleave_attemptChanging(value)
-				Me.SendPropertyChanging
-				Me._leave_attempt = value
-				Me.SendPropertyChanged("leave_attempt")
-				Me.Onleave_attemptChanged
 			End If
 		End Set
 	End Property
