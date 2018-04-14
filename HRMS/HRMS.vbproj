@@ -349,6 +349,7 @@
     <Content Include="HRMS_DB_log.ldf">
       <DependentUpon>HRMS_DB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\holiday-mood.jpg" />
     <None Include="Resources\checkinout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
