@@ -132,6 +132,7 @@
     <Compile Include="LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MandatoryDeductionID.vb" />
     <Compile Include="MDIManager.Designer.vb">
       <DependentUpon>MDIManager.vb</DependentUpon>
     </Compile>

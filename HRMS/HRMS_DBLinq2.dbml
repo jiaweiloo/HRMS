@@ -19,11 +19,22 @@
       <Column Name="hourly_rates" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.attend" Member="attends">
+    <Type Name="attend">
+      <Column Name="attendance_id" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="people_id" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="[current_date]" Member="current_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="time_in" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="time_out" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="lunch_in" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="lunch_out" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.deduction" Member="deductions">
     <Type Name="deduction">
       <Column Name="deduction_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="deduction_type" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="deduction_value" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="deduction_type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="deduction_value" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="deduction_format" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="people_id" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
       <Column Name="deduction_month" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -46,14 +57,14 @@
     <Type Name="mandatory_deduction">
       <Column Name="deduction_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="deduction_type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="deduction_value" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="deduction_value" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="deduction_format" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.netpay" Member="netpays">
     <Type Name="netpay">
       <Column Name="payroll_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="people_id" Type="System.Data.Linq.Binary" DbType="VarBinary(15)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="people_id" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Column Name="total_attendance" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="total_absence" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="final_pay" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
@@ -65,17 +76,6 @@
       <Column Name="people_id" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Column Name="overtime_duration" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="overtime_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.attend" Member="attends">
-    <Type Name="attend">
-      <Column Name="attendance_id" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="people_id" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="[current_date]" Member="current_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="time_in" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
-      <Column Name="time_out" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
-      <Column Name="lunch_in" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
-      <Column Name="lunch_out" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

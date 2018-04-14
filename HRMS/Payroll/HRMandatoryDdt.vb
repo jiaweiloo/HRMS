@@ -22,4 +22,8 @@
     Private Sub txtType_TextChanged(sender As Object, e As EventArgs) Handles txtType.TextChanged
         BindData()
     End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        HRAddMandatory.Show()
+    End Sub
 End Class

@@ -26,13 +26,13 @@ Partial Class HRAddMandatory
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblID = New System.Windows.Forms.Label()
         Me.cBoxFormat = New System.Windows.Forms.ComboBox()
         Me.txtValue = New System.Windows.Forms.TextBox()
         Me.txtType = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnReset = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -71,15 +71,15 @@ Partial Class HRAddMandatory
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Format :"
         '
-        'Label5
+        'lblID
         '
-        Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label5.Location = New System.Drawing.Point(268, 51)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(232, 33)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "40001"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblID.Location = New System.Drawing.Point(268, 51)
+        Me.lblID.Name = "lblID"
+        Me.lblID.Size = New System.Drawing.Size(232, 33)
+        Me.lblID.TabIndex = 4
+        Me.lblID.Text = "40000"
+        Me.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'cBoxFormat
         '
@@ -107,48 +107,48 @@ Partial Class HRAddMandatory
         Me.txtType.Size = New System.Drawing.Size(232, 26)
         Me.txtType.TabIndex = 9
         '
-        'Button1
+        'btnAdd
         '
-        Me.Button1.AutoSize = True
-        Me.Button1.Location = New System.Drawing.Point(176, 310)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(76, 30)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "&Add"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAdd.AutoSize = True
+        Me.btnAdd.Location = New System.Drawing.Point(176, 310)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(76, 30)
+        Me.btnAdd.TabIndex = 10
+        Me.btnAdd.Text = "&Add"
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnCancel
         '
-        Me.Button2.AutoSize = True
-        Me.Button2.Location = New System.Drawing.Point(408, 310)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(76, 30)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "&Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnCancel.AutoSize = True
+        Me.btnCancel.Location = New System.Drawing.Point(408, 310)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(76, 30)
+        Me.btnCancel.TabIndex = 11
+        Me.btnCancel.Text = "&Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnReset
         '
-        Me.Button3.AutoSize = True
-        Me.Button3.Location = New System.Drawing.Point(292, 310)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(76, 30)
-        Me.Button3.TabIndex = 12
-        Me.Button3.Text = "&Reset"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnReset.AutoSize = True
+        Me.btnReset.Location = New System.Drawing.Point(292, 310)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(76, 30)
+        Me.btnReset.TabIndex = 12
+        Me.btnReset.Text = "&Reset"
+        Me.btnReset.UseVisualStyleBackColor = True
         '
         'HRAddMandatory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(660, 366)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnReset)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.txtType)
         Me.Controls.Add(Me.txtValue)
         Me.Controls.Add(Me.cBoxFormat)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.lblID)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -164,11 +164,11 @@ Partial Class HRAddMandatory
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblID As Label
     Friend WithEvents cBoxFormat As ComboBox
     Friend WithEvents txtValue As TextBox
     Friend WithEvents txtType As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents btnReset As Button
 End Class
