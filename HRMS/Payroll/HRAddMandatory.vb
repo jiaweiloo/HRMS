@@ -7,10 +7,10 @@
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim type As String = ""
+        Dim type As String = txtType.Text
         Dim value As Double
-        Dim format As String = ""
-        value = 0.0
+        Dim format As String = cBoxFormat.SelectedItem.ToString
+        value = Double.Parse(txtValue.Text)
         Dim manDeduction As New mandatory_deduction()
         manDeduction.deduction_id = Integer.Parse(lblID.Text)
         manDeduction.deduction_type = type
@@ -23,6 +23,9 @@
         'Submit the change to the database.
         Try
             db.SubmitChanges()
+            MessageBox.Show("Success ", "Success")
+            Me.Close()
+            HRMandatoryDdt.refresh()
         Catch ex As Exception
             MessageBox.Show("Error : " & ex.Message, "error")
         End Try
@@ -33,7 +36,6 @@
         txtValue.Text = ""
         cBoxFormat.SelectedIndex = 0
         txtType.Focus()
-
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
