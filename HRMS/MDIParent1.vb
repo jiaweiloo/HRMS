@@ -53,8 +53,13 @@ Public Class MDIParent1
 
 
     Public Sub ShowForm(ChildForm As System.Windows.Forms.Form)
+
+
         For Each OldChildForm As Form In Me.MdiChildren
-            OldChildForm.Close()
+            If (ChildForm IsNot OldChildForm) Then
+                OldChildForm.Close()
+            End If
+
         Next
         m_ChildFormNumber += 1
         ChildForm.MdiParent = Me
