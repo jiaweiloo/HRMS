@@ -26,4 +26,8 @@ Public Class MDIManager
         ChildForm.Dock = DockStyle.Fill
         ChildForm.Show()
     End Sub
+
+    Private Sub TimeAndAttendanceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimeAndAttendanceToolStripMenuItem.Click
+        ShowForm(Attendance)
+    End Sub
 End Class

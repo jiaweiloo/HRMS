@@ -52,6 +52,7 @@ Partial Class Attendance
         Me.btnReport.TabIndex = 31
         Me.btnReport.Text = "Manager Report"
         Me.btnReport.UseVisualStyleBackColor = True
+        Me.btnReport.Visible = False
         '
         'Timer1
         '

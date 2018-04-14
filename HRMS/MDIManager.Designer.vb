@@ -33,13 +33,14 @@ Partial Class MDIManager
         Me.UpdateHRFetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteHRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewHRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TimeAndAttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip
         '
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.AccountManagementToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.AccountManagementToolStripMenuItem, Me.TimeAndAttendanceToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
@@ -60,23 +61,23 @@ Partial Class MDIManager
         Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(167, 26)
         Me.NewToolStripMenuItem.Text = "&New"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(213, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(164, 6)
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(213, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(164, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(167, 26)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'AccountManagementToolStripMenuItem
@@ -89,20 +90,26 @@ Partial Class MDIManager
         'UpdateHRFetailsToolStripMenuItem
         '
         Me.UpdateHRFetailsToolStripMenuItem.Name = "UpdateHRFetailsToolStripMenuItem"
-        Me.UpdateHRFetailsToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.UpdateHRFetailsToolStripMenuItem.Size = New System.Drawing.Size(203, 26)
         Me.UpdateHRFetailsToolStripMenuItem.Text = "Update HR Fetails"
         '
         'DeleteHRToolStripMenuItem
         '
         Me.DeleteHRToolStripMenuItem.Name = "DeleteHRToolStripMenuItem"
-        Me.DeleteHRToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.DeleteHRToolStripMenuItem.Size = New System.Drawing.Size(203, 26)
         Me.DeleteHRToolStripMenuItem.Text = "Delete HR"
         '
         'AddNewHRToolStripMenuItem
         '
         Me.AddNewHRToolStripMenuItem.Name = "AddNewHRToolStripMenuItem"
-        Me.AddNewHRToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.AddNewHRToolStripMenuItem.Size = New System.Drawing.Size(203, 26)
         Me.AddNewHRToolStripMenuItem.Text = "Add New HR"
+        '
+        'TimeAndAttendanceToolStripMenuItem
+        '
+        Me.TimeAndAttendanceToolStripMenuItem.Name = "TimeAndAttendanceToolStripMenuItem"
+        Me.TimeAndAttendanceToolStripMenuItem.Size = New System.Drawing.Size(163, 24)
+        Me.TimeAndAttendanceToolStripMenuItem.Text = "Time and Attendance"
         '
         'MDIManager
         '
@@ -112,7 +119,7 @@ Partial Class MDIManager
         Me.Controls.Add(Me.MenuStrip)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MDIManager"
         Me.Text = "MDIManager"
         Me.MenuStrip.ResumeLayout(False)
@@ -131,4 +138,5 @@ Partial Class MDIManager
     Friend WithEvents UpdateHRFetailsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteHRToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddNewHRToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TimeAndAttendanceToolStripMenuItem As ToolStripMenuItem
 End Class

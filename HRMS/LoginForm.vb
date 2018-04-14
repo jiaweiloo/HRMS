@@ -26,13 +26,13 @@
             For Each a In db.Peoples
                 If userid.ToLower = a.people_id.ToLower And password = a.people_password Then
                     If (a.people_role.Equals("Staff")) Then
-                        HRstaffid.StoreId(userid, a.people_name)
+                        HRstaffid.StoreId(userid, a.people_name, a.people_role)
                         Return "Staff"
                     ElseIf (a.people_role.Equals("Manager")) Then
-                        HRstaffid.StoreId(userid, a.people_name)
+                        HRstaffid.StoreId(userid, a.people_name, a.people_role)
                         Return "Manager"
                     ElseIf (a.people_role.Equals("HR")) Then
-                        HRstaffid.StoreId(userid, a.people_name)
+                        HRstaffid.StoreId(userid, a.people_name, a.people_role)
                         Return "HR"
                     Else
                         Return "cantfindrole"
@@ -52,4 +52,5 @@
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
     End Sub
+
 End Class

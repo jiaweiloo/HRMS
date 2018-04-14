@@ -13,6 +13,9 @@ Public Class Attendance
 
 
     Private Sub Attendance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If hrrole.Equals("Manager") Then
+            btnReport.Visible = True
+        End If
         Timer1.Enabled = True
         Dim peopleObject As People = db.Peoples.FirstOrDefault(Function(o) o.people_id = peopleid)
         Dim currentdate As Date = New Date(2018, 4, 14)
