@@ -62,7 +62,7 @@ Partial Class DisplayLeave
         Me.cboLeave.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboLeave.FormattingEnabled = True
         Me.cboLeave.Items.AddRange(New Object() {"Pending", "Rejected", "Approved", "All"})
-        Me.cboLeave.Location = New System.Drawing.Point(24, 12)
+        Me.cboLeave.Location = New System.Drawing.Point(24, 18)
         Me.cboLeave.Name = "cboLeave"
         Me.cboLeave.Size = New System.Drawing.Size(121, 24)
         Me.cboLeave.TabIndex = 3
@@ -70,7 +70,7 @@ Partial Class DisplayLeave
         'lblID
         '
         Me.lblID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblID.Location = New System.Drawing.Point(245, 18)
+        Me.lblID.Location = New System.Drawing.Point(282, 9)
         Me.lblID.Name = "lblID"
         Me.lblID.Size = New System.Drawing.Size(130, 39)
         Me.lblID.TabIndex = 6
@@ -78,7 +78,7 @@ Partial Class DisplayLeave
         'lblName
         '
         Me.lblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblName.Location = New System.Drawing.Point(469, 19)
+        Me.lblName.Location = New System.Drawing.Point(469, 10)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(130, 38)
         Me.lblName.TabIndex = 7
