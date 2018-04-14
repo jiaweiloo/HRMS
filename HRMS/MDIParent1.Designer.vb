@@ -37,6 +37,10 @@ Partial Class MDIParent1
         Me.AbsenceLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PayrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimeAttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddNewStaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateStaffDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RetrieveStaffDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteStaffDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -109,6 +113,7 @@ Partial Class MDIParent1
         '
         'UserManagementToolStripMenuItem
         '
+        Me.UserManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewStaffToolStripMenuItem, Me.UpdateStaffDetailsToolStripMenuItem, Me.RetrieveStaffDetailsToolStripMenuItem, Me.DeleteStaffDetailsToolStripMenuItem})
         Me.UserManagementToolStripMenuItem.Name = "UserManagementToolStripMenuItem"
         Me.UserManagementToolStripMenuItem.Size = New System.Drawing.Size(169, 29)
         Me.UserManagementToolStripMenuItem.Text = "User Management"
@@ -130,6 +135,30 @@ Partial Class MDIParent1
         Me.TimeAttendanceToolStripMenuItem.Name = "TimeAttendanceToolStripMenuItem"
         Me.TimeAttendanceToolStripMenuItem.Size = New System.Drawing.Size(162, 29)
         Me.TimeAttendanceToolStripMenuItem.Text = "Time & Attendance"
+        '
+        'AddNewStaffToolStripMenuItem
+        '
+        Me.AddNewStaffToolStripMenuItem.Name = "AddNewStaffToolStripMenuItem"
+        Me.AddNewStaffToolStripMenuItem.Size = New System.Drawing.Size(257, 30)
+        Me.AddNewStaffToolStripMenuItem.Text = "Add New Staff"
+        '
+        'UpdateStaffDetailsToolStripMenuItem
+        '
+        Me.UpdateStaffDetailsToolStripMenuItem.Name = "UpdateStaffDetailsToolStripMenuItem"
+        Me.UpdateStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(257, 30)
+        Me.UpdateStaffDetailsToolStripMenuItem.Text = "Update Staff Details"
+        '
+        'RetrieveStaffDetailsToolStripMenuItem
+        '
+        Me.RetrieveStaffDetailsToolStripMenuItem.Name = "RetrieveStaffDetailsToolStripMenuItem"
+        Me.RetrieveStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(257, 30)
+        Me.RetrieveStaffDetailsToolStripMenuItem.Text = "Retrieve Staff Details"
+        '
+        'DeleteStaffDetailsToolStripMenuItem
+        '
+        Me.DeleteStaffDetailsToolStripMenuItem.Name = "DeleteStaffDetailsToolStripMenuItem"
+        Me.DeleteStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(257, 30)
+        Me.DeleteStaffDetailsToolStripMenuItem.Text = "Delete Staff Details"
         '
         'MDIParent1
         '
@@ -161,4 +190,8 @@ Partial Class MDIParent1
     Friend WithEvents AbsenceLeaveToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PayrollToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TimeAttendanceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddNewStaffToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UpdateStaffDetailsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RetrieveStaffDetailsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteStaffDetailsToolStripMenuItem As ToolStripMenuItem
 End Class

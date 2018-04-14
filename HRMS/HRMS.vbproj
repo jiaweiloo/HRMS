@@ -98,11 +98,30 @@
     <Compile Include="AbsenceLeave\Form2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="HRHomepage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="HRHomepage.Designer.vb">
+      <DependentUpon>HRHomepage.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRMS_DBLinq.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HRMS_DBLinq.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="HRstaffid.vb" />
+    <Compile Include="LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIManager.Designer.vb">
+      <DependentUpon>MDIManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIManager.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HRDatabase.designer.vb">
@@ -114,6 +133,12 @@
       <DependentUpon>MDIParent1.vb</DependentUpon>
     </Compile>
     <Compile Include="MDIParent1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIStaff.Designer.vb">
+      <DependentUpon>MDIStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIStaff.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -144,16 +169,47 @@
     <Compile Include="Payroll\PayrollHomepage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="peopleid.vb" />
+    <Compile Include="UserManagement\AddNewStaff.Designer.vb">
+      <DependentUpon>AddNewStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\AddNewStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ManagerMainPage.Designer.vb">
+      <DependentUpon>ManagerMainPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\ManagerMainPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\NormalStaffPage.Designer.vb">
+      <DependentUpon>NormalStaffPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\NormalStaffPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\UpdateForm.Designer.vb">
+      <DependentUpon>UpdateForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\UpdateForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\UpdateStaffDetail.Designer.vb">
+      <DependentUpon>UpdateStaffDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\UpdateStaffDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AbsenceLeave\Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIStaff.resx">
+      <DependentUpon>MDIStaff.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -167,16 +223,23 @@
     <EmbeddedResource Include="Payroll\PayrollHomepage.resx">
       <DependentUpon>PayrollHomepage.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\AddNewStaff.resx">
+      <DependentUpon>AddNewStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ManagerMainPage.resx">
+      <DependentUpon>ManagerMainPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\NormalStaffPage.resx">
+      <DependentUpon>NormalStaffPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\UpdateForm.resx">
+      <DependentUpon>UpdateForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\UpdateStaffDetail.resx">
+      <DependentUpon>UpdateStaffDetail.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="HRDatabase.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>HRDatabase.designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HRDatabase.dbml.layout">
-      <DependentUpon>HRDatabase.dbml</DependentUpon>
-    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -190,7 +253,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="TimeAttendance\" />
-    <Folder Include="UserManagement\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
