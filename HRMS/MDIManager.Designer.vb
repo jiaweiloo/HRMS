@@ -23,24 +23,27 @@ Partial Class MDIManager
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MDIManager))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AccountManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateHRFetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteHRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddNewHRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip
         '
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.AccountManagementToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Padding = New System.Windows.Forms.Padding(9, 3, 0, 3)
-        Me.MenuStrip.Size = New System.Drawing.Size(948, 35)
+        Me.MenuStrip.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
+        Me.MenuStrip.Size = New System.Drawing.Size(843, 28)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
         '
@@ -49,43 +52,67 @@ Partial Class MDIManager
         Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.ToolStripSeparator3, Me.ToolStripSeparator5, Me.ExitToolStripMenuItem})
         Me.FileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
         Me.FileMenu.Name = "FileMenu"
-        Me.FileMenu.Size = New System.Drawing.Size(50, 29)
+        Me.FileMenu.Size = New System.Drawing.Size(44, 24)
         Me.FileMenu.Text = "&File"
         '
         'NewToolStripMenuItem
         '
-        Me.NewToolStripMenuItem.Image = CType(resources.GetObject("NewToolStripMenuItem.Image"), System.Drawing.Image)
         Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(195, 30)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
         Me.NewToolStripMenuItem.Text = "&New"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(192, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(213, 6)
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(192, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(213, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(195, 30)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
         Me.ExitToolStripMenuItem.Text = "E&xit"
+        '
+        'AccountManagementToolStripMenuItem
+        '
+        Me.AccountManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateHRFetailsToolStripMenuItem, Me.DeleteHRToolStripMenuItem, Me.AddNewHRToolStripMenuItem})
+        Me.AccountManagementToolStripMenuItem.Name = "AccountManagementToolStripMenuItem"
+        Me.AccountManagementToolStripMenuItem.Size = New System.Drawing.Size(167, 24)
+        Me.AccountManagementToolStripMenuItem.Text = "Account Management"
+        '
+        'UpdateHRFetailsToolStripMenuItem
+        '
+        Me.UpdateHRFetailsToolStripMenuItem.Name = "UpdateHRFetailsToolStripMenuItem"
+        Me.UpdateHRFetailsToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.UpdateHRFetailsToolStripMenuItem.Text = "Update HR Fetails"
+        '
+        'DeleteHRToolStripMenuItem
+        '
+        Me.DeleteHRToolStripMenuItem.Name = "DeleteHRToolStripMenuItem"
+        Me.DeleteHRToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.DeleteHRToolStripMenuItem.Text = "Delete HR"
+        '
+        'AddNewHRToolStripMenuItem
+        '
+        Me.AddNewHRToolStripMenuItem.Name = "AddNewHRToolStripMenuItem"
+        Me.AddNewHRToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.AddNewHRToolStripMenuItem.Text = "Add New HR"
         '
         'MDIManager
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(948, 697)
+        Me.ClientSize = New System.Drawing.Size(843, 558)
         Me.Controls.Add(Me.MenuStrip)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "MDIManager"
         Me.Text = "MDIManager"
         Me.MenuStrip.ResumeLayout(False)
@@ -100,5 +127,8 @@ Partial Class MDIManager
     Friend WithEvents FileMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents MenuStrip As System.Windows.Forms.MenuStrip
-
+    Friend WithEvents AccountManagementToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UpdateHRFetailsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteHRToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddNewHRToolStripMenuItem As ToolStripMenuItem
 End Class

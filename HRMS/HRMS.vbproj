@@ -219,6 +219,9 @@
     <EmbeddedResource Include="AbsenceLeave\Update_Leave.resx">
       <DependentUpon>Update_Leave.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDIManager.resx">
+      <DependentUpon>MDIManager.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.vb</DependentUpon>
     </EmbeddedResource>
