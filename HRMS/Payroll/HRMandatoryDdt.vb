@@ -11,10 +11,6 @@
         lblCount.Text = rs.Count.ToString("0 record(s)")
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        lblShow.Text = DeductionID.GetNextId()
-    End Sub
-
     Private Sub HRMandatoryDdt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BindData()
     End Sub
