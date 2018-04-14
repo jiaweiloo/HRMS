@@ -1247,6 +1247,10 @@ Partial Public Class netpay
 	
 	Private _generated_date As System.Nullable(Of Date)
 	
+	Private _ttl_mandatory_ddt As System.Nullable(Of Decimal)
+	
+	Private _ttl_deduction As System.Nullable(Of Decimal)
+	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
     End Sub
@@ -1277,6 +1281,14 @@ Partial Public Class netpay
     Partial Private Sub Ongenerated_dateChanging(value As System.Nullable(Of Date))
     End Sub
     Partial Private Sub Ongenerated_dateChanged()
+    End Sub
+    Partial Private Sub Onttl_mandatory_ddtChanging(value As System.Nullable(Of Decimal))
+    End Sub
+    Partial Private Sub Onttl_mandatory_ddtChanged()
+    End Sub
+    Partial Private Sub Onttl_deductionChanging(value As System.Nullable(Of Decimal))
+    End Sub
+    Partial Private Sub Onttl_deductionChanged()
     End Sub
     #End Region
 	
@@ -1350,7 +1362,7 @@ Partial Public Class netpay
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_final_pay", DbType:="Decimal(18,0)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_final_pay", DbType:="Decimal(18,2)")>  _
 	Public Property final_pay() As System.Nullable(Of Decimal)
 		Get
 			Return Me._final_pay
@@ -1378,6 +1390,38 @@ Partial Public Class netpay
 				Me._generated_date = value
 				Me.SendPropertyChanged("generated_date")
 				Me.Ongenerated_dateChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ttl_mandatory_ddt", DbType:="Decimal(18,2)")>  _
+	Public Property ttl_mandatory_ddt() As System.Nullable(Of Decimal)
+		Get
+			Return Me._ttl_mandatory_ddt
+		End Get
+		Set
+			If (Me._ttl_mandatory_ddt.Equals(value) = false) Then
+				Me.Onttl_mandatory_ddtChanging(value)
+				Me.SendPropertyChanging
+				Me._ttl_mandatory_ddt = value
+				Me.SendPropertyChanged("ttl_mandatory_ddt")
+				Me.Onttl_mandatory_ddtChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ttl_deduction", DbType:="Decimal(18,2)")>  _
+	Public Property ttl_deduction() As System.Nullable(Of Decimal)
+		Get
+			Return Me._ttl_deduction
+		End Get
+		Set
+			If (Me._ttl_deduction.Equals(value) = false) Then
+				Me.Onttl_deductionChanging(value)
+				Me.SendPropertyChanging
+				Me._ttl_deduction = value
+				Me.SendPropertyChanged("ttl_deduction")
+				Me.Onttl_deductionChanged
 			End If
 		End Set
 	End Property

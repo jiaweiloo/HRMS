@@ -66,8 +66,10 @@
       <Column Name="people_id" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Column Name="total_attendance" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="total_absence" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="final_pay" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="final_pay" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Column Name="generated_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ttl_mandatory_ddt" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ttl_deduction" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.overtime" Member="overtimes">
