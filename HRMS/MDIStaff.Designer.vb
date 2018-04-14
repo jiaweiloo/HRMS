@@ -26,11 +26,11 @@ Partial Class MDIStaff
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MDIStaff))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.PrintSetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimeAttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -42,7 +42,7 @@ Partial Class MDIStaff
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
-        Me.MenuStrip.Size = New System.Drawing.Size(843, 28)
+        Me.MenuStrip.Size = New System.Drawing.Size(887, 28)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
         '
@@ -53,6 +53,15 @@ Partial Class MDIStaff
         Me.FileMenu.Name = "FileMenu"
         Me.FileMenu.Size = New System.Drawing.Size(44, 24)
         Me.FileMenu.Text = "&File"
+        '
+        'NewToolStripMenuItem
+        '
+        Me.NewToolStripMenuItem.Image = CType(resources.GetObject("NewToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
+        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
+        Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(173, 26)
+        Me.NewToolStripMenuItem.Text = "&New"
         '
         'ToolStripSeparator3
         '
@@ -76,15 +85,6 @@ Partial Class MDIStaff
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(173, 26)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
-        'NewToolStripMenuItem
-        '
-        Me.NewToolStripMenuItem.Image = CType(resources.GetObject("NewToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
-        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(220, 30)
-        Me.NewToolStripMenuItem.Text = "&New"
-        '
         'TimeAttendanceToolStripMenuItem
         '
         Me.TimeAttendanceToolStripMenuItem.Name = "TimeAttendanceToolStripMenuItem"
@@ -95,11 +95,11 @@ Partial Class MDIStaff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(843, 558)
+        Me.ClientSize = New System.Drawing.Size(887, 558)
         Me.Controls.Add(Me.MenuStrip)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MDIStaff"
         Me.Text = "MDIStaff"
         Me.MenuStrip.ResumeLayout(False)

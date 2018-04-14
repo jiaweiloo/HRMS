@@ -74,6 +74,7 @@ Public Class Form1
             MessageBox.Show("Error: " & ex.Message, "Error")
         End Try
         MessageBox.Show("Leave " & leaveid & " submitted", "Submit")
+        Me.Close()
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click

@@ -16,8 +16,8 @@
         cboLeave.Text = "All"
         lblID.Text = HRstaffid.hrstaffid
         lblName.Text = HRstaffid.hrname
-        lblID.BackColor = Color.AliceBlue
-        lblName.BackColor = Color.AliceBlue
+        'lblID.BackColor = Color.AliceBlue
+        'lblName.BackColor = Color.AliceBlue
         Dim style As FontStyle
         style = FontStyle.Bold
         Dim timesNewRoman As Font = New Font("Times New Roman", 12, style)

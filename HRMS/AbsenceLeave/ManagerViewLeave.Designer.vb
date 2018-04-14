@@ -22,6 +22,7 @@ Partial Class ManagerViewLeave
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ManagerViewLeave))
         Me.cboStatus = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblID = New System.Windows.Forms.Label()
@@ -31,11 +32,14 @@ Partial Class ManagerViewLeave
         Me.lblCount = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutUsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnPrint = New System.Windows.Forms.Button()
+        Me.doc = New System.Drawing.Printing.PrintDocument()
+        Me.dlgPreview = New System.Windows.Forms.PrintPreviewDialog()
         CType(Me.dgvLeave, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -128,6 +132,25 @@ Partial Class ManagerViewLeave
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(44, 24)
         Me.FileToolStripMenuItem.Text = "File"
         '
+        'PrintToolStripMenuItem
+        '
+        Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
+        Me.PrintToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
+        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(164, 26)
+        Me.PrintToolStripMenuItem.Text = "Print"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(161, 6)
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(164, 26)
+        Me.ExitToolStripMenuItem.Text = "Exit"
+        '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutUsToolStripMenuItem})
@@ -135,36 +158,41 @@ Partial Class ManagerViewLeave
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
-        'PrintToolStripMenuItem
-        '
-        Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
-        Me.PrintToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
-        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
-        Me.PrintToolStripMenuItem.Text = "Print"
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(213, 6)
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
-        Me.ExitToolStripMenuItem.Text = "Exit"
-        '
         'AboutUsToolStripMenuItem
         '
         Me.AboutUsToolStripMenuItem.Name = "AboutUsToolStripMenuItem"
-        Me.AboutUsToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.AboutUsToolStripMenuItem.Size = New System.Drawing.Size(145, 26)
         Me.AboutUsToolStripMenuItem.Text = "&About Us"
+        '
+        'btnPrint
+        '
+        Me.btnPrint.Location = New System.Drawing.Point(455, 413)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(91, 38)
+        Me.btnPrint.TabIndex = 8
+        Me.btnPrint.Text = "&Print"
+        Me.btnPrint.UseVisualStyleBackColor = True
+        '
+        'doc
+        '
+        '
+        'dlgPreview
+        '
+        Me.dlgPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.dlgPreview.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.dlgPreview.ClientSize = New System.Drawing.Size(400, 300)
+        Me.dlgPreview.Enabled = True
+        Me.dlgPreview.Icon = CType(resources.GetObject("dlgPreview.Icon"), System.Drawing.Icon)
+        Me.dlgPreview.Name = "dlgPreview"
+        Me.dlgPreview.UseAntiAlias = True
+        Me.dlgPreview.Visible = False
         '
         'ManagerViewLeave
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(760, 491)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.lblCount)
         Me.Controls.Add(Me.dgvLeave)
         Me.Controls.Add(Me.lblName)
@@ -198,4 +226,7 @@ Partial Class ManagerViewLeave
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutUsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnPrint As Button
+    Friend WithEvents doc As Printing.PrintDocument
+    Friend WithEvents dlgPreview As PrintPreviewDialog
 End Class

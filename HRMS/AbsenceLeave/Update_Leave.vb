@@ -4,16 +4,17 @@
     Public peopleID As String
 
     Private Sub resetform()
-        Label1.Text = ""
-        Label2.Text = ""
+        Label5.Text = ""
+        Label6.Text = ""
         radRejected.Checked = True
-        Label3.Text = ""
-        Label4.Text = ""
+        Label7.Text = ""
+        Label8.Text = ""
 
 
     End Sub
 
     Private Sub Update_Leave_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        resetform()
         lblID.Text = HRstaffid.hrstaffid
         lblName.Text = HRstaffid.hrname
         resetform()
@@ -24,10 +25,22 @@
             Me.Close()
             Return
         End If
-        Label1.Text = c.leave_id
-        Label2.Text = c.people_id
-        Label3.Text = c.reason
-        Label4.Text = c.leave_duration.ToString()
+        Label5.Text = c.leave_id
+        Label6.Text = c.people_id
+        Label7.Text = c.reason
+        Label8.Text = c.leave_duration.ToString()
+        Dim style As FontStyle
+        style = FontStyle.Bold
+        Dim timesNewRoman As Font = New Font("Times New Roman", 12, style)
+        Dim fore As Color = Color.Brown
+        Label5.Font = timesNewRoman
+        Label5.ForeColor = fore
+        Label6.Font = timesNewRoman
+        Label6.ForeColor = fore
+        Label7.Font = timesNewRoman
+        Label7.ForeColor = fore
+        Label8.Font = timesNewRoman
+        Label8.ForeColor = fore
         Select Case c.status
             Case "Rejected" : radRejected.Checked = True
             Case "Approved" : radApproved.Checked = True
@@ -55,31 +68,33 @@
         c.status = If(radRejected.Checked = True, "Rejected", "Approved")
         db.SubmitChanges()
         Dim extra_leave As Integer
-        Dim charge As Integer
+        'Dim charge As Integer
         Dim type As String = "Extra Leave"
         Dim format As String = "Salary Decuction"
         Dim month As Integer = c.leave_date.Month
         Dim year As Integer = c.leave_date.Year
 
         If (emp.leave_num < c.leave_duration) And radApproved.Checked = True Then
-            extra_leave = emp.extra_leave - c.leave_duration
-            Dim deduction As New deduction
-            deduction.deduction_id = Integer.Parse(DeductionID.GetNextId())
-            deduction.deduction_type = type
-            deduction.deduction_value = extra_leave * 200
-            deduction.deduction_month = month
-            deduction.deduction_year = year
-            deduction.people_id = peopleID
-            deduction.deduction_format = format
-            db.deductions.InsertOnSubmit(deduction)
+            extra_leave = Math.Abs(emp.leave_num - c.leave_duration)
+            'Dim deduction As New deduction
+            'deduction.deduction_id = Integer.Parse(DeductionID.GetNextId())
+            'deduction.deduction_type = type
+            'deduction.deduction_value = Math.Abs((emp.extra_leave - emp.leave_num) * 200)
+            'deduction.deduction_month = month
+            'deduction.deduction_year = year
+            'deduction.people_id = peopleID
+            'deduction.deduction_format = format
+            'db.deductions.InsertOnSubmit(deduction)
 
+            emp.extra_leave = extra_leave
+            db.SubmitChanges()
 
-            Try
-                db.SubmitChanges()
-            Catch ex As Exception
-                MessageBox.Show("Error: " & ex.Message, "Error")
-            End Try
-            MessageBox.Show("Deduction for " & peopleID & " submitted", "Submit")
+            '    Try
+            '        db.SubmitChanges()
+            '    Catch ex As Exception
+            '        MessageBox.Show("Error: " & ex.Message, "Error")
+            '    End Try
+            '    MessageBox.Show("Deduction for " & peopleID & " submitted", "Submit")
         End If
 
         If (radApproved.Checked = True) Then
