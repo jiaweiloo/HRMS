@@ -191,6 +191,12 @@
     <Compile Include="Payroll\HRMandatoryDdt.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Payroll\HROvertimeShow.Designer.vb">
+      <DependentUpon>HROvertimeShow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\HROvertimeShow.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Payroll\PayrollHomepage.Designer.vb">
       <DependentUpon>PayrollHomepage.vb</DependentUpon>
     </Compile>
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Payroll\HRMandatoryDdt.resx">
       <DependentUpon>HRMandatoryDdt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\HROvertimeShow.resx">
+      <DependentUpon>HROvertimeShow.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payroll\PayrollHomepage.resx">
       <DependentUpon>PayrollHomepage.vb</DependentUpon>
