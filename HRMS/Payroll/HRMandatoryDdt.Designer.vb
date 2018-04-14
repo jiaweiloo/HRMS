@@ -28,6 +28,7 @@ Partial Class HRMandatoryDdt
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lblShow = New System.Windows.Forms.Label()
+        Me.btnAdd = New System.Windows.Forms.Button()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -98,11 +99,22 @@ Partial Class HRMandatoryDdt
         Me.lblShow.TabIndex = 19
         Me.lblShow.Text = "Label2"
         '
+        'btnAdd
+        '
+        Me.btnAdd.AutoSize = True
+        Me.btnAdd.Location = New System.Drawing.Point(696, 114)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(92, 30)
+        Me.btnAdd.TabIndex = 20
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
         'HRMandatoryDdt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 500)
+        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.lblShow)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtType)
@@ -124,4 +136,5 @@ Partial Class HRMandatoryDdt
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents lblShow As Label
+    Friend WithEvents btnAdd As Button
 End Class

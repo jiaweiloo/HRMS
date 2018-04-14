@@ -18,4 +18,8 @@
     Private Sub HRMandatoryDdt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BindData()
     End Sub
+
+    Private Sub txtType_TextChanged(sender As Object, e As EventArgs) Handles txtType.TextChanged
+        BindData()
+    End Sub
 End Class

@@ -34,8 +34,8 @@ Partial Class PayrollHomepage
         Me.Button1.Location = New System.Drawing.Point(304, 316)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(192, 52)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Prepare this month payroll for all"
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "&Prepare this month payroll for all"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'btnCheckMdDdt
@@ -43,8 +43,8 @@ Partial Class PayrollHomepage
         Me.btnCheckMdDdt.Location = New System.Drawing.Point(304, 100)
         Me.btnCheckMdDdt.Name = "btnCheckMdDdt"
         Me.btnCheckMdDdt.Size = New System.Drawing.Size(192, 52)
-        Me.btnCheckMdDdt.TabIndex = 1
-        Me.btnCheckMdDdt.Text = "Check and Manage Mandatory Deduction"
+        Me.btnCheckMdDdt.TabIndex = 0
+        Me.btnCheckMdDdt.Text = "Check and &Manage Mandatory Deduction"
         Me.btnCheckMdDdt.UseVisualStyleBackColor = True
         '
         'Button3
@@ -53,8 +53,8 @@ Partial Class PayrollHomepage
         Me.Button3.Location = New System.Drawing.Point(304, 172)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(192, 52)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Check Overtime"
+        Me.Button3.TabIndex = 1
+        Me.Button3.Text = "Check &Overtime"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
@@ -63,8 +63,8 @@ Partial Class PayrollHomepage
         Me.Button4.Location = New System.Drawing.Point(304, 244)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(192, 52)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Check Deduction"
+        Me.Button4.TabIndex = 2
+        Me.Button4.Text = "Check &Deduction"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Label1
