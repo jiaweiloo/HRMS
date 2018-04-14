@@ -26,4 +26,8 @@
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         HRAddMandatory.Show()
     End Sub
+
+    Public Sub refresh()
+        BindData()
+    End Sub
 End Class
