@@ -124,7 +124,7 @@ Partial Class Form1
         Me.Controls.Add(Me.btnSubmit)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Submit Leave"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.err, System.ComponentModel.ISupportInitialize).EndInit()
