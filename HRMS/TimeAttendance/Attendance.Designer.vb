@@ -23,6 +23,7 @@ Partial Class Attendance
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Attendance))
         Me.btnReport = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnLunchOut = New System.Windows.Forms.Button()
@@ -40,6 +41,8 @@ Partial Class Attendance
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.dlgPreview = New System.Windows.Forms.PrintPreviewDialog()
+        Me.doc = New System.Drawing.Printing.PrintDocument()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -98,7 +101,8 @@ Partial Class Attendance
         'lblAttID
         '
         Me.lblAttID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblAttID.Location = New System.Drawing.Point(133, 51)
+        Me.lblAttID.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAttID.Location = New System.Drawing.Point(153, 51)
         Me.lblAttID.Name = "lblAttID"
         Me.lblAttID.Size = New System.Drawing.Size(100, 23)
         Me.lblAttID.TabIndex = 29
@@ -106,18 +110,20 @@ Partial Class Attendance
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(28, 51)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(105, 17)
+        Me.Label5.Size = New System.Drawing.Size(119, 21)
         Me.Label5.TabIndex = 28
         Me.Label5.Text = "Attendance ID :"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(28, 124)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(98, 17)
+        Me.Label4.Size = New System.Drawing.Size(112, 21)
         Me.Label4.TabIndex = 26
         Me.Label4.Text = "Current Time :"
         '
@@ -146,7 +152,8 @@ Partial Class Attendance
         'lblDepartment
         '
         Me.lblDepartment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblDepartment.Location = New System.Drawing.Point(435, 123)
+        Me.lblDepartment.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDepartment.Location = New System.Drawing.Point(440, 123)
         Me.lblDepartment.Name = "lblDepartment"
         Me.lblDepartment.Size = New System.Drawing.Size(100, 23)
         Me.lblDepartment.TabIndex = 24
@@ -155,34 +162,39 @@ Partial Class Attendance
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(328, 121)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 17)
+        Me.Label3.Size = New System.Drawing.Size(106, 21)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Department :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(328, 51)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 17)
+        Me.Label2.Size = New System.Drawing.Size(61, 21)
         Me.Label2.TabIndex = 21
         Me.Label2.Text = "Name :"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(132, 124)
+        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(149, 125)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 17)
+        Me.Label1.Size = New System.Drawing.Size(58, 23)
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Label1"
         '
         'lblName
         '
         Me.lblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblName.Location = New System.Drawing.Point(435, 51)
+        Me.lblName.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.Location = New System.Drawing.Point(440, 51)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(100, 23)
         Me.lblName.TabIndex = 23
@@ -197,6 +209,22 @@ Partial Class Attendance
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 27
         Me.PictureBox1.TabStop = False
+        '
+        'dlgPreview
+        '
+        Me.dlgPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.dlgPreview.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.dlgPreview.ClientSize = New System.Drawing.Size(400, 300)
+        Me.dlgPreview.Enabled = True
+        Me.dlgPreview.Icon = CType(resources.GetObject("dlgPreview.Icon"), System.Drawing.Icon)
+        Me.dlgPreview.Name = "dlgPreview"
+        Me.dlgPreview.UseAntiAlias = True
+        Me.dlgPreview.Visible = False
+        '
+        'doc
+        '
+        Me.doc.DocumentName = "DailyReport"
+        Me.doc.OriginAtMargins = True
         '
         'Attendance
         '
@@ -241,4 +269,6 @@ Partial Class Attendance
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lblName As Label
+    Friend WithEvents dlgPreview As PrintPreviewDialog
+    Friend WithEvents doc As Printing.PrintDocument
 End Class
