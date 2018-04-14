@@ -139,12 +139,21 @@ Public Class Attendance
     End Sub
 
     Private Sub Attendance_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        Dim test = (att.time_out - att.time_in) - (att.lunch_out - att.lunch_in)
+        'Dim starttime As String = "11-11-11 08:00:00"
+
+        'Dim starttimedate As Date = Date.ParseExact(starttime, "hh:mm:ss tt",
+        'System.Globalization.DateTimeFormatInfo.InvariantInfo)
+        'Dim test = (att.time_out - att.time_in) - (att.lunch_out - att.lunch_in)
+        'Console.WriteLine(att.time_in.ToString(""))
+        'Console.WriteLine(starttimedate.TimeOfDay)
+        'If att.time_in > starttimedate.TimeOfDay) Then
+
+        'End If
 
 
-        Dim tests As String = test.ToString
-        Dim testi As Integer = CInt(tests.Substring(0, 2))
-        MessageBox.Show(test.ToString)
+        'Dim tests As String = test.ToString
+        'Dim testi As Integer = CInt(tests.Substring(0, 2))
+        'MessageBox.Show(test.ToString)
     End Sub
 
     Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
