@@ -37,6 +37,6 @@
     End Sub
 
     Private Sub btnPrepPayroll_Click(sender As Object, e As EventArgs) Handles btnPrepPayroll.Click
-
+        MDIParent1.ShowForm(HRNetpay)
     End Sub
 End Class
