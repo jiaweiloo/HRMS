@@ -22,25 +22,61 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnGoLeave = New System.Windows.Forms.Button()
+        Me.btnGoPayroll = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnGoLeave
         '
-        Me.Button1.AutoSize = True
-        Me.Button1.Location = New System.Drawing.Point(196, 135)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(151, 35)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Go To Emp"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnGoLeave.AutoSize = True
+        Me.btnGoLeave.Location = New System.Drawing.Point(86, 44)
+        Me.btnGoLeave.Name = "btnGoLeave"
+        Me.btnGoLeave.Size = New System.Drawing.Size(110, 58)
+        Me.btnGoLeave.TabIndex = 0
+        Me.btnGoLeave.Text = "Go To Leave"
+        Me.btnGoLeave.UseVisualStyleBackColor = True
+        '
+        'btnGoPayroll
+        '
+        Me.btnGoPayroll.AutoSize = True
+        Me.btnGoPayroll.Location = New System.Drawing.Point(328, 44)
+        Me.btnGoPayroll.Name = "btnGoPayroll"
+        Me.btnGoPayroll.Size = New System.Drawing.Size(113, 58)
+        Me.btnGoPayroll.TabIndex = 1
+        Me.btnGoPayroll.Text = "Go To Payroll"
+        Me.btnGoPayroll.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.AutoSize = True
+        Me.Button3.Location = New System.Drawing.Point(46, 201)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(150, 58)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "Go To Attendance"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.AutoSize = True
+        Me.Button4.Location = New System.Drawing.Point(328, 201)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(199, 58)
+        Me.Button4.TabIndex = 3
+        Me.Button4.Text = "Go To User Management"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(572, 318)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.btnGoPayroll)
+        Me.Controls.Add(Me.btnGoLeave)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
         Me.Text = "Login"
@@ -49,5 +85,8 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnGoLeave As Button
+    Friend WithEvents btnGoPayroll As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class
