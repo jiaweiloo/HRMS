@@ -92,6 +92,25 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbsenceLeave\DisplayLeave.Designer.vb">
+      <DependentUpon>DisplayLeave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AbsenceLeave\DisplayLeave.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbsenceLeave\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AbsenceLeave\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbsenceLeave\Update_Leave.Designer.vb">
+      <DependentUpon>Update_Leave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AbsenceLeave\Update_Leave.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addleave.vb" />
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="HRHomepage.vb">
       <SubType>Form</SubType>
@@ -191,6 +210,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AbsenceLeave\DisplayLeave.resx">
+      <DependentUpon>DisplayLeave.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbsenceLeave\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbsenceLeave\Update_Leave.resx">
+      <DependentUpon>Update_Leave.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.vb</DependentUpon>
     </EmbeddedResource>
@@ -246,7 +274,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AbsenceLeave\" />
     <Folder Include="TimeAttendance\" />
   </ItemGroup>
   <ItemGroup>
