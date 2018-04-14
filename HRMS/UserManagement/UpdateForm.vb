@@ -2,7 +2,7 @@
     Public SelectedId As String
 
     Private Sub UpdateForm_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
-        Dim db As New HRMS_DBLinqDataContext()
+        Dim db As New HRMS_DBLinq2DataContext()
         Dim a As People = db.Peoples.FirstOrDefault(Function(o) o.people_id = SelectedId)
 
         If a Is Nothing Then
@@ -42,7 +42,7 @@
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        Dim db As New HRMS_DBLinqDataContext()
+        Dim db As New HRMS_DBLinq2DataContext()
         Dim a As People = db.Peoples.FirstOrDefault(Function(o) o.people_id = SelectedId)
 
         If a Is Nothing Then
@@ -106,7 +106,7 @@
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        Dim db As New HRMS_DBLinqDataContext()
+        Dim db As New HRMS_DBLinq2DataContext()
         Dim a As People = db.Peoples.FirstOrDefault(Function(o) o.people_id = SelectedId)
         If a Is Nothing Then
             MessageBox.Show("Staff not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

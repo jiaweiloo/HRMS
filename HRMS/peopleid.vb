@@ -5,7 +5,7 @@
 
     Public Function GetNextId() As String
         Dim peopleid As String
-        Dim db As New HRMS_DBLinqDataContext
+        Dim db As New HRMS_DBLinq2DataContext
         Dim lastindex As Integer
         Try
             For Each a In db.Peoples

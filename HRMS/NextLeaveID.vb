@@ -4,7 +4,7 @@
 
     Public Function GetNextId() As String
         Count = 0
-        Dim db As New DataClasses1DataContext
+        Dim db As New HRMS_DBLinq2DataContext
         Dim lastid As String
         Dim id As String
         id = "L0000"

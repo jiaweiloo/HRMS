@@ -19,7 +19,7 @@
 
     Function ValidateLogin(ByVal username As String, ByVal password As String) As String
         ' create LINQ context to the access database
-        Dim db As New HRMS_DBLinqDataContext
+        Dim db As New HRMS_DBLinq2DataContext
         ' check credentials against User table
         'Dim rs As People = db.Peoples.FirstOrDefault(Function(o) o.people_id = username And o.people_password = password)
         Try

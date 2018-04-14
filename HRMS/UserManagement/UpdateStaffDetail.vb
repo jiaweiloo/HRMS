@@ -23,7 +23,7 @@
         Dim gender As String = cboGender.Text
         Dim role As String = "Staff"
 
-        Dim db As New HRMS_DBLinqDataContext()
+        Dim db As New HRMS_DBLinq2DataContext()
         Dim rs = From a In db.Peoples
                  Where a.people_role = role And a.people_id.Contains(staffid) And a.people_name.Contains(name) And (department = "All" Or a.department_name = department) And (gender = "All" Or a.people_gender = gender)
                  Select a.people_id, a.people_name, a.department_name, a.people_gender

@@ -23,7 +23,7 @@ Imports System.Reflection
 
 
 <Global.System.Data.Linq.Mapping.DatabaseAttribute(Name:="HRMS_DB")>  _
-Partial Public Class HRMS_DBLinqDataContext
+Partial Public Class HRMS_DBLinq2DataContext
 	Inherits System.Data.Linq.DataContext
 	
 	Private Shared mappingSource As System.Data.Linq.Mapping.MappingSource = New AttributeMappingSource()
@@ -31,17 +31,17 @@ Partial Public Class HRMS_DBLinqDataContext
   #Region "Extensibility Method Definitions"
   Partial Private Sub OnCreated()
   End Sub
-  Partial Private Sub InsertPeople(instance As People)
-    End Sub
-  Partial Private Sub UpdatePeople(instance As People)
-    End Sub
-  Partial Private Sub DeletePeople(instance As People)
-    End Sub
   Partial Private Sub Insertattendance(instance As attendance)
     End Sub
   Partial Private Sub Updateattendance(instance As attendance)
     End Sub
   Partial Private Sub Deleteattendance(instance As attendance)
+    End Sub
+  Partial Private Sub InsertPeople(instance As People)
+    End Sub
+  Partial Private Sub UpdatePeople(instance As People)
+    End Sub
+  Partial Private Sub DeletePeople(instance As People)
     End Sub
   Partial Private Sub Insertdeduction(instance As deduction)
     End Sub
@@ -100,15 +100,15 @@ Partial Public Class HRMS_DBLinqDataContext
 		OnCreated
 	End Sub
 	
-	Public ReadOnly Property Peoples() As System.Data.Linq.Table(Of People)
-		Get
-			Return Me.GetTable(Of People)
-		End Get
-	End Property
-	
 	Public ReadOnly Property attendances() As System.Data.Linq.Table(Of attendance)
 		Get
 			Return Me.GetTable(Of attendance)
+		End Get
+	End Property
+	
+	Public ReadOnly Property Peoples() As System.Data.Linq.Table(Of People)
+		Get
+			Return Me.GetTable(Of People)
 		End Get
 	End Property
 	
@@ -141,6 +141,201 @@ Partial Public Class HRMS_DBLinqDataContext
 			Return Me.GetTable(Of overtime)
 		End Get
 	End Property
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.attendance")>  _
+Partial Public Class attendance
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _attendance_id As Integer
+	
+	Private _people_id As String
+	
+	Private _date As Date
+	
+	Private _time_in As System.Nullable(Of System.TimeSpan)
+	
+	Private _time_out As System.Nullable(Of System.TimeSpan)
+	
+	Private _lunch_out As System.Nullable(Of System.TimeSpan)
+	
+	Private _lunch_in As System.Nullable(Of System.TimeSpan)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub Onattendance_idChanging(value As Integer)
+    End Sub
+    Partial Private Sub Onattendance_idChanged()
+    End Sub
+    Partial Private Sub Onpeople_idChanging(value As String)
+    End Sub
+    Partial Private Sub Onpeople_idChanged()
+    End Sub
+    Partial Private Sub OndateChanging(value As Date)
+    End Sub
+    Partial Private Sub OndateChanged()
+    End Sub
+    Partial Private Sub Ontime_inChanging(value As System.Nullable(Of System.TimeSpan))
+    End Sub
+    Partial Private Sub Ontime_inChanged()
+    End Sub
+    Partial Private Sub Ontime_outChanging(value As System.Nullable(Of System.TimeSpan))
+    End Sub
+    Partial Private Sub Ontime_outChanged()
+    End Sub
+    Partial Private Sub Onlunch_outChanging(value As System.Nullable(Of System.TimeSpan))
+    End Sub
+    Partial Private Sub Onlunch_outChanged()
+    End Sub
+    Partial Private Sub Onlunch_inChanging(value As System.Nullable(Of System.TimeSpan))
+    End Sub
+    Partial Private Sub Onlunch_inChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_attendance_id", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
+	Public Property attendance_id() As Integer
+		Get
+			Return Me._attendance_id
+		End Get
+		Set
+			If ((Me._attendance_id = value)  _
+						= false) Then
+				Me.Onattendance_idChanging(value)
+				Me.SendPropertyChanging
+				Me._attendance_id = value
+				Me.SendPropertyChanged("attendance_id")
+				Me.Onattendance_idChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_people_id", DbType:="VarChar(15) NOT NULL", CanBeNull:=false)>  _
+	Public Property people_id() As String
+		Get
+			Return Me._people_id
+		End Get
+		Set
+			If (String.Equals(Me._people_id, value) = false) Then
+				Me.Onpeople_idChanging(value)
+				Me.SendPropertyChanging
+				Me._people_id = value
+				Me.SendPropertyChanged("people_id")
+				Me.Onpeople_idChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Name:="date", Storage:="_date", DbType:="Date NOT NULL")>  _
+	Public Property [date]() As Date
+		Get
+			Return Me._date
+		End Get
+		Set
+			If ((Me._date = value)  _
+						= false) Then
+				Me.OndateChanging(value)
+				Me.SendPropertyChanging
+				Me._date = value
+				Me.SendPropertyChanged("[date]")
+				Me.OndateChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_time_in", DbType:="Time")>  _
+	Public Property time_in() As System.Nullable(Of System.TimeSpan)
+		Get
+			Return Me._time_in
+		End Get
+		Set
+			If (Me._time_in.Equals(value) = false) Then
+				Me.Ontime_inChanging(value)
+				Me.SendPropertyChanging
+				Me._time_in = value
+				Me.SendPropertyChanged("time_in")
+				Me.Ontime_inChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_time_out", DbType:="Time")>  _
+	Public Property time_out() As System.Nullable(Of System.TimeSpan)
+		Get
+			Return Me._time_out
+		End Get
+		Set
+			If (Me._time_out.Equals(value) = false) Then
+				Me.Ontime_outChanging(value)
+				Me.SendPropertyChanging
+				Me._time_out = value
+				Me.SendPropertyChanged("time_out")
+				Me.Ontime_outChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_lunch_out", DbType:="Time")>  _
+	Public Property lunch_out() As System.Nullable(Of System.TimeSpan)
+		Get
+			Return Me._lunch_out
+		End Get
+		Set
+			If (Me._lunch_out.Equals(value) = false) Then
+				Me.Onlunch_outChanging(value)
+				Me.SendPropertyChanging
+				Me._lunch_out = value
+				Me.SendPropertyChanged("lunch_out")
+				Me.Onlunch_outChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_lunch_in", DbType:="Time")>  _
+	Public Property lunch_in() As System.Nullable(Of System.TimeSpan)
+		Get
+			Return Me._lunch_in
+		End Get
+		Set
+			If (Me._lunch_in.Equals(value) = false) Then
+				Me.Onlunch_inChanging(value)
+				Me.SendPropertyChanging
+				Me._lunch_in = value
+				Me.SendPropertyChanged("lunch_in")
+				Me.Onlunch_inChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
 End Class
 
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.People")>  _
@@ -493,201 +688,6 @@ Partial Public Class People
 				Me._hourly_rates = value
 				Me.SendPropertyChanged("hourly_rates")
 				Me.Onhourly_ratesChanged
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.attendance")>  _
-Partial Public Class attendance
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _attendance_id As Integer
-	
-	Private _people_id As String
-	
-	Private _date As Date
-	
-	Private _time_in As System.Nullable(Of System.TimeSpan)
-	
-	Private _time_out As System.Nullable(Of System.TimeSpan)
-	
-	Private _lunch_out As System.Nullable(Of System.TimeSpan)
-	
-	Private _lunch_in As System.Nullable(Of System.TimeSpan)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub Onattendance_idChanging(value As Integer)
-    End Sub
-    Partial Private Sub Onattendance_idChanged()
-    End Sub
-    Partial Private Sub Onpeople_idChanging(value As String)
-    End Sub
-    Partial Private Sub Onpeople_idChanged()
-    End Sub
-    Partial Private Sub OndateChanging(value As Date)
-    End Sub
-    Partial Private Sub OndateChanged()
-    End Sub
-    Partial Private Sub Ontime_inChanging(value As System.Nullable(Of System.TimeSpan))
-    End Sub
-    Partial Private Sub Ontime_inChanged()
-    End Sub
-    Partial Private Sub Ontime_outChanging(value As System.Nullable(Of System.TimeSpan))
-    End Sub
-    Partial Private Sub Ontime_outChanged()
-    End Sub
-    Partial Private Sub Onlunch_outChanging(value As System.Nullable(Of System.TimeSpan))
-    End Sub
-    Partial Private Sub Onlunch_outChanged()
-    End Sub
-    Partial Private Sub Onlunch_inChanging(value As System.Nullable(Of System.TimeSpan))
-    End Sub
-    Partial Private Sub Onlunch_inChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_attendance_id", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
-	Public Property attendance_id() As Integer
-		Get
-			Return Me._attendance_id
-		End Get
-		Set
-			If ((Me._attendance_id = value)  _
-						= false) Then
-				Me.Onattendance_idChanging(value)
-				Me.SendPropertyChanging
-				Me._attendance_id = value
-				Me.SendPropertyChanged("attendance_id")
-				Me.Onattendance_idChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_people_id", DbType:="VarChar(15) NOT NULL", CanBeNull:=false)>  _
-	Public Property people_id() As String
-		Get
-			Return Me._people_id
-		End Get
-		Set
-			If (String.Equals(Me._people_id, value) = false) Then
-				Me.Onpeople_idChanging(value)
-				Me.SendPropertyChanging
-				Me._people_id = value
-				Me.SendPropertyChanged("people_id")
-				Me.Onpeople_idChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Name:="date", Storage:="_date", DbType:="Date NOT NULL")>  _
-	Public Property [date]() As Date
-		Get
-			Return Me._date
-		End Get
-		Set
-			If ((Me._date = value)  _
-						= false) Then
-				Me.OndateChanging(value)
-				Me.SendPropertyChanging
-				Me._date = value
-				Me.SendPropertyChanged("[date]")
-				Me.OndateChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_time_in", DbType:="Time")>  _
-	Public Property time_in() As System.Nullable(Of System.TimeSpan)
-		Get
-			Return Me._time_in
-		End Get
-		Set
-			If (Me._time_in.Equals(value) = false) Then
-				Me.Ontime_inChanging(value)
-				Me.SendPropertyChanging
-				Me._time_in = value
-				Me.SendPropertyChanged("time_in")
-				Me.Ontime_inChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_time_out", DbType:="Time")>  _
-	Public Property time_out() As System.Nullable(Of System.TimeSpan)
-		Get
-			Return Me._time_out
-		End Get
-		Set
-			If (Me._time_out.Equals(value) = false) Then
-				Me.Ontime_outChanging(value)
-				Me.SendPropertyChanging
-				Me._time_out = value
-				Me.SendPropertyChanged("time_out")
-				Me.Ontime_outChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_lunch_out", DbType:="Time")>  _
-	Public Property lunch_out() As System.Nullable(Of System.TimeSpan)
-		Get
-			Return Me._lunch_out
-		End Get
-		Set
-			If (Me._lunch_out.Equals(value) = false) Then
-				Me.Onlunch_outChanging(value)
-				Me.SendPropertyChanging
-				Me._lunch_out = value
-				Me.SendPropertyChanged("lunch_out")
-				Me.Onlunch_outChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_lunch_in", DbType:="Time")>  _
-	Public Property lunch_in() As System.Nullable(Of System.TimeSpan)
-		Get
-			Return Me._lunch_in
-		End Get
-		Set
-			If (Me._lunch_in.Equals(value) = false) Then
-				Me.Onlunch_inChanging(value)
-				Me.SendPropertyChanging
-				Me._lunch_in = value
-				Me.SendPropertyChanged("lunch_in")
-				Me.Onlunch_inChanged
 			End If
 		End Set
 	End Property

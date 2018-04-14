@@ -102,7 +102,7 @@ Public Class AddNewStaff
                 ppl.extra_leave = 0
                 ppl.hourly_rates = 15
 
-                Dim db As New HRMS_DBLinqDataContext()
+                Dim db As New HRMS_DBLinq2DataContext()
                 db.Peoples.InsertOnSubmit(ppl)
                 db.SubmitChanges()
 
