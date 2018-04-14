@@ -172,6 +172,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NetpayID.vb" />
     <Compile Include="NextLeaveID.vb" />
     <Compile Include="overtimeID.vb" />
     <Compile Include="Payroll\EmpHistoryPayroll.Designer.vb">
