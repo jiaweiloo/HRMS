@@ -173,6 +173,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="NextLeaveID.vb" />
+    <Compile Include="overtimeID.vb" />
     <Compile Include="Payroll\EmpHistoryPayroll.Designer.vb">
       <DependentUpon>EmpHistoryPayroll.vb</DependentUpon>
     </Compile>
