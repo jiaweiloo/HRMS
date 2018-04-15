@@ -190,6 +190,12 @@
     <Compile Include="Payroll\HRAddMandatory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Payroll\HRDeductionAdd.Designer.vb">
+      <DependentUpon>HRDeductionAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\HRDeductionAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Payroll\HRDeductionShow.Designer.vb">
       <DependentUpon>HRDeductionShow.vb</DependentUpon>
     </Compile>
@@ -336,6 +342,9 @@
     <EmbeddedResource Include="Payroll\HRAddMandatory.resx">
       <DependentUpon>HRAddMandatory.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\HRDeductionAdd.resx">
+      <DependentUpon>HRDeductionAdd.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Payroll\HRDeductionShow.resx">
       <DependentUpon>HRDeductionShow.vb</DependentUpon>
     </EmbeddedResource>
@@ -445,6 +454,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>HRMS_DB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Mypayrollhistory.jpg" />
     <None Include="Resources\MyPayrollHistory.PNG" />
     <None Include="Resources\print-large.png" />
   </ItemGroup>

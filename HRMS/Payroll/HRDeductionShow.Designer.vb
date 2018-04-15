@@ -91,8 +91,9 @@ Partial Class HRDeductionShow
         '
         'btnAdd
         '
+        Me.btnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnAdd.AutoSize = True
-        Me.btnAdd.Location = New System.Drawing.Point(658, 60)
+        Me.btnAdd.Location = New System.Drawing.Point(658, 56)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(131, 30)
         Me.btnAdd.TabIndex = 34

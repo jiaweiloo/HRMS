@@ -27,7 +27,11 @@ Public Class EmpHistoryPayroll
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         dlgPreview.Document = doc
-        dlgPreview.ShowDialog(Me)
+        Try
+            dlgPreview.ShowDialog(Me)
+        Catch ex As Exception
+            dlgPreview.Close()
+        End Try
         'dlgPreview.Size.Height = 100
     End Sub
 
@@ -65,9 +69,9 @@ Public Class EmpHistoryPayroll
 
         ' (4) Print 
         With e.Graphics
-            .DrawImage(My.Resources.MyPayrollHistory, 0, 0, 400, 100)
-            .DrawString(header, fontHeader, Brushes.Purple, 400, 0)
-            .DrawString(subHeader, fontSubHeader, Brushes.Black, 400, 40)
+            .DrawImage(My.Resources.Mypayrollhistory1, 0, 0, 100, 100)
+            .DrawString(header, fontHeader, Brushes.Purple, 100, 0)
+            .DrawString(subHeader, fontSubHeader, Brushes.Black, 100, 40)
             .DrawString(body.ToString(), fontBody, Brushes.Black, 0, 120)
         End With
     End Sub

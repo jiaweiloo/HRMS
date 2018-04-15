@@ -20,10 +20,12 @@
         BindData()
     End Sub
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-
+        HRDeductionAdd.ShowDialog()
     End Sub
 
     Private Sub txtType_TextChanged(sender As Object, e As EventArgs) Handles txtType.TextChanged
         BindData()
     End Sub
+
+
 End Class
