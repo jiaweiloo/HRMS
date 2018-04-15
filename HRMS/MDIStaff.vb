@@ -22,6 +22,7 @@ Public Class MDIStaff
                 OldChildForm.Close()
             End If
         Next
+        Me.Text = "Human Resource Management System - "
         m_ChildFormNumber += 1
         ChildForm.MdiParent = Me
         ChildForm.Dock = DockStyle.Fill

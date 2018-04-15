@@ -17,6 +17,7 @@ Public Class EmpHistoryPayroll
         MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
 
         BindData()
+        MDIStaff.Text = MDIStaff.Text & "Staff Payroll history"
     End Sub
 
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click

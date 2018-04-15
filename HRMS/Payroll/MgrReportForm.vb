@@ -45,6 +45,7 @@ Public Class MgrReportForm
     Private Sub MgrReportForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ResetForm()
         BindData()
+        MDIManager.Text = MDIManager.Text & "Manager payroll report"
     End Sub
 
     Private Sub MgrReportForm_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
