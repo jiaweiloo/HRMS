@@ -25,7 +25,7 @@ Partial Class ManagerMainPage
         Me.btnAccount = New System.Windows.Forms.Button()
         Me.btnAttend = New System.Windows.Forms.Button()
         Me.btnViewleave = New System.Windows.Forms.Button()
-        Me.btnLogout = New System.Windows.Forms.Button()
+        Me.btnPayroll = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnAccount
@@ -64,24 +64,24 @@ Partial Class ManagerMainPage
         Me.btnViewleave.Text = "&View Leave"
         Me.btnViewleave.UseVisualStyleBackColor = False
         '
-        'btnLogout
+        'btnPayroll
         '
-        Me.btnLogout.BackColor = System.Drawing.Color.IndianRed
-        Me.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.Location = New System.Drawing.Point(447, 263)
-        Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(396, 282)
-        Me.btnLogout.TabIndex = 4
-        Me.btnLogout.Text = "&Log Out"
-        Me.btnLogout.UseVisualStyleBackColor = False
+        Me.btnPayroll.BackColor = System.Drawing.Color.IndianRed
+        Me.btnPayroll.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnPayroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPayroll.Location = New System.Drawing.Point(447, 263)
+        Me.btnPayroll.Name = "btnPayroll"
+        Me.btnPayroll.Size = New System.Drawing.Size(396, 282)
+        Me.btnPayroll.TabIndex = 4
+        Me.btnPayroll.Text = "&Payroll"
+        Me.btnPayroll.UseVisualStyleBackColor = False
         '
         'ManagerMainPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(845, 547)
-        Me.Controls.Add(Me.btnLogout)
+        Me.Controls.Add(Me.btnPayroll)
         Me.Controls.Add(Me.btnViewleave)
         Me.Controls.Add(Me.btnAttend)
         Me.Controls.Add(Me.btnAccount)
@@ -96,5 +96,5 @@ Partial Class ManagerMainPage
     Friend WithEvents btnAccount As Button
     Friend WithEvents btnAttend As Button
     Friend WithEvents btnViewleave As Button
-    Friend WithEvents btnLogout As Button
+    Friend WithEvents btnPayroll As Button
 End Class

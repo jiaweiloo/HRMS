@@ -60,7 +60,7 @@
                 payr.generated_date = DateTime.Now
                 payr.ttl_mandatory_ddt = Convert.ToDecimal(finalmandatory)
                 payr.ttl_deduction = Convert.ToDecimal(ttlDeduction + (basicsalary * ttldeductionInPercentage))
-                MessageBox.Show("Already exist", "Test")
+                'MessageBox.Show("Already exist", "Test")
             Else
                 Dim np As New netpay
                 np.payroll_id = Integer.Parse(NetpayID.GetNextId)
