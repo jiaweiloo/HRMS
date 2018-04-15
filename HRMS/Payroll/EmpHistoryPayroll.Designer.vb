@@ -22,11 +22,14 @@ Partial Class EmpHistoryPayroll
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EmpHistoryPayroll))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblCount = New System.Windows.Forms.Label()
         Me.dgv = New System.Windows.Forms.DataGridView()
         Me.btnRefresh = New System.Windows.Forms.Button()
         Me.btnPrint = New System.Windows.Forms.Button()
+        Me.doc = New System.Drawing.Printing.PrintDocument()
+        Me.dlgPreview = New System.Windows.Forms.PrintPreviewDialog()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -71,6 +74,7 @@ Partial Class EmpHistoryPayroll
         '
         'btnRefresh
         '
+        Me.btnRefresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnRefresh.AutoSize = True
         Me.btnRefresh.Location = New System.Drawing.Point(693, 43)
         Me.btnRefresh.Name = "btnRefresh"
@@ -81,6 +85,7 @@ Partial Class EmpHistoryPayroll
         '
         'btnPrint
         '
+        Me.btnPrint.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnPrint.AutoSize = True
         Me.btnPrint.Location = New System.Drawing.Point(691, 408)
         Me.btnPrint.Name = "btnPrint"
@@ -88,6 +93,21 @@ Partial Class EmpHistoryPayroll
         Me.btnPrint.TabIndex = 31
         Me.btnPrint.Text = "Print"
         Me.btnPrint.UseVisualStyleBackColor = True
+        '
+        'doc
+        '
+        Me.doc.OriginAtMargins = True
+        '
+        'dlgPreview
+        '
+        Me.dlgPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.dlgPreview.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.dlgPreview.ClientSize = New System.Drawing.Size(400, 300)
+        Me.dlgPreview.Enabled = True
+        Me.dlgPreview.Icon = CType(resources.GetObject("dlgPreview.Icon"), System.Drawing.Icon)
+        Me.dlgPreview.Name = "dlgPreview"
+        Me.dlgPreview.UseAntiAlias = True
+        Me.dlgPreview.Visible = False
         '
         'EmpHistoryPayroll
         '
@@ -113,4 +133,6 @@ Partial Class EmpHistoryPayroll
     Friend WithEvents dgv As DataGridView
     Friend WithEvents btnRefresh As Button
     Friend WithEvents btnPrint As Button
+    Friend WithEvents doc As Printing.PrintDocument
+    Friend WithEvents dlgPreview As PrintPreviewDialog
 End Class
