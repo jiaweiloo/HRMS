@@ -221,26 +221,29 @@ Partial Class ManagerViewLeave
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.btnPrint.Size = New System.Drawing.Size(153, 54)
-        Me.btnPrint.TabIndex = 8
+        Me.btnPrint.TabIndex = 0
         Me.btnPrint.Text = "&Print"
         Me.btnPrint.UseVisualStyleBackColor = True
         '
         'btnClose
         '
+        Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnClose.Font = New System.Drawing.Font("Modern No. 20", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClose.ForeColor = System.Drawing.Color.Red
         Me.btnClose.Location = New System.Drawing.Point(583, 427)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(75, 37)
-        Me.btnClose.TabIndex = 11
+        Me.btnClose.TabIndex = 1
         Me.btnClose.Text = "&Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
         'ManagerViewLeave
         '
+        Me.AcceptButton = Me.btnPrint
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(760, 491)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Label2)

@@ -86,6 +86,7 @@ Partial Class DisplayLeave
         '
         'Button1
         '
+        Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Button1.Font = New System.Drawing.Font("Modern No. 20", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Red
         Me.Button1.Location = New System.Drawing.Point(661, 5)
@@ -99,6 +100,7 @@ Partial Class DisplayLeave
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.Button1
         Me.ClientSize = New System.Drawing.Size(796, 362)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblName)

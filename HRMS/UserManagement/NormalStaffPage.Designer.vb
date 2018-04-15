@@ -64,7 +64,7 @@ Partial Class NormalStaffPage
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(166, 69)
-        Me.Button1.TabIndex = 3
+        Me.Button1.TabIndex = 0
         Me.Button1.Text = "Attendance"
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -118,7 +118,7 @@ Partial Class NormalStaffPage
         Me.btnView.Location = New System.Drawing.Point(519, 226)
         Me.btnView.Name = "btnView"
         Me.btnView.Size = New System.Drawing.Size(166, 73)
-        Me.btnView.TabIndex = 91
+        Me.btnView.TabIndex = 2
         Me.btnView.Text = "&View Leave"
         Me.btnView.UseVisualStyleBackColor = False
         '

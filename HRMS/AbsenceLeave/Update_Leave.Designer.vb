@@ -45,7 +45,7 @@ Partial Class Update_Leave
         Me.radApproved.Location = New System.Drawing.Point(274, 85)
         Me.radApproved.Name = "radApproved"
         Me.radApproved.Size = New System.Drawing.Size(98, 21)
-        Me.radApproved.TabIndex = 16
+        Me.radApproved.TabIndex = 1
         Me.radApproved.TabStop = True
         Me.radApproved.Text = "Approved"
         Me.radApproved.UseVisualStyleBackColor = True
@@ -57,7 +57,7 @@ Partial Class Update_Leave
         Me.radRejected.Location = New System.Drawing.Point(50, 85)
         Me.radRejected.Name = "radRejected"
         Me.radRejected.Size = New System.Drawing.Size(93, 21)
-        Me.radRejected.TabIndex = 15
+        Me.radRejected.TabIndex = 0
         Me.radRejected.TabStop = True
         Me.radRejected.Text = "Rejected"
         Me.radRejected.UseVisualStyleBackColor = True
@@ -182,6 +182,7 @@ Partial Class Update_Leave
         Me.btnExit.AutoSize = True
         Me.btnExit.BackColor = System.Drawing.Color.IndianRed
         Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnExit.Location = New System.Drawing.Point(565, 85)
@@ -194,9 +195,11 @@ Partial Class Update_Leave
         '
         'Update_Leave
         '
+        Me.AcceptButton = Me.btnUpdate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.CancelButton = Me.btnExit
         Me.ClientSize = New System.Drawing.Size(724, 363)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.Label8)
