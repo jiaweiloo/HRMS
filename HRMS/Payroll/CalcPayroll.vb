@@ -51,17 +51,16 @@
 
             finalpay -= finalmandatory
             'Check if payroll already have the records
-            If (db.netpays.Any(Function(o) o.generated_date.Value.Month.Equals(DateTime.Now.Month) And o.generated_date.Value.Month.Equals(DateTime.Now.Year) And o.people_id = ppl.people_id)) Then
-                'Dim payr = (From c In db.netpays
-                '            Where c.people_id = ppl.people_id And c.generated_date.Value.Month.Equals(DateTime.Now.Month) And c.generated_date.Value.Year.Equals(DateTime.Now.Year)).FirstOrDefault
-                'payr.total_attendance = 23 - totalabsent
-                'payr.total_absence = totalabsent
-                'payr.final_pay = Decimal.Parse(finalpay.ToString("0.00"))
-                'payr.generated_date = DateTime.Now
-                'Dim finalmandatory As Double = ttlmanDeduction + (ppl.hourly_rates * 9 * 23 * ttlmandedctionInPercentage)
-                'payr.ttl_mandatory_ddt = Convert.ToDecimal(finalmandatory)
-                'payr.ttl_deduction = Convert.ToDecimal(ttlDeduction + (ppl.hourly_rates * 9 * 23 * ttldeductionInPercentage))
-
+            If (db.netpays.Any(Function(o) o.people_id = ppl.people_id AndAlso o.generated_date.Value.Year.Equals(DateTime.Now.Year) AndAlso o.generated_date.Value.Month.Equals(DateTime.Now.Month))) Then
+                Dim payr = (From c In db.netpays
+                            Where c.people_id = ppl.people_id And c.generated_date.Value.Month.Equals(DateTime.Now.Month) And c.generated_date.Value.Year.Equals(DateTime.Now.Year)).FirstOrDefault
+                payr.total_attendance = 23 - totalabsent
+                payr.total_absence = totalabsent
+                payr.final_pay = Convert.ToDecimal(basicsalary)
+                payr.generated_date = DateTime.Now
+                payr.ttl_mandatory_ddt = Convert.ToDecimal(finalmandatory)
+                payr.ttl_deduction = Convert.ToDecimal(ttlDeduction + (basicsalary * ttldeductionInPercentage))
+                MessageBox.Show("Already exist", "Test")
             Else
                 Dim np As New netpay
                 np.payroll_id = Integer.Parse(NetpayID.GetNextId)

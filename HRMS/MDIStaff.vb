@@ -33,7 +33,7 @@ Public Class MDIStaff
     End Sub
 
     Private Sub ViewpayrollHistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewpayrollHistoryToolStripMenuItem.Click
-        Me.Show(EmpHistoryPayroll)
+        Me.ShowForm(EmpHistoryPayroll)
     End Sub
 
     Private Sub LogoutToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem1.Click

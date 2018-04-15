@@ -4,10 +4,10 @@ Public Class ManagerViewLeave
     Private Sub BindData()
 
         Dim status As String = cboStatus.Text
-
+        Dim month As String = cboMonth.Text
         Dim db As New HRMS_DBLinq2DataContext()
         Dim rs = From c In db.Leaves
-                 Where (status = "All" Or c.status = status)
+                 Where ((status = "All" Or c.status = status) And (month = "All" Or c.leave_date.Month.ToString() = month))
         dgvLeave.DataSource = rs
 
         lblCount.Text = rs.Count().ToString("0 record(s)")
@@ -20,6 +20,7 @@ Public Class ManagerViewLeave
 
     Private Sub ManagerViewLeave_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cboStatus.Text = "All"
+        cboMonth.Text = "All"
         lblID.Text = HRstaffid.hrstaffid
         lblName.Text = HRstaffid.hrname
         lblID.BackColor = Color.AliceBlue
@@ -76,8 +77,10 @@ Public Class ManagerViewLeave
 
 
         For Each item In db.Leaves
-            cnt += 1
-            body.AppendFormat("{0,10} {1,10} {2,13} {3,12} {4,10} {5,13}" & vbNewLine, item.leave_id, item.people_id, item.leave_date.ToShortTimeString, item.apply_date.ToShortTimeString, item.leave_duration, item.status)
+            If ((item.leave_date.Month.ToString() = cboMonth.Text Or cboMonth.Text = "All") And item.leave_date.Year = Year(Now)) Then
+                cnt += 1
+                body.AppendFormat("{0,10} {1,10} {2,13} {3,12} {4,10} {5,13}" & vbNewLine, item.leave_id, item.people_id, item.leave_date.ToShortTimeString, item.apply_date.ToShortTimeString, item.leave_duration, item.status)
+            End If
         Next
         body.AppendLine()
         body.AppendFormat("{0,2} record(s)", cnt)
@@ -90,5 +93,9 @@ Public Class ManagerViewLeave
             .DrawString(body.ToString(), fontBody, Brushes.Black, 0, 120)
         End With
 
+    End Sub
+
+    Private Sub cboMonth_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMonth.SelectedIndexChanged
+        BindData()
     End Sub
 End Class
