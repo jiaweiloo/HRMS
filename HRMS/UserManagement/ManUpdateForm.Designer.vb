@@ -22,6 +22,7 @@ Partial Class ManUpdateForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ManUpdateForm))
         Me.txtPhone = New System.Windows.Forms.MaskedTextBox()
         Me.txtIC = New System.Windows.Forms.MaskedTextBox()
         Me.txtName = New System.Windows.Forms.MaskedTextBox()
@@ -51,6 +52,11 @@ Partial Class ManUpdateForm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblJoin = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.btnPrint = New System.Windows.Forms.Button()
+        Me.doc = New System.Drawing.Printing.PrintDocument()
+        Me.dlgPreview = New System.Windows.Forms.PrintPreviewDialog()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -134,13 +140,14 @@ Partial Class ManUpdateForm
         'btnDelete
         '
         Me.btnDelete.BackColor = System.Drawing.Color.IndianRed
+        Me.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnDelete.Location = New System.Drawing.Point(350, 491)
+        Me.btnDelete.Location = New System.Drawing.Point(350, 537)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(102, 52)
         Me.btnDelete.TabIndex = 128
-        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.Text = "&Delete"
         Me.btnDelete.UseVisualStyleBackColor = False
         '
         'Label9
@@ -176,26 +183,28 @@ Partial Class ManUpdateForm
         'btnCancel
         '
         Me.btnCancel.BackColor = System.Drawing.Color.Goldenrod
+        Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCancel.Location = New System.Drawing.Point(459, 491)
+        Me.btnCancel.Location = New System.Drawing.Point(459, 537)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(97, 53)
         Me.btnCancel.TabIndex = 124
-        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.Text = "&Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
         'btnUpdate
         '
         Me.btnUpdate.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnUpdate.Location = New System.Drawing.Point(241, 491)
+        Me.btnUpdate.Location = New System.Drawing.Point(241, 537)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(104, 52)
         Me.btnUpdate.TabIndex = 123
-        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.Text = "&Update"
         Me.btnUpdate.UseVisualStyleBackColor = False
         '
         'txtAddress
@@ -230,7 +239,7 @@ Partial Class ManUpdateForm
         Me.radFemale.AutoSize = True
         Me.radFemale.Location = New System.Drawing.Point(109, 6)
         Me.radFemale.Name = "radFemale"
-        Me.radFemale.Size = New System.Drawing.Size(103, 24)
+        Me.radFemale.Size = New System.Drawing.Size(93, 24)
         Me.radFemale.TabIndex = 18
         Me.radFemale.TabStop = True
         Me.radFemale.Text = "Female"
@@ -242,7 +251,7 @@ Partial Class ManUpdateForm
         Me.radMale.Checked = True
         Me.radMale.Location = New System.Drawing.Point(0, 6)
         Me.radMale.Name = "radMale"
-        Me.radMale.Size = New System.Drawing.Size(80, 24)
+        Me.radMale.Size = New System.Drawing.Size(72, 24)
         Me.radMale.TabIndex = 0
         Me.radMale.TabStop = True
         Me.radMale.Text = "Male"
@@ -345,12 +354,59 @@ Partial Class ManUpdateForm
         Me.Label2.TabIndex = 111
         Me.Label2.Text = "IC number :"
         '
+        'lblJoin
+        '
+        Me.lblJoin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblJoin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJoin.Location = New System.Drawing.Point(241, 493)
+        Me.lblJoin.Name = "lblJoin"
+        Me.lblJoin.Size = New System.Drawing.Size(303, 29)
+        Me.lblJoin.TabIndex = 138
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(77, 494)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(116, 20)
+        Me.Label12.TabIndex = 137
+        Me.Label12.Text = "Joined Date :"
+        '
+        'btnPrint
+        '
+        Me.btnPrint.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnPrint.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnPrint.Location = New System.Drawing.Point(562, 536)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(102, 53)
+        Me.btnPrint.TabIndex = 139
+        Me.btnPrint.Text = "&Print"
+        Me.btnPrint.UseVisualStyleBackColor = False
+        '
+        'doc
+        '
+        '
+        'dlgPreview
+        '
+        Me.dlgPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.dlgPreview.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.dlgPreview.ClientSize = New System.Drawing.Size(400, 300)
+        Me.dlgPreview.Enabled = True
+        Me.dlgPreview.Icon = CType(resources.GetObject("dlgPreview.Icon"), System.Drawing.Icon)
+        Me.dlgPreview.Name = "PrintPreviewDialog1"
+        Me.dlgPreview.Visible = False
+        '
         'ManUpdateForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(722, 565)
+        Me.ClientSize = New System.Drawing.Size(720, 601)
+        Me.Controls.Add(Me.btnPrint)
+        Me.Controls.Add(Me.lblJoin)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.txtPhone)
         Me.Controls.Add(Me.txtIC)
         Me.Controls.Add(Me.txtName)
@@ -380,7 +436,7 @@ Partial Class ManUpdateForm
         Me.Controls.Add(Me.Label2)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "ManUpdateForm"
-        Me.Text = "ManUpdateForm"
+        Me.Text = "Update / Delete HR Staff"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
@@ -417,4 +473,9 @@ Partial Class ManUpdateForm
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents lblJoin As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents btnPrint As Button
+    Friend WithEvents doc As Printing.PrintDocument
+    Friend WithEvents dlgPreview As PrintPreviewDialog
 End Class

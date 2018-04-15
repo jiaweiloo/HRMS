@@ -30,18 +30,19 @@ Partial Class MDIStaff
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.PrintSetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.LogoutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimeAttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PayrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewpayrollHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LogoutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ApplyLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip
         '
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.TimeAttendanceToolStripMenuItem, Me.PayrollToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.TimeAttendanceToolStripMenuItem, Me.ApplyLeaveToolStripMenuItem, Me.PayrollToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Padding = New System.Windows.Forms.Padding(9, 2, 0, 2)
@@ -63,29 +64,35 @@ Partial Class MDIStaff
         Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(205, 30)
         Me.NewToolStripMenuItem.Text = "&New"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(249, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(202, 6)
         '
         'PrintSetupToolStripMenuItem
         '
         Me.PrintSetupToolStripMenuItem.Name = "PrintSetupToolStripMenuItem"
-        Me.PrintSetupToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.PrintSetupToolStripMenuItem.Size = New System.Drawing.Size(205, 30)
         Me.PrintSetupToolStripMenuItem.Text = "Logout Lunch"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(249, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(202, 6)
+        '
+        'LogoutToolStripMenuItem1
+        '
+        Me.LogoutToolStripMenuItem1.Name = "LogoutToolStripMenuItem1"
+        Me.LogoutToolStripMenuItem1.Size = New System.Drawing.Size(205, 30)
+        Me.LogoutToolStripMenuItem1.Text = "&Logout"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(205, 30)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'TimeAttendanceToolStripMenuItem
@@ -98,7 +105,7 @@ Partial Class MDIStaff
         '
         Me.PayrollToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewpayrollHistoryToolStripMenuItem})
         Me.PayrollToolStripMenuItem.Name = "PayrollToolStripMenuItem"
-        Me.PayrollToolStripMenuItem.Size = New System.Drawing.Size(76, 29)
+        Me.PayrollToolStripMenuItem.Size = New System.Drawing.Size(77, 29)
         Me.PayrollToolStripMenuItem.Text = "Payroll"
         '
         'ViewpayrollHistoryToolStripMenuItem
@@ -107,11 +114,11 @@ Partial Class MDIStaff
         Me.ViewpayrollHistoryToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
         Me.ViewpayrollHistoryToolStripMenuItem.Text = "View &payroll history"
         '
-        'LogoutToolStripMenuItem1
+        'ApplyLeaveToolStripMenuItem
         '
-        Me.LogoutToolStripMenuItem1.Name = "LogoutToolStripMenuItem1"
-        Me.LogoutToolStripMenuItem1.Size = New System.Drawing.Size(252, 30)
-        Me.LogoutToolStripMenuItem1.Text = "&Logout"
+        Me.ApplyLeaveToolStripMenuItem.Name = "ApplyLeaveToolStripMenuItem"
+        Me.ApplyLeaveToolStripMenuItem.Size = New System.Drawing.Size(120, 29)
+        Me.ApplyLeaveToolStripMenuItem.Text = "Apply Leave"
         '
         'MDIStaff
         '
@@ -124,7 +131,8 @@ Partial Class MDIStaff
         Me.MainMenuStrip = Me.MenuStrip
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "MDIStaff"
-        Me.Text = "MDIStaff"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Staff Page"
         Me.MenuStrip.ResumeLayout(False)
         Me.MenuStrip.PerformLayout()
         Me.ResumeLayout(False)
@@ -142,4 +150,5 @@ Partial Class MDIStaff
     Friend WithEvents PayrollToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewpayrollHistoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogoutToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ApplyLeaveToolStripMenuItem As ToolStripMenuItem
 End Class

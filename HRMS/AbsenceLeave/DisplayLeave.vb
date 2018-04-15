@@ -30,8 +30,6 @@
         BindData()
         MDIParent1.AddNewStaffToolStripMenuItem.Enabled = True
         MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.RetrieveStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.DeleteStaffDetailsToolStripMenuItem.Enabled = True
     End Sub
 
     Private Sub cboLeave_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboLeave.SelectedIndexChanged
@@ -59,7 +57,5 @@
         lblName.Text = HRstaffid.hrname
         MDIParent1.AddNewStaffToolStripMenuItem.Enabled = True
         MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.RetrieveStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.DeleteStaffDetailsToolStripMenuItem.Enabled = True
     End Sub
 End Class

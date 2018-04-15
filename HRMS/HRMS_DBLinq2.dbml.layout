@@ -8,12 +8,6 @@
         <elementListCompartment Id="d365500e-d683-4fd7-b319-6bd099198ab2" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="600a332e-7041-4628-8e5b-5aa1d3eb4a05" absoluteBounds="3.75, 0.75, 2, 3.6939111328124996">
-      <DataClassMoniker Name="/HRMS_DBLinq2DataContext/People" />
-      <nestedChildShapes>
-        <elementListCompartment Id="b08e5241-7e48-4a8a-b69e-4746687f8568" absoluteBounds="3.765, 1.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="2f3dc739-4df9-46da-add3-864300030504" absoluteBounds="0.75, 5.75, 2, 1.9631982421875005">
       <DataClassMoniker Name="/HRMS_DBLinq2DataContext/deduction" />
       <nestedChildShapes>
@@ -42,6 +36,12 @@
       <DataClassMoniker Name="/HRMS_DBLinq2DataContext/overtime" />
       <nestedChildShapes>
         <elementListCompartment Id="423d2644-50a7-407e-b180-8ad2df25e09e" absoluteBounds="6.765, 8.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9570e329-0744-459e-8194-3bd14b453a0a" absoluteBounds="3.375, 1.125, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/HRMS_DBLinq2DataContext/People" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f2298c13-d4b3-43a9-a8ed-9b289d5cfa06" absoluteBounds="3.39, 1.585, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

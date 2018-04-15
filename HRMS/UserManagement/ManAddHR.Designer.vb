@@ -47,42 +47,45 @@ Partial Class ManAddHR
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblDepart = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.lblTimeNow = New System.Windows.Forms.Label()
+        Me.cboDepartment = New System.Windows.Forms.ComboBox()
+        Me.btnHome = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtPhone
         '
         Me.txtPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhone.Location = New System.Drawing.Point(282, 379)
+        Me.txtPhone.Location = New System.Drawing.Point(283, 405)
         Me.txtPhone.Mask = "00000000009"
         Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(273, 26)
+        Me.txtPhone.Size = New System.Drawing.Size(297, 26)
         Me.txtPhone.TabIndex = 102
         '
         'txtIC
         '
         Me.txtIC.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIC.Location = New System.Drawing.Point(282, 257)
+        Me.txtIC.Location = New System.Drawing.Point(283, 283)
         Me.txtIC.Mask = "000000-00-0000"
         Me.txtIC.Name = "txtIC"
-        Me.txtIC.Size = New System.Drawing.Size(273, 26)
+        Me.txtIC.Size = New System.Drawing.Size(297, 26)
         Me.txtIC.TabIndex = 101
         '
         'txtName
         '
         Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.Location = New System.Drawing.Point(282, 215)
+        Me.txtName.Location = New System.Drawing.Point(283, 241)
         Me.txtName.Mask = "LLLLLLLLLLLLLLLLLL"
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(273, 26)
+        Me.txtName.Size = New System.Drawing.Size(297, 26)
         Me.txtName.TabIndex = 100
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(297, 32)
+        Me.Label9.Location = New System.Drawing.Point(320, 38)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(97, 20)
         Me.Label9.TabIndex = 99
@@ -93,7 +96,7 @@ Partial Class ManAddHR
         Me.lblHRname.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.lblHRname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblHRname.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHRname.Location = New System.Drawing.Point(430, 56)
+        Me.lblHRname.Location = New System.Drawing.Point(455, 62)
         Me.lblHRname.Name = "lblHRname"
         Me.lblHRname.Size = New System.Drawing.Size(125, 30)
         Me.lblHRname.TabIndex = 98
@@ -103,7 +106,7 @@ Partial Class ManAddHR
         Me.lblHRid.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.lblHRid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblHRid.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHRid.Location = New System.Drawing.Point(430, 22)
+        Me.lblHRid.Location = New System.Drawing.Point(455, 28)
         Me.lblHRid.Name = "lblHRid"
         Me.lblHRid.Size = New System.Drawing.Size(125, 30)
         Me.lblHRid.TabIndex = 97
@@ -114,7 +117,7 @@ Partial Class ManAddHR
         Me.Label8.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label8.Location = New System.Drawing.Point(131, 173)
+        Me.Label8.Location = New System.Drawing.Point(132, 199)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(114, 20)
         Me.Label8.TabIndex = 95
@@ -123,12 +126,13 @@ Partial Class ManAddHR
         'btnCancel
         '
         Me.btnCancel.BackColor = System.Drawing.Color.IndianRed
+        Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCancel.Location = New System.Drawing.Point(426, 502)
+        Me.btnCancel.Location = New System.Drawing.Point(438, 538)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(129, 52)
+        Me.btnCancel.Size = New System.Drawing.Size(142, 52)
         Me.btnCancel.TabIndex = 94
         Me.btnCancel.Text = "&Reset"
         Me.btnCancel.UseVisualStyleBackColor = False
@@ -136,11 +140,12 @@ Partial Class ManAddHR
         'btnConfirm
         '
         Me.btnConfirm.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnConfirm.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConfirm.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnConfirm.Location = New System.Drawing.Point(282, 502)
+        Me.btnConfirm.Location = New System.Drawing.Point(282, 538)
         Me.btnConfirm.Name = "btnConfirm"
-        Me.btnConfirm.Size = New System.Drawing.Size(122, 52)
+        Me.btnConfirm.Size = New System.Drawing.Size(135, 52)
         Me.btnConfirm.TabIndex = 93
         Me.btnConfirm.Text = "&Confirm"
         Me.btnConfirm.UseVisualStyleBackColor = False
@@ -148,17 +153,17 @@ Partial Class ManAddHR
         'txtAddress
         '
         Me.txtAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddress.Location = New System.Drawing.Point(282, 463)
+        Me.txtAddress.Location = New System.Drawing.Point(283, 489)
         Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(273, 26)
+        Me.txtAddress.Size = New System.Drawing.Size(297, 26)
         Me.txtAddress.TabIndex = 92
         '
         'txtEmail
         '
         Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(282, 421)
+        Me.txtEmail.Location = New System.Drawing.Point(283, 447)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(273, 26)
+        Me.txtEmail.Size = New System.Drawing.Size(297, 26)
         Me.txtEmail.TabIndex = 91
         '
         'GroupBox1
@@ -166,9 +171,9 @@ Partial Class ManAddHR
         Me.GroupBox1.Controls.Add(Me.radFemale)
         Me.GroupBox1.Controls.Add(Me.radMale)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(282, 337)
+        Me.GroupBox1.Location = New System.Drawing.Point(283, 363)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(273, 36)
+        Me.GroupBox1.Size = New System.Drawing.Size(297, 36)
         Me.GroupBox1.TabIndex = 90
         Me.GroupBox1.TabStop = False
         '
@@ -198,11 +203,11 @@ Partial Class ManAddHR
         'DateDOB
         '
         Me.DateDOB.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateDOB.Location = New System.Drawing.Point(282, 297)
+        Me.DateDOB.Location = New System.Drawing.Point(283, 323)
         Me.DateDOB.MaxDate = New Date(2018, 12, 31, 0, 0, 0, 0)
         Me.DateDOB.MinDate = New Date(1920, 1, 1, 0, 0, 0, 0)
         Me.DateDOB.Name = "DateDOB"
-        Me.DateDOB.Size = New System.Drawing.Size(273, 26)
+        Me.DateDOB.Size = New System.Drawing.Size(297, 26)
         Me.DateDOB.TabIndex = 89
         Me.DateDOB.Value = New Date(2002, 1, 1, 0, 0, 0, 0)
         '
@@ -210,9 +215,9 @@ Partial Class ManAddHR
         '
         Me.Label11.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(130, 56)
+        Me.Label11.Location = New System.Drawing.Point(131, 82)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(185, 45)
+        Me.Label11.Size = New System.Drawing.Size(168, 45)
         Me.Label11.TabIndex = 88
         Me.Label11.Text = "Add New HR"
         '
@@ -220,9 +225,9 @@ Partial Class ManAddHR
         '
         Me.lblStaffID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblStaffID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStaffID.Location = New System.Drawing.Point(282, 123)
+        Me.lblStaffID.Location = New System.Drawing.Point(283, 149)
         Me.lblStaffID.Name = "lblStaffID"
-        Me.lblStaffID.Size = New System.Drawing.Size(273, 33)
+        Me.lblStaffID.Size = New System.Drawing.Size(297, 33)
         Me.lblStaffID.TabIndex = 87
         '
         'Label10
@@ -231,7 +236,7 @@ Partial Class ManAddHR
         Me.Label10.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label10.Location = New System.Drawing.Point(131, 124)
+        Me.Label10.Location = New System.Drawing.Point(132, 150)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(83, 20)
         Me.Label10.TabIndex = 86
@@ -243,7 +248,7 @@ Partial Class ManAddHR
         Me.Label7.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label7.Location = New System.Drawing.Point(131, 421)
+        Me.Label7.Location = New System.Drawing.Point(132, 447)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(68, 20)
         Me.Label7.TabIndex = 85
@@ -255,7 +260,7 @@ Partial Class ManAddHR
         Me.Label6.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label6.Location = New System.Drawing.Point(131, 463)
+        Me.Label6.Location = New System.Drawing.Point(132, 489)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(90, 20)
         Me.Label6.TabIndex = 84
@@ -267,7 +272,7 @@ Partial Class ManAddHR
         Me.Label5.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label5.Location = New System.Drawing.Point(131, 379)
+        Me.Label5.Location = New System.Drawing.Point(132, 405)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(97, 20)
         Me.Label5.TabIndex = 83
@@ -279,7 +284,7 @@ Partial Class ManAddHR
         Me.Label4.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label4.Location = New System.Drawing.Point(131, 337)
+        Me.Label4.Location = New System.Drawing.Point(132, 363)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(84, 20)
         Me.Label4.TabIndex = 82
@@ -291,7 +296,7 @@ Partial Class ManAddHR
         Me.Label3.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label3.Location = New System.Drawing.Point(131, 297)
+        Me.Label3.Location = New System.Drawing.Point(132, 323)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(125, 20)
         Me.Label3.TabIndex = 81
@@ -303,7 +308,7 @@ Partial Class ManAddHR
         Me.Label2.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label2.Location = New System.Drawing.Point(131, 257)
+        Me.Label2.Location = New System.Drawing.Point(132, 283)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(102, 20)
         Me.Label2.TabIndex = 80
@@ -315,29 +320,66 @@ Partial Class ManAddHR
         Me.Label1.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label1.Location = New System.Drawing.Point(131, 218)
+        Me.Label1.Location = New System.Drawing.Point(132, 244)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(70, 20)
         Me.Label1.TabIndex = 79
         Me.Label1.Text = "Name : "
         '
-        'lblDepart
+        'Label13
         '
-        Me.lblDepart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblDepart.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDepart.Location = New System.Drawing.Point(282, 172)
-        Me.lblDepart.Name = "lblDepart"
-        Me.lblDepart.Size = New System.Drawing.Size(273, 30)
-        Me.lblDepart.TabIndex = 103
-        Me.lblDepart.Text = "HR Dept."
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(324, 71)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(84, 20)
+        Me.Label13.TabIndex = 141
+        Me.Label13.Text = "Manager "
+        '
+        'lblTimeNow
+        '
+        Me.lblTimeNow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblTimeNow.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTimeNow.Location = New System.Drawing.Point(136, 32)
+        Me.lblTimeNow.Name = "lblTimeNow"
+        Me.lblTimeNow.Size = New System.Drawing.Size(178, 26)
+        Me.lblTimeNow.TabIndex = 142
+        '
+        'cboDepartment
+        '
+        Me.cboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboDepartment.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboDepartment.FormattingEnabled = True
+        Me.cboDepartment.Items.AddRange(New Object() {"IT Dept.", "HR Dept.", "Accounting Dept.", "Marketing Dept."})
+        Me.cboDepartment.Location = New System.Drawing.Point(283, 196)
+        Me.cboDepartment.Name = "cboDepartment"
+        Me.cboDepartment.Size = New System.Drawing.Size(297, 28)
+        Me.cboDepartment.TabIndex = 143
+        '
+        'btnHome
+        '
+        Me.btnHome.BackColor = System.Drawing.Color.IndianRed
+        Me.btnHome.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnHome.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnHome.Location = New System.Drawing.Point(455, 95)
+        Me.btnHome.Name = "btnHome"
+        Me.btnHome.Size = New System.Drawing.Size(125, 40)
+        Me.btnHome.TabIndex = 144
+        Me.btnHome.Text = "&HomePage"
+        Me.btnHome.UseVisualStyleBackColor = False
         '
         'ManAddHR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(748, 590)
-        Me.Controls.Add(Me.lblDepart)
+        Me.ClientSize = New System.Drawing.Size(747, 602)
+        Me.Controls.Add(Me.btnHome)
+        Me.Controls.Add(Me.cboDepartment)
+        Me.Controls.Add(Me.lblTimeNow)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.txtPhone)
         Me.Controls.Add(Me.txtIC)
         Me.Controls.Add(Me.txtName)
@@ -396,5 +438,8 @@ Partial Class ManAddHR
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents lblDepart As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents lblTimeNow As Label
+    Friend WithEvents cboDepartment As ComboBox
+    Friend WithEvents btnHome As Button
 End Class

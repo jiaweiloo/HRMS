@@ -32,6 +32,7 @@ Partial Class HRHomepage
         '
         Me.btnGoLeave.AutoSize = True
         Me.btnGoLeave.BackColor = System.Drawing.Color.SpringGreen
+        Me.btnGoLeave.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnGoLeave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGoLeave.Location = New System.Drawing.Point(0, 283)
         Me.btnGoLeave.Name = "btnGoLeave"
@@ -44,6 +45,7 @@ Partial Class HRHomepage
         '
         Me.btnGoPayroll.AutoSize = True
         Me.btnGoPayroll.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btnGoPayroll.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnGoPayroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGoPayroll.Location = New System.Drawing.Point(493, 283)
         Me.btnGoPayroll.Name = "btnGoPayroll"
@@ -56,6 +58,7 @@ Partial Class HRHomepage
         '
         Me.btnAttend.AutoSize = True
         Me.btnAttend.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnAttend.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAttend.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAttend.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnAttend.Location = New System.Drawing.Point(0, 2)
@@ -69,6 +72,7 @@ Partial Class HRHomepage
         '
         Me.btnStaff.AutoSize = True
         Me.btnStaff.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnStaff.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnStaff.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnStaff.Location = New System.Drawing.Point(493, 2)
         Me.btnStaff.Name = "btnStaff"

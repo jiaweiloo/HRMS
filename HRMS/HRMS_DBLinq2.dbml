@@ -11,25 +11,6 @@
       <Column Name="lunch_out" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.People" Member="Peoples">
-    <Type Name="People">
-      <Column Name="people_id" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="people_index" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="people_password" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="people_name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="people_ic" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="people_DOB" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="people_gender" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="people_phone" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="people_email" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
-      <Column Name="people_address" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="people_role" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="department_name" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
-      <Column Name="leave_num" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="extra_leave" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="hourly_rates" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="dbo.deduction" Member="deductions">
     <Type Name="deduction">
       <Column Name="deduction_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -78,6 +59,26 @@
       <Column Name="people_id" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Column Name="overtime_duration" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="overtime_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.People" Member="Peoples">
+    <Type Name="People">
+      <Column Name="people_id" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="people_index" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="people_password" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="people_name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="people_ic" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="people_DOB" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="people_gender" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="people_phone" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="people_email" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="people_address" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="people_role" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="department_name" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="leave_num" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="extra_leave" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="hourly_rates" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="joined_year" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

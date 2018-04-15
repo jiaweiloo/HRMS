@@ -73,9 +73,9 @@ Partial Class Update_Leave
         Me.btnUpdate.Location = New System.Drawing.Point(511, 106)
         Me.btnUpdate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(119, 38)
+        Me.btnUpdate.Size = New System.Drawing.Size(119, 50)
         Me.btnUpdate.TabIndex = 14
-        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.Text = "&Update"
         Me.btnUpdate.UseVisualStyleBackColor = False
         '
         'Label4
@@ -187,15 +187,16 @@ Partial Class Update_Leave
         Me.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnExit.Location = New System.Drawing.Point(636, 106)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(109, 38)
+        Me.btnExit.Size = New System.Drawing.Size(109, 50)
         Me.btnExit.TabIndex = 23
-        Me.btnExit.Text = "Exit"
+        Me.btnExit.Text = "&Exit"
         Me.btnExit.UseVisualStyleBackColor = False
         '
         'Update_Leave
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(815, 454)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.Label8)

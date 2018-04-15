@@ -31,45 +31,49 @@ Partial Class ManagerMainPage
         'btnAccount
         '
         Me.btnAccount.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.btnAccount.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAccount.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAccount.Location = New System.Drawing.Point(1, -2)
+        Me.btnAccount.Location = New System.Drawing.Point(4, -12)
         Me.btnAccount.Name = "btnAccount"
-        Me.btnAccount.Size = New System.Drawing.Size(437, 269)
-        Me.btnAccount.TabIndex = 0
-        Me.btnAccount.Text = "Account Management"
+        Me.btnAccount.Size = New System.Drawing.Size(434, 279)
+        Me.btnAccount.TabIndex = 1
+        Me.btnAccount.Text = "&Account Management"
         Me.btnAccount.UseVisualStyleBackColor = False
         '
         'btnAttend
         '
         Me.btnAttend.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnAttend.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAttend.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAttend.Location = New System.Drawing.Point(444, -2)
+        Me.btnAttend.Location = New System.Drawing.Point(447, -12)
         Me.btnAttend.Name = "btnAttend"
-        Me.btnAttend.Size = New System.Drawing.Size(399, 269)
-        Me.btnAttend.TabIndex = 1
-        Me.btnAttend.Text = "Time and Attendance"
+        Me.btnAttend.Size = New System.Drawing.Size(396, 279)
+        Me.btnAttend.TabIndex = 2
+        Me.btnAttend.Text = "&Time and Attendance"
         Me.btnAttend.UseVisualStyleBackColor = False
         '
         'btnViewleave
         '
         Me.btnViewleave.BackColor = System.Drawing.Color.SpringGreen
+        Me.btnViewleave.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnViewleave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnViewleave.Location = New System.Drawing.Point(1, 273)
+        Me.btnViewleave.Location = New System.Drawing.Point(4, 263)
         Me.btnViewleave.Name = "btnViewleave"
-        Me.btnViewleave.Size = New System.Drawing.Size(437, 272)
-        Me.btnViewleave.TabIndex = 2
-        Me.btnViewleave.Text = "View Leave"
+        Me.btnViewleave.Size = New System.Drawing.Size(434, 282)
+        Me.btnViewleave.TabIndex = 3
+        Me.btnViewleave.Text = "&View Leave"
         Me.btnViewleave.UseVisualStyleBackColor = False
         '
         'btnLogout
         '
         Me.btnLogout.BackColor = System.Drawing.Color.IndianRed
+        Me.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.Location = New System.Drawing.Point(444, 273)
+        Me.btnLogout.Location = New System.Drawing.Point(447, 263)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(399, 272)
-        Me.btnLogout.TabIndex = 3
-        Me.btnLogout.Text = "Log Out"
+        Me.btnLogout.Size = New System.Drawing.Size(396, 282)
+        Me.btnLogout.TabIndex = 4
+        Me.btnLogout.Text = "&Log Out"
         Me.btnLogout.UseVisualStyleBackColor = False
         '
         'ManagerMainPage

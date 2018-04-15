@@ -39,4 +39,8 @@ Public Class MDIStaff
     Private Sub LogoutToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem1.Click
         Me.Close()
     End Sub
+
+    Private Sub ApplyLeaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplyLeaveToolStripMenuItem.Click
+        Me.ShowForm(Form1)
+    End Sub
 End Class

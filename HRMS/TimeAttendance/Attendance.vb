@@ -70,7 +70,6 @@ Public Class Attendance
         End If
         MDIManager.AddNewHRToolStripMenuItem.Enabled = True
         MDIManager.UpdateHRFetailsToolStripMenuItem.Enabled = True
-        MDIManager.DeleteHRToolStripMenuItem.Enabled = True
     End Sub
 
 
@@ -207,7 +206,10 @@ Public Class Attendance
         UpdateAttendance.ShowDialog()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
         Me.Close()
+        MDIParent1.Close()
+        MDIStaff.Close()
+        MDIManager.Close()
     End Sub
 End Class

@@ -27,22 +27,20 @@ Partial Class MDIParent1
         Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.HomepagetoolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.LogoutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UserManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewStaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateStaffDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RetrieveStaffDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeleteStaffDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbsenceLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PayrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TimeAttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LogoutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.HomepageToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckDeductionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckMandatoryDeductionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckOvertimeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckNetpayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TimeAttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -68,23 +66,29 @@ Partial Class MDIParent1
         'HomepagetoolStripMenuItem
         '
         Me.HomepagetoolStripMenuItem.Name = "HomepagetoolStripMenuItem"
-        Me.HomepagetoolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.HomepagetoolStripMenuItem.Size = New System.Drawing.Size(186, 30)
         Me.HomepagetoolStripMenuItem.Text = "&Homepage"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(249, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(183, 6)
+        '
+        'LogoutToolStripMenuItem1
+        '
+        Me.LogoutToolStripMenuItem1.Name = "LogoutToolStripMenuItem1"
+        Me.LogoutToolStripMenuItem1.Size = New System.Drawing.Size(186, 30)
+        Me.LogoutToolStripMenuItem1.Text = "&Logout"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(186, 30)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'UserManagementToolStripMenuItem
         '
-        Me.UserManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewStaffToolStripMenuItem, Me.UpdateStaffDetailsToolStripMenuItem, Me.RetrieveStaffDetailsToolStripMenuItem, Me.DeleteStaffDetailsToolStripMenuItem})
+        Me.UserManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewStaffToolStripMenuItem, Me.UpdateStaffDetailsToolStripMenuItem})
         Me.UserManagementToolStripMenuItem.Name = "UserManagementToolStripMenuItem"
         Me.UserManagementToolStripMenuItem.Size = New System.Drawing.Size(169, 29)
         Me.UserManagementToolStripMenuItem.Text = "User Management"
@@ -92,26 +96,14 @@ Partial Class MDIParent1
         'AddNewStaffToolStripMenuItem
         '
         Me.AddNewStaffToolStripMenuItem.Name = "AddNewStaffToolStripMenuItem"
-        Me.AddNewStaffToolStripMenuItem.Size = New System.Drawing.Size(257, 30)
+        Me.AddNewStaffToolStripMenuItem.Size = New System.Drawing.Size(255, 30)
         Me.AddNewStaffToolStripMenuItem.Text = "Add New Staff"
         '
         'UpdateStaffDetailsToolStripMenuItem
         '
         Me.UpdateStaffDetailsToolStripMenuItem.Name = "UpdateStaffDetailsToolStripMenuItem"
-        Me.UpdateStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(257, 30)
-        Me.UpdateStaffDetailsToolStripMenuItem.Text = "Update Staff Details"
-        '
-        'RetrieveStaffDetailsToolStripMenuItem
-        '
-        Me.RetrieveStaffDetailsToolStripMenuItem.Name = "RetrieveStaffDetailsToolStripMenuItem"
-        Me.RetrieveStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(257, 30)
-        Me.RetrieveStaffDetailsToolStripMenuItem.Text = "Retrieve Staff Details"
-        '
-        'DeleteStaffDetailsToolStripMenuItem
-        '
-        Me.DeleteStaffDetailsToolStripMenuItem.Name = "DeleteStaffDetailsToolStripMenuItem"
-        Me.DeleteStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(257, 30)
-        Me.DeleteStaffDetailsToolStripMenuItem.Text = "Delete Staff Details"
+        Me.UpdateStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(244, 30)
+        Me.UpdateStaffDetailsToolStripMenuItem.Text = "Staff Management"
         '
         'AbsenceLeaveToolStripMenuItem
         '
@@ -123,57 +115,51 @@ Partial Class MDIParent1
         'UpdateLeaveToolStripMenuItem
         '
         Me.UpdateLeaveToolStripMenuItem.Name = "UpdateLeaveToolStripMenuItem"
-        Me.UpdateLeaveToolStripMenuItem.Size = New System.Drawing.Size(203, 30)
+        Me.UpdateLeaveToolStripMenuItem.Size = New System.Drawing.Size(204, 30)
         Me.UpdateLeaveToolStripMenuItem.Text = "&Update Leave"
         '
         'PayrollToolStripMenuItem
         '
         Me.PayrollToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomepageToolStripMenuItem1, Me.CheckDeductionToolStripMenuItem, Me.CheckMandatoryDeductionToolStripMenuItem, Me.CheckOvertimeToolStripMenuItem, Me.CheckNetpayToolStripMenuItem})
         Me.PayrollToolStripMenuItem.Name = "PayrollToolStripMenuItem"
-        Me.PayrollToolStripMenuItem.Size = New System.Drawing.Size(76, 29)
+        Me.PayrollToolStripMenuItem.Size = New System.Drawing.Size(77, 29)
         Me.PayrollToolStripMenuItem.Text = "Payroll"
+        '
+        'HomepageToolStripMenuItem1
+        '
+        Me.HomepageToolStripMenuItem1.Name = "HomepageToolStripMenuItem1"
+        Me.HomepageToolStripMenuItem1.Size = New System.Drawing.Size(275, 30)
+        Me.HomepageToolStripMenuItem1.Text = "Homepage"
+        '
+        'CheckDeductionToolStripMenuItem
+        '
+        Me.CheckDeductionToolStripMenuItem.Name = "CheckDeductionToolStripMenuItem"
+        Me.CheckDeductionToolStripMenuItem.Size = New System.Drawing.Size(275, 30)
+        Me.CheckDeductionToolStripMenuItem.Text = "Check &Deduction"
+        '
+        'CheckMandatoryDeductionToolStripMenuItem
+        '
+        Me.CheckMandatoryDeductionToolStripMenuItem.Name = "CheckMandatoryDeductionToolStripMenuItem"
+        Me.CheckMandatoryDeductionToolStripMenuItem.Size = New System.Drawing.Size(275, 30)
+        Me.CheckMandatoryDeductionToolStripMenuItem.Text = "Check &Mandatory De..."
+        '
+        'CheckOvertimeToolStripMenuItem
+        '
+        Me.CheckOvertimeToolStripMenuItem.Name = "CheckOvertimeToolStripMenuItem"
+        Me.CheckOvertimeToolStripMenuItem.Size = New System.Drawing.Size(275, 30)
+        Me.CheckOvertimeToolStripMenuItem.Text = "Check &Overtime"
+        '
+        'CheckNetpayToolStripMenuItem
+        '
+        Me.CheckNetpayToolStripMenuItem.Name = "CheckNetpayToolStripMenuItem"
+        Me.CheckNetpayToolStripMenuItem.Size = New System.Drawing.Size(275, 30)
+        Me.CheckNetpayToolStripMenuItem.Text = "Check &Netpay"
         '
         'TimeAttendanceToolStripMenuItem
         '
         Me.TimeAttendanceToolStripMenuItem.Name = "TimeAttendanceToolStripMenuItem"
         Me.TimeAttendanceToolStripMenuItem.Size = New System.Drawing.Size(162, 29)
         Me.TimeAttendanceToolStripMenuItem.Text = "Time & Attendance"
-        '
-        'LogoutToolStripMenuItem1
-        '
-        Me.LogoutToolStripMenuItem1.Name = "LogoutToolStripMenuItem1"
-        Me.LogoutToolStripMenuItem1.Size = New System.Drawing.Size(252, 30)
-        Me.LogoutToolStripMenuItem1.Text = "&Logout"
-        '
-        'HomepageToolStripMenuItem1
-        '
-        Me.HomepageToolStripMenuItem1.Name = "HomepageToolStripMenuItem1"
-        Me.HomepageToolStripMenuItem1.Size = New System.Drawing.Size(252, 30)
-        Me.HomepageToolStripMenuItem1.Text = "Homepage"
-        '
-        'CheckDeductionToolStripMenuItem
-        '
-        Me.CheckDeductionToolStripMenuItem.Name = "CheckDeductionToolStripMenuItem"
-        Me.CheckDeductionToolStripMenuItem.Size = New System.Drawing.Size(274, 30)
-        Me.CheckDeductionToolStripMenuItem.Text = "Check &Deduction"
-        '
-        'CheckMandatoryDeductionToolStripMenuItem
-        '
-        Me.CheckMandatoryDeductionToolStripMenuItem.Name = "CheckMandatoryDeductionToolStripMenuItem"
-        Me.CheckMandatoryDeductionToolStripMenuItem.Size = New System.Drawing.Size(274, 30)
-        Me.CheckMandatoryDeductionToolStripMenuItem.Text = "Check &Mandatory De..."
-        '
-        'CheckOvertimeToolStripMenuItem
-        '
-        Me.CheckOvertimeToolStripMenuItem.Name = "CheckOvertimeToolStripMenuItem"
-        Me.CheckOvertimeToolStripMenuItem.Size = New System.Drawing.Size(274, 30)
-        Me.CheckOvertimeToolStripMenuItem.Text = "Check &Overtime"
-        '
-        'CheckNetpayToolStripMenuItem
-        '
-        Me.CheckNetpayToolStripMenuItem.Name = "CheckNetpayToolStripMenuItem"
-        Me.CheckNetpayToolStripMenuItem.Size = New System.Drawing.Size(274, 30)
-        Me.CheckNetpayToolStripMenuItem.Text = "Check &Netpay"
         '
         'MDIParent1
         '
@@ -204,8 +190,6 @@ Partial Class MDIParent1
     Friend WithEvents TimeAttendanceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddNewStaffToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UpdateStaffDetailsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RetrieveStaffDetailsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DeleteStaffDetailsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UpdateLeaveToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogoutToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents HomepageToolStripMenuItem1 As ToolStripMenuItem

@@ -289,6 +289,12 @@
     <Compile Include="UserManagement\NormalStaffPage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserManagement\PrintReportMan.Designer.vb">
+      <DependentUpon>PrintReportMan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\PrintReportMan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserManagement\UpdateForm.Designer.vb">
       <DependentUpon>UpdateForm.vb</DependentUpon>
     </Compile>
@@ -390,6 +396,9 @@
     <EmbeddedResource Include="UserManagement\NormalStaffPage.resx">
       <DependentUpon>NormalStaffPage.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\PrintReportMan.resx">
+      <DependentUpon>PrintReportMan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserManagement\UpdateForm.resx">
       <DependentUpon>UpdateForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -447,6 +456,11 @@
     <None Include="Resources\login2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Mypayrollhistory.jpg" />
+    <None Include="Resources\MyPayrollHistory.PNG" />
+    <None Include="Resources\print-large.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="HRMS_DB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -454,9 +468,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>HRMS_DB.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\Mypayrollhistory.jpg" />
-    <None Include="Resources\MyPayrollHistory.PNG" />
-    <None Include="Resources\print-large.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

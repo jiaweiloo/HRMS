@@ -19,8 +19,6 @@
         txtStaffid.Focus()
         MDIParent1.AddNewStaffToolStripMenuItem.Enabled = True
         MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = False
-        MDIParent1.RetrieveStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.DeleteStaffDetailsToolStripMenuItem.Enabled = True
     End Sub
     Private Sub BindData()
         Dim staffid As String = txtStaffid.Text
@@ -34,6 +32,7 @@
                  Where a.people_role = role And a.people_id.Contains(staffid) And a.people_name.Contains(name) And (department = "All" Or a.department_name = department) And (gender = "All" Or a.people_gender = gender)
                  Select a.people_id, a.people_name, a.department_name, a.people_gender
         dgv.DataSource = rs
+        lblCount.Text = rs.Count().ToString("0 record(s)")
     End Sub
 
     Private Sub txtStaffid_TextChanged(sender As Object, e As EventArgs) Handles txtStaffid.TextChanged
@@ -61,5 +60,9 @@
             UpdateForm.ShowDialog(Me)
             BindData()
         End If
+    End Sub
+
+    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
+        MDIParent1.ShowForm(HRHomepage)
     End Sub
 End Class

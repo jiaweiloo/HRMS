@@ -18,12 +18,10 @@
     Private Sub ManagerMainPage_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         MDIManager.AddNewHRToolStripMenuItem.Enabled = True
         MDIManager.UpdateHRFetailsToolStripMenuItem.Enabled = True
-        MDIManager.DeleteHRToolStripMenuItem.Enabled = True
     End Sub
 
     Private Sub ManagerMainPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MDIManager.AddNewHRToolStripMenuItem.Enabled = True
         MDIManager.UpdateHRFetailsToolStripMenuItem.Enabled = True
-        MDIManager.DeleteHRToolStripMenuItem.Enabled = True
     End Sub
 End Class

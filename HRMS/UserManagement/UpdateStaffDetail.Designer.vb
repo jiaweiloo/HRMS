@@ -35,6 +35,8 @@ Partial Class UpdateStaffDetail
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblHRname = New System.Windows.Forms.Label()
         Me.lblHRid = New System.Windows.Forms.Label()
+        Me.lblCount = New System.Windows.Forms.Label()
+        Me.btnHome = New System.Windows.Forms.Button()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,7 +46,7 @@ Partial Class UpdateStaffDetail
         Me.cboGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboGender.FormattingEnabled = True
         Me.cboGender.Items.AddRange(New Object() {"All", "Male", "Female"})
-        Me.cboGender.Location = New System.Drawing.Point(757, 74)
+        Me.cboGender.Location = New System.Drawing.Point(779, 74)
         Me.cboGender.Name = "cboGender"
         Me.cboGender.Size = New System.Drawing.Size(109, 28)
         Me.cboGender.TabIndex = 4
@@ -55,7 +57,7 @@ Partial Class UpdateStaffDetail
         Me.cboDepart.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboDepart.FormattingEnabled = True
         Me.cboDepart.Items.AddRange(New Object() {"All", "IT Dept.", "HR Dept.", "Accounting Dept.", "Marketing Dept."})
-        Me.cboDepart.Location = New System.Drawing.Point(526, 73)
+        Me.cboDepart.Location = New System.Drawing.Point(540, 73)
         Me.cboDepart.Name = "cboDepart"
         Me.cboDepart.Size = New System.Drawing.Size(149, 28)
         Me.cboDepart.TabIndex = 3
@@ -65,7 +67,7 @@ Partial Class UpdateStaffDetail
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.SystemColors.Control
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(681, 79)
+        Me.Label4.Location = New System.Drawing.Point(694, 81)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(79, 20)
         Me.Label4.TabIndex = 62
@@ -76,7 +78,7 @@ Partial Class UpdateStaffDetail
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.SystemColors.Control
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(416, 79)
+        Me.Label3.Location = New System.Drawing.Point(416, 77)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(114, 20)
         Me.Label3.TabIndex = 61
@@ -114,7 +116,7 @@ Partial Class UpdateStaffDetail
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.SystemColors.Control
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(24, 76)
+        Me.Label1.Location = New System.Drawing.Point(14, 81)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(83, 20)
         Me.Label1.TabIndex = 57
@@ -130,32 +132,32 @@ Partial Class UpdateStaffDetail
         Me.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv.Location = New System.Drawing.Point(27, 121)
+        Me.dgv.Location = New System.Drawing.Point(18, 121)
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
         Me.dgv.RowTemplate.Height = 28
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv.Size = New System.Drawing.Size(825, 322)
+        Me.dgv.Size = New System.Drawing.Size(870, 322)
         Me.dgv.TabIndex = 56
         '
         'Label11
         '
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(27, 35)
+        Me.Label11.Location = New System.Drawing.Point(18, 9)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(292, 35)
+        Me.Label11.Size = New System.Drawing.Size(239, 52)
         Me.Label11.TabIndex = 55
-        Me.Label11.Text = "Update Staff Details"
+        Me.Label11.Text = "Select a Staff to Update or Delete"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(300, 31)
+        Me.Label9.Location = New System.Drawing.Point(273, 22)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(97, 20)
+        Me.Label9.Size = New System.Drawing.Size(128, 20)
         Me.Label9.TabIndex = 78
-        Me.Label9.Text = "Welcome ! "
+        Me.Label9.Text = "Welcome ! HR "
         '
         'lblHRname
         '
@@ -177,11 +179,36 @@ Partial Class UpdateStaffDetail
         Me.lblHRid.Size = New System.Drawing.Size(125, 30)
         Me.lblHRid.TabIndex = 76
         '
+        'lblCount
+        '
+        Me.lblCount.AutoSize = True
+        Me.lblCount.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCount.Location = New System.Drawing.Point(24, 449)
+        Me.lblCount.Name = "lblCount"
+        Me.lblCount.Size = New System.Drawing.Size(98, 20)
+        Me.lblCount.TabIndex = 80
+        Me.lblCount.Text = "X record(s)"
+        '
+        'btnHome
+        '
+        Me.btnHome.BackColor = System.Drawing.Color.IndianRed
+        Me.btnHome.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnHome.Location = New System.Drawing.Point(763, 21)
+        Me.btnHome.Name = "btnHome"
+        Me.btnHome.Size = New System.Drawing.Size(125, 40)
+        Me.btnHome.TabIndex = 5
+        Me.btnHome.Text = "&HomePage"
+        Me.btnHome.UseVisualStyleBackColor = False
+        '
         'UpdateStaffDetail
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(878, 478)
+        Me.ClientSize = New System.Drawing.Size(914, 478)
+        Me.Controls.Add(Me.btnHome)
+        Me.Controls.Add(Me.lblCount)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.lblHRname)
         Me.Controls.Add(Me.lblHRid)
@@ -217,4 +244,6 @@ Partial Class UpdateStaffDetail
     Friend WithEvents Label9 As Label
     Friend WithEvents lblHRname As Label
     Friend WithEvents lblHRid As Label
+    Friend WithEvents lblCount As Label
+    Friend WithEvents btnHome As Button
 End Class

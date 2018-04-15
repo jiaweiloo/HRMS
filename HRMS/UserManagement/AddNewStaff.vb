@@ -36,7 +36,7 @@ Public Class AddNewStaff
 
             id = lblStaffID.Text
             name = txtName.Text
-            IC = txtIC.Text
+            IC = If(txtIC.MaskCompleted, txtIC.Text, "")
             dob = DateDOB.Value.ToString("yyyy-MM-dd")
             If (radFemale.Checked = True) Then
                 gender = "Female"
@@ -46,16 +46,19 @@ Public Class AddNewStaff
                 MessageBox.Show("Please select gender !", "error")
                 Return
             End If
-            phone = txtPhone.Text
+            phone = If(txtPhone.MaskCompleted, txtPhone.Text, "")
             email = txtEmail.Text
             address = txtAddress.Text
             depart = cboDepart.SelectedItem.ToString
             If depart = "HR Dept." Then
-                role = "HR"
+                role = "Staff"
             Else
                 role = "Staff"
             End If
-
+            If dob = "" Then
+                err.AppendLine("- Please Enter Correct Birthday")
+                ctr = If(ctr, DateDOB)
+            End If
             If name = "" Then
                 err.AppendLine("- Please Enter Name")
                 ctr = If(ctr, txtName)
@@ -65,11 +68,11 @@ Public Class AddNewStaff
                 ctr = If(ctr, cboDepart)
             End If
             If IC = "" Then
-                err.AppendLine("- Please Select IC")
+                err.AppendLine("- Please Correct IC Format")
                 ctr = If(ctr, txtIC)
             End If
             If phone = "" Then
-                err.AppendLine("- Please Select Phone")
+                err.AppendLine("- Please Correct Phone Format")
                 ctr = If(ctr, txtPhone)
             End If
             If email = "" Then
@@ -101,6 +104,7 @@ Public Class AddNewStaff
                 ppl.leave_num = 5
                 ppl.extra_leave = 0
                 ppl.hourly_rates = 15
+                ppl.joined_year = Date.Parse(lblTimeNow.Text)
 
                 Dim db As New HRMS_DBLinq2DataContext()
                 db.Peoples.InsertOnSubmit(ppl)
@@ -117,27 +121,30 @@ Public Class AddNewStaff
     End Sub
 
     Private Sub AddNewStaff_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblTimeNow.Text = Date.Now.ToShortDateString
         lblStaffID.Text = peopleid.GetNextId
         lblHRname.Text = HRstaffid.hrname
         lblHRid.Text = HRstaffid.hrstaffid
         txtName.Focus()
         cboDepart.SelectedIndex = 0
+        Dim maxdate As System.TimeSpan = New TimeSpan(4748, 0, 0, 0, 0)
+        DateDOB.MaxDate = DateTime.Now.Subtract(maxdate)
         MDIParent1.AddNewStaffToolStripMenuItem.Enabled = False
         MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.RetrieveStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.DeleteStaffDetailsToolStripMenuItem.Enabled = True
     End Sub
 
     Private Sub AddNewStaff_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        lblTimeNow.Text = Date.Now.ToShortDateString
         lblStaffID.Text = peopleid.GetNextId
         lblHRname.Text = HRstaffid.hrname
         lblHRid.Text = HRstaffid.hrstaffid
         txtName.Focus()
         cboDepart.SelectedIndex = 0
+        Dim maxdate As System.TimeSpan = New TimeSpan(4748, 0, 0, 0, 0)
+        DateDOB.MaxDate = DateTime.Now.Subtract(maxdate)
         MDIParent1.AddNewStaffToolStripMenuItem.Enabled = False
         MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.RetrieveStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.DeleteStaffDetailsToolStripMenuItem.Enabled = True
+
     End Sub
 
     Private Sub UpdateStaffDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs)
@@ -157,4 +164,7 @@ Public Class AddNewStaff
         'MDIParent1.ShowForm(HRHomepage)
     End Sub
 
+    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
+        MDIParent1.ShowForm(HRHomepage)
+    End Sub
 End Class

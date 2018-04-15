@@ -10,8 +10,6 @@ Public Class MDIParent1
     Private Sub MDIParent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.AddNewStaffToolStripMenuItem.Enabled = True
         Me.UpdateStaffDetailsToolStripMenuItem.Enabled = True
-        Me.RetrieveStaffDetailsToolStripMenuItem.Enabled = True
-        Me.DeleteStaffDetailsToolStripMenuItem.Enabled = True
 
         Me.Text = "Human Resource Management System - "
         ' Create a new instance of the child form.
@@ -51,11 +49,11 @@ Public Class MDIParent1
         Me.ShowForm(UpdateStaffDetail)
     End Sub
 
-    Private Sub RetrieveStaffDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RetrieveStaffDetailsToolStripMenuItem.Click
+    Private Sub RetrieveStaffDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub DeleteStaffDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteStaffDetailsToolStripMenuItem.Click
+    Private Sub DeleteStaffDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
     End Sub
 

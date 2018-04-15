@@ -6,7 +6,6 @@ Public Class MDIManager
     Private Sub MDIManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.AddNewHRToolStripMenuItem.Enabled = True
         Me.UpdateHRFetailsToolStripMenuItem.Enabled = True
-        Me.DeleteHRToolStripMenuItem.Enabled = True
         ' Create a new instance of the child form.
         Dim ChildForm As New System.Windows.Forms.Form
         ' Make it a child of this MDI form before showing it.
@@ -48,11 +47,15 @@ Public Class MDIManager
         ShowForm(ManUpdateHR)
     End Sub
 
-    Private Sub DeleteHRToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteHRToolStripMenuItem.Click
+    Private Sub DeleteHRToolStripMenuItem_Click(sender As Object, e As EventArgs)
         ShowForm(ManUpdateHR)
     End Sub
 
     Private Sub LogOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogOutToolStripMenuItem.Click
         Me.Close()
+    End Sub
+
+    Private Sub ReportStaffToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportStaffToolStripMenuItem.Click
+        Me.ShowForm(PrintReportMan)
     End Sub
 End Class

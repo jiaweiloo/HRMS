@@ -15,8 +15,6 @@ Public Class EmpHistoryPayroll
     Private Sub EmpHistoryPayroll_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MDIParent1.AddNewStaffToolStripMenuItem.Enabled = True
         MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.RetrieveStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.DeleteStaffDetailsToolStripMenuItem.Enabled = True
 
         BindData()
     End Sub
