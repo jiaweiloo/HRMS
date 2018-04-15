@@ -22,6 +22,7 @@ Partial Class HRAddMandatory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -33,6 +34,8 @@ Partial Class HRAddMandatory
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
+        Me.err = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.err, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -85,11 +88,11 @@ Partial Class HRAddMandatory
         '
         Me.cBoxFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cBoxFormat.FormattingEnabled = True
-        Me.cBoxFormat.Items.AddRange(New Object() {"actual deduction", "percentage deduction"})
+        Me.cBoxFormat.Items.AddRange(New Object() {"money", "percentage"})
         Me.cBoxFormat.Location = New System.Drawing.Point(268, 255)
         Me.cBoxFormat.Name = "cBoxFormat"
         Me.cBoxFormat.Size = New System.Drawing.Size(232, 28)
-        Me.cBoxFormat.TabIndex = 7
+        Me.cBoxFormat.TabIndex = 2
         '
         'txtValue
         '
@@ -97,7 +100,7 @@ Partial Class HRAddMandatory
         Me.txtValue.MaxLength = 50
         Me.txtValue.Name = "txtValue"
         Me.txtValue.Size = New System.Drawing.Size(232, 26)
-        Me.txtValue.TabIndex = 8
+        Me.txtValue.TabIndex = 1
         '
         'txtType
         '
@@ -105,7 +108,7 @@ Partial Class HRAddMandatory
         Me.txtType.MaxLength = 50
         Me.txtType.Name = "txtType"
         Me.txtType.Size = New System.Drawing.Size(232, 26)
-        Me.txtType.TabIndex = 9
+        Me.txtType.TabIndex = 0
         '
         'btnAdd
         '
@@ -116,7 +119,7 @@ Partial Class HRAddMandatory
         Me.btnAdd.Location = New System.Drawing.Point(177, 301)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(100, 44)
-        Me.btnAdd.TabIndex = 10
+        Me.btnAdd.TabIndex = 3
         Me.btnAdd.Text = "&Add"
         Me.btnAdd.UseVisualStyleBackColor = False
         '
@@ -124,12 +127,13 @@ Partial Class HRAddMandatory
         '
         Me.btnCancel.AutoSize = True
         Me.btnCancel.BackColor = System.Drawing.Color.Goldenrod
+        Me.btnCancel.CausesValidation = False
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnCancel.Location = New System.Drawing.Point(409, 301)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(114, 44)
-        Me.btnCancel.TabIndex = 11
+        Me.btnCancel.TabIndex = 5
         Me.btnCancel.Text = "&Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
@@ -137,19 +141,26 @@ Partial Class HRAddMandatory
         '
         Me.btnReset.AutoSize = True
         Me.btnReset.BackColor = System.Drawing.Color.IndianRed
+        Me.btnReset.CausesValidation = False
         Me.btnReset.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReset.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnReset.Location = New System.Drawing.Point(293, 301)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(101, 44)
-        Me.btnReset.TabIndex = 12
+        Me.btnReset.TabIndex = 4
         Me.btnReset.Text = "&Reset"
         Me.btnReset.UseVisualStyleBackColor = False
+        '
+        'err
+        '
+        Me.err.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
+        Me.err.ContainerControl = Me
         '
         'HRAddMandatory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.ClientSize = New System.Drawing.Size(660, 366)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnCancel)
@@ -164,6 +175,7 @@ Partial Class HRAddMandatory
         Me.Controls.Add(Me.Label1)
         Me.Name = "HRAddMandatory"
         Me.Text = "Add Mandatory Deduction"
+        CType(Me.err, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -180,4 +192,5 @@ Partial Class HRAddMandatory
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnReset As Button
+    Friend WithEvents err As ErrorProvider
 End Class

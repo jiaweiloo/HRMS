@@ -7,6 +7,10 @@
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        If Me.ValidateChildren() = False Then
+            Return
+        End If
+
         Try
             '1: Retrieve the value from the form
             Dim type As String = txtType.Text
@@ -45,5 +49,38 @@
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
+    End Sub
+
+    Private Sub txtType_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtType.Validating
+        Dim type As String = txtType.Text
+        If String.IsNullOrEmpty(type) Then
+            err.SetError(txtType, "Type should not left blank")
+            e.Cancel = True
+        Else
+            err.SetError(txtType, Nothing)
+        End If
+    End Sub
+
+    Private Sub txtValue_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtValue.Validating
+        Dim value As String = txtValue.Text
+        If String.IsNullOrEmpty(value) Then
+            err.SetError(txtValue, "Value should not left blank")
+            e.Cancel = True
+        ElseIf (IsNumeric(value) = False) Then
+            err.SetError(txtValue, "Value should be made of numeric")
+            e.Cancel = True
+        Else
+            err.SetError(txtValue, Nothing)
+        End If
+    End Sub
+
+    Private Sub cBoxFormat_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles cBoxFormat.Validating
+        Dim selected As Integer = cBoxFormat.SelectedIndex
+        If (selected < 0) Then
+            err.SetError(cBoxFormat, "Please select a format before proceeding.")
+            e.Cancel = True
+        Else
+            err.SetError(cBoxFormat, Nothing)
+        End If
     End Sub
 End Class

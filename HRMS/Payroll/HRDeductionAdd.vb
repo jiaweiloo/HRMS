@@ -17,6 +17,7 @@
         lblDate.Text = DateTime.Now.ToShortDateString
         cBoxPplID.SelectedIndex = -1
         err.Clear()
+        txtType.Focus()
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
@@ -88,6 +89,16 @@
             e.Cancel = True
         Else
             err.SetError(cBoxPplID, Nothing)
+        End If
+    End Sub
+
+    Private Sub cBoxFormat_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles cBoxFormat.Validating
+        Dim selected As Integer = cBoxFormat.SelectedIndex
+        If (selected < 0) Then
+            err.SetError(cBoxFormat, "Please select a format before proceeding.")
+            e.Cancel = True
+        Else
+            err.SetError(cBoxFormat, Nothing)
         End If
     End Sub
 End Class
