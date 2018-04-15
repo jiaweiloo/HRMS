@@ -24,7 +24,6 @@
             Return "Fail to connect database"
         End Try
         newindex = index
-        'peopleid = "HR" + newindex.ToString
         peopleid = "HR" + newindex.ToString
         Return peopleid
     End Function
