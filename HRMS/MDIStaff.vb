@@ -12,6 +12,7 @@ Public Class MDIStaff
         m_ChildFormNumber += 1
         ChildForm.Text = "Window " & m_ChildFormNumber
         'AA
+        Me.Text = "Human Resource Management System - "
         ChildForm.Show()
     End Sub
 
@@ -33,5 +34,9 @@ Public Class MDIStaff
 
     Private Sub LogOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogOutToolStripMenuItem.Click
         Me.Close()
+    End Sub
+
+    Private Sub ViewpayrollHistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewpayrollHistoryToolStripMenuItem.Click
+        Me.Show(EmpHistoryPayroll)
     End Sub
 End Class

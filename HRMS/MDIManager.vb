@@ -16,6 +16,8 @@ Public Class MDIManager
         ChildForm.Text = "Window " & m_ChildFormNumber
         'AA
         ChildForm.Show()
+
+        Me.Text = "Human Resource Management System - "
     End Sub
 
     Public Sub ShowForm(ChildForm As System.Windows.Forms.Form)
