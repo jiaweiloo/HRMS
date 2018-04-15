@@ -283,6 +283,7 @@ Partial Class Attendance
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Tan
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.CancelButton = Me.btnHome
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnHome)
         Me.Controls.Add(Me.btnUpdate)
