@@ -41,9 +41,9 @@ Partial Class FrmUpdate
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Algerian", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(136, 38)
+        Me.Label1.Location = New System.Drawing.Point(121, 30)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(144, 20)
+        Me.Label1.Size = New System.Drawing.Size(120, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Attendance ID"
         '
@@ -53,10 +53,10 @@ Partial Class FrmUpdate
         Me.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnUpdate.Font = New System.Drawing.Font("Algerian", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnUpdate.Location = New System.Drawing.Point(48, 298)
-        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnUpdate.Location = New System.Drawing.Point(43, 238)
+        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(126, 42)
+        Me.btnUpdate.Size = New System.Drawing.Size(112, 34)
         Me.btnUpdate.TabIndex = 12
         Me.btnUpdate.Text = "&Update"
         Me.btnUpdate.UseVisualStyleBackColor = False
@@ -65,9 +65,9 @@ Partial Class FrmUpdate
         '
         Me.lblid.AutoSize = True
         Me.lblid.Font = New System.Drawing.Font("Algerian", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblid.Location = New System.Drawing.Point(314, 38)
+        Me.lblid.Location = New System.Drawing.Point(279, 30)
         Me.lblid.Name = "lblid"
-        Me.lblid.Size = New System.Drawing.Size(77, 20)
+        Me.lblid.Size = New System.Drawing.Size(63, 16)
         Me.lblid.TabIndex = 13
         Me.lblid.Text = "Label2"
         '
@@ -75,9 +75,9 @@ Partial Class FrmUpdate
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Algerian", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(45, 161)
+        Me.Label3.Location = New System.Drawing.Point(40, 129)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 20)
+        Me.Label3.Size = New System.Drawing.Size(60, 16)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Time in"
         '
@@ -85,9 +85,9 @@ Partial Class FrmUpdate
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Algerian", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(45, 212)
+        Me.Label4.Location = New System.Drawing.Point(40, 170)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(84, 20)
+        Me.Label4.Size = New System.Drawing.Size(70, 16)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Lunch In"
         '
@@ -95,9 +95,9 @@ Partial Class FrmUpdate
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Algerian", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(285, 161)
+        Me.Label7.Location = New System.Drawing.Point(253, 129)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(86, 20)
+        Me.Label7.Size = New System.Drawing.Size(73, 16)
         Me.Label7.TabIndex = 18
         Me.Label7.Text = "Time Out"
         '
@@ -105,51 +105,47 @@ Partial Class FrmUpdate
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Algerian", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(285, 212)
+        Me.Label9.Location = New System.Drawing.Point(253, 170)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(99, 20)
+        Me.Label9.Size = New System.Drawing.Size(83, 16)
         Me.Label9.TabIndex = 20
         Me.Label9.Text = "Lunch Out"
         '
         'txtTimein
         '
-        Me.txtTimein.Location = New System.Drawing.Point(140, 161)
-        Me.txtTimein.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTimein.Location = New System.Drawing.Point(124, 129)
         Me.txtTimein.Name = "txtTimein"
-        Me.txtTimein.Size = New System.Drawing.Size(112, 26)
-        Me.txtTimein.TabIndex = 21
+        Me.txtTimein.Size = New System.Drawing.Size(100, 22)
+        Me.txtTimein.TabIndex = 1
         '
         'txtlunchin
         '
-        Me.txtlunchin.Location = New System.Drawing.Point(140, 212)
-        Me.txtlunchin.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtlunchin.Location = New System.Drawing.Point(124, 170)
         Me.txtlunchin.Name = "txtlunchin"
-        Me.txtlunchin.Size = New System.Drawing.Size(112, 26)
-        Me.txtlunchin.TabIndex = 22
+        Me.txtlunchin.Size = New System.Drawing.Size(100, 22)
+        Me.txtlunchin.TabIndex = 2
         '
         'txtTimeout
         '
-        Me.txtTimeout.Location = New System.Drawing.Point(399, 161)
-        Me.txtTimeout.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTimeout.Location = New System.Drawing.Point(355, 129)
         Me.txtTimeout.Name = "txtTimeout"
-        Me.txtTimeout.Size = New System.Drawing.Size(112, 26)
-        Me.txtTimeout.TabIndex = 23
+        Me.txtTimeout.Size = New System.Drawing.Size(100, 22)
+        Me.txtTimeout.TabIndex = 3
         '
         'txtlunchout
         '
-        Me.txtlunchout.Location = New System.Drawing.Point(399, 212)
-        Me.txtlunchout.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtlunchout.Location = New System.Drawing.Point(355, 170)
         Me.txtlunchout.Name = "txtlunchout"
-        Me.txtlunchout.Size = New System.Drawing.Size(112, 26)
-        Me.txtlunchout.TabIndex = 24
+        Me.txtlunchout.Size = New System.Drawing.Size(100, 22)
+        Me.txtlunchout.TabIndex = 4
         '
         'lbldate
         '
         Me.lbldate.AutoSize = True
         Me.lbldate.Font = New System.Drawing.Font("Algerian", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbldate.Location = New System.Drawing.Point(314, 96)
+        Me.lbldate.Location = New System.Drawing.Point(279, 77)
         Me.lbldate.Name = "lbldate"
-        Me.lbldate.Size = New System.Drawing.Size(77, 20)
+        Me.lbldate.Size = New System.Drawing.Size(63, 16)
         Me.lbldate.TabIndex = 26
         Me.lbldate.Text = "Label5"
         '
@@ -157,18 +153,19 @@ Partial Class FrmUpdate
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Algerian", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(136, 96)
+        Me.Label6.Location = New System.Drawing.Point(121, 77)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(55, 20)
+        Me.Label6.Size = New System.Drawing.Size(46, 16)
         Me.Label6.TabIndex = 25
         Me.Label6.Text = "Date"
         '
         'FrmUpdate
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AcceptButton = Me.btnUpdate
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Tan
-        Me.ClientSize = New System.Drawing.Size(613, 368)
+        Me.ClientSize = New System.Drawing.Size(545, 294)
         Me.Controls.Add(Me.lbldate)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtlunchout)
@@ -182,7 +179,6 @@ Partial Class FrmUpdate
         Me.Controls.Add(Me.lblid)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FrmUpdate"
         Me.Text = "FrmUpdate"
         Me.ResumeLayout(False)
