@@ -21,6 +21,10 @@ Public Class Attendance
         If hrrole.Equals("Manager") Then
             btnReport.Visible = True
         End If
+
+        If hrrole.Equals("HR") Then
+            btnUpdate.Visible = True
+        End If
         Timer1.Enabled = True
         Dim peopleObject As People = db.Peoples.FirstOrDefault(Function(o) o.people_id = peopleid)
         Dim currentdate As Date = Date.Now
@@ -76,8 +80,8 @@ Public Class Attendance
     End Sub
 
     Private Sub btnCheckIn_Click(sender As Object, e As EventArgs) Handles btnCheckIn.Click
-        Dim s As String = Date.Now.ToString("hh:mm:ss tt")
-        Dim expenddt As Date = Date.ParseExact(s, "hh:mm:ss tt",
+        Dim s As String = Date.Now.ToString("HH:mm:ss")
+        Dim expenddt As Date = Date.ParseExact(s, "HH:mm:ss",
             System.Globalization.DateTimeFormatInfo.InvariantInfo)
         'MessageBox.Show(expenddt.ToString)
         'Console.WriteLine(att.time_in & att2.time_in)
@@ -94,8 +98,8 @@ Public Class Attendance
     End Sub
 
     Private Sub btnLunchIn_Click(sender As Object, e As EventArgs) Handles btnLunchIn.Click
-        Dim s As String = Date.Now.ToString("hh:mm:ss tt")
-        Dim expenddt As Date = Date.ParseExact(s, "hh:mm:ss tt",
+        Dim s As String = Date.Now.ToString("HH:mm:ss")
+        Dim expenddt As Date = Date.ParseExact(s, "HH:mm:ss",
             System.Globalization.DateTimeFormatInfo.InvariantInfo)
         If (att.lunch_in Is Nothing) Then
             att.lunch_in = expenddt.TimeOfDay
@@ -109,8 +113,8 @@ Public Class Attendance
     End Sub
 
     Private Sub btnLunchOut_Click(sender As Object, e As EventArgs) Handles btnLunchOut.Click
-        Dim s As String = Date.Now.ToString("hh:mm:ss tt")
-        Dim expenddt As Date = Date.ParseExact(s, "hh:mm:ss tt",
+        Dim s As String = Date.Now.ToString("HH:mm:ss")
+        Dim expenddt As Date = Date.ParseExact(s, "HH:mm:ss",
             System.Globalization.DateTimeFormatInfo.InvariantInfo)
         If (att.lunch_out Is Nothing) Then
             att.lunch_out = expenddt.TimeOfDay
@@ -123,8 +127,8 @@ Public Class Attendance
     End Sub
 
     Private Sub btnCheckOut_Click(sender As Object, e As EventArgs) Handles btnCheckOut.Click
-        Dim s As String = Date.Now.ToString("hh:mm:ss tt")
-        Dim expenddt As Date = Date.ParseExact(s, "hh:mm:ss tt",
+        Dim s As String = Date.Now.ToString("HH:mm:ss")
+        Dim expenddt As Date = Date.ParseExact(s, "HH:mm:ss",
             System.Globalization.DateTimeFormatInfo.InvariantInfo)
         If (att.time_out Is Nothing) Then
             att.time_out = expenddt.TimeOfDay
@@ -181,8 +185,11 @@ Public Class Attendance
         Dim cnt As Integer = 0
         Dim parts() As String
         For Each item In db.attends
-            cnt += 1
-            body.AppendFormat("{0,2} {1,18} {2,9} {3,10} {4,11} {5,10} {6,10} {7,10}" & vbNewLine, cnt, item.attendance_id, item.people_id, db.Peoples.FirstOrDefault(Function(o) o.people_id = item.people_id).people_name, item.time_in, item.lunch_in, item.lunch_out, item.lunch_out)
+            If item.current_date = Date.Now.Date Then
+                cnt += 1
+                body.AppendFormat("{0,2} {1,18} {2,9} {3,10} {4,11} {5,10} {6,10} {7,10}" & vbNewLine, cnt, item.attendance_id, item.people_id, db.Peoples.FirstOrDefault(Function(o) o.people_id = item.people_id).people_name, item.time_in, item.lunch_in, item.lunch_out, item.lunch_out)
+
+            End If
         Next
         body.AppendLine()
         body.AppendFormat("{0,2} record(s)", cnt)
@@ -196,5 +203,11 @@ Public Class Attendance
         End With
     End Sub
 
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        UpdateAttendance.ShowDialog()
+    End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
 End Class

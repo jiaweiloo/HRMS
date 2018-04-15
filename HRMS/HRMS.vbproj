@@ -235,6 +235,18 @@
     <Compile Include="TimeAttendance\AttendanceHistory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TimeAttendance\FrmUpdate.Designer.vb">
+      <DependentUpon>FrmUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TimeAttendance\FrmUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeAttendance\UpdateAttendance.Designer.vb">
+      <DependentUpon>UpdateAttendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TimeAttendance\UpdateAttendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserManagement\AddNewStaff.Designer.vb">
       <DependentUpon>AddNewStaff.vb</DependentUpon>
     </Compile>
@@ -344,6 +356,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TimeAttendance\AttendanceHistory.resx">
       <DependentUpon>AttendanceHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeAttendance\FrmUpdate.resx">
+      <DependentUpon>FrmUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeAttendance\UpdateAttendance.resx">
+      <DependentUpon>UpdateAttendance.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManagement\AddNewStaff.resx">
       <DependentUpon>AddNewStaff.vb</DependentUpon>
