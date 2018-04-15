@@ -14,12 +14,17 @@ Public Class MDIParent1
         Me.Text = "Human Resource Management System - "
         ' Create a new instance of the child form.
         Dim ChildForm As New System.Windows.Forms.Form
+        'Clear all childform
+        For Each OldChildForm As Form In Me.MdiChildren
+            If (ChildForm IsNot OldChildForm) Then
+                OldChildForm.Close()
+            End If
+        Next
         ' Make it a child of this MDI form before showing it.
         ChildForm = HRHomepage
-        ChildForm.MdiParent = Me
         m_ChildFormNumber += 1
-        ChildForm.Text = "Window " & m_ChildFormNumber
-        'AA
+        ChildForm.MdiParent = Me
+        ChildForm.Dock = DockStyle.Fill
         ChildForm.Show()
     End Sub
 
@@ -29,7 +34,6 @@ Public Class MDIParent1
             If (ChildForm IsNot OldChildForm) Then
                 OldChildForm.Close()
             End If
-
         Next
         m_ChildFormNumber += 1
         ChildForm.MdiParent = Me

@@ -6,12 +6,17 @@ Public Class MDIStaff
     Private Sub MDIStaff_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Create a new instance of the child form.
         Dim ChildForm As New System.Windows.Forms.Form
+        'Close previous form before opening new form
+        For Each OldChildForm As Form In Me.MdiChildren
+            If (ChildForm IsNot OldChildForm) Then
+                OldChildForm.Close()
+            End If
+        Next
         ' Make it a child of this MDI form before showing it.
         ChildForm = NormalStaffPage
         ChildForm.MdiParent = Me
         m_ChildFormNumber += 1
-        ChildForm.Text = "Window " & m_ChildFormNumber
-        'AA
+        ChildForm.Dock = DockStyle.Fill
         Me.Text = "Human Resource Management System - "
         ChildForm.Show()
     End Sub

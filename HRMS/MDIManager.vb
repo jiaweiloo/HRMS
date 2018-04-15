@@ -8,12 +8,19 @@ Public Class MDIManager
         Me.UpdateHRFetailsToolStripMenuItem.Enabled = True
         ' Create a new instance of the child form.
         Dim ChildForm As New System.Windows.Forms.Form
+
+        'Close all childform
+        For Each OldChildForm As Form In Me.MdiChildren
+            If (ChildForm IsNot OldChildForm) Then
+                OldChildForm.Close()
+            End If
+        Next
+
         ' Make it a child of this MDI form before showing it.
         ChildForm = ManagerMainPage
         ChildForm.MdiParent = Me
         m_ChildFormNumber += 1
-        ChildForm.Text = "Window " & m_ChildFormNumber
-        'AA
+        ChildForm.Dock = DockStyle.Fill
         ChildForm.Show()
 
         Me.Text = "Human Resource Management System - "
