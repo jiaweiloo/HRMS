@@ -90,12 +90,13 @@ Partial Class StaffViewLeave
         '
         'btnOK
         '
+        Me.btnOK.BackColor = System.Drawing.Color.Lime
         Me.btnOK.Location = New System.Drawing.Point(687, 26)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(75, 36)
         Me.btnOK.TabIndex = 10
         Me.btnOK.Text = "&OK"
-        Me.btnOK.UseVisualStyleBackColor = True
+        Me.btnOK.UseVisualStyleBackColor = False
         '
         'StaffViewLeave
         '
