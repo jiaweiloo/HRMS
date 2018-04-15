@@ -88,7 +88,8 @@
             db.deductions.InsertOnSubmit(deduction)
 
             emp.extra_leave = emp.extra_leave + extra_leave
-            emp.leave_num = 0
+            db.SubmitChanges()
+            'emp.leave_num = 0
 
             '    Try
             '        db.SubmitChanges()
@@ -98,9 +99,9 @@
             'MessageBox.Show("Deduction of" & extra_leave.ToString("0") & " for " & peopleID & " submitted", "Submit")
         End If
 
-        'If (radApproved.Checked = True) Then
-        '    emp.leave_num = emp.leave_num - c.leave_duration
-        'End If
+        If (radApproved.Checked = True) Then
+            emp.leave_num = emp.leave_num - c.leave_duration
+        End If
         db.SubmitChanges()
 
         MessageBox.Show("Leave [" & c.leave_id & "]updated", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information)
