@@ -58,4 +58,8 @@
         MDIParent1.AddNewStaffToolStripMenuItem.Enabled = True
         MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
 End Class
