@@ -27,6 +27,7 @@ Partial Class PayrollHomepage
         Me.btnOvertime = New System.Windows.Forms.Button()
         Me.btnDeduction = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblLogin = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnPrepPayroll
@@ -93,11 +94,21 @@ Partial Class PayrollHomepage
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "HR Management"
         '
+        'lblLogin
+        '
+        Me.lblLogin.Location = New System.Drawing.Point(567, 446)
+        Me.lblLogin.Name = "lblLogin"
+        Me.lblLogin.Size = New System.Drawing.Size(206, 34)
+        Me.lblLogin.TabIndex = 5
+        Me.lblLogin.Text = "Label2"
+        Me.lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'PayrollHomepage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(785, 489)
+        Me.Controls.Add(Me.lblLogin)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnDeduction)
         Me.Controls.Add(Me.btnOvertime)
@@ -116,4 +127,5 @@ Partial Class PayrollHomepage
     Friend WithEvents btnOvertime As Button
     Friend WithEvents btnDeduction As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents lblLogin As Label
 End Class

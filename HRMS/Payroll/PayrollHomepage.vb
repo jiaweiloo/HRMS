@@ -16,4 +16,8 @@
         CalcPayroll.Calculate()
         MDIParent1.ShowForm(HRNetpay)
     End Sub
+
+    Private Sub PayrollHomepage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblLogin.Text = HRstaffid.hrname
+    End Sub
 End Class

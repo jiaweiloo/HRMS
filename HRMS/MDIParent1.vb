@@ -76,4 +76,22 @@ Public Class MDIParent1
     Private Sub pay_HomepageToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles HomepageToolStripMenuItem1.Click
         ShowForm(PayrollHomepage)
     End Sub
+
+    Private Sub CheckDeductionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckDeductionToolStripMenuItem.Click
+        Me.ShowForm(HRDeductionShow)
+    End Sub
+
+    Private Sub CheckMandatoryDeductionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckMandatoryDeductionToolStripMenuItem.Click
+        Me.ShowForm(HRMandatoryDdt)
+    End Sub
+
+    Private Sub CheckOvertimeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckOvertimeToolStripMenuItem.Click
+        CalcOvertime.Calculate()
+        Me.ShowForm(HROvertimeShow)
+    End Sub
+
+    Private Sub CheckNetpayToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckNetpayToolStripMenuItem.Click
+        CalcPayroll.Calculate()
+        Me.ShowForm(HRNetpay)
+    End Sub
 End Class
