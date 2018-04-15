@@ -16,7 +16,7 @@
             Dim manDeduction As New mandatory_deduction()
             manDeduction.deduction_id = Integer.Parse(lblID.Text)
             manDeduction.deduction_type = type
-            manDeduction.deduction_value = value
+            manDeduction.deduction_value = Convert.ToDecimal(value)
             manDeduction.deduction_format = format
 
             '2: Insert the Customer record using LINQ

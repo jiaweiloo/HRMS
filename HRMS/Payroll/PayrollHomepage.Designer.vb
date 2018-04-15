@@ -32,7 +32,7 @@ Partial Class PayrollHomepage
         'btnPrepPayroll
         '
         Me.btnPrepPayroll.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.btnPrepPayroll.Cursor = System.Windows.Forms.Cursors.PanWest
+        Me.btnPrepPayroll.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnPrepPayroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPrepPayroll.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnPrepPayroll.Location = New System.Drawing.Point(258, 344)
@@ -45,7 +45,7 @@ Partial Class PayrollHomepage
         'btnCheckMdDdt
         '
         Me.btnCheckMdDdt.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.btnCheckMdDdt.Cursor = System.Windows.Forms.Cursors.PanWest
+        Me.btnCheckMdDdt.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCheckMdDdt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCheckMdDdt.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnCheckMdDdt.Location = New System.Drawing.Point(258, 100)
@@ -59,7 +59,7 @@ Partial Class PayrollHomepage
         '
         Me.btnOvertime.AutoSize = True
         Me.btnOvertime.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.btnOvertime.Cursor = System.Windows.Forms.Cursors.PanWest
+        Me.btnOvertime.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnOvertime.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnOvertime.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnOvertime.Location = New System.Drawing.Point(258, 183)
@@ -73,7 +73,7 @@ Partial Class PayrollHomepage
         '
         Me.btnDeduction.AutoSize = True
         Me.btnDeduction.BackColor = System.Drawing.SystemColors.Highlight
-        Me.btnDeduction.Cursor = System.Windows.Forms.Cursors.PanWest
+        Me.btnDeduction.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDeduction.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDeduction.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnDeduction.Location = New System.Drawing.Point(258, 261)

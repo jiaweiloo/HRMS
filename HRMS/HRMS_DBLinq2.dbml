@@ -1,5 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HRMS_DB" Class="HRMS_DBLinq2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\HRMS_DB.mdf;Integrated Security=True" SettingsObjectName="HRMS.My.MySettings" SettingsPropertyName="HRMS_DBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.attend" Member="attends">
+    <Type Name="attend">
+      <Column Name="attendance_id" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="people_id" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="[current_date]" Member="current_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="time_in" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="time_out" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="lunch_in" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="lunch_out" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.People" Member="Peoples">
     <Type Name="People">
       <Column Name="people_id" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -17,17 +28,6 @@
       <Column Name="leave_num" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="extra_leave" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="hourly_rates" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.attend" Member="attends">
-    <Type Name="attend">
-      <Column Name="attendance_id" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="people_id" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
-      <Column Name="[current_date]" Member="current_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="time_in" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
-      <Column Name="time_out" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
-      <Column Name="lunch_in" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
-      <Column Name="lunch_out" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.deduction" Member="deductions">
@@ -56,7 +56,7 @@
     <Type Name="mandatory_deduction">
       <Column Name="deduction_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="deduction_type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="deduction_value" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="deduction_value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Column Name="deduction_format" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
     </Type>
   </Table>

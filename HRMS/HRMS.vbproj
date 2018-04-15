@@ -176,6 +176,8 @@
     <Compile Include="NetpayID.vb" />
     <Compile Include="NextLeaveID.vb" />
     <Compile Include="overtimeID.vb" />
+    <Compile Include="Payroll\CalcOvertime.vb" />
+    <Compile Include="Payroll\CalcPayroll.vb" />
     <Compile Include="Payroll\EmpHistoryPayroll.Designer.vb">
       <DependentUpon>EmpHistoryPayroll.vb</DependentUpon>
     </Compile>

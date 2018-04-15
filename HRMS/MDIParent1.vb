@@ -76,6 +76,6 @@ Public Class MDIParent1
     End Sub
 
     Private Sub pay_HomepageToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles HomepageToolStripMenuItem1.Click
-        ShowForm(EmpHistoryPayroll)
+        ShowForm(PayrollHomepage)
     End Sub
 End Class
