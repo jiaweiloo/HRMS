@@ -57,18 +57,20 @@ Partial Class UpdateForm
         Me.dlgPreview = New System.Windows.Forms.PrintPreviewDialog()
         Me.lblJoin = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.txtHourlyPay = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblhourpay
         '
-        Me.lblhourpay.AutoSize = True
         Me.lblhourpay.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblhourpay.ForeColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.lblhourpay.Location = New System.Drawing.Point(441, 458)
+        Me.lblhourpay.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.lblhourpay.Location = New System.Drawing.Point(395, 449)
         Me.lblhourpay.Name = "lblhourpay"
-        Me.lblhourpay.Size = New System.Drawing.Size(0, 20)
+        Me.lblhourpay.Size = New System.Drawing.Size(112, 28)
         Me.lblhourpay.TabIndex = 106
+        Me.lblhourpay.Text = "Hourly Pay: "
+        Me.lblhourpay.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblextra
         '
@@ -399,6 +401,13 @@ Partial Class UpdateForm
         Me.Label12.TabIndex = 109
         Me.Label12.Text = "Joined Date :"
         '
+        'txtHourlyPay
+        '
+        Me.txtHourlyPay.Location = New System.Drawing.Point(505, 451)
+        Me.txtHourlyPay.Name = "txtHourlyPay"
+        Me.txtHourlyPay.Size = New System.Drawing.Size(77, 26)
+        Me.txtHourlyPay.TabIndex = 111
+        '
         'UpdateForm
         '
         Me.AcceptButton = Me.btnUpdate
@@ -407,6 +416,7 @@ Partial Class UpdateForm
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(780, 592)
+        Me.Controls.Add(Me.txtHourlyPay)
         Me.Controls.Add(Me.lblJoin)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.btnPrint)
@@ -482,4 +492,5 @@ Partial Class UpdateForm
     Friend WithEvents dlgPreview As PrintPreviewDialog
     Friend WithEvents lblJoin As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents txtHourlyPay As TextBox
 End Class
