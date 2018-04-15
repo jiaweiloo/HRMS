@@ -1,5 +1,5 @@
 ﻿Public Class ManagerMainPage
-    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs)
         MDIManager.Close()
     End Sub
 
@@ -23,5 +23,9 @@
     Private Sub ManagerMainPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MDIManager.AddNewHRToolStripMenuItem.Enabled = True
         MDIManager.UpdateHRFetailsToolStripMenuItem.Enabled = True
+    End Sub
+
+    Private Sub btnPayroll_Click(sender As Object, e As EventArgs) Handles btnPayroll.Click
+        MDIManager.ShowForm(MgrReportForm)
     End Sub
 End Class

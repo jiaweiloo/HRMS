@@ -21,4 +21,15 @@
 
         lblCount.Text = rs.Count.ToString("0 record(s)")
     End Sub
+
+    Private Sub dgv_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv.CellDoubleClick
+        Dim i As Integer = e.RowIndex
+
+        If i > -1 Then
+            Dim id As String = CStr(dgv.Rows(i).Cells(0).Value)
+            HRNetpayUpDel.SelectedId = Integer.Parse(id)
+            HRNetpayUpDel.ShowDialog(Me)
+            BindData()
+        End If
+    End Sub
 End Class
