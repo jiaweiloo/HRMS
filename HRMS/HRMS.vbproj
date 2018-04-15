@@ -468,6 +468,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>HRMS_DB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Users-Checked-User-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
