@@ -32,16 +32,16 @@ Partial Class MDIStaff
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimeAttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PayrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewpayrollHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LogoutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip
         '
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.TimeAttendanceToolStripMenuItem, Me.LogOutToolStripMenuItem, Me.PayrollToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.TimeAttendanceToolStripMenuItem, Me.PayrollToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Padding = New System.Windows.Forms.Padding(9, 2, 0, 2)
@@ -51,7 +51,7 @@ Partial Class MDIStaff
         '
         'FileMenu
         '
-        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.ToolStripSeparator3, Me.PrintSetupToolStripMenuItem, Me.ToolStripSeparator5, Me.ExitToolStripMenuItem})
+        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.ToolStripSeparator3, Me.PrintSetupToolStripMenuItem, Me.ToolStripSeparator5, Me.LogoutToolStripMenuItem1, Me.ExitToolStripMenuItem})
         Me.FileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
         Me.FileMenu.Name = "FileMenu"
         Me.FileMenu.Size = New System.Drawing.Size(50, 29)
@@ -94,12 +94,6 @@ Partial Class MDIStaff
         Me.TimeAttendanceToolStripMenuItem.Size = New System.Drawing.Size(157, 29)
         Me.TimeAttendanceToolStripMenuItem.Text = "Time Attendance"
         '
-        'LogOutToolStripMenuItem
-        '
-        Me.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem"
-        Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(89, 29)
-        Me.LogOutToolStripMenuItem.Text = "Log Out"
-        '
         'PayrollToolStripMenuItem
         '
         Me.PayrollToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewpayrollHistoryToolStripMenuItem})
@@ -112,6 +106,12 @@ Partial Class MDIStaff
         Me.ViewpayrollHistoryToolStripMenuItem.Name = "ViewpayrollHistoryToolStripMenuItem"
         Me.ViewpayrollHistoryToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
         Me.ViewpayrollHistoryToolStripMenuItem.Text = "View &payroll history"
+        '
+        'LogoutToolStripMenuItem1
+        '
+        Me.LogoutToolStripMenuItem1.Name = "LogoutToolStripMenuItem1"
+        Me.LogoutToolStripMenuItem1.Size = New System.Drawing.Size(252, 30)
+        Me.LogoutToolStripMenuItem1.Text = "&Logout"
         '
         'MDIStaff
         '
@@ -139,7 +139,7 @@ Partial Class MDIStaff
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents MenuStrip As System.Windows.Forms.MenuStrip
     Friend WithEvents TimeAttendanceToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LogOutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PayrollToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewpayrollHistoryToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LogoutToolStripMenuItem1 As ToolStripMenuItem
 End Class

@@ -32,11 +32,11 @@ Public Class MDIStaff
         ShowForm(Attendance)
     End Sub
 
-    Private Sub LogOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogOutToolStripMenuItem.Click
-        Me.Close()
-    End Sub
-
     Private Sub ViewpayrollHistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewpayrollHistoryToolStripMenuItem.Click
         Me.Show(EmpHistoryPayroll)
+    End Sub
+
+    Private Sub LogoutToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem1.Click
+        Me.Close()
     End Sub
 End Class
