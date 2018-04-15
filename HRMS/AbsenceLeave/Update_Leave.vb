@@ -102,9 +102,9 @@
 
         End If
 
-        If (radApproved.Checked = True) Then
-            emp.leave_num = emp.leave_num - c.leave_duration
-        End If
+        'If (radApproved.Checked = True) Then
+        '    emp.leave_num = emp.leave_num - c.leave_duration
+        'End If
         db.SubmitChanges()
 
         MessageBox.Show("Leave [" & c.leave_id & "]updated", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information)
