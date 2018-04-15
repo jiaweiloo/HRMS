@@ -37,11 +37,12 @@ Partial Class ManagerViewLeave
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutUsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnPrint = New System.Windows.Forms.Button()
         Me.doc = New System.Drawing.Printing.PrintDocument()
         Me.dlgPreview = New System.Windows.Forms.PrintPreviewDialog()
         Me.cboMonth = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnPrint = New System.Windows.Forms.Button()
+        Me.btnClose = New System.Windows.Forms.Button()
         CType(Me.dgvLeave, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -71,9 +72,9 @@ Partial Class ManagerViewLeave
         '
         Me.lblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblID.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblID.Location = New System.Drawing.Point(263, 61)
+        Me.lblID.Location = New System.Drawing.Point(273, 61)
         Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(74, 18)
+        Me.lblID.Size = New System.Drawing.Size(119, 29)
         Me.lblID.TabIndex = 2
         Me.lblID.Text = "Label2"
         '
@@ -82,7 +83,7 @@ Partial Class ManagerViewLeave
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(369, 61)
+        Me.Label3.Location = New System.Drawing.Point(398, 60)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(122, 18)
         Me.Label3.TabIndex = 3
@@ -93,7 +94,7 @@ Partial Class ManagerViewLeave
         Me.lblName.AutoSize = True
         Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblName.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblName.Location = New System.Drawing.Point(530, 61)
+        Me.lblName.Location = New System.Drawing.Point(564, 60)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(57, 18)
         Me.lblName.TabIndex = 4
@@ -175,20 +176,6 @@ Partial Class ManagerViewLeave
         Me.AboutUsToolStripMenuItem.Size = New System.Drawing.Size(145, 26)
         Me.AboutUsToolStripMenuItem.Text = "&About Us"
         '
-        'btnPrint
-        '
-        Me.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrint.Image = Global.HRMS.My.Resources.Resources.print_large
-        Me.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPrint.Location = New System.Drawing.Point(468, 431)
-        Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.btnPrint.Size = New System.Drawing.Size(153, 54)
-        Me.btnPrint.TabIndex = 8
-        Me.btnPrint.Text = "&Print"
-        Me.btnPrint.UseVisualStyleBackColor = True
-        '
         'doc
         '
         '
@@ -209,7 +196,7 @@ Partial Class ManagerViewLeave
         Me.cboMonth.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboMonth.FormattingEnabled = True
         Me.cboMonth.Items.AddRange(New Object() {"All", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"})
-        Me.cboMonth.Location = New System.Drawing.Point(213, 431)
+        Me.cboMonth.Location = New System.Drawing.Point(259, 431)
         Me.cboMonth.Name = "cboMonth"
         Me.cboMonth.Size = New System.Drawing.Size(133, 24)
         Me.cboMonth.TabIndex = 9
@@ -218,11 +205,36 @@ Partial Class ManagerViewLeave
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(82, 438)
+        Me.Label2.Location = New System.Drawing.Point(115, 438)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(110, 17)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Select Months"
+        '
+        'btnPrint
+        '
+        Me.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.Image = Global.HRMS.My.Resources.Resources.print_large
+        Me.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPrint.Location = New System.Drawing.Point(415, 425)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.btnPrint.Size = New System.Drawing.Size(153, 54)
+        Me.btnPrint.TabIndex = 8
+        Me.btnPrint.Text = "&Print"
+        Me.btnPrint.UseVisualStyleBackColor = True
+        '
+        'btnClose
+        '
+        Me.btnClose.Font = New System.Drawing.Font("Modern No. 20", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClose.ForeColor = System.Drawing.Color.Red
+        Me.btnClose.Location = New System.Drawing.Point(583, 427)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(75, 37)
+        Me.btnClose.TabIndex = 11
+        Me.btnClose.Text = "&Close"
+        Me.btnClose.UseVisualStyleBackColor = True
         '
         'ManagerViewLeave
         '
@@ -230,6 +242,7 @@ Partial Class ManagerViewLeave
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(760, 491)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cboMonth)
         Me.Controls.Add(Me.btnPrint)
@@ -272,4 +285,5 @@ Partial Class ManagerViewLeave
     Friend WithEvents dlgPreview As PrintPreviewDialog
     Friend WithEvents cboMonth As ComboBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents btnClose As Button
 End Class

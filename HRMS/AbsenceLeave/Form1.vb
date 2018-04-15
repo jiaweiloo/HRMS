@@ -76,11 +76,13 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cboDuration.SelectedIndex = 0
         lbl_Leave_ID.Text = addleave.GetNextId()
         lbl_People_ID.Text = HRstaffid.hrstaffid.ToString()
     End Sub
 
     Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        cboDuration.SelectedIndex = 0
         lbl_Leave_ID.Text = addleave.GetNextId()
         lbl_People_ID.Text = HRstaffid.hrstaffid.ToString()
     End Sub

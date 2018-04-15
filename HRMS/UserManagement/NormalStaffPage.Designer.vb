@@ -24,20 +24,21 @@ Partial Class NormalStaffPage
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnApplyLeave = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblstaffname = New System.Windows.Forms.Label()
         Me.lblstaffid = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnView = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(27, 21)
+        Me.Label1.Location = New System.Drawing.Point(24, 17)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(337, 37)
+        Me.Label1.Size = New System.Drawing.Size(300, 30)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "STAFF HOME PAGE"
         '
@@ -47,34 +48,22 @@ Partial Class NormalStaffPage
         Me.btnApplyLeave.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnApplyLeave.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnApplyLeave.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnApplyLeave.Location = New System.Drawing.Point(584, 171)
-        Me.btnApplyLeave.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnApplyLeave.Location = New System.Drawing.Point(519, 137)
         Me.btnApplyLeave.Name = "btnApplyLeave"
-        Me.btnApplyLeave.Size = New System.Drawing.Size(187, 91)
+        Me.btnApplyLeave.Size = New System.Drawing.Size(166, 73)
         Me.btnApplyLeave.TabIndex = 1
         Me.btnApplyLeave.Text = "&Apply Leave"
         Me.btnApplyLeave.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Image = Global.HRMS.My.Resources.Resources.holiday_mood
-        Me.PictureBox1.Location = New System.Drawing.Point(34, 78)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(463, 283)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(584, 78)
+        Me.Button1.Location = New System.Drawing.Point(519, 62)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(187, 86)
+        Me.Button1.Size = New System.Drawing.Size(166, 69)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Attendance"
         Me.Button1.UseVisualStyleBackColor = False
@@ -83,9 +72,9 @@ Partial Class NormalStaffPage
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(404, 29)
+        Me.Label9.Location = New System.Drawing.Point(359, 23)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(92, 20)
+        Me.Label9.Size = New System.Drawing.Size(82, 17)
         Me.Label9.TabIndex = 90
         Me.Label9.Text = "Welcome !"
         '
@@ -94,9 +83,9 @@ Partial Class NormalStaffPage
         Me.lblstaffname.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.lblstaffname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblstaffname.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblstaffname.Location = New System.Drawing.Point(646, 28)
+        Me.lblstaffname.Location = New System.Drawing.Point(574, 22)
         Me.lblstaffname.Name = "lblstaffname"
-        Me.lblstaffname.Size = New System.Drawing.Size(125, 30)
+        Me.lblstaffname.Size = New System.Drawing.Size(111, 24)
         Me.lblstaffname.TabIndex = 89
         '
         'lblstaffid
@@ -104,16 +93,41 @@ Partial Class NormalStaffPage
         Me.lblstaffid.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.lblstaffid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblstaffid.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblstaffid.Location = New System.Drawing.Point(515, 28)
+        Me.lblstaffid.Location = New System.Drawing.Point(458, 22)
         Me.lblstaffid.Name = "lblstaffid"
-        Me.lblstaffid.Size = New System.Drawing.Size(125, 30)
+        Me.lblstaffid.Size = New System.Drawing.Size(111, 24)
         Me.lblstaffid.TabIndex = 88
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Image = Global.HRMS.My.Resources.Resources.holiday_mood
+        Me.PictureBox1.Location = New System.Drawing.Point(30, 62)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(412, 227)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
+        'btnView
+        '
+        Me.btnView.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnView.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnView.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnView.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnView.Location = New System.Drawing.Point(519, 226)
+        Me.btnView.Name = "btnView"
+        Me.btnView.Size = New System.Drawing.Size(166, 73)
+        Me.btnView.TabIndex = 91
+        Me.btnView.Text = "&View Leave"
+        Me.btnView.UseVisualStyleBackColor = False
         '
         'NormalStaffPage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(945, 558)
+        Me.ClientSize = New System.Drawing.Size(840, 446)
+        Me.Controls.Add(Me.btnView)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.lblstaffname)
         Me.Controls.Add(Me.lblstaffid)
@@ -138,4 +152,5 @@ Partial Class NormalStaffPage
     Friend WithEvents Label9 As Label
     Friend WithEvents lblstaffname As Label
     Friend WithEvents lblstaffid As Label
+    Friend WithEvents btnView As Button
 End Class

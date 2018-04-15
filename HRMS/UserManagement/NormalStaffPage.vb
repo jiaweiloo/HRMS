@@ -12,4 +12,8 @@
         lblstaffname.Text = HRstaffid.hrname
         lblstaffid.Text = HRstaffid.hrstaffid
     End Sub
+
+    Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
+        MDIStaff.ShowForm(StaffViewLeave)
+    End Sub
 End Class

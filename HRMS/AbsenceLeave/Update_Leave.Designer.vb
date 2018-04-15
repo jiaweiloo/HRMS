@@ -42,10 +42,9 @@ Partial Class Update_Leave
         '
         Me.radApproved.AutoSize = True
         Me.radApproved.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radApproved.Location = New System.Drawing.Point(308, 106)
-        Me.radApproved.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.radApproved.Location = New System.Drawing.Point(274, 85)
         Me.radApproved.Name = "radApproved"
-        Me.radApproved.Size = New System.Drawing.Size(110, 24)
+        Me.radApproved.Size = New System.Drawing.Size(98, 21)
         Me.radApproved.TabIndex = 16
         Me.radApproved.TabStop = True
         Me.radApproved.Text = "Approved"
@@ -55,10 +54,9 @@ Partial Class Update_Leave
         '
         Me.radRejected.AutoSize = True
         Me.radRejected.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radRejected.Location = New System.Drawing.Point(56, 106)
-        Me.radRejected.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.radRejected.Location = New System.Drawing.Point(50, 85)
         Me.radRejected.Name = "radRejected"
-        Me.radRejected.Size = New System.Drawing.Size(106, 24)
+        Me.radRejected.Size = New System.Drawing.Size(93, 21)
         Me.radRejected.TabIndex = 15
         Me.radRejected.TabStop = True
         Me.radRejected.Text = "Rejected"
@@ -70,10 +68,9 @@ Partial Class Update_Leave
         Me.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnUpdate.Location = New System.Drawing.Point(511, 106)
-        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnUpdate.Location = New System.Drawing.Point(454, 85)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(119, 50)
+        Me.btnUpdate.Size = New System.Drawing.Size(106, 40)
         Me.btnUpdate.TabIndex = 14
         Me.btnUpdate.Text = "&Update"
         Me.btnUpdate.UseVisualStyleBackColor = False
@@ -82,9 +79,9 @@ Partial Class Update_Leave
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(128, 368)
+        Me.Label4.Location = New System.Drawing.Point(114, 294)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(78, 20)
+        Me.Label4.Size = New System.Drawing.Size(70, 17)
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "Duration"
         '
@@ -92,9 +89,9 @@ Partial Class Update_Leave
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(129, 301)
+        Me.Label3.Location = New System.Drawing.Point(115, 241)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(76, 20)
+        Me.Label3.Size = New System.Drawing.Size(68, 17)
         Me.Label3.TabIndex = 12
         Me.Label3.Text = "Reason:"
         '
@@ -102,9 +99,9 @@ Partial Class Update_Leave
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(119, 234)
+        Me.Label2.Location = New System.Drawing.Point(106, 187)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 20)
+        Me.Label2.Size = New System.Drawing.Size(78, 17)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "People ID"
         '
@@ -112,9 +109,9 @@ Partial Class Update_Leave
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(121, 167)
+        Me.Label1.Location = New System.Drawing.Point(108, 134)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 20)
+        Me.Label1.Size = New System.Drawing.Size(77, 17)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Leave ID:"
         '
@@ -123,9 +120,9 @@ Partial Class Update_Leave
         Me.lblName.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.lblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.Location = New System.Drawing.Point(304, 30)
+        Me.lblName.Location = New System.Drawing.Point(270, 24)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(146, 47)
+        Me.lblName.Size = New System.Drawing.Size(130, 38)
         Me.lblName.TabIndex = 18
         '
         'lblID
@@ -133,18 +130,18 @@ Partial Class Update_Leave
         Me.lblID.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.lblID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblID.Location = New System.Drawing.Point(52, 29)
+        Me.lblID.Location = New System.Drawing.Point(46, 23)
         Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(146, 48)
+        Me.lblID.Size = New System.Drawing.Size(130, 39)
         Me.lblID.TabIndex = 17
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(304, 167)
+        Me.Label5.Location = New System.Drawing.Point(270, 134)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 20)
+        Me.Label5.Size = New System.Drawing.Size(57, 17)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "Label5"
         '
@@ -152,19 +149,21 @@ Partial Class Update_Leave
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(304, 234)
+        Me.Label6.Location = New System.Drawing.Point(270, 187)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 20)
+        Me.Label6.Size = New System.Drawing.Size(57, 17)
         Me.Label6.TabIndex = 20
         Me.Label6.Text = "Label6"
         '
         'Label7
         '
-        Me.Label7.AutoSize = True
+        Me.Label7.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(304, 301)
+        Me.Label7.Location = New System.Drawing.Point(270, 222)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(63, 20)
+        Me.Label7.Size = New System.Drawing.Size(392, 59)
         Me.Label7.TabIndex = 21
         Me.Label7.Text = "Label7"
         '
@@ -172,9 +171,9 @@ Partial Class Update_Leave
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(304, 368)
+        Me.Label8.Location = New System.Drawing.Point(270, 294)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(63, 20)
+        Me.Label8.Size = New System.Drawing.Size(57, 17)
         Me.Label8.TabIndex = 22
         Me.Label8.Text = "Label8"
         '
@@ -185,19 +184,20 @@ Partial Class Update_Leave
         Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnExit.Location = New System.Drawing.Point(636, 106)
+        Me.btnExit.Location = New System.Drawing.Point(565, 85)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(109, 50)
+        Me.btnExit.Size = New System.Drawing.Size(97, 40)
         Me.btnExit.TabIndex = 23
         Me.btnExit.Text = "&Exit"
         Me.btnExit.UseVisualStyleBackColor = False
         '
         'Update_Leave
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(815, 454)
+        Me.ClientSize = New System.Drawing.Size(724, 363)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
