@@ -427,6 +427,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>HRMS_DB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\print-large.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

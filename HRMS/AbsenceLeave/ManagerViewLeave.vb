@@ -77,8 +77,10 @@ Public Class ManagerViewLeave
 
 
         For Each item In db.Leaves
-            cnt += 1
-            body.AppendFormat("{0,10} {1,10} {2,13} {3,12} {4,10} {5,13}" & vbNewLine, item.leave_id, item.people_id, item.leave_date.ToShortTimeString, item.apply_date.ToShortTimeString, item.leave_duration, item.status)
+            If ((item.leave_date.Month.ToString() = cboMonth.Text Or cboMonth.Text = "All") And item.leave_date.Year = Year(Now)) Then
+                cnt += 1
+                body.AppendFormat("{0,10} {1,10} {2,13} {3,12} {4,10} {5,13}" & vbNewLine, item.leave_id, item.people_id, item.leave_date.ToShortTimeString, item.apply_date.ToShortTimeString, item.leave_duration, item.status)
+            End If
         Next
         body.AppendLine()
         body.AppendFormat("{0,2} record(s)", cnt)

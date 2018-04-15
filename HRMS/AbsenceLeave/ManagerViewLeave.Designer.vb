@@ -41,6 +41,7 @@ Partial Class ManagerViewLeave
         Me.doc = New System.Drawing.Printing.PrintDocument()
         Me.dlgPreview = New System.Windows.Forms.PrintPreviewDialog()
         Me.cboMonth = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.dgvLeave, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -110,7 +111,7 @@ Partial Class ManagerViewLeave
         'lblCount
         '
         Me.lblCount.AutoSize = True
-        Me.lblCount.Location = New System.Drawing.Point(12, 428)
+        Me.lblCount.Location = New System.Drawing.Point(9, 456)
         Me.lblCount.Name = "lblCount"
         Me.lblCount.Size = New System.Drawing.Size(51, 17)
         Me.lblCount.TabIndex = 6
@@ -167,9 +168,13 @@ Partial Class ManagerViewLeave
         '
         'btnPrint
         '
-        Me.btnPrint.Location = New System.Drawing.Point(455, 413)
+        Me.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnPrint.Image = Global.HRMS.My.Resources.Resources.print_large
+        Me.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPrint.Location = New System.Drawing.Point(400, 429)
         Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(91, 38)
+        Me.btnPrint.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.btnPrint.Size = New System.Drawing.Size(146, 54)
         Me.btnPrint.TabIndex = 8
         Me.btnPrint.Text = "&Print"
         Me.btnPrint.UseVisualStyleBackColor = True
@@ -192,16 +197,26 @@ Partial Class ManagerViewLeave
         '
         Me.cboMonth.FormattingEnabled = True
         Me.cboMonth.Items.AddRange(New Object() {"All", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"})
-        Me.cboMonth.Location = New System.Drawing.Point(180, 428)
+        Me.cboMonth.Location = New System.Drawing.Point(211, 449)
         Me.cboMonth.Name = "cboMonth"
         Me.cboMonth.Size = New System.Drawing.Size(121, 24)
         Me.cboMonth.TabIndex = 9
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(79, 456)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(97, 17)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Select Months"
         '
         'ManagerViewLeave
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(760, 491)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cboMonth)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.lblCount)
@@ -242,4 +257,5 @@ Partial Class ManagerViewLeave
     Friend WithEvents doc As Printing.PrintDocument
     Friend WithEvents dlgPreview As PrintPreviewDialog
     Friend WithEvents cboMonth As ComboBox
+    Friend WithEvents Label2 As Label
 End Class

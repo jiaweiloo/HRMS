@@ -89,7 +89,7 @@
 
             emp.extra_leave = emp.extra_leave + extra_leave
             db.SubmitChanges()
-            'emp.leave_num = 0
+            emp.leave_num = 0
 
             '    Try
             '        db.SubmitChanges()
