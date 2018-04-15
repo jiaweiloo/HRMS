@@ -195,7 +195,7 @@ Public Class Attendance
 
         ' (4) Print 
         With e.Graphics
-            '.DrawImage(My.Resources.Erika, 0, 0, 80, 100)
+            .DrawImage(My.Resources.Users_Checked_User_icon, 0, 0, 80, 100)
             .DrawString(header, fontHeader, Brushes.Purple, 100, 0)
             .DrawString(subHeader, fontSubHeader, Brushes.Black, 100, 40)
             .DrawString(body.ToString(), fontBody, Brushes.Black, 0, 120)

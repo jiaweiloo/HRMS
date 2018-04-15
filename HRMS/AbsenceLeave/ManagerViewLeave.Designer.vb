@@ -61,7 +61,7 @@ Partial Class ManagerViewLeave
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(149, 61)
+        Me.Label1.Location = New System.Drawing.Point(139, 61)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(99, 18)
         Me.Label1.TabIndex = 1
@@ -69,12 +69,11 @@ Partial Class ManagerViewLeave
         '
         'lblID
         '
-        Me.lblID.AutoSize = True
         Me.lblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblID.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblID.Location = New System.Drawing.Point(276, 61)
+        Me.lblID.Location = New System.Drawing.Point(263, 61)
         Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(57, 18)
+        Me.lblID.Size = New System.Drawing.Size(74, 18)
         Me.lblID.TabIndex = 2
         Me.lblID.Text = "Label2"
         '
@@ -83,7 +82,7 @@ Partial Class ManagerViewLeave
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(356, 61)
+        Me.Label3.Location = New System.Drawing.Point(369, 61)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(122, 18)
         Me.Label3.TabIndex = 3
@@ -94,7 +93,7 @@ Partial Class ManagerViewLeave
         Me.lblName.AutoSize = True
         Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblName.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblName.Location = New System.Drawing.Point(507, 61)
+        Me.lblName.Location = New System.Drawing.Point(530, 61)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(57, 18)
         Me.lblName.TabIndex = 4
