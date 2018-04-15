@@ -44,11 +44,6 @@ Public Class Form1
                 Return
             End If
 
-
-
-
-
-
         Catch ex As Exception
             'MessageBox.Show("Invalid Input", "Error")
 
@@ -64,7 +59,6 @@ Public Class Form1
         leave.reason = reason
         leave.status = status
         leave.leave_duration = duration
-
 
         Dim db As New HRMS_DBLinq2DataContext
         db.Leaves.InsertOnSubmit(leave)
