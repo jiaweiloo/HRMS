@@ -1,7 +1,6 @@
 ﻿Imports System.Text
 
-Public Class AddNewStaff
-
+Public Class ManAddHR
     Public Sub ResetForm()
         txtName.Text = ""
         txtIC.Text = ""
@@ -10,11 +9,10 @@ Public Class AddNewStaff
         txtPhone.Text = ""
         txtEmail.Text = ""
         txtAddress.Text = ""
-        cboDepart.SelectedIndex = 0
+
         txtName.Focus()
         Err.Clear()
     End Sub
-
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
         If Me.ValidateChildren() = False Then
             Return
@@ -31,7 +29,7 @@ Public Class AddNewStaff
             Dim phone As String = ""
             Dim email As String = ""
             Dim address As String = ""
-            Dim role As String = ""
+            Dim role As String = "HR"
             Dim depart As String = ""
 
             id = lblStaffID.Text
@@ -49,20 +47,11 @@ Public Class AddNewStaff
             phone = txtPhone.Text
             email = txtEmail.Text
             address = txtAddress.Text
-            depart = cboDepart.SelectedItem.ToString
-            If depart = "HR Dept." Then
-                role = "HR"
-            Else
-                role = "Staff"
-            End If
+            depart = lblDepart.Text
 
             If name = "" Then
                 err.AppendLine("- Please Enter Name")
                 ctr = If(ctr, txtName)
-            End If
-            If cboDepart.SelectedIndex < 0 Then
-                err.AppendLine("- Please Select Department")
-                ctr = If(ctr, cboDepart)
             End If
             If IC = "" Then
                 err.AppendLine("- Please Select IC")
@@ -108,53 +97,34 @@ Public Class AddNewStaff
 
                 MessageBox.Show("Insert complete", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 ResetForm()
-                lblStaffID.Text = peopleid.GetNextId
+                lblStaffID.Text = HRstaffid.GetHRNextId
             End If
         Catch ex As Exception
             MessageBox.Show("Input Error ", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
-
-    End Sub
-
-    Private Sub AddNewStaff_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblStaffID.Text = peopleid.GetNextId
-        lblHRname.Text = HRstaffid.hrname
-        lblHRid.Text = HRstaffid.hrstaffid
-        txtName.Focus()
-        cboDepart.SelectedIndex = 0
-        MDIParent1.AddNewStaffToolStripMenuItem.Enabled = False
-        MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.RetrieveStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.DeleteStaffDetailsToolStripMenuItem.Enabled = True
-    End Sub
-
-    Private Sub AddNewStaff_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
-        lblStaffID.Text = peopleid.GetNextId
-        lblHRname.Text = HRstaffid.hrname
-        lblHRid.Text = HRstaffid.hrstaffid
-        txtName.Focus()
-        cboDepart.SelectedIndex = 0
-        MDIParent1.AddNewStaffToolStripMenuItem.Enabled = False
-        MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.RetrieveStaffDetailsToolStripMenuItem.Enabled = True
-        MDIParent1.DeleteStaffDetailsToolStripMenuItem.Enabled = True
-    End Sub
-
-    Private Sub UpdateStaffDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        UpdateStaffDetail.Show()
-    End Sub
-
-    Private Sub RetriveStaffDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub DeleteStaffDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         ResetForm()
-        'MDIParent1.ShowForm(HRHomepage)
     End Sub
 
+    Private Sub ManAddHR_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblStaffID.Text = HRstaffid.GetHRNextId
+        lblHRname.Text = HRstaffid.hrname
+        lblHRid.Text = HRstaffid.hrstaffid
+        'cboDepart.SelectedIndex = 0
+        MDIManager.AddNewHRToolStripMenuItem.Enabled = False
+        MDIManager.UpdateHRFetailsToolStripMenuItem.Enabled = True
+        MDIManager.DeleteHRToolStripMenuItem.Enabled = True
+    End Sub
+
+    Private Sub ManAddHR_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        lblStaffID.Text = HRstaffid.GetHRNextId
+        lblHRname.Text = HRstaffid.hrname
+        lblHRid.Text = HRstaffid.hrstaffid
+        'cboDepart.SelectedIndex = 0
+        MDIManager.AddNewHRToolStripMenuItem.Enabled = False
+        MDIManager.UpdateHRFetailsToolStripMenuItem.Enabled = True
+        MDIManager.DeleteHRToolStripMenuItem.Enabled = True
+    End Sub
 End Class

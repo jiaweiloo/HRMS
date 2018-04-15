@@ -26,8 +26,6 @@ Partial Class MDIParent1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MDIParent1))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -42,17 +40,20 @@ Partial Class MDIParent1
         Me.UpdateLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PayrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimeAttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip
         '
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.UserManagementToolStripMenuItem, Me.AbsenceLeaveToolStripMenuItem, Me.PayrollToolStripMenuItem, Me.TimeAttendanceToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.UserManagementToolStripMenuItem, Me.AbsenceLeaveToolStripMenuItem, Me.PayrollToolStripMenuItem, Me.TimeAttendanceToolStripMenuItem, Me.LogOutToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
-        Me.MenuStrip.Size = New System.Drawing.Size(843, 28)
+        Me.MenuStrip.Padding = New System.Windows.Forms.Padding(9, 2, 0, 2)
+        Me.MenuStrip.Size = New System.Drawing.Size(948, 33)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
         '
@@ -61,8 +62,94 @@ Partial Class MDIParent1
         Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.OpenToolStripMenuItem, Me.ToolStripSeparator3, Me.SaveToolStripMenuItem, Me.SaveAsToolStripMenuItem, Me.ToolStripSeparator4, Me.ExitToolStripMenuItem})
         Me.FileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
         Me.FileMenu.Name = "FileMenu"
-        Me.FileMenu.Size = New System.Drawing.Size(44, 24)
+        Me.FileMenu.Size = New System.Drawing.Size(50, 29)
         Me.FileMenu.Text = "&File"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(203, 6)
+        '
+        'SaveToolStripMenuItem
+        '
+        Me.SaveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
+        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
+        Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+        Me.SaveToolStripMenuItem.Text = "&Save"
+        '
+        'SaveAsToolStripMenuItem
+        '
+        Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
+        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+        Me.SaveAsToolStripMenuItem.Text = "Save &As"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(203, 6)
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
+        Me.ExitToolStripMenuItem.Text = "E&xit"
+        '
+        'UserManagementToolStripMenuItem
+        '
+        Me.UserManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewStaffToolStripMenuItem, Me.UpdateStaffDetailsToolStripMenuItem, Me.RetrieveStaffDetailsToolStripMenuItem, Me.DeleteStaffDetailsToolStripMenuItem})
+        Me.UserManagementToolStripMenuItem.Name = "UserManagementToolStripMenuItem"
+        Me.UserManagementToolStripMenuItem.Size = New System.Drawing.Size(169, 29)
+        Me.UserManagementToolStripMenuItem.Text = "User Management"
+        '
+        'AddNewStaffToolStripMenuItem
+        '
+        Me.AddNewStaffToolStripMenuItem.Name = "AddNewStaffToolStripMenuItem"
+        Me.AddNewStaffToolStripMenuItem.Size = New System.Drawing.Size(260, 30)
+        Me.AddNewStaffToolStripMenuItem.Text = "Add New Staff"
+        '
+        'UpdateStaffDetailsToolStripMenuItem
+        '
+        Me.UpdateStaffDetailsToolStripMenuItem.Name = "UpdateStaffDetailsToolStripMenuItem"
+        Me.UpdateStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(260, 30)
+        Me.UpdateStaffDetailsToolStripMenuItem.Text = "Update Staff Details"
+        '
+        'RetrieveStaffDetailsToolStripMenuItem
+        '
+        Me.RetrieveStaffDetailsToolStripMenuItem.Name = "RetrieveStaffDetailsToolStripMenuItem"
+        Me.RetrieveStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(260, 30)
+        Me.RetrieveStaffDetailsToolStripMenuItem.Text = "Retrieve Staff Details"
+        '
+        'DeleteStaffDetailsToolStripMenuItem
+        '
+        Me.DeleteStaffDetailsToolStripMenuItem.Name = "DeleteStaffDetailsToolStripMenuItem"
+        Me.DeleteStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(260, 30)
+        Me.DeleteStaffDetailsToolStripMenuItem.Text = "Delete Staff Details"
+        '
+        'AbsenceLeaveToolStripMenuItem
+        '
+        Me.AbsenceLeaveToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateLeaveToolStripMenuItem})
+        Me.AbsenceLeaveToolStripMenuItem.Name = "AbsenceLeaveToolStripMenuItem"
+        Me.AbsenceLeaveToolStripMenuItem.Size = New System.Drawing.Size(145, 29)
+        Me.AbsenceLeaveToolStripMenuItem.Text = "Absence & Leave"
+        '
+        'UpdateLeaveToolStripMenuItem
+        '
+        Me.UpdateLeaveToolStripMenuItem.Name = "UpdateLeaveToolStripMenuItem"
+        Me.UpdateLeaveToolStripMenuItem.Size = New System.Drawing.Size(211, 30)
+        Me.UpdateLeaveToolStripMenuItem.Text = "&Update Leave"
+        '
+        'PayrollToolStripMenuItem
+        '
+        Me.PayrollToolStripMenuItem.Name = "PayrollToolStripMenuItem"
+        Me.PayrollToolStripMenuItem.Size = New System.Drawing.Size(77, 29)
+        Me.PayrollToolStripMenuItem.Text = "Payroll"
+        '
+        'TimeAttendanceToolStripMenuItem
+        '
+        Me.TimeAttendanceToolStripMenuItem.Name = "TimeAttendanceToolStripMenuItem"
+        Me.TimeAttendanceToolStripMenuItem.Size = New System.Drawing.Size(162, 29)
+        Me.TimeAttendanceToolStripMenuItem.Text = "Time & Attendance"
         '
         'NewToolStripMenuItem
         '
@@ -70,7 +157,7 @@ Partial Class MDIParent1
         Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(173, 26)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
         Me.NewToolStripMenuItem.Text = "&New"
         '
         'OpenToolStripMenuItem
@@ -79,105 +166,26 @@ Partial Class MDIParent1
         Me.OpenToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
         Me.OpenToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(173, 26)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
         Me.OpenToolStripMenuItem.Text = "&Open"
         '
-        'ToolStripSeparator3
+        'LogOutToolStripMenuItem
         '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(170, 6)
-        '
-        'SaveToolStripMenuItem
-        '
-        Me.SaveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
-        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(173, 26)
-        Me.SaveToolStripMenuItem.Text = "&Save"
-        '
-        'SaveAsToolStripMenuItem
-        '
-        Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(173, 26)
-        Me.SaveAsToolStripMenuItem.Text = "Save &As"
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(170, 6)
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(173, 26)
-        Me.ExitToolStripMenuItem.Text = "E&xit"
-        '
-        'UserManagementToolStripMenuItem
-        '
-        Me.UserManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewStaffToolStripMenuItem, Me.UpdateStaffDetailsToolStripMenuItem, Me.RetrieveStaffDetailsToolStripMenuItem, Me.DeleteStaffDetailsToolStripMenuItem})
-        Me.UserManagementToolStripMenuItem.Name = "UserManagementToolStripMenuItem"
-        Me.UserManagementToolStripMenuItem.Size = New System.Drawing.Size(142, 24)
-        Me.UserManagementToolStripMenuItem.Text = "User Management"
-        '
-        'AddNewStaffToolStripMenuItem
-        '
-        Me.AddNewStaffToolStripMenuItem.Name = "AddNewStaffToolStripMenuItem"
-        Me.AddNewStaffToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
-        Me.AddNewStaffToolStripMenuItem.Text = "Add New Staff"
-        '
-        'UpdateStaffDetailsToolStripMenuItem
-        '
-        Me.UpdateStaffDetailsToolStripMenuItem.Name = "UpdateStaffDetailsToolStripMenuItem"
-        Me.UpdateStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
-        Me.UpdateStaffDetailsToolStripMenuItem.Text = "Update Staff Details"
-        '
-        'RetrieveStaffDetailsToolStripMenuItem
-        '
-        Me.RetrieveStaffDetailsToolStripMenuItem.Name = "RetrieveStaffDetailsToolStripMenuItem"
-        Me.RetrieveStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
-        Me.RetrieveStaffDetailsToolStripMenuItem.Text = "Retrieve Staff Details"
-        '
-        'DeleteStaffDetailsToolStripMenuItem
-        '
-        Me.DeleteStaffDetailsToolStripMenuItem.Name = "DeleteStaffDetailsToolStripMenuItem"
-        Me.DeleteStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
-        Me.DeleteStaffDetailsToolStripMenuItem.Text = "Delete Staff Details"
-        '
-        'AbsenceLeaveToolStripMenuItem
-        '
-        Me.AbsenceLeaveToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateLeaveToolStripMenuItem})
-        Me.AbsenceLeaveToolStripMenuItem.Name = "AbsenceLeaveToolStripMenuItem"
-        Me.AbsenceLeaveToolStripMenuItem.Size = New System.Drawing.Size(123, 24)
-        Me.AbsenceLeaveToolStripMenuItem.Text = "Absence & Leave"
-        '
-        'UpdateLeaveToolStripMenuItem
-        '
-        Me.UpdateLeaveToolStripMenuItem.Name = "UpdateLeaveToolStripMenuItem"
-        Me.UpdateLeaveToolStripMenuItem.Size = New System.Drawing.Size(175, 26)
-        Me.UpdateLeaveToolStripMenuItem.Text = "&Update Leave"
-        '
-        'PayrollToolStripMenuItem
-        '
-        Me.PayrollToolStripMenuItem.Name = "PayrollToolStripMenuItem"
-        Me.PayrollToolStripMenuItem.Size = New System.Drawing.Size(65, 24)
-        Me.PayrollToolStripMenuItem.Text = "Payroll"
-        '
-        'TimeAttendanceToolStripMenuItem
-        '
-        Me.TimeAttendanceToolStripMenuItem.Name = "TimeAttendanceToolStripMenuItem"
-        Me.TimeAttendanceToolStripMenuItem.Size = New System.Drawing.Size(138, 24)
-        Me.TimeAttendanceToolStripMenuItem.Text = "Time & Attendance"
+        Me.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem"
+        Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(89, 29)
+        Me.LogOutToolStripMenuItem.Text = "Log Out"
         '
         'MDIParent1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(843, 558)
+        Me.ClientSize = New System.Drawing.Size(948, 698)
         Me.Controls.Add(Me.MenuStrip)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "MDIParent1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MDIParent"
         Me.MenuStrip.ResumeLayout(False)
         Me.MenuStrip.PerformLayout()
@@ -203,4 +211,5 @@ Partial Class MDIParent1
     Friend WithEvents RetrieveStaffDetailsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteStaffDetailsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UpdateLeaveToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LogOutToolStripMenuItem As ToolStripMenuItem
 End Class

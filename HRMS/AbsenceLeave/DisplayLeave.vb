@@ -28,6 +28,10 @@
         lblName.Font = timesNewRoman
 
         BindData()
+        MDIParent1.AddNewStaffToolStripMenuItem.Enabled = True
+        MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
+        MDIParent1.RetrieveStaffDetailsToolStripMenuItem.Enabled = True
+        MDIParent1.DeleteStaffDetailsToolStripMenuItem.Enabled = True
     End Sub
 
     Private Sub cboLeave_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboLeave.SelectedIndexChanged
@@ -53,5 +57,9 @@
     Private Sub DisplayLeave_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         lblID.Text = HRstaffid.hrstaffid
         lblName.Text = HRstaffid.hrname
+        MDIParent1.AddNewStaffToolStripMenuItem.Enabled = True
+        MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
+        MDIParent1.RetrieveStaffDetailsToolStripMenuItem.Enabled = True
+        MDIParent1.DeleteStaffDetailsToolStripMenuItem.Enabled = True
     End Sub
 End Class

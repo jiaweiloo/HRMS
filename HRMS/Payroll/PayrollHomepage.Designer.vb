@@ -31,41 +31,57 @@ Partial Class PayrollHomepage
         '
         'btnPrepPayroll
         '
-        Me.btnPrepPayroll.Location = New System.Drawing.Point(304, 316)
+        Me.btnPrepPayroll.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.btnPrepPayroll.Cursor = System.Windows.Forms.Cursors.PanWest
+        Me.btnPrepPayroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrepPayroll.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnPrepPayroll.Location = New System.Drawing.Point(258, 344)
         Me.btnPrepPayroll.Name = "btnPrepPayroll"
-        Me.btnPrepPayroll.Size = New System.Drawing.Size(192, 52)
+        Me.btnPrepPayroll.Size = New System.Drawing.Size(281, 77)
         Me.btnPrepPayroll.TabIndex = 3
         Me.btnPrepPayroll.Text = "&Prepare this month payroll for all"
-        Me.btnPrepPayroll.UseVisualStyleBackColor = True
+        Me.btnPrepPayroll.UseVisualStyleBackColor = False
         '
         'btnCheckMdDdt
         '
-        Me.btnCheckMdDdt.Location = New System.Drawing.Point(304, 100)
+        Me.btnCheckMdDdt.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.btnCheckMdDdt.Cursor = System.Windows.Forms.Cursors.PanWest
+        Me.btnCheckMdDdt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCheckMdDdt.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnCheckMdDdt.Location = New System.Drawing.Point(258, 100)
         Me.btnCheckMdDdt.Name = "btnCheckMdDdt"
-        Me.btnCheckMdDdt.Size = New System.Drawing.Size(192, 52)
+        Me.btnCheckMdDdt.Size = New System.Drawing.Size(281, 77)
         Me.btnCheckMdDdt.TabIndex = 0
         Me.btnCheckMdDdt.Text = "Check and &Manage Mandatory Deduction"
-        Me.btnCheckMdDdt.UseVisualStyleBackColor = True
+        Me.btnCheckMdDdt.UseVisualStyleBackColor = False
         '
         'btnOvertime
         '
         Me.btnOvertime.AutoSize = True
-        Me.btnOvertime.Location = New System.Drawing.Point(304, 172)
+        Me.btnOvertime.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnOvertime.Cursor = System.Windows.Forms.Cursors.PanWest
+        Me.btnOvertime.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOvertime.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnOvertime.Location = New System.Drawing.Point(258, 183)
         Me.btnOvertime.Name = "btnOvertime"
-        Me.btnOvertime.Size = New System.Drawing.Size(192, 52)
+        Me.btnOvertime.Size = New System.Drawing.Size(281, 77)
         Me.btnOvertime.TabIndex = 1
         Me.btnOvertime.Text = "Check &Overtime"
-        Me.btnOvertime.UseVisualStyleBackColor = True
+        Me.btnOvertime.UseVisualStyleBackColor = False
         '
         'btnDeduction
         '
         Me.btnDeduction.AutoSize = True
-        Me.btnDeduction.Location = New System.Drawing.Point(304, 244)
+        Me.btnDeduction.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnDeduction.Cursor = System.Windows.Forms.Cursors.PanWest
+        Me.btnDeduction.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDeduction.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnDeduction.Location = New System.Drawing.Point(258, 261)
         Me.btnDeduction.Name = "btnDeduction"
-        Me.btnDeduction.Size = New System.Drawing.Size(192, 52)
+        Me.btnDeduction.Size = New System.Drawing.Size(281, 77)
         Me.btnDeduction.TabIndex = 2
         Me.btnDeduction.Text = "Check &Deduction"
-        Me.btnDeduction.UseVisualStyleBackColor = True
+        Me.btnDeduction.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -81,7 +97,7 @@ Partial Class PayrollHomepage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(785, 489)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnDeduction)
         Me.Controls.Add(Me.btnOvertime)

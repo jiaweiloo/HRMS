@@ -31,37 +31,43 @@ Partial Class NormalStaffPage
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(306, 19)
+        Me.Label1.Location = New System.Drawing.Point(344, 24)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 17)
+        Me.Label1.Size = New System.Drawing.Size(60, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "STAFF"
         '
         'btnApplyLeave
         '
-        Me.btnApplyLeave.Location = New System.Drawing.Point(531, 144)
+        Me.btnApplyLeave.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnApplyLeave.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnApplyLeave.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnApplyLeave.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnApplyLeave.Location = New System.Drawing.Point(549, 185)
+        Me.btnApplyLeave.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnApplyLeave.Name = "btnApplyLeave"
-        Me.btnApplyLeave.Size = New System.Drawing.Size(85, 77)
+        Me.btnApplyLeave.Size = New System.Drawing.Size(187, 91)
         Me.btnApplyLeave.TabIndex = 1
         Me.btnApplyLeave.Text = "&Apply Leave"
-        Me.btnApplyLeave.UseVisualStyleBackColor = True
+        Me.btnApplyLeave.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.Image = Global.HRMS.My.Resources.Resources.holiday_mood
-        Me.PictureBox1.Location = New System.Drawing.Point(30, 71)
+        Me.PictureBox1.Location = New System.Drawing.Point(34, 89)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(412, 227)
+        Me.PictureBox1.Size = New System.Drawing.Size(463, 283)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
         'NormalStaffPage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(711, 360)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnApplyLeave)
         Me.Controls.Add(Me.Label1)

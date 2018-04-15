@@ -110,32 +110,41 @@ Partial Class HRAddMandatory
         'btnAdd
         '
         Me.btnAdd.AutoSize = True
-        Me.btnAdd.Location = New System.Drawing.Point(176, 310)
+        Me.btnAdd.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnAdd.Location = New System.Drawing.Point(177, 301)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(76, 30)
+        Me.btnAdd.Size = New System.Drawing.Size(100, 44)
         Me.btnAdd.TabIndex = 10
         Me.btnAdd.Text = "&Add"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnAdd.UseVisualStyleBackColor = False
         '
         'btnCancel
         '
         Me.btnCancel.AutoSize = True
-        Me.btnCancel.Location = New System.Drawing.Point(408, 310)
+        Me.btnCancel.BackColor = System.Drawing.Color.Goldenrod
+        Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnCancel.Location = New System.Drawing.Point(409, 301)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(76, 30)
+        Me.btnCancel.Size = New System.Drawing.Size(114, 44)
         Me.btnCancel.TabIndex = 11
         Me.btnCancel.Text = "&Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'btnReset
         '
         Me.btnReset.AutoSize = True
-        Me.btnReset.Location = New System.Drawing.Point(292, 310)
+        Me.btnReset.BackColor = System.Drawing.Color.IndianRed
+        Me.btnReset.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReset.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnReset.Location = New System.Drawing.Point(293, 301)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(76, 30)
+        Me.btnReset.Size = New System.Drawing.Size(101, 44)
         Me.btnReset.TabIndex = 12
         Me.btnReset.Text = "&Reset"
-        Me.btnReset.UseVisualStyleBackColor = True
+        Me.btnReset.UseVisualStyleBackColor = False
         '
         'HRAddMandatory
         '

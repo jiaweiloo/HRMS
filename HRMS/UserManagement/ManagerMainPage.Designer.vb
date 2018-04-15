@@ -20,34 +20,77 @@ Partial Class ManagerMainPage
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnAccount = New System.Windows.Forms.Button()
+        Me.btnAttend = New System.Windows.Forms.Button()
+        Me.btnViewleave = New System.Windows.Forms.Button()
+        Me.btnLogout = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Label1
+        'btnAccount
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(257, 34)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(146, 17)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "This is Manager Page"
+        Me.btnAccount.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.btnAccount.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAccount.Location = New System.Drawing.Point(1, -2)
+        Me.btnAccount.Name = "btnAccount"
+        Me.btnAccount.Size = New System.Drawing.Size(437, 269)
+        Me.btnAccount.TabIndex = 0
+        Me.btnAccount.Text = "Account Management"
+        Me.btnAccount.UseVisualStyleBackColor = False
+        '
+        'btnAttend
+        '
+        Me.btnAttend.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnAttend.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAttend.Location = New System.Drawing.Point(444, -2)
+        Me.btnAttend.Name = "btnAttend"
+        Me.btnAttend.Size = New System.Drawing.Size(399, 269)
+        Me.btnAttend.TabIndex = 1
+        Me.btnAttend.Text = "Time and Attendance"
+        Me.btnAttend.UseVisualStyleBackColor = False
+        '
+        'btnViewleave
+        '
+        Me.btnViewleave.BackColor = System.Drawing.Color.SpringGreen
+        Me.btnViewleave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnViewleave.Location = New System.Drawing.Point(1, 273)
+        Me.btnViewleave.Name = "btnViewleave"
+        Me.btnViewleave.Size = New System.Drawing.Size(437, 272)
+        Me.btnViewleave.TabIndex = 2
+        Me.btnViewleave.Text = "View Leave"
+        Me.btnViewleave.UseVisualStyleBackColor = False
+        '
+        'btnLogout
+        '
+        Me.btnLogout.BackColor = System.Drawing.Color.IndianRed
+        Me.btnLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.Location = New System.Drawing.Point(444, 273)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(399, 272)
+        Me.btnLogout.TabIndex = 3
+        Me.btnLogout.Text = "Log Out"
+        Me.btnLogout.UseVisualStyleBackColor = False
         '
         'ManagerMainPage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(711, 360)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(845, 547)
+        Me.Controls.Add(Me.btnLogout)
+        Me.Controls.Add(Me.btnViewleave)
+        Me.Controls.Add(Me.btnAttend)
+        Me.Controls.Add(Me.btnAccount)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "ManagerMainPage"
         Me.Text = "ManagerMainPage"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents btnAccount As Button
+    Friend WithEvents btnAttend As Button
+    Friend WithEvents btnViewleave As Button
+    Friend WithEvents btnLogout As Button
 End Class

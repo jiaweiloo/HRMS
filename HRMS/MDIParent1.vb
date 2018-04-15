@@ -22,6 +22,10 @@ Public Class MDIParent1
     End Sub
 
     Private Sub MDIParent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.AddNewStaffToolStripMenuItem.Enabled = True
+        Me.UpdateStaffDetailsToolStripMenuItem.Enabled = True
+        Me.RetrieveStaffDetailsToolStripMenuItem.Enabled = True
+        Me.DeleteStaffDetailsToolStripMenuItem.Enabled = True
         ' Create a new instance of the child form.
         Dim ChildForm As New System.Windows.Forms.Form
         ' Make it a child of this MDI form before showing it.
@@ -77,5 +81,9 @@ Public Class MDIParent1
 
     Private Sub TimeAttendanceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimeAttendanceToolStripMenuItem.Click
         ShowForm(Attendance)
+    End Sub
+
+    Private Sub LogOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogOutToolStripMenuItem.Click
+        Me.Close()
     End Sub
 End Class

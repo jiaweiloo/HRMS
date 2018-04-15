@@ -11,9 +11,10 @@
     <AssemblyName>HRMS</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -238,10 +239,28 @@
     <Compile Include="UserManagement\AddNewStaff.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserManagement\ManAddHR.Designer.vb">
+      <DependentUpon>ManAddHR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\ManAddHR.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserManagement\ManagerMainPage.Designer.vb">
       <DependentUpon>ManagerMainPage.vb</DependentUpon>
     </Compile>
     <Compile Include="UserManagement\ManagerMainPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ManUpdateForm.Designer.vb">
+      <DependentUpon>ManUpdateForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\ManUpdateForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\ManUpdateHR.Designer.vb">
+      <DependentUpon>ManUpdateHR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\ManUpdateHR.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserManagement\NormalStaffPage.Designer.vb">
@@ -327,8 +346,17 @@
     <EmbeddedResource Include="UserManagement\AddNewStaff.resx">
       <DependentUpon>AddNewStaff.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ManAddHR.resx">
+      <DependentUpon>ManAddHR.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserManagement\ManagerMainPage.resx">
       <DependentUpon>ManagerMainPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ManUpdateForm.resx">
+      <DependentUpon>ManUpdateForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\ManUpdateHR.resx">
+      <DependentUpon>ManUpdateHR.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManagement\NormalStaffPage.resx">
       <DependentUpon>NormalStaffPage.vb</DependentUpon>
@@ -360,7 +388,6 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
@@ -377,13 +404,27 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HRMS_DB.mdf" />
-    <Content Include="HRMS_DB_log.ldf">
-      <DependentUpon>HRMS_DB.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\left.jpg" />
     <None Include="Resources\holiday-mood.jpg" />
     <None Include="Resources\checkinout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+    <None Include="Resources\hr2.jpg" />
+    <None Include="Resources\hr.jpg" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\password.jpg" />
+    <None Include="Resources\login3.jpg" />
+    <None Include="Resources\login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HRMS_DB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HRMS_DB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>HRMS_DB.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

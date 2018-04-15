@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class UpdateStaffDetail
+Partial Class ManUpdateHR
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -44,10 +44,10 @@ Partial Class UpdateStaffDetail
         Me.cboGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboGender.FormattingEnabled = True
         Me.cboGender.Items.AddRange(New Object() {"All", "Male", "Female"})
-        Me.cboGender.Location = New System.Drawing.Point(757, 74)
+        Me.cboGender.Location = New System.Drawing.Point(849, 97)
         Me.cboGender.Name = "cboGender"
-        Me.cboGender.Size = New System.Drawing.Size(109, 28)
-        Me.cboGender.TabIndex = 4
+        Me.cboGender.Size = New System.Drawing.Size(91, 28)
+        Me.cboGender.TabIndex = 84
         '
         'cboDepart
         '
@@ -55,70 +55,66 @@ Partial Class UpdateStaffDetail
         Me.cboDepart.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboDepart.FormattingEnabled = True
         Me.cboDepart.Items.AddRange(New Object() {"All", "IT Dept.", "HR Dept.", "Accounting Dept.", "Marketing Dept."})
-        Me.cboDepart.Location = New System.Drawing.Point(526, 73)
+        Me.cboDepart.Location = New System.Drawing.Point(604, 96)
         Me.cboDepart.Name = "cboDepart"
-        Me.cboDepart.Size = New System.Drawing.Size(149, 28)
-        Me.cboDepart.TabIndex = 3
+        Me.cboDepart.Size = New System.Drawing.Size(152, 28)
+        Me.cboDepart.TabIndex = 83
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.SystemColors.Control
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(681, 79)
+        Me.Label4.Location = New System.Drawing.Point(772, 102)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(79, 20)
-        Me.Label4.TabIndex = 62
+        Me.Label4.TabIndex = 82
         Me.Label4.Text = "Gender :"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.SystemColors.Control
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(416, 79)
+        Me.Label3.Location = New System.Drawing.Point(484, 100)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(114, 20)
-        Me.Label3.TabIndex = 61
+        Me.Label3.TabIndex = 81
         Me.Label3.Text = "Department :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.Control
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(232, 76)
+        Me.Label2.Location = New System.Drawing.Point(247, 100)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 20)
-        Me.Label2.TabIndex = 60
+        Me.Label2.TabIndex = 80
         Me.Label2.Text = "Name : "
         '
         'txtName
         '
         Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.Location = New System.Drawing.Point(310, 76)
+        Me.txtName.Location = New System.Drawing.Point(323, 97)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(100, 26)
-        Me.txtName.TabIndex = 2
+        Me.txtName.Size = New System.Drawing.Size(155, 26)
+        Me.txtName.TabIndex = 79
         '
         'txtStaffid
         '
         Me.txtStaffid.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtStaffid.Location = New System.Drawing.Point(103, 76)
+        Me.txtStaffid.Location = New System.Drawing.Point(125, 98)
         Me.txtStaffid.Name = "txtStaffid"
-        Me.txtStaffid.Size = New System.Drawing.Size(123, 26)
-        Me.txtStaffid.TabIndex = 1
+        Me.txtStaffid.Size = New System.Drawing.Size(99, 26)
+        Me.txtStaffid.TabIndex = 78
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.Control
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(24, 76)
+        Me.Label1.Location = New System.Drawing.Point(16, 100)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 20)
-        Me.Label1.TabIndex = 57
-        Me.Label1.Text = "Staff ID :"
+        Me.Label1.Size = New System.Drawing.Size(114, 20)
+        Me.Label1.TabIndex = 77
+        Me.Label1.Text = "HR Staff ID :"
         '
         'dgv
         '
@@ -130,58 +126,58 @@ Partial Class UpdateStaffDetail
         Me.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv.Location = New System.Drawing.Point(27, 121)
+        Me.dgv.Location = New System.Drawing.Point(12, 152)
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
         Me.dgv.RowTemplate.Height = 28
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv.Size = New System.Drawing.Size(825, 322)
-        Me.dgv.TabIndex = 56
+        Me.dgv.Size = New System.Drawing.Size(928, 314)
+        Me.dgv.TabIndex = 76
         '
         'Label11
         '
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(27, 35)
+        Me.Label11.Location = New System.Drawing.Point(12, 51)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(292, 35)
-        Me.Label11.TabIndex = 55
-        Me.Label11.Text = "Update Staff Details"
+        Me.Label11.Size = New System.Drawing.Size(236, 35)
+        Me.Label11.TabIndex = 75
+        Me.Label11.Text = "Update HR Details"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(300, 31)
+        Me.Label9.Location = New System.Drawing.Point(275, 46)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(97, 20)
-        Me.Label9.TabIndex = 78
-        Me.Label9.Text = "Welcome ! "
+        Me.Label9.Size = New System.Drawing.Size(172, 20)
+        Me.Label9.TabIndex = 87
+        Me.Label9.Text = "Welcome, Manager !"
         '
         'lblHRname
         '
         Me.lblHRname.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.lblHRname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblHRname.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHRname.Location = New System.Drawing.Point(564, 21)
+        Me.lblHRname.Location = New System.Drawing.Point(586, 45)
         Me.lblHRname.Name = "lblHRname"
         Me.lblHRname.Size = New System.Drawing.Size(125, 30)
-        Me.lblHRname.TabIndex = 77
+        Me.lblHRname.TabIndex = 86
         '
         'lblHRid
         '
         Me.lblHRid.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.lblHRid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblHRid.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHRid.Location = New System.Drawing.Point(433, 21)
+        Me.lblHRid.Location = New System.Drawing.Point(455, 45)
         Me.lblHRid.Name = "lblHRid"
         Me.lblHRid.Size = New System.Drawing.Size(125, 30)
-        Me.lblHRid.TabIndex = 76
+        Me.lblHRid.TabIndex = 85
         '
-        'UpdateStaffDetail
+        'ManUpdateHR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(878, 478)
+        Me.ClientSize = New System.Drawing.Size(961, 504)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.lblHRname)
         Me.Controls.Add(Me.lblHRid)
@@ -196,8 +192,8 @@ Partial Class UpdateStaffDetail
         Me.Controls.Add(Me.dgv)
         Me.Controls.Add(Me.Label11)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "UpdateStaffDetail"
-        Me.Text = "UpdateStaffDetail"
+        Me.Name = "ManUpdateHR"
+        Me.Text = "ManUpdateHR"
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

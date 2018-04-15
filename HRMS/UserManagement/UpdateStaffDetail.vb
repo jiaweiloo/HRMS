@@ -3,6 +3,9 @@
         cboGender.Text = "All"
         cboDepart.Text = "All"
         BindData()
+        lblHRname.Text = HRstaffid.hrname
+        lblHRid.Text = HRstaffid.hrstaffid
+        txtStaffid.Focus()
         MDIParent1.AddNewStaffToolStripMenuItem.Enabled = True
         MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = False
     End Sub
@@ -11,6 +14,9 @@
         cboGender.Text = "All"
         cboDepart.Text = "All"
         BindData()
+        lblHRname.Text = HRstaffid.hrname
+        lblHRid.Text = HRstaffid.hrstaffid
+        txtStaffid.Focus()
         MDIParent1.AddNewStaffToolStripMenuItem.Enabled = True
         MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = False
         MDIParent1.RetrieveStaffDetailsToolStripMenuItem.Enabled = True

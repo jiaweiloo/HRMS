@@ -38,6 +38,9 @@ Public Class ManagerViewLeave
         Label3.Font = timesNewRoman
 
         BindData()
+        MDIManager.AddNewHRToolStripMenuItem.Enabled = True
+        MDIManager.UpdateHRFetailsToolStripMenuItem.Enabled = True
+        MDIManager.DeleteHRToolStripMenuItem.Enabled = True
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click

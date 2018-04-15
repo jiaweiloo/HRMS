@@ -64,7 +64,9 @@ Public Class Attendance
         If att.lunch_out IsNot Nothing Then
             btnCheckOut.Enabled = True
         End If
-
+        MDIManager.AddNewHRToolStripMenuItem.Enabled = True
+        MDIManager.UpdateHRFetailsToolStripMenuItem.Enabled = True
+        MDIManager.DeleteHRToolStripMenuItem.Enabled = True
     End Sub
 
 

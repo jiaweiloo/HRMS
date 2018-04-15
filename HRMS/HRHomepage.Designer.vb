@@ -24,57 +24,66 @@ Partial Class HRHomepage
     Private Sub InitializeComponent()
         Me.btnGoLeave = New System.Windows.Forms.Button()
         Me.btnGoPayroll = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnAttend = New System.Windows.Forms.Button()
+        Me.btnStaff = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnGoLeave
         '
         Me.btnGoLeave.AutoSize = True
-        Me.btnGoLeave.Location = New System.Drawing.Point(342, 47)
+        Me.btnGoLeave.BackColor = System.Drawing.Color.SpringGreen
+        Me.btnGoLeave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGoLeave.Location = New System.Drawing.Point(0, 283)
         Me.btnGoLeave.Name = "btnGoLeave"
-        Me.btnGoLeave.Size = New System.Drawing.Size(199, 58)
+        Me.btnGoLeave.Size = New System.Drawing.Size(487, 264)
         Me.btnGoLeave.TabIndex = 0
         Me.btnGoLeave.Text = "Go To Leave"
-        Me.btnGoLeave.UseVisualStyleBackColor = True
+        Me.btnGoLeave.UseVisualStyleBackColor = False
         '
         'btnGoPayroll
         '
         Me.btnGoPayroll.AutoSize = True
-        Me.btnGoPayroll.Location = New System.Drawing.Point(342, 149)
+        Me.btnGoPayroll.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btnGoPayroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGoPayroll.Location = New System.Drawing.Point(493, 283)
         Me.btnGoPayroll.Name = "btnGoPayroll"
-        Me.btnGoPayroll.Size = New System.Drawing.Size(199, 58)
+        Me.btnGoPayroll.Size = New System.Drawing.Size(449, 264)
         Me.btnGoPayroll.TabIndex = 1
         Me.btnGoPayroll.Text = "Go To Payroll"
-        Me.btnGoPayroll.UseVisualStyleBackColor = True
+        Me.btnGoPayroll.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btnAttend
         '
-        Me.Button3.AutoSize = True
-        Me.Button3.Location = New System.Drawing.Point(342, 251)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(199, 58)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Go To Attendance"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnAttend.AutoSize = True
+        Me.btnAttend.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnAttend.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAttend.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnAttend.Location = New System.Drawing.Point(0, 2)
+        Me.btnAttend.Name = "btnAttend"
+        Me.btnAttend.Size = New System.Drawing.Size(487, 275)
+        Me.btnAttend.TabIndex = 2
+        Me.btnAttend.Text = "Go To Attendance"
+        Me.btnAttend.UseVisualStyleBackColor = False
         '
-        'Button4
+        'btnStaff
         '
-        Me.Button4.AutoSize = True
-        Me.Button4.Location = New System.Drawing.Point(342, 353)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(199, 58)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Go To User Management"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnStaff.AutoSize = True
+        Me.btnStaff.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnStaff.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStaff.Location = New System.Drawing.Point(493, 2)
+        Me.btnStaff.Name = "btnStaff"
+        Me.btnStaff.Size = New System.Drawing.Size(449, 275)
+        Me.btnStaff.TabIndex = 3
+        Me.btnStaff.Text = "Go To Staff Management"
+        Me.btnStaff.UseVisualStyleBackColor = False
         '
         'HRHomepage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(883, 459)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
+        Me.ClientSize = New System.Drawing.Size(945, 549)
+        Me.Controls.Add(Me.btnStaff)
+        Me.Controls.Add(Me.btnAttend)
         Me.Controls.Add(Me.btnGoPayroll)
         Me.Controls.Add(Me.btnGoLeave)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -87,6 +96,6 @@ Partial Class HRHomepage
 
     Friend WithEvents btnGoLeave As Button
     Friend WithEvents btnGoPayroll As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnAttend As Button
+    Friend WithEvents btnStaff As Button
 End Class

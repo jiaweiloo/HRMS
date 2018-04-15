@@ -7,13 +7,13 @@
         password = txtPassword.Text
         If ValidateLogin(userid, password) = "Staff" Then
             'txtUserID.Enabled = False
-            'txtPassword.Enabled = False
-            MDIStaff.Show()
+            'txtPassword.Enabled = False          
+            MDIStaff.ShowDialog()
             'NormalStaffPage.Show()
         ElseIf ValidateLogin(userid, password) = "HR" Then
-            MDIParent1.Show()
+            MDIParent1.ShowDialog()
         ElseIf ValidateLogin(userid, password) = "Manager" Then
-            MDIManager.Show()
+            MDIManager.ShowDialog()
         ElseIf ValidateLogin(userid, password) = "invalidaccount" Then
             MessageBox.Show("Invalid User ID", "Invalid User ID !")
         End If
@@ -47,12 +47,13 @@
         Return "invalidaccount"
     End Function
 
-    Private Sub btnStaff_Click(sender As Object, e As EventArgs) Handles btnStaff.Click
+    Private Sub btnStaff_Click(sender As Object, e As EventArgs)
         MDIParent1.Show()
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
     End Sub
+
 
 End Class

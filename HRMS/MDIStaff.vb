@@ -30,4 +30,8 @@ Public Class MDIStaff
     Private Sub TimeAttendanceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimeAttendanceToolStripMenuItem.Click
         ShowForm(Attendance)
     End Sub
+
+    Private Sub LogOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogOutToolStripMenuItem.Click
+        Me.Close()
+    End Sub
 End Class
