@@ -13,7 +13,7 @@
 
     Private Sub HRMandatoryDdt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BindData()
-        MDIParent1.Text = MDIParent1.Text & "HR Show Mandatory Deduction"
+        MDIParent1.Text = "Human Resource Management System - HR Show Mandatory Deduction"
     End Sub
 
     Private Sub txtType_TextChanged(sender As Object, e As EventArgs) Handles txtType.TextChanged
