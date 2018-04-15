@@ -91,7 +91,7 @@ Partial Class LoginForm
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(173, 26)
         Me.txtPassword.TabIndex = 18
-        Me.txtPassword.Text = "man123"
+        Me.txtPassword.Text = "hr123"
         '
         'txtUserID
         '
@@ -102,7 +102,7 @@ Partial Class LoginForm
         Me.txtUserID.Name = "txtUserID"
         Me.txtUserID.Size = New System.Drawing.Size(173, 26)
         Me.txtUserID.TabIndex = 17
-        Me.txtUserID.Text = "man10001"
+        Me.txtUserID.Text = "hr10001"
         '
         'Label1
         '
