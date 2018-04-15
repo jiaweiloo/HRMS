@@ -18,6 +18,7 @@
     End Sub
 
     Private Sub PayrollHomepage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblLogin.Text = HRstaffid.hrname
+        lblLogin.Text = "[Login As : " & HRstaffid.hrname & "] ."
+        MDIParent1.Text = MDIParent1.Text & "Manager payroll report"
     End Sub
 End Class

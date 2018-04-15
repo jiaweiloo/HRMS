@@ -110,4 +110,22 @@
             err.SetError(txtManDdt, Nothing)
         End If
     End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Dim db As New HRMS_DBLinq2DataContext()
+        Dim np As netpay = db.netpays.FirstOrDefault(Function(o) o.payroll_id = SelectedId)
+
+        If np Is Nothing Then
+            MessageBox.Show("Netpay not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Close()
+            Return
+        End If
+
+        '1 : Delete the customer record using LINQ
+        db.netpays.DeleteOnSubmit(np)
+        db.SubmitChanges()
+        '2: Show a message box to indicate deletion done
+        MessageBox.Show("Netpay [" & np.payroll_id & "] deleted", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Me.Close()
+    End Sub
 End Class

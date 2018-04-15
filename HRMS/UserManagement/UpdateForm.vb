@@ -21,7 +21,7 @@ Public Class UpdateForm
         txtEmail.Text = a.people_email
         txtAddress.Text = a.people_address
         lblextra.Text = a.extra_leave.ToString
-        lblhourpay.Text = a.hourly_rates.ToString
+        txtHourlyPay.Text = a.hourly_rates.ToString
         lblJoin.Text = a.joined_year.ToShortDateString
 
         Select Case a.department_name
@@ -60,6 +60,7 @@ Public Class UpdateForm
         Dim address As String = ""
         Dim role As String = ""
         Dim depart As String = ""
+        Dim hourlypay As String = ""
 
         id = lblStaffID.Text
         name = txtName.Text
@@ -137,7 +138,7 @@ Public Class UpdateForm
                 ppl.department_name = cboDepart.SelectedItem.ToString
                 ppl.leave_num = Integer.Parse(cboLeave.SelectedItem.ToString)
                 ppl.extra_leave = Integer.Parse(lblextra.Text)
-                ppl.hourly_rates = Integer.Parse(lblhourpay.Text)
+                ppl.hourly_rates = Integer.Parse(txtHourlyPay.Text)
                 ppl.joined_year = Date.Parse(lblJoin.Text)
 
                 'Dim db2 As New HRDatabaseDataContext()

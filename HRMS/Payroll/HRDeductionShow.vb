@@ -14,6 +14,7 @@
 
     Private Sub HRDeductionShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BindData()
+        MDIParent1.Text = MDIParent1.Text & "HR Show Deduction"
     End Sub
 
     Public Sub refresh()

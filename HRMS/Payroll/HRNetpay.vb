@@ -8,6 +8,7 @@
 
     Private Sub HRNetpay_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BindData()
+        MDIParent1.Text = MDIParent1.Text & "HR Show Netpay"
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click

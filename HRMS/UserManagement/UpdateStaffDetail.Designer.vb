@@ -181,6 +181,7 @@ Partial Class UpdateStaffDetail
         '
         'lblCount
         '
+        Me.lblCount.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lblCount.AutoSize = True
         Me.lblCount.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCount.Location = New System.Drawing.Point(24, 449)

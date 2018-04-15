@@ -24,5 +24,6 @@
 
     Private Sub HROvertimeShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BindData()
+        MDIParent1.Text = MDIParent1.Text & "HR Show Overtime"
     End Sub
 End Class
