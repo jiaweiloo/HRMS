@@ -2,23 +2,9 @@
 
 Public Class MDIParent1
     Private m_ChildFormNumber As Integer
-    Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SaveAsToolStripMenuItem.Click
-
-    End Sub
 
     Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
-    End Sub
-
-    Private Sub CloseAllToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
-        ' Close all child forms of the parent.
-        For Each ChildForm As Form In Me.MdiChildren
-            ChildForm.Close()
-        Next
     End Sub
 
     Private Sub MDIParent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -26,6 +12,8 @@ Public Class MDIParent1
         Me.UpdateStaffDetailsToolStripMenuItem.Enabled = True
         Me.RetrieveStaffDetailsToolStripMenuItem.Enabled = True
         Me.DeleteStaffDetailsToolStripMenuItem.Enabled = True
+
+        Me.Text = "Human Resource Management System - "
         ' Create a new instance of the child form.
         Dim ChildForm As New System.Windows.Forms.Form
         ' Make it a child of this MDI form before showing it.
@@ -55,10 +43,6 @@ Public Class MDIParent1
 
     End Sub
 
-    Private Sub PayrollToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PayrollToolStripMenuItem.Click
-        ShowForm(EmpHistoryPayroll)
-    End Sub
-
     Private Sub AddNewStaffToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewStaffToolStripMenuItem.Click
         Me.ShowForm(AddNewStaff)
     End Sub
@@ -83,7 +67,15 @@ Public Class MDIParent1
         ShowForm(Attendance)
     End Sub
 
-    Private Sub LogOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogOutToolStripMenuItem.Click
+    Private Sub HomepagetoolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomepagetoolStripMenuItem.Click
+        Me.ShowForm(HRHomepage)
+    End Sub
+
+    Private Sub LogoutToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem1.Click
         Me.Close()
+    End Sub
+
+    Private Sub pay_HomepageToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles HomepageToolStripMenuItem1.Click
+        ShowForm(EmpHistoryPayroll)
     End Sub
 End Class

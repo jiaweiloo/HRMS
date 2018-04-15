@@ -13,6 +13,8 @@
         MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
         MDIParent1.RetrieveStaffDetailsToolStripMenuItem.Enabled = True
         MDIParent1.DeleteStaffDetailsToolStripMenuItem.Enabled = True
+
+        MDIParent1.Text = MDIParent1.Text & "Home Page"
     End Sub
 
     Private Sub HRHomepage_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
