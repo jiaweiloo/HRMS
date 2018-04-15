@@ -42,13 +42,15 @@ Partial Class HRNetpayUpDel
         Me.lblPplID = New System.Windows.Forms.Label()
         Me.lblAttendance = New System.Windows.Forms.Label()
         Me.err = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
         CType(Me.err, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(212, 40)
+        Me.Label1.Location = New System.Drawing.Point(212, 62)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(84, 20)
         Me.Label1.TabIndex = 0
@@ -57,7 +59,7 @@ Partial Class HRNetpayUpDel
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(213, 83)
+        Me.Label2.Location = New System.Drawing.Point(213, 105)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(83, 20)
         Me.Label2.TabIndex = 1
@@ -66,7 +68,7 @@ Partial Class HRNetpayUpDel
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(196, 126)
+        Me.Label3.Location = New System.Drawing.Point(196, 148)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(100, 20)
         Me.Label3.TabIndex = 2
@@ -75,7 +77,7 @@ Partial Class HRNetpayUpDel
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(216, 169)
+        Me.Label4.Location = New System.Drawing.Point(216, 191)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(80, 20)
         Me.Label4.TabIndex = 3
@@ -84,7 +86,7 @@ Partial Class HRNetpayUpDel
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(197, 212)
+        Me.Label5.Location = New System.Drawing.Point(197, 234)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(99, 20)
         Me.Label5.TabIndex = 4
@@ -93,7 +95,7 @@ Partial Class HRNetpayUpDel
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(163, 255)
+        Me.Label6.Location = New System.Drawing.Point(163, 277)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(133, 20)
         Me.Label6.TabIndex = 5
@@ -102,7 +104,7 @@ Partial Class HRNetpayUpDel
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(127, 298)
+        Me.Label7.Location = New System.Drawing.Point(127, 320)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(169, 20)
         Me.Label7.TabIndex = 6
@@ -111,7 +113,7 @@ Partial Class HRNetpayUpDel
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(165, 341)
+        Me.Label8.Location = New System.Drawing.Point(165, 363)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(131, 20)
         Me.Label8.TabIndex = 7
@@ -120,7 +122,7 @@ Partial Class HRNetpayUpDel
         'lblPayrollID
         '
         Me.lblPayrollID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblPayrollID.Location = New System.Drawing.Point(373, 35)
+        Me.lblPayrollID.Location = New System.Drawing.Point(373, 57)
         Me.lblPayrollID.Name = "lblPayrollID"
         Me.lblPayrollID.Size = New System.Drawing.Size(245, 31)
         Me.lblPayrollID.TabIndex = 8
@@ -129,7 +131,7 @@ Partial Class HRNetpayUpDel
         'lblGenerateDate
         '
         Me.lblGenerateDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblGenerateDate.Location = New System.Drawing.Point(373, 250)
+        Me.lblGenerateDate.Location = New System.Drawing.Point(373, 272)
         Me.lblGenerateDate.Name = "lblGenerateDate"
         Me.lblGenerateDate.Size = New System.Drawing.Size(245, 31)
         Me.lblGenerateDate.TabIndex = 9
@@ -138,28 +140,28 @@ Partial Class HRNetpayUpDel
         '
         'txtAbsence
         '
-        Me.txtAbsence.Location = New System.Drawing.Point(373, 166)
+        Me.txtAbsence.Location = New System.Drawing.Point(373, 188)
         Me.txtAbsence.Name = "txtAbsence"
         Me.txtAbsence.Size = New System.Drawing.Size(245, 26)
         Me.txtAbsence.TabIndex = 12
         '
         'txtFinalPay
         '
-        Me.txtFinalPay.Location = New System.Drawing.Point(373, 209)
+        Me.txtFinalPay.Location = New System.Drawing.Point(373, 231)
         Me.txtFinalPay.Name = "txtFinalPay"
         Me.txtFinalPay.Size = New System.Drawing.Size(245, 26)
         Me.txtFinalPay.TabIndex = 13
         '
         'txtManDdt
         '
-        Me.txtManDdt.Location = New System.Drawing.Point(373, 295)
+        Me.txtManDdt.Location = New System.Drawing.Point(373, 317)
         Me.txtManDdt.Name = "txtManDdt"
         Me.txtManDdt.Size = New System.Drawing.Size(245, 26)
         Me.txtManDdt.TabIndex = 14
         '
         'txtExtraDdt
         '
-        Me.txtExtraDdt.Location = New System.Drawing.Point(373, 338)
+        Me.txtExtraDdt.Location = New System.Drawing.Point(373, 360)
         Me.txtExtraDdt.Name = "txtExtraDdt"
         Me.txtExtraDdt.Size = New System.Drawing.Size(245, 26)
         Me.txtExtraDdt.TabIndex = 15
@@ -167,7 +169,7 @@ Partial Class HRNetpayUpDel
         'btnUpdate
         '
         Me.btnUpdate.AutoSize = True
-        Me.btnUpdate.Location = New System.Drawing.Point(252, 398)
+        Me.btnUpdate.Location = New System.Drawing.Point(229, 408)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(99, 30)
         Me.btnUpdate.TabIndex = 16
@@ -179,7 +181,7 @@ Partial Class HRNetpayUpDel
         Me.btnCancel.AutoSize = True
         Me.btnCancel.CausesValidation = False
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(449, 398)
+        Me.btnCancel.Location = New System.Drawing.Point(473, 408)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(99, 30)
         Me.btnCancel.TabIndex = 18
@@ -189,7 +191,7 @@ Partial Class HRNetpayUpDel
         'lblPplID
         '
         Me.lblPplID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblPplID.Location = New System.Drawing.Point(373, 78)
+        Me.lblPplID.Location = New System.Drawing.Point(373, 100)
         Me.lblPplID.Name = "lblPplID"
         Me.lblPplID.Size = New System.Drawing.Size(245, 31)
         Me.lblPplID.TabIndex = 19
@@ -198,7 +200,7 @@ Partial Class HRNetpayUpDel
         'lblAttendance
         '
         Me.lblAttendance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblAttendance.Location = New System.Drawing.Point(373, 121)
+        Me.lblAttendance.Location = New System.Drawing.Point(373, 143)
         Me.lblAttendance.Name = "lblAttendance"
         Me.lblAttendance.Size = New System.Drawing.Size(245, 31)
         Me.lblAttendance.TabIndex = 20
@@ -209,6 +211,28 @@ Partial Class HRNetpayUpDel
         Me.err.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.err.ContainerControl = Me
         '
+        'btnDelete
+        '
+        Me.btnDelete.AutoSize = True
+        Me.btnDelete.CausesValidation = False
+        Me.btnDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnDelete.Location = New System.Drawing.Point(351, 408)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(99, 30)
+        Me.btnDelete.TabIndex = 21
+        Me.btnDelete.Text = "&Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(307, 9)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(186, 29)
+        Me.Label9.TabIndex = 22
+        Me.Label9.Text = "Netpay Update"
+        '
         'HRNetpayUpDel
         '
         Me.AcceptButton = Me.btnUpdate
@@ -217,6 +241,8 @@ Partial Class HRNetpayUpDel
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.lblAttendance)
         Me.Controls.Add(Me.lblPplID)
         Me.Controls.Add(Me.btnCancel)
@@ -261,4 +287,6 @@ Partial Class HRNetpayUpDel
     Friend WithEvents lblPplID As Label
     Friend WithEvents lblAttendance As Label
     Friend WithEvents err As ErrorProvider
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents Label9 As Label
 End Class

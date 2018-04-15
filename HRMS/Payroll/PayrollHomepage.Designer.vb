@@ -32,6 +32,8 @@ Partial Class PayrollHomepage
         '
         'btnPrepPayroll
         '
+        Me.btnPrepPayroll.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnPrepPayroll.BackColor = System.Drawing.SystemColors.HotTrack
         Me.btnPrepPayroll.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnPrepPayroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -45,6 +47,8 @@ Partial Class PayrollHomepage
         '
         'btnCheckMdDdt
         '
+        Me.btnCheckMdDdt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCheckMdDdt.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.btnCheckMdDdt.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCheckMdDdt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -58,6 +62,8 @@ Partial Class PayrollHomepage
         '
         'btnOvertime
         '
+        Me.btnOvertime.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnOvertime.AutoSize = True
         Me.btnOvertime.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnOvertime.Cursor = System.Windows.Forms.Cursors.Hand
@@ -72,6 +78,8 @@ Partial Class PayrollHomepage
         '
         'btnDeduction
         '
+        Me.btnDeduction.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnDeduction.AutoSize = True
         Me.btnDeduction.BackColor = System.Drawing.SystemColors.Highlight
         Me.btnDeduction.Cursor = System.Windows.Forms.Cursors.Hand
@@ -86,6 +94,8 @@ Partial Class PayrollHomepage
         '
         'Label1
         '
+        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(280, 27)
@@ -96,6 +106,7 @@ Partial Class PayrollHomepage
         '
         'lblLogin
         '
+        Me.lblLogin.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblLogin.Location = New System.Drawing.Point(567, 446)
         Me.lblLogin.Name = "lblLogin"
         Me.lblLogin.Size = New System.Drawing.Size(206, 34)
