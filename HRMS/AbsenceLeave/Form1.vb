@@ -79,6 +79,7 @@ Public Class Form1
         cboDuration.SelectedIndex = 0
         lbl_Leave_ID.Text = addleave.GetNextId()
         lbl_People_ID.Text = HRstaffid.hrstaffid.ToString()
+        MDIStaff.Text = "Human Resource Management System (Employee) - Apply Leave"
     End Sub
 
     Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown

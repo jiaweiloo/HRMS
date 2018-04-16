@@ -50,6 +50,7 @@ Public Class ManUpdateHR
         lblHRid.Text = HRstaffid.hrstaffid
         MDIManager.AddNewHRToolStripMenuItem.Enabled = True
         MDIManager.UpdateHRFetailsToolStripMenuItem.Enabled = False
+        MDIManager.Text = "Human Resource Management System (Manager)- Update HR Details"
         BindData()
     End Sub
 

@@ -17,7 +17,7 @@ Public Class MDIStaff
         ChildForm.MdiParent = Me
         m_ChildFormNumber += 1
         ChildForm.Dock = DockStyle.Fill
-        Me.Text = "Human Resource Management System - "
+        Me.Text = "Human Resource Management System (Employee) - "
         ChildForm.Show()
     End Sub
 
@@ -27,7 +27,7 @@ Public Class MDIStaff
                 OldChildForm.Close()
             End If
         Next
-        Me.Text = "Human Resource Management System - "
+        Me.Text = "Human Resource Management System (Employee) - "
         m_ChildFormNumber += 1
         ChildForm.MdiParent = Me
         ChildForm.Dock = DockStyle.Fill
@@ -48,5 +48,9 @@ Public Class MDIStaff
 
     Private Sub ApplyLeaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplyLeaveToolStripMenuItem.Click
         Me.ShowForm(Form1)
+    End Sub
+
+    Private Sub HomepageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomepageToolStripMenuItem.Click
+        Me.ShowForm(NormalStaffPage)
     End Sub
 End Class

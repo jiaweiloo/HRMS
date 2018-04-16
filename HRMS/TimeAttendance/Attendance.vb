@@ -18,6 +18,7 @@ Public Class Attendance
     Dim starttime As Date
 
     Private Sub Attendance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MDIManager.Text = "Human Resource Management System (Manager)- Attendance"
         If hrrole.Equals("Manager") Then
             btnReport.Visible = True
         End If

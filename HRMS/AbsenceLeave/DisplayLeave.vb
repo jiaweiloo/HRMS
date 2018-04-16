@@ -13,6 +13,7 @@
     End Sub
 
     Private Sub LeaveDisplay_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MDIParent1.Text = "Human Resource Management System (HR)- Display Leave"
         cboLeave.Text = "All"
         lblID.Text = HRstaffid.hrstaffid
         lblName.Text = HRstaffid.hrname

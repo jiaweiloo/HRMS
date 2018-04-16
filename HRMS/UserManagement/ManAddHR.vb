@@ -128,6 +128,7 @@ Public Class ManAddHR
         DateDOB.MaxDate = DateTime.Now.Subtract(maxdate)
         MDIManager.AddNewHRToolStripMenuItem.Enabled = False
         MDIManager.UpdateHRFetailsToolStripMenuItem.Enabled = True
+        MDIManager.Text = "Human Resource Management System (Manager)- Add HR Employee"
     End Sub
 
     Private Sub ManAddHR_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown

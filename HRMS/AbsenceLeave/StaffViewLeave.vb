@@ -24,6 +24,7 @@
         lblName.Font = timesNewRoman
 
         BindData()
+        MDIStaff.Text = "Human Resource Management System (Employee) - View Leave"
     End Sub
 
     Private Sub StaffViewLeave_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown

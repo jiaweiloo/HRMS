@@ -39,6 +39,7 @@ Public Class ManagerViewLeave
         Label3.Font = timesNewRoman
 
         BindData()
+        MDIManager.Text = "Human Resource Management System - View Leave"
         MDIManager.AddNewHRToolStripMenuItem.Enabled = True
         MDIManager.UpdateHRFetailsToolStripMenuItem.Enabled = True
     End Sub

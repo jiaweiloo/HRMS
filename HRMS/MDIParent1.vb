@@ -11,7 +11,7 @@ Public Class MDIParent1
         Me.AddNewStaffToolStripMenuItem.Enabled = True
         Me.UpdateStaffDetailsToolStripMenuItem.Enabled = True
 
-        Me.Text = "Human Resource Management System - "
+        Me.Text = "Human Resource Management System (HR)- "
         ' Create a new instance of the child form.
         Dim ChildForm As New System.Windows.Forms.Form
         'Clear all childform
@@ -51,14 +51,6 @@ Public Class MDIParent1
 
     Private Sub UpdateStaffDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateStaffDetailsToolStripMenuItem.Click
         Me.ShowForm(UpdateStaffDetail)
-    End Sub
-
-    Private Sub RetrieveStaffDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub DeleteStaffDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub UpdateLeaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateLeaveToolStripMenuItem.Click

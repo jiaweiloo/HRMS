@@ -25,8 +25,6 @@ Partial Class MDIManager
     Private Sub InitializeComponent()
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AccountManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -37,6 +35,7 @@ Partial Class MDIManager
         Me.ViewLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewTheLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomepageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,35 +52,22 @@ Partial Class MDIManager
         '
         'FileMenu
         '
-        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.ToolStripSeparator3, Me.ToolStripSeparator5, Me.ExitToolStripMenuItem})
+        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomepageToolStripMenuItem, Me.ToolStripSeparator5, Me.ExitToolStripMenuItem})
         Me.FileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
         Me.FileMenu.Name = "FileMenu"
         Me.FileMenu.Size = New System.Drawing.Size(50, 29)
         Me.FileMenu.Text = "&File"
         '
-        'NewToolStripMenuItem
-        '
-        Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
-        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(211, 30)
-        Me.NewToolStripMenuItem.Text = "&New"
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(208, 6)
-        '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(208, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(249, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(211, 30)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'AccountManagementToolStripMenuItem
@@ -95,21 +81,21 @@ Partial Class MDIManager
         '
         Me.AddNewHRToolStripMenuItem.Name = "AddNewHRToolStripMenuItem"
         Me.AddNewHRToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.AddNewHRToolStripMenuItem.Size = New System.Drawing.Size(298, 30)
+        Me.AddNewHRToolStripMenuItem.Size = New System.Drawing.Size(297, 30)
         Me.AddNewHRToolStripMenuItem.Text = "Add New HR"
         '
         'UpdateHRFetailsToolStripMenuItem
         '
         Me.UpdateHRFetailsToolStripMenuItem.Name = "UpdateHRFetailsToolStripMenuItem"
         Me.UpdateHRFetailsToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.M), System.Windows.Forms.Keys)
-        Me.UpdateHRFetailsToolStripMenuItem.Size = New System.Drawing.Size(298, 30)
+        Me.UpdateHRFetailsToolStripMenuItem.Size = New System.Drawing.Size(297, 30)
         Me.UpdateHRFetailsToolStripMenuItem.Text = "HR Management"
         '
         'ReportStaffToolStripMenuItem
         '
         Me.ReportStaffToolStripMenuItem.Name = "ReportStaffToolStripMenuItem"
         Me.ReportStaffToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.ReportStaffToolStripMenuItem.Size = New System.Drawing.Size(298, 30)
+        Me.ReportStaffToolStripMenuItem.Size = New System.Drawing.Size(297, 30)
         Me.ReportStaffToolStripMenuItem.Text = "Report (Staff)"
         '
         'TimeAndAttendanceToolStripMenuItem
@@ -130,7 +116,7 @@ Partial Class MDIManager
         '
         Me.ViewTheLeaveToolStripMenuItem.Name = "ViewTheLeaveToolStripMenuItem"
         Me.ViewTheLeaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.ViewTheLeaveToolStripMenuItem.Size = New System.Drawing.Size(272, 30)
+        Me.ViewTheLeaveToolStripMenuItem.Size = New System.Drawing.Size(271, 30)
         Me.ViewTheLeaveToolStripMenuItem.Text = "View the Leave"
         '
         'LogOutToolStripMenuItem
@@ -139,6 +125,12 @@ Partial Class MDIManager
         Me.LogOutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
         Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(89, 29)
         Me.LogOutToolStripMenuItem.Text = "Log Out"
+        '
+        'HomepageToolStripMenuItem
+        '
+        Me.HomepageToolStripMenuItem.Name = "HomepageToolStripMenuItem"
+        Me.HomepageToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.HomepageToolStripMenuItem.Text = "&Homepage"
         '
         'MDIManager
         '
@@ -161,9 +153,7 @@ Partial Class MDIManager
     End Sub
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents NewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FileMenu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents MenuStrip As System.Windows.Forms.MenuStrip
     Friend WithEvents AccountManagementToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UpdateHRFetailsToolStripMenuItem As ToolStripMenuItem
@@ -173,4 +163,5 @@ Partial Class MDIManager
     Friend WithEvents ViewTheLeaveToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogOutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportStaffToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HomepageToolStripMenuItem As ToolStripMenuItem
 End Class

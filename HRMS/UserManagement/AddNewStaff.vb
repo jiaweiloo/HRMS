@@ -131,6 +131,7 @@ Public Class AddNewStaff
         DateDOB.MaxDate = DateTime.Now.Subtract(maxdate)
         MDIParent1.AddNewStaffToolStripMenuItem.Enabled = False
         MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
+        MDIParent1.Text = "Human Resource Management System (HR)- Add New Staff"
     End Sub
 
     Private Sub AddNewStaff_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
