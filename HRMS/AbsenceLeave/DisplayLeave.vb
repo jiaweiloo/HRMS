@@ -13,6 +13,7 @@
     End Sub
 
     Private Sub LeaveDisplay_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MDIParent1.Text = "Human Resource Management System (HR)- Display Leave"
         cboLeave.Text = "All"
         lblID.Text = HRstaffid.hrstaffid
         lblName.Text = HRstaffid.hrname
@@ -21,11 +22,11 @@
         Dim style As FontStyle
         style = FontStyle.Bold
         Dim timesNewRoman As Font = New Font("Times New Roman", 12, style)
-        Dim fore As Color = Color.GreenYellow
-        lblID.ForeColor = fore
-        lblName.ForeColor = fore
-        lblID.Font = timesNewRoman
-        lblName.Font = timesNewRoman
+        'Dim fore As Color = Color.GreenYellow
+        'lblID.ForeColor = fore
+        'lblName.ForeColor = fore
+        'lblID.Font = timesNewRoman
+        'lblName.Font = timesNewRoman
 
         BindData()
         MDIParent1.AddNewStaffToolStripMenuItem.Enabled = True
@@ -60,6 +61,8 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
+        MDIParent1.ShowForm(HRHomepage)
     End Sub
+
+
 End Class

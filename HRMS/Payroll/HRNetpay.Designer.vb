@@ -34,22 +34,26 @@ Partial Class HRNetpay
         'btnSearch
         '
         Me.btnSearch.AutoSize = True
-        Me.btnSearch.Location = New System.Drawing.Point(359, 54)
+        Me.btnSearch.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnSearch.Location = New System.Drawing.Point(396, 55)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(93, 30)
-        Me.btnSearch.TabIndex = 34
+        Me.btnSearch.Size = New System.Drawing.Size(108, 35)
+        Me.btnSearch.TabIndex = 1
         Me.btnSearch.Text = "&Search"
-        Me.btnSearch.UseVisualStyleBackColor = True
+        Me.btnSearch.UseVisualStyleBackColor = False
         '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(133, 58)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(146, 63)
         Me.DateTimePicker1.MaxDate = New Date(2020, 12, 31, 0, 0, 0, 0)
         Me.DateTimePicker1.MinDate = New Date(2000, 1, 1, 0, 0, 0, 0)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 26)
-        Me.DateTimePicker1.TabIndex = 33
+        Me.DateTimePicker1.TabIndex = 0
         '
         'Label2
         '
@@ -64,10 +68,11 @@ Partial Class HRNetpay
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(19, 63)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(107, 20)
+        Me.Label1.Size = New System.Drawing.Size(120, 20)
         Me.Label1.TabIndex = 31
         Me.Label1.Text = "&Search Date :"
         '
@@ -104,6 +109,7 @@ Partial Class HRNetpay
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.DateTimePicker1)

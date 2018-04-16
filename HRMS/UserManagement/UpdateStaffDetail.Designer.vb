@@ -57,7 +57,7 @@ Partial Class UpdateStaffDetail
         Me.cboDepart.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboDepart.FormattingEnabled = True
         Me.cboDepart.Items.AddRange(New Object() {"All", "IT Dept.", "HR Dept.", "Accounting Dept.", "Marketing Dept."})
-        Me.cboDepart.Location = New System.Drawing.Point(540, 73)
+        Me.cboDepart.Location = New System.Drawing.Point(536, 76)
         Me.cboDepart.Name = "cboDepart"
         Me.cboDepart.Size = New System.Drawing.Size(149, 28)
         Me.cboDepart.TabIndex = 3
@@ -65,7 +65,7 @@ Partial Class UpdateStaffDetail
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.SystemColors.Control
+        Me.Label4.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(694, 81)
         Me.Label4.Name = "Label4"
@@ -76,9 +76,9 @@ Partial Class UpdateStaffDetail
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.SystemColors.Control
+        Me.Label3.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(416, 77)
+        Me.Label3.Location = New System.Drawing.Point(416, 82)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(114, 20)
         Me.Label3.TabIndex = 61
@@ -87,9 +87,9 @@ Partial Class UpdateStaffDetail
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.Control
+        Me.Label2.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(232, 76)
+        Me.Label2.Location = New System.Drawing.Point(232, 82)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 20)
         Me.Label2.TabIndex = 60
@@ -114,7 +114,7 @@ Partial Class UpdateStaffDetail
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.Control
+        Me.Label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(14, 81)
         Me.Label1.Name = "Label1"
@@ -145,7 +145,7 @@ Partial Class UpdateStaffDetail
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(18, 9)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(239, 52)
+        Me.Label11.Size = New System.Drawing.Size(249, 67)
         Me.Label11.TabIndex = 55
         Me.Label11.Text = "Select a Staff to Update or Delete"
         '
@@ -193,6 +193,7 @@ Partial Class UpdateStaffDetail
         'btnHome
         '
         Me.btnHome.BackColor = System.Drawing.Color.IndianRed
+        Me.btnHome.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnHome.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight
@@ -207,6 +208,7 @@ Partial Class UpdateStaffDetail
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(914, 478)
         Me.Controls.Add(Me.btnHome)
         Me.Controls.Add(Me.lblCount)

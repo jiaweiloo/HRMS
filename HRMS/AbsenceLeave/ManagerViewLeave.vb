@@ -28,23 +28,24 @@ Public Class ManagerViewLeave
         Dim style As FontStyle
         style = FontStyle.Bold
         Dim timesNewRoman As Font = New Font("Times New Roman", 12, style)
-        Dim fore As Color = Color.GreenYellow
-        lblID.ForeColor = fore
-        lblName.ForeColor = fore
-        Label1.ForeColor = fore
-        Label3.ForeColor = fore
+        'Dim fore As Color = Color.GreenYellow
+        'lblID.ForeColor = fore
+        'lblName.ForeColor = fore
+        'Label1.ForeColor = fore
+        'Label3.ForeColor = fore
         lblID.Font = timesNewRoman
         lblName.Font = timesNewRoman
         Label1.Font = timesNewRoman
         Label3.Font = timesNewRoman
 
         BindData()
+        MDIManager.Text = "Human Resource Management System - View Leave"
         MDIManager.AddNewHRToolStripMenuItem.Enabled = True
         MDIManager.UpdateHRFetailsToolStripMenuItem.Enabled = True
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
-        Me.Close()
+        MDIManager.ShowForm(ManagerMainPage)
     End Sub
 
     Private Sub AboutUsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutUsToolStripMenuItem.Click
@@ -96,5 +97,9 @@ Public Class ManagerViewLeave
 
     Private Sub cboMonth_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboMonth.SelectedIndexChanged
         BindData()
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        MDIManager.ShowForm(ManagerMainPage)
     End Sub
 End Class

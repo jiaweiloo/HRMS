@@ -71,10 +71,13 @@ Public Class PrintReportMan
     Private Sub PrintReportMan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblHRname.Text = HRstaffid.hrname
         lblHRid.Text = HRstaffid.hrstaffid
+        cboDate.MaxDate = DateTime.Now
+        MDIManager.Text = "Human Resource Management System (Manager)- Print report employee details"
     End Sub
 
     Private Sub PrintReportMan_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         lblHRname.Text = HRstaffid.hrname
         lblHRid.Text = HRstaffid.hrstaffid
+        cboDate.MaxDate = DateTime.Now
     End Sub
 End Class

@@ -43,7 +43,7 @@
             Case "Rejected" : radRejected.Checked = True
             Case "Approved" : radApproved.Checked = True
         End Select
-
+        MDIManager.Text = "Human Resource Management System (Manager) - Leave approval"
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click

@@ -65,4 +65,12 @@ Public Class MDIManager
     Private Sub ReportStaffToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportStaffToolStripMenuItem.Click
         Me.ShowForm(PrintReportMan)
     End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        Me.Close()
+    End Sub
+
+    Private Sub HomepageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomepageToolStripMenuItem.Click
+        Me.ShowForm(ManagerMainPage)
+    End Sub
 End Class

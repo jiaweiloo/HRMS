@@ -50,78 +50,87 @@ Partial Class HRNetpayUpDel
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(212, 62)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(84, 20)
+        Me.Label1.Size = New System.Drawing.Size(96, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Payroll ID :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(213, 105)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 20)
+        Me.Label2.Size = New System.Drawing.Size(93, 20)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "People ID:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(196, 148)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(100, 20)
+        Me.Label3.Size = New System.Drawing.Size(112, 20)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Attendance :"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(216, 191)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(80, 20)
+        Me.Label4.Size = New System.Drawing.Size(89, 20)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Absence :"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(197, 234)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(99, 20)
+        Me.Label5.Size = New System.Drawing.Size(113, 20)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Final Salary :"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(163, 277)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(133, 20)
+        Me.Label6.Size = New System.Drawing.Size(149, 20)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Generated Date :"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(127, 320)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(169, 20)
+        Me.Label7.Size = New System.Drawing.Size(190, 20)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Mandatory Deduction :"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(165, 363)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(131, 20)
+        Me.Label8.Size = New System.Drawing.Size(148, 20)
         Me.Label8.TabIndex = 7
         Me.Label8.Text = "Extra Deduction :"
         '
         'lblPayrollID
         '
         Me.lblPayrollID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblPayrollID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPayrollID.Location = New System.Drawing.Point(373, 57)
         Me.lblPayrollID.Name = "lblPayrollID"
         Me.lblPayrollID.Size = New System.Drawing.Size(245, 31)
@@ -131,6 +140,7 @@ Partial Class HRNetpayUpDel
         'lblGenerateDate
         '
         Me.lblGenerateDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblGenerateDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGenerateDate.Location = New System.Drawing.Point(373, 272)
         Me.lblGenerateDate.Name = "lblGenerateDate"
         Me.lblGenerateDate.Size = New System.Drawing.Size(245, 31)
@@ -140,57 +150,68 @@ Partial Class HRNetpayUpDel
         '
         'txtAbsence
         '
+        Me.txtAbsence.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAbsence.Location = New System.Drawing.Point(373, 188)
         Me.txtAbsence.Name = "txtAbsence"
         Me.txtAbsence.Size = New System.Drawing.Size(245, 26)
-        Me.txtAbsence.TabIndex = 12
+        Me.txtAbsence.TabIndex = 0
         '
         'txtFinalPay
         '
+        Me.txtFinalPay.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFinalPay.Location = New System.Drawing.Point(373, 231)
         Me.txtFinalPay.Name = "txtFinalPay"
         Me.txtFinalPay.Size = New System.Drawing.Size(245, 26)
-        Me.txtFinalPay.TabIndex = 13
+        Me.txtFinalPay.TabIndex = 1
         '
         'txtManDdt
         '
+        Me.txtManDdt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtManDdt.Location = New System.Drawing.Point(373, 317)
         Me.txtManDdt.Name = "txtManDdt"
         Me.txtManDdt.Size = New System.Drawing.Size(245, 26)
-        Me.txtManDdt.TabIndex = 14
+        Me.txtManDdt.TabIndex = 2
         '
         'txtExtraDdt
         '
+        Me.txtExtraDdt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtExtraDdt.Location = New System.Drawing.Point(373, 360)
         Me.txtExtraDdt.Name = "txtExtraDdt"
         Me.txtExtraDdt.Size = New System.Drawing.Size(245, 26)
-        Me.txtExtraDdt.TabIndex = 15
+        Me.txtExtraDdt.TabIndex = 3
         '
         'btnUpdate
         '
         Me.btnUpdate.AutoSize = True
-        Me.btnUpdate.Location = New System.Drawing.Point(229, 408)
+        Me.btnUpdate.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnUpdate.Location = New System.Drawing.Point(310, 408)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(99, 30)
-        Me.btnUpdate.TabIndex = 16
+        Me.btnUpdate.Size = New System.Drawing.Size(99, 45)
+        Me.btnUpdate.TabIndex = 4
         Me.btnUpdate.Text = "&Update"
-        Me.btnUpdate.UseVisualStyleBackColor = True
+        Me.btnUpdate.UseVisualStyleBackColor = False
         '
         'btnCancel
         '
         Me.btnCancel.AutoSize = True
+        Me.btnCancel.BackColor = System.Drawing.Color.LightCoral
         Me.btnCancel.CausesValidation = False
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(473, 408)
+        Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnCancel.Location = New System.Drawing.Point(520, 407)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(99, 30)
-        Me.btnCancel.TabIndex = 18
+        Me.btnCancel.Size = New System.Drawing.Size(99, 46)
+        Me.btnCancel.TabIndex = 6
         Me.btnCancel.Text = "&Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'lblPplID
         '
         Me.lblPplID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblPplID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPplID.Location = New System.Drawing.Point(373, 100)
         Me.lblPplID.Name = "lblPplID"
         Me.lblPplID.Size = New System.Drawing.Size(245, 31)
@@ -200,6 +221,7 @@ Partial Class HRNetpayUpDel
         'lblAttendance
         '
         Me.lblAttendance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblAttendance.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAttendance.Location = New System.Drawing.Point(373, 143)
         Me.lblAttendance.Name = "lblAttendance"
         Me.lblAttendance.Size = New System.Drawing.Size(245, 31)
@@ -214,14 +236,17 @@ Partial Class HRNetpayUpDel
         'btnDelete
         '
         Me.btnDelete.AutoSize = True
+        Me.btnDelete.BackColor = System.Drawing.Color.IndianRed
         Me.btnDelete.CausesValidation = False
         Me.btnDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnDelete.Location = New System.Drawing.Point(351, 408)
+        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnDelete.Location = New System.Drawing.Point(415, 407)
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(99, 30)
-        Me.btnDelete.TabIndex = 21
+        Me.btnDelete.Size = New System.Drawing.Size(99, 46)
+        Me.btnDelete.TabIndex = 5
         Me.btnDelete.Text = "&Delete"
-        Me.btnDelete.UseVisualStyleBackColor = True
+        Me.btnDelete.UseVisualStyleBackColor = False
         '
         'Label9
         '
@@ -239,8 +264,9 @@ Partial Class HRNetpayUpDel
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(801, 465)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.lblAttendance)
@@ -261,7 +287,9 @@ Partial Class HRNetpayUpDel
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "HRNetpayUpDel"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.err, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

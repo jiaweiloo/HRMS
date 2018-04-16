@@ -234,6 +234,7 @@ Partial Class ManUpdateHR
         Me.AcceptButton = Me.btnPrint
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.CancelButton = Me.btnHome
         Me.ClientSize = New System.Drawing.Size(996, 504)
         Me.Controls.Add(Me.btnPrint)

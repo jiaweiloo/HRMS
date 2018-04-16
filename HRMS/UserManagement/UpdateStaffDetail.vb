@@ -8,6 +8,7 @@
         txtStaffid.Focus()
         MDIParent1.AddNewStaffToolStripMenuItem.Enabled = True
         MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = False
+        MDIParent1.Text = "Human Resource Management System (HR)- Update staff details"
     End Sub
 
     Private Sub UpdateStaffDetail_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown

@@ -18,12 +18,15 @@ Public Class Attendance
     Dim starttime As Date
 
     Private Sub Attendance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MDIManager.Text = "Human Resource Management System (Employee) - Attendance"
         If hrrole.Equals("Manager") Then
             btnReport.Visible = True
+            MDIManager.Text = "Human Resource Management System (Manager) - Attendance"
         End If
 
         If hrrole.Equals("HR") Then
             btnUpdate.Visible = True
+            MDIManager.Text = "Human Resource Management System (HR) - Attendance"
         End If
         Timer1.Enabled = True
         Dim peopleObject As People = db.Peoples.FirstOrDefault(Function(o) o.people_id = peopleid)

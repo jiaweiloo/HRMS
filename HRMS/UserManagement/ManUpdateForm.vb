@@ -5,6 +5,8 @@ Public Class ManUpdateForm
 
     Private Sub ManUpdateForm_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         txtName.Focus()
+        Dim maxdate As System.TimeSpan = New TimeSpan(5479, 0, 0, 0, 0)
+        DateDOB.MaxDate = DateTime.Now.Subtract(maxdate)
         Dim db As New HRMS_DBLinq2DataContext()
         Dim a As People = db.Peoples.FirstOrDefault(Function(o) o.people_id = SelectedId)
 
@@ -22,8 +24,9 @@ Public Class ManUpdateForm
         txtEmail.Text = a.people_email
         txtAddress.Text = a.people_address
         lblextra.Text = a.extra_leave.ToString
-        lblhourpay.Text = a.hourly_rates.ToString
+        txtHourlyPay.Text = a.hourly_rates.ToString
         lblJoin.Text = a.joined_year.ToShortDateString
+        lblPass.Text = a.people_password
 
         Select Case a.department_name
             Case "IT Dept." : cboDepart.SelectedIndex = 0
@@ -126,7 +129,7 @@ Public Class ManUpdateForm
                 Dim ppl As New People
                 ppl.people_id = lblStaffID.Text
                 ppl.people_index = Integer.Parse(lblIndex.Text)
-                ppl.people_password = txtIC.Text
+                ppl.people_password = lblPass.Text
                 ppl.people_name = txtName.Text
                 ppl.people_ic = txtIC.Text
                 ppl.people_DOB = DateDOB.Value.ToString("yyyy-MM-dd")
@@ -138,7 +141,7 @@ Public Class ManUpdateForm
                 ppl.department_name = cboDepart.SelectedItem.ToString
                 ppl.leave_num = Integer.Parse(cboLeave.SelectedItem.ToString)
                 ppl.extra_leave = Integer.Parse(lblextra.Text)
-                ppl.hourly_rates = Integer.Parse(lblhourpay.Text)
+                ppl.hourly_rates = Integer.Parse(txtHourlyPay.Text)
                 ppl.joined_year = Date.Parse(lblJoin.Text)
 
                 'Dim db2 As New HRDatabaseDataContext()
@@ -230,4 +233,6 @@ Public Class ManUpdateForm
         dlgPreview.Document = doc
         dlgPreview.ShowDialog(Me)
     End Sub
+
+
 End Class

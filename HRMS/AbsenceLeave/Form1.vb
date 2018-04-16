@@ -72,13 +72,14 @@ Public Class Form1
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        Me.Close()
+        MDIStaff.ShowForm(NormalStaffPage)
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cboDuration.SelectedIndex = 0
         lbl_Leave_ID.Text = addleave.GetNextId()
         lbl_People_ID.Text = HRstaffid.hrstaffid.ToString()
+        MDIStaff.Text = "Human Resource Management System (Employee) - Apply Leave"
     End Sub
 
     Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown

@@ -488,6 +488,9 @@
     <None Include="Resources\print-large.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Users-Checked-User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="HRMS_DB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -495,7 +498,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>HRMS_DB.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\Users-Checked-User-icon.png" />
+    <None Include="Resources\payroll.jpg" />
+    <None Include="Resources\payroll1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

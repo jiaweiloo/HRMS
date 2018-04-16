@@ -13,17 +13,24 @@
     Public Function GetHRNextId() As String
         Dim peopleid As String
         Dim db As New HRMS_DBLinq2DataContext
-        ' Dim lastindex As Integer
         Dim index As Integer = 10001
         Try
             For Each a In db.Peoples
                 index = index + 1
-                'lastindex = a.people_index
             Next
         Catch ex As Exception
             Return "Fail to connect database"
         End Try
         newindex = index
+        Try
+            For Each a In db.Peoples
+                If newindex = a.people_index Then
+                    newindex += 1
+                End If
+            Next
+        Catch ex As Exception
+            Return "Fail to connect database"
+        End Try
         peopleid = "HR" + newindex.ToString
         Return peopleid
     End Function

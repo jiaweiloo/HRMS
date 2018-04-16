@@ -23,6 +23,7 @@
     Private Sub ManagerMainPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MDIManager.AddNewHRToolStripMenuItem.Enabled = True
         MDIManager.UpdateHRFetailsToolStripMenuItem.Enabled = True
+        MDIManager.Text = "Human Resource Management System (Manager) - Home Page"
     End Sub
 
     Private Sub btnPayroll_Click(sender As Object, e As EventArgs) Handles btnPayroll.Click

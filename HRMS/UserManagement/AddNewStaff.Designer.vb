@@ -80,7 +80,7 @@ Partial Class AddNewStaff
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(302, 41)
+        Me.Label9.Location = New System.Drawing.Point(329, 41)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(123, 20)
         Me.Label9.TabIndex = 75
@@ -91,7 +91,7 @@ Partial Class AddNewStaff
         Me.lblHRname.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.lblHRname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblHRname.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHRname.Location = New System.Drawing.Point(451, 65)
+        Me.lblHRname.Location = New System.Drawing.Point(478, 65)
         Me.lblHRname.Name = "lblHRname"
         Me.lblHRname.Size = New System.Drawing.Size(125, 30)
         Me.lblHRname.TabIndex = 74
@@ -101,7 +101,7 @@ Partial Class AddNewStaff
         Me.lblHRid.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.lblHRid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblHRid.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHRid.Location = New System.Drawing.Point(451, 31)
+        Me.lblHRid.Location = New System.Drawing.Point(478, 31)
         Me.lblHRid.Name = "lblHRid"
         Me.lblHRid.Size = New System.Drawing.Size(125, 30)
         Me.lblHRid.TabIndex = 73
@@ -114,7 +114,7 @@ Partial Class AddNewStaff
         Me.cboDepart.Items.AddRange(New Object() {"IT Dept.", "HR Dept.", "Accounting Dept.", "Marketing Dept."})
         Me.cboDepart.Location = New System.Drawing.Point(275, 215)
         Me.cboDepart.Name = "cboDepart"
-        Me.cboDepart.Size = New System.Drawing.Size(301, 28)
+        Me.cboDepart.Size = New System.Drawing.Size(328, 28)
         Me.cboDepart.TabIndex = 1
         '
         'Label8
@@ -136,9 +136,9 @@ Partial Class AddNewStaff
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCancel.Location = New System.Drawing.Point(439, 544)
+        Me.btnCancel.Location = New System.Drawing.Point(451, 544)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(137, 52)
+        Me.btnCancel.Size = New System.Drawing.Size(152, 52)
         Me.btnCancel.TabIndex = 10
         Me.btnCancel.Text = "&Reset"
         Me.btnCancel.UseVisualStyleBackColor = False
@@ -151,7 +151,7 @@ Partial Class AddNewStaff
         Me.btnConfirm.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnConfirm.Location = New System.Drawing.Point(275, 544)
         Me.btnConfirm.Name = "btnConfirm"
-        Me.btnConfirm.Size = New System.Drawing.Size(132, 52)
+        Me.btnConfirm.Size = New System.Drawing.Size(150, 52)
         Me.btnConfirm.TabIndex = 9
         Me.btnConfirm.Text = "&Confirm"
         Me.btnConfirm.UseVisualStyleBackColor = False
@@ -161,7 +161,7 @@ Partial Class AddNewStaff
         Me.txtAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAddress.Location = New System.Drawing.Point(275, 505)
         Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(301, 26)
+        Me.txtAddress.Size = New System.Drawing.Size(328, 26)
         Me.txtAddress.TabIndex = 8
         '
         'txtEmail
@@ -169,7 +169,7 @@ Partial Class AddNewStaff
         Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.Location = New System.Drawing.Point(275, 463)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(301, 26)
+        Me.txtEmail.Size = New System.Drawing.Size(328, 26)
         Me.txtEmail.TabIndex = 7
         '
         'GroupBox1
@@ -179,7 +179,7 @@ Partial Class AddNewStaff
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(275, 379)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(301, 36)
+        Me.GroupBox1.Size = New System.Drawing.Size(328, 36)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         '
@@ -190,7 +190,7 @@ Partial Class AddNewStaff
         Me.DateDOB.MaxDate = New Date(2018, 12, 31, 0, 0, 0, 0)
         Me.DateDOB.MinDate = New Date(1920, 1, 1, 0, 0, 0, 0)
         Me.DateDOB.Name = "DateDOB"
-        Me.DateDOB.Size = New System.Drawing.Size(301, 26)
+        Me.DateDOB.Size = New System.Drawing.Size(328, 26)
         Me.DateDOB.TabIndex = 4
         Me.DateDOB.Value = New Date(2002, 1, 1, 0, 0, 0, 0)
         '
@@ -200,7 +200,7 @@ Partial Class AddNewStaff
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(123, 98)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(167, 45)
+        Me.Label11.Size = New System.Drawing.Size(198, 45)
         Me.Label11.TabIndex = 61
         Me.Label11.Text = "Add New Staff"
         '
@@ -210,7 +210,7 @@ Partial Class AddNewStaff
         Me.lblStaffID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblStaffID.Location = New System.Drawing.Point(275, 165)
         Me.lblStaffID.Name = "lblStaffID"
-        Me.lblStaffID.Size = New System.Drawing.Size(301, 33)
+        Me.lblStaffID.Size = New System.Drawing.Size(328, 33)
         Me.lblStaffID.TabIndex = 60
         '
         'Label10
@@ -315,7 +315,7 @@ Partial Class AddNewStaff
         Me.txtName.Location = New System.Drawing.Point(275, 257)
         Me.txtName.Mask = "LLLLLLLLLLLLLLLLLL"
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(301, 26)
+        Me.txtName.Size = New System.Drawing.Size(328, 26)
         Me.txtName.TabIndex = 2
         '
         'txtIC
@@ -324,7 +324,7 @@ Partial Class AddNewStaff
         Me.txtIC.Location = New System.Drawing.Point(275, 299)
         Me.txtIC.Mask = "000000-00-0000"
         Me.txtIC.Name = "txtIC"
-        Me.txtIC.Size = New System.Drawing.Size(301, 26)
+        Me.txtIC.Size = New System.Drawing.Size(328, 26)
         Me.txtIC.TabIndex = 3
         '
         'txtPhone
@@ -333,7 +333,7 @@ Partial Class AddNewStaff
         Me.txtPhone.Location = New System.Drawing.Point(275, 421)
         Me.txtPhone.Mask = "00000000009"
         Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(301, 26)
+        Me.txtPhone.Size = New System.Drawing.Size(328, 26)
         Me.txtPhone.TabIndex = 6
         '
         'lblTimeNow
@@ -352,10 +352,10 @@ Partial Class AddNewStaff
         Me.btnHome.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnHome.Location = New System.Drawing.Point(451, 103)
+        Me.btnHome.Location = New System.Drawing.Point(478, 103)
         Me.btnHome.Name = "btnHome"
         Me.btnHome.Size = New System.Drawing.Size(125, 40)
-        Me.btnHome.TabIndex = 91
+        Me.btnHome.TabIndex = 11
         Me.btnHome.Text = "&HomePage"
         Me.btnHome.UseVisualStyleBackColor = False
         '
@@ -364,7 +364,7 @@ Partial Class AddNewStaff
         Me.AcceptButton = Me.btnConfirm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(800, 700)
         Me.Controls.Add(Me.btnHome)

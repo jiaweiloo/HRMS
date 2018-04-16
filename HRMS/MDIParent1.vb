@@ -11,7 +11,7 @@ Public Class MDIParent1
         Me.AddNewStaffToolStripMenuItem.Enabled = True
         Me.UpdateStaffDetailsToolStripMenuItem.Enabled = True
 
-        Me.Text = "Human Resource Management System - "
+        Me.Text = "Human Resource Management System (HR)- "
         ' Create a new instance of the child form.
         Dim ChildForm As New System.Windows.Forms.Form
         'Clear all childform
@@ -53,23 +53,21 @@ Public Class MDIParent1
         Me.ShowForm(UpdateStaffDetail)
     End Sub
 
-    Private Sub RetrieveStaffDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub DeleteStaffDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub UpdateLeaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateLeaveToolStripMenuItem.Click
+        Me.AddNewStaffToolStripMenuItem.Enabled = True
+        Me.UpdateStaffDetailsToolStripMenuItem.Enabled = True
         Me.ShowForm(DisplayLeave)
     End Sub
 
     Private Sub TimeAttendanceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimeAttendanceToolStripMenuItem.Click
+        Me.AddNewStaffToolStripMenuItem.Enabled = True
+        Me.UpdateStaffDetailsToolStripMenuItem.Enabled = True
         ShowForm(Attendance)
     End Sub
 
     Private Sub HomepagetoolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomepagetoolStripMenuItem.Click
+        Me.AddNewStaffToolStripMenuItem.Enabled = True
+        Me.UpdateStaffDetailsToolStripMenuItem.Enabled = True
         Me.ShowForm(HRHomepage)
     End Sub
 
@@ -78,24 +76,35 @@ Public Class MDIParent1
     End Sub
 
     Private Sub pay_HomepageToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles HomepageToolStripMenuItem1.Click
+        Me.AddNewStaffToolStripMenuItem.Enabled = True
+        Me.UpdateStaffDetailsToolStripMenuItem.Enabled = True
         ShowForm(PayrollHomepage)
     End Sub
 
     Private Sub CheckDeductionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckDeductionToolStripMenuItem.Click
+        Me.AddNewStaffToolStripMenuItem.Enabled = True
+        Me.UpdateStaffDetailsToolStripMenuItem.Enabled = True
         Me.ShowForm(HRDeductionShow)
     End Sub
 
     Private Sub CheckMandatoryDeductionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckMandatoryDeductionToolStripMenuItem.Click
+        Me.AddNewStaffToolStripMenuItem.Enabled = True
+        Me.UpdateStaffDetailsToolStripMenuItem.Enabled = True
         Me.ShowForm(HRMandatoryDdt)
     End Sub
 
     Private Sub CheckOvertimeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckOvertimeToolStripMenuItem.Click
         CalcOvertime.Calculate()
+        Me.AddNewStaffToolStripMenuItem.Enabled = True
+        Me.UpdateStaffDetailsToolStripMenuItem.Enabled = True
         Me.ShowForm(HROvertimeShow)
     End Sub
 
     Private Sub CheckNetpayToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckNetpayToolStripMenuItem.Click
         CalcPayroll.Calculate()
+        Me.AddNewStaffToolStripMenuItem.Enabled = True
+        Me.UpdateStaffDetailsToolStripMenuItem.Enabled = True
         Me.ShowForm(HRNetpay)
     End Sub
+
 End Class

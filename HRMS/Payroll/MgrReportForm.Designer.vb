@@ -34,6 +34,8 @@ Partial Class MgrReportForm
         Me.btnRefresh = New System.Windows.Forms.Button()
         Me.doc = New System.Drawing.Printing.PrintDocument()
         Me.dlgPreview = New System.Windows.Forms.PrintPreviewDialog()
+        Me.btnPrtSummary = New System.Windows.Forms.Button()
+        Me.docSumary = New System.Drawing.Printing.PrintDocument()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,10 +52,11 @@ Partial Class MgrReportForm
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(13, 30)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 20)
+        Me.Label2.Size = New System.Drawing.Size(78, 20)
         Me.Label2.TabIndex = 37
         Me.Label2.Text = "&Sort By :"
         '
@@ -90,52 +93,61 @@ Partial Class MgrReportForm
         '
         Me.btnPrint.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnPrint.AutoSize = True
-        Me.btnPrint.Location = New System.Drawing.Point(644, 403)
+        Me.btnPrint.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnPrint.Location = New System.Drawing.Point(640, 392)
         Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(143, 41)
-        Me.btnPrint.TabIndex = 40
-        Me.btnPrint.Text = "Print"
-        Me.btnPrint.UseVisualStyleBackColor = True
+        Me.btnPrint.Size = New System.Drawing.Size(147, 52)
+        Me.btnPrint.TabIndex = 4
+        Me.btnPrint.Text = "&Print"
+        Me.btnPrint.UseVisualStyleBackColor = False
         '
         'cBoxMonth
         '
         Me.cBoxMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cBoxMonth.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cBoxMonth.FormattingEnabled = True
         Me.cBoxMonth.Items.AddRange(New Object() {"All", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"})
         Me.cBoxMonth.Location = New System.Drawing.Point(82, 64)
         Me.cBoxMonth.Name = "cBoxMonth"
         Me.cBoxMonth.Size = New System.Drawing.Size(85, 28)
-        Me.cBoxMonth.TabIndex = 41
+        Me.cBoxMonth.TabIndex = 0
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(21, 67)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 20)
+        Me.Label3.Size = New System.Drawing.Size(59, 20)
         Me.Label3.TabIndex = 42
         Me.Label3.Text = "&Month"
         '
         'cBoxYear
         '
         Me.cBoxYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cBoxYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cBoxYear.FormattingEnabled = True
         Me.cBoxYear.Items.AddRange(New Object() {"All", "2017", "2018", "2019", "2020", "2021", "2022"})
         Me.cBoxYear.Location = New System.Drawing.Point(173, 64)
         Me.cBoxYear.Name = "cBoxYear"
         Me.cBoxYear.Size = New System.Drawing.Size(125, 28)
-        Me.cBoxYear.TabIndex = 43
+        Me.cBoxYear.TabIndex = 1
         '
         'btnRefresh
         '
         Me.btnRefresh.AutoSize = True
-        Me.btnRefresh.Location = New System.Drawing.Point(321, 62)
+        Me.btnRefresh.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btnRefresh.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnRefresh.Location = New System.Drawing.Point(336, 62)
         Me.btnRefresh.Name = "btnRefresh"
-        Me.btnRefresh.Size = New System.Drawing.Size(76, 30)
-        Me.btnRefresh.TabIndex = 44
-        Me.btnRefresh.Text = "Refresh"
-        Me.btnRefresh.UseVisualStyleBackColor = True
+        Me.btnRefresh.Size = New System.Drawing.Size(121, 42)
+        Me.btnRefresh.TabIndex = 2
+        Me.btnRefresh.Text = "&Refresh"
+        Me.btnRefresh.UseVisualStyleBackColor = False
         '
         'doc
         '
@@ -152,11 +164,30 @@ Partial Class MgrReportForm
         Me.dlgPreview.UseAntiAlias = True
         Me.dlgPreview.Visible = False
         '
+        'btnPrtSummary
+        '
+        Me.btnPrtSummary.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnPrtSummary.AutoSize = True
+        Me.btnPrtSummary.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnPrtSummary.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrtSummary.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnPrtSummary.Location = New System.Drawing.Point(469, 392)
+        Me.btnPrtSummary.Name = "btnPrtSummary"
+        Me.btnPrtSummary.Size = New System.Drawing.Size(147, 52)
+        Me.btnPrtSummary.TabIndex = 3
+        Me.btnPrtSummary.Text = "Print &Summary"
+        Me.btnPrtSummary.UseVisualStyleBackColor = False
+        '
+        'docSumary
+        '
+        '
         'MgrReportForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightBlue
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnPrtSummary)
         Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.cBoxYear)
         Me.Controls.Add(Me.Label3)
@@ -185,4 +216,6 @@ Partial Class MgrReportForm
     Friend WithEvents btnRefresh As Button
     Friend WithEvents doc As Printing.PrintDocument
     Friend WithEvents dlgPreview As PrintPreviewDialog
+    Friend WithEvents btnPrtSummary As Button
+    Friend WithEvents docSumary As Printing.PrintDocument
 End Class
