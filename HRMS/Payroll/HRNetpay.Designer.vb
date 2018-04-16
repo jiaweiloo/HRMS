@@ -40,7 +40,7 @@ Partial Class HRNetpay
         Me.btnSearch.Location = New System.Drawing.Point(396, 55)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(108, 35)
-        Me.btnSearch.TabIndex = 34
+        Me.btnSearch.TabIndex = 1
         Me.btnSearch.Text = "&Search"
         Me.btnSearch.UseVisualStyleBackColor = False
         '
@@ -53,7 +53,7 @@ Partial Class HRNetpay
         Me.DateTimePicker1.MinDate = New Date(2000, 1, 1, 0, 0, 0, 0)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 26)
-        Me.DateTimePicker1.TabIndex = 33
+        Me.DateTimePicker1.TabIndex = 0
         '
         'Label2
         '

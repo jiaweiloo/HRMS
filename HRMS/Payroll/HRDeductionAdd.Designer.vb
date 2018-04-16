@@ -51,7 +51,7 @@ Partial Class HRDeductionAdd
         Me.cBoxFormat.Location = New System.Drawing.Point(317, 185)
         Me.cBoxFormat.Name = "cBoxFormat"
         Me.cBoxFormat.Size = New System.Drawing.Size(198, 28)
-        Me.cBoxFormat.TabIndex = 3
+        Me.cBoxFormat.TabIndex = 2
         '
         'Label1
         '
@@ -119,7 +119,7 @@ Partial Class HRDeductionAdd
         Me.txtValue.Location = New System.Drawing.Point(317, 138)
         Me.txtValue.Name = "txtValue"
         Me.txtValue.Size = New System.Drawing.Size(198, 26)
-        Me.txtValue.TabIndex = 2
+        Me.txtValue.TabIndex = 1
         '
         'txtType
         '
@@ -128,7 +128,7 @@ Partial Class HRDeductionAdd
         Me.txtType.MaxLength = 30
         Me.txtType.Name = "txtType"
         Me.txtType.Size = New System.Drawing.Size(198, 26)
-        Me.txtType.TabIndex = 1
+        Me.txtType.TabIndex = 0
         '
         'cBoxPplID
         '
@@ -138,7 +138,7 @@ Partial Class HRDeductionAdd
         Me.cBoxPplID.Location = New System.Drawing.Point(317, 285)
         Me.cBoxPplID.Name = "cBoxPplID"
         Me.cBoxPplID.Size = New System.Drawing.Size(198, 28)
-        Me.cBoxPplID.TabIndex = 4
+        Me.cBoxPplID.TabIndex = 3
         '
         'lblID
         '
@@ -171,7 +171,7 @@ Partial Class HRDeductionAdd
         Me.btnAdd.Location = New System.Drawing.Point(198, 330)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(98, 47)
-        Me.btnAdd.TabIndex = 5
+        Me.btnAdd.TabIndex = 4
         Me.btnAdd.Text = "&Add"
         Me.btnAdd.UseVisualStyleBackColor = False
         '
@@ -185,7 +185,7 @@ Partial Class HRDeductionAdd
         Me.btnReset.Location = New System.Drawing.Point(317, 328)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(99, 47)
-        Me.btnReset.TabIndex = 6
+        Me.btnReset.TabIndex = 5
         Me.btnReset.Text = "&Reset"
         Me.btnReset.UseVisualStyleBackColor = False
         '
@@ -200,7 +200,7 @@ Partial Class HRDeductionAdd
         Me.btnExit.Location = New System.Drawing.Point(436, 328)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(113, 47)
-        Me.btnExit.TabIndex = 7
+        Me.btnExit.TabIndex = 6
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = False
         '

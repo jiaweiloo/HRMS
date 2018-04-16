@@ -112,7 +112,7 @@ Partial Class MgrReportForm
         Me.cBoxMonth.Location = New System.Drawing.Point(82, 64)
         Me.cBoxMonth.Name = "cBoxMonth"
         Me.cBoxMonth.Size = New System.Drawing.Size(85, 28)
-        Me.cBoxMonth.TabIndex = 1
+        Me.cBoxMonth.TabIndex = 0
         '
         'Label3
         '
@@ -134,7 +134,7 @@ Partial Class MgrReportForm
         Me.cBoxYear.Location = New System.Drawing.Point(173, 64)
         Me.cBoxYear.Name = "cBoxYear"
         Me.cBoxYear.Size = New System.Drawing.Size(125, 28)
-        Me.cBoxYear.TabIndex = 2
+        Me.cBoxYear.TabIndex = 1
         '
         'btnRefresh
         '
@@ -145,7 +145,7 @@ Partial Class MgrReportForm
         Me.btnRefresh.Location = New System.Drawing.Point(336, 62)
         Me.btnRefresh.Name = "btnRefresh"
         Me.btnRefresh.Size = New System.Drawing.Size(121, 42)
-        Me.btnRefresh.TabIndex = 3
+        Me.btnRefresh.TabIndex = 2
         Me.btnRefresh.Text = "&Refresh"
         Me.btnRefresh.UseVisualStyleBackColor = False
         '
@@ -174,7 +174,7 @@ Partial Class MgrReportForm
         Me.btnPrtSummary.Location = New System.Drawing.Point(469, 392)
         Me.btnPrtSummary.Name = "btnPrtSummary"
         Me.btnPrtSummary.Size = New System.Drawing.Size(147, 52)
-        Me.btnPrtSummary.TabIndex = 43
+        Me.btnPrtSummary.TabIndex = 3
         Me.btnPrtSummary.Text = "Print &Summary"
         Me.btnPrtSummary.UseVisualStyleBackColor = False
         '

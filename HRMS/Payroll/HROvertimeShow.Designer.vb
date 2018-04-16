@@ -90,7 +90,7 @@ Partial Class HROvertimeShow
         Me.DateTimePicker1.MinDate = New Date(2000, 1, 1, 0, 0, 0, 0)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 26)
-        Me.DateTimePicker1.TabIndex = 27
+        Me.DateTimePicker1.TabIndex = 0
         '
         'btnSearch
         '
@@ -101,7 +101,7 @@ Partial Class HROvertimeShow
         Me.btnSearch.Location = New System.Drawing.Point(375, 50)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(117, 40)
-        Me.btnSearch.TabIndex = 28
+        Me.btnSearch.TabIndex = 1
         Me.btnSearch.Text = "&Search"
         Me.btnSearch.UseVisualStyleBackColor = False
         '

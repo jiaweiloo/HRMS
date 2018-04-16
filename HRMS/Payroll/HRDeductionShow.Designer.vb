@@ -89,7 +89,7 @@ Partial Class HRDeductionShow
         Me.txtType.MaxLength = 30
         Me.txtType.Name = "txtType"
         Me.txtType.Size = New System.Drawing.Size(175, 26)
-        Me.txtType.TabIndex = 1
+        Me.txtType.TabIndex = 0
         '
         'btnAdd
         '
@@ -101,7 +101,7 @@ Partial Class HRDeductionShow
         Me.btnAdd.Location = New System.Drawing.Point(638, 45)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(151, 46)
-        Me.btnAdd.TabIndex = 2
+        Me.btnAdd.TabIndex = 1
         Me.btnAdd.Text = "&Add"
         Me.btnAdd.UseVisualStyleBackColor = False
         '

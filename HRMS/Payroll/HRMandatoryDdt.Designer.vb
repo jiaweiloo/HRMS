@@ -68,7 +68,7 @@ Partial Class HRMandatoryDdt
         Me.txtType.MaxLength = 30
         Me.txtType.Name = "txtType"
         Me.txtType.Size = New System.Drawing.Size(148, 26)
-        Me.txtType.TabIndex = 17
+        Me.txtType.TabIndex = 0
         '
         'Label1
         '
@@ -90,7 +90,7 @@ Partial Class HRMandatoryDdt
         Me.btnAdd.Location = New System.Drawing.Point(672, 52)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(116, 47)
-        Me.btnAdd.TabIndex = 20
+        Me.btnAdd.TabIndex = 1
         Me.btnAdd.Text = "&Add"
         Me.btnAdd.UseVisualStyleBackColor = False
         '

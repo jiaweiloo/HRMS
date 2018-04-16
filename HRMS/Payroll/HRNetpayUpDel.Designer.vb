@@ -154,7 +154,7 @@ Partial Class HRNetpayUpDel
         Me.txtAbsence.Location = New System.Drawing.Point(373, 188)
         Me.txtAbsence.Name = "txtAbsence"
         Me.txtAbsence.Size = New System.Drawing.Size(245, 26)
-        Me.txtAbsence.TabIndex = 12
+        Me.txtAbsence.TabIndex = 0
         '
         'txtFinalPay
         '
@@ -162,7 +162,7 @@ Partial Class HRNetpayUpDel
         Me.txtFinalPay.Location = New System.Drawing.Point(373, 231)
         Me.txtFinalPay.Name = "txtFinalPay"
         Me.txtFinalPay.Size = New System.Drawing.Size(245, 26)
-        Me.txtFinalPay.TabIndex = 13
+        Me.txtFinalPay.TabIndex = 1
         '
         'txtManDdt
         '
@@ -170,7 +170,7 @@ Partial Class HRNetpayUpDel
         Me.txtManDdt.Location = New System.Drawing.Point(373, 317)
         Me.txtManDdt.Name = "txtManDdt"
         Me.txtManDdt.Size = New System.Drawing.Size(245, 26)
-        Me.txtManDdt.TabIndex = 14
+        Me.txtManDdt.TabIndex = 2
         '
         'txtExtraDdt
         '
@@ -178,7 +178,7 @@ Partial Class HRNetpayUpDel
         Me.txtExtraDdt.Location = New System.Drawing.Point(373, 360)
         Me.txtExtraDdt.Name = "txtExtraDdt"
         Me.txtExtraDdt.Size = New System.Drawing.Size(245, 26)
-        Me.txtExtraDdt.TabIndex = 15
+        Me.txtExtraDdt.TabIndex = 3
         '
         'btnUpdate
         '
@@ -189,7 +189,7 @@ Partial Class HRNetpayUpDel
         Me.btnUpdate.Location = New System.Drawing.Point(310, 408)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(99, 45)
-        Me.btnUpdate.TabIndex = 16
+        Me.btnUpdate.TabIndex = 4
         Me.btnUpdate.Text = "&Update"
         Me.btnUpdate.UseVisualStyleBackColor = False
         '
@@ -204,7 +204,7 @@ Partial Class HRNetpayUpDel
         Me.btnCancel.Location = New System.Drawing.Point(520, 407)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(99, 46)
-        Me.btnCancel.TabIndex = 18
+        Me.btnCancel.TabIndex = 6
         Me.btnCancel.Text = "&Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
@@ -244,7 +244,7 @@ Partial Class HRNetpayUpDel
         Me.btnDelete.Location = New System.Drawing.Point(415, 407)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(99, 46)
-        Me.btnDelete.TabIndex = 21
+        Me.btnDelete.TabIndex = 5
         Me.btnDelete.Text = "&Delete"
         Me.btnDelete.UseVisualStyleBackColor = False
         '

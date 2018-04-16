@@ -82,7 +82,7 @@ Partial Class EmpHistoryPayroll
         Me.btnRefresh.Location = New System.Drawing.Point(659, 27)
         Me.btnRefresh.Name = "btnRefresh"
         Me.btnRefresh.Size = New System.Drawing.Size(130, 51)
-        Me.btnRefresh.TabIndex = 30
+        Me.btnRefresh.TabIndex = 0
         Me.btnRefresh.Text = "&Refresh"
         Me.btnRefresh.UseVisualStyleBackColor = False
         '
@@ -96,7 +96,7 @@ Partial Class EmpHistoryPayroll
         Me.btnPrint.Location = New System.Drawing.Point(659, 403)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(128, 42)
-        Me.btnPrint.TabIndex = 31
+        Me.btnPrint.TabIndex = 1
         Me.btnPrint.Text = "Print"
         Me.btnPrint.UseVisualStyleBackColor = False
         '
