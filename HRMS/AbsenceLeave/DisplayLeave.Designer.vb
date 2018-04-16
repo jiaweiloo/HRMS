@@ -70,6 +70,7 @@ Partial Class DisplayLeave
         '
         'lblID
         '
+        Me.lblID.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.lblID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblID.Location = New System.Drawing.Point(282, 18)
         Me.lblID.Name = "lblID"
@@ -78,6 +79,7 @@ Partial Class DisplayLeave
         '
         'lblName
         '
+        Me.lblName.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.lblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblName.Location = New System.Drawing.Point(469, 18)
         Me.lblName.Name = "lblName"
