@@ -9,6 +9,8 @@
         Dim ttlmanDeduction As Double = 0.0
         Dim ttlmandedctionInPercentage As Double = 0.0
         Dim finalmandatory As Double
+        Dim otDuration As Integer = 0
+        Dim otTotal As Double = 0.0
 
         Dim db As New HRMS_DBLinq2DataContext()
 
@@ -45,18 +47,28 @@
                     totalabsent += 1
                 Next
             End If
+
+            Dim overtimeRS = (From c In db.overtimes
+                              Where c.people_id = ppl.people_id And c.overtime_date.Value.Month.Equals(DateTime.Now.Month) And c.overtime_date.Value.Year.Equals(DateTime.Now.Year)).ToList
+            If (overtimeRS.Count > 0) Then
+                For Each ot As overtime In overtimeRS
+                    otDuration += Convert.ToInt16(ot.overtime_duration)
+                Next
+                otTotal = otDuration * ppl.hourly_rates
+            End If
+
             finalpay = basicsalary
             finalpay -= basicsalary * ttldeductionInPercentage
             finalpay -= ttlDeduction
-
             finalpay -= finalmandatory
+            finalpay += otTotal
             'Check if payroll already have the records
             If (db.netpays.Any(Function(o) o.people_id = ppl.people_id AndAlso o.generated_date.Value.Year.Equals(DateTime.Now.Year) AndAlso o.generated_date.Value.Month.Equals(DateTime.Now.Month))) Then
                 Dim payr = (From c In db.netpays
                             Where c.people_id = ppl.people_id And c.generated_date.Value.Month.Equals(DateTime.Now.Month) And c.generated_date.Value.Year.Equals(DateTime.Now.Year)).FirstOrDefault
                 payr.total_attendance = 23 - totalabsent
                 payr.total_absence = totalabsent
-                payr.final_pay = Convert.ToDecimal(basicsalary)
+                payr.final_pay = Convert.ToDecimal(finalpay)
                 payr.generated_date = DateTime.Now
                 payr.ttl_mandatory_ddt = Convert.ToDecimal(finalmandatory)
                 payr.ttl_deduction = Convert.ToDecimal(ttlDeduction + (basicsalary * ttldeductionInPercentage))
@@ -67,7 +79,7 @@
                 np.people_id = ppl.people_id
                 np.total_attendance = 23 - totalabsent
                 np.total_absence = totalabsent
-                np.final_pay = Convert.ToDecimal(basicsalary)
+                np.final_pay = Convert.ToDecimal(finalpay)
                 np.generated_date = DateTime.Now
                 np.ttl_mandatory_ddt = Convert.ToDecimal(finalmandatory)
                 np.ttl_deduction = Convert.ToDecimal(ttlDeduction + (basicsalary * ttldeductionInPercentage))

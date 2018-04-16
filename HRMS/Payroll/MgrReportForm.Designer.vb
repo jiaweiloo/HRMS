@@ -34,6 +34,8 @@ Partial Class MgrReportForm
         Me.btnRefresh = New System.Windows.Forms.Button()
         Me.doc = New System.Drawing.Printing.PrintDocument()
         Me.dlgPreview = New System.Windows.Forms.PrintPreviewDialog()
+        Me.btnPrtSummary = New System.Windows.Forms.Button()
+        Me.docSumary = New System.Drawing.Printing.PrintDocument()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -162,12 +164,30 @@ Partial Class MgrReportForm
         Me.dlgPreview.UseAntiAlias = True
         Me.dlgPreview.Visible = False
         '
+        'btnPrtSummary
+        '
+        Me.btnPrtSummary.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnPrtSummary.AutoSize = True
+        Me.btnPrtSummary.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnPrtSummary.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrtSummary.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnPrtSummary.Location = New System.Drawing.Point(469, 392)
+        Me.btnPrtSummary.Name = "btnPrtSummary"
+        Me.btnPrtSummary.Size = New System.Drawing.Size(147, 52)
+        Me.btnPrtSummary.TabIndex = 43
+        Me.btnPrtSummary.Text = "Print &Summary"
+        Me.btnPrtSummary.UseVisualStyleBackColor = False
+        '
+        'docSumary
+        '
+        '
         'MgrReportForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightBlue
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnPrtSummary)
         Me.Controls.Add(Me.btnRefresh)
         Me.Controls.Add(Me.cBoxYear)
         Me.Controls.Add(Me.Label3)
@@ -196,4 +216,6 @@ Partial Class MgrReportForm
     Friend WithEvents btnRefresh As Button
     Friend WithEvents doc As Printing.PrintDocument
     Friend WithEvents dlgPreview As PrintPreviewDialog
+    Friend WithEvents btnPrtSummary As Button
+    Friend WithEvents docSumary As Printing.PrintDocument
 End Class
