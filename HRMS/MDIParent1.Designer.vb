@@ -66,24 +66,27 @@ Partial Class MDIParent1
         'HomepagetoolStripMenuItem
         '
         Me.HomepagetoolStripMenuItem.Name = "HomepagetoolStripMenuItem"
-        Me.HomepagetoolStripMenuItem.Size = New System.Drawing.Size(185, 30)
+        Me.HomepagetoolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
+        Me.HomepagetoolStripMenuItem.Size = New System.Drawing.Size(250, 30)
         Me.HomepagetoolStripMenuItem.Text = "&Homepage"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(182, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(247, 6)
         '
         'LogoutToolStripMenuItem1
         '
         Me.LogoutToolStripMenuItem1.Name = "LogoutToolStripMenuItem1"
-        Me.LogoutToolStripMenuItem1.Size = New System.Drawing.Size(185, 30)
+        Me.LogoutToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.LogoutToolStripMenuItem1.Size = New System.Drawing.Size(250, 30)
         Me.LogoutToolStripMenuItem1.Text = "&Logout"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(185, 30)
+        Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(250, 30)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'UserManagementToolStripMenuItem
@@ -96,13 +99,15 @@ Partial Class MDIParent1
         'AddNewStaffToolStripMenuItem
         '
         Me.AddNewStaffToolStripMenuItem.Name = "AddNewStaffToolStripMenuItem"
-        Me.AddNewStaffToolStripMenuItem.Size = New System.Drawing.Size(242, 30)
+        Me.AddNewStaffToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
+        Me.AddNewStaffToolStripMenuItem.Size = New System.Drawing.Size(311, 30)
         Me.AddNewStaffToolStripMenuItem.Text = "Add New Staff"
         '
         'UpdateStaffDetailsToolStripMenuItem
         '
         Me.UpdateStaffDetailsToolStripMenuItem.Name = "UpdateStaffDetailsToolStripMenuItem"
-        Me.UpdateStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(242, 30)
+        Me.UpdateStaffDetailsToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.M), System.Windows.Forms.Keys)
+        Me.UpdateStaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(311, 30)
         Me.UpdateStaffDetailsToolStripMenuItem.Text = "Staff Management"
         '
         'AbsenceLeaveToolStripMenuItem
@@ -115,49 +120,57 @@ Partial Class MDIParent1
         'UpdateLeaveToolStripMenuItem
         '
         Me.UpdateLeaveToolStripMenuItem.Name = "UpdateLeaveToolStripMenuItem"
-        Me.UpdateLeaveToolStripMenuItem.Size = New System.Drawing.Size(203, 30)
+        Me.UpdateLeaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
+        Me.UpdateLeaveToolStripMenuItem.Size = New System.Drawing.Size(263, 30)
         Me.UpdateLeaveToolStripMenuItem.Text = "&Update Leave"
         '
         'PayrollToolStripMenuItem
         '
         Me.PayrollToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomepageToolStripMenuItem1, Me.CheckDeductionToolStripMenuItem, Me.CheckMandatoryDeductionToolStripMenuItem, Me.CheckOvertimeToolStripMenuItem, Me.CheckNetpayToolStripMenuItem})
         Me.PayrollToolStripMenuItem.Name = "PayrollToolStripMenuItem"
-        Me.PayrollToolStripMenuItem.Size = New System.Drawing.Size(76, 29)
+        Me.PayrollToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
+        Me.PayrollToolStripMenuItem.Size = New System.Drawing.Size(77, 29)
         Me.PayrollToolStripMenuItem.Text = "Payroll"
         '
         'HomepageToolStripMenuItem1
         '
         Me.HomepageToolStripMenuItem1.Name = "HomepageToolStripMenuItem1"
-        Me.HomepageToolStripMenuItem1.Size = New System.Drawing.Size(274, 30)
+        Me.HomepageToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
+        Me.HomepageToolStripMenuItem1.Size = New System.Drawing.Size(337, 30)
         Me.HomepageToolStripMenuItem1.Text = "Homepage"
         '
         'CheckDeductionToolStripMenuItem
         '
         Me.CheckDeductionToolStripMenuItem.Name = "CheckDeductionToolStripMenuItem"
-        Me.CheckDeductionToolStripMenuItem.Size = New System.Drawing.Size(274, 30)
+        Me.CheckDeductionToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
+        Me.CheckDeductionToolStripMenuItem.Size = New System.Drawing.Size(337, 30)
         Me.CheckDeductionToolStripMenuItem.Text = "Check &Deduction"
         '
         'CheckMandatoryDeductionToolStripMenuItem
         '
         Me.CheckMandatoryDeductionToolStripMenuItem.Name = "CheckMandatoryDeductionToolStripMenuItem"
-        Me.CheckMandatoryDeductionToolStripMenuItem.Size = New System.Drawing.Size(274, 30)
+        Me.CheckMandatoryDeductionToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.M), System.Windows.Forms.Keys)
+        Me.CheckMandatoryDeductionToolStripMenuItem.Size = New System.Drawing.Size(337, 30)
         Me.CheckMandatoryDeductionToolStripMenuItem.Text = "Check &Mandatory De..."
         '
         'CheckOvertimeToolStripMenuItem
         '
         Me.CheckOvertimeToolStripMenuItem.Name = "CheckOvertimeToolStripMenuItem"
-        Me.CheckOvertimeToolStripMenuItem.Size = New System.Drawing.Size(274, 30)
+        Me.CheckOvertimeToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.CheckOvertimeToolStripMenuItem.Size = New System.Drawing.Size(337, 30)
         Me.CheckOvertimeToolStripMenuItem.Text = "Check &Overtime"
         '
         'CheckNetpayToolStripMenuItem
         '
         Me.CheckNetpayToolStripMenuItem.Name = "CheckNetpayToolStripMenuItem"
-        Me.CheckNetpayToolStripMenuItem.Size = New System.Drawing.Size(274, 30)
+        Me.CheckNetpayToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
+        Me.CheckNetpayToolStripMenuItem.Size = New System.Drawing.Size(337, 30)
         Me.CheckNetpayToolStripMenuItem.Text = "Check &Netpay"
         '
         'TimeAttendanceToolStripMenuItem
         '
         Me.TimeAttendanceToolStripMenuItem.Name = "TimeAttendanceToolStripMenuItem"
+        Me.TimeAttendanceToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.T), System.Windows.Forms.Keys)
         Me.TimeAttendanceToolStripMenuItem.Size = New System.Drawing.Size(162, 29)
         Me.TimeAttendanceToolStripMenuItem.Text = "Time & Attendance"
         '
@@ -167,6 +180,7 @@ Partial Class MDIParent1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(948, 698)
         Me.Controls.Add(Me.MenuStrip)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)

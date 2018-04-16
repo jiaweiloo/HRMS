@@ -26,8 +26,10 @@ Partial Class PayrollHomepage
         Me.btnCheckMdDdt = New System.Windows.Forms.Button()
         Me.btnOvertime = New System.Windows.Forms.Button()
         Me.btnDeduction = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.lblLogin = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnBack = New System.Windows.Forms.Button()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnPrepPayroll
@@ -38,9 +40,9 @@ Partial Class PayrollHomepage
         Me.btnPrepPayroll.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnPrepPayroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPrepPayroll.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnPrepPayroll.Location = New System.Drawing.Point(258, 344)
+        Me.btnPrepPayroll.Location = New System.Drawing.Point(258, 378)
         Me.btnPrepPayroll.Name = "btnPrepPayroll"
-        Me.btnPrepPayroll.Size = New System.Drawing.Size(281, 77)
+        Me.btnPrepPayroll.Size = New System.Drawing.Size(345, 78)
         Me.btnPrepPayroll.TabIndex = 3
         Me.btnPrepPayroll.Text = "&Prepare this month payroll for all"
         Me.btnPrepPayroll.UseVisualStyleBackColor = False
@@ -53,9 +55,9 @@ Partial Class PayrollHomepage
         Me.btnCheckMdDdt.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCheckMdDdt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCheckMdDdt.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCheckMdDdt.Location = New System.Drawing.Point(258, 100)
+        Me.btnCheckMdDdt.Location = New System.Drawing.Point(258, 134)
         Me.btnCheckMdDdt.Name = "btnCheckMdDdt"
-        Me.btnCheckMdDdt.Size = New System.Drawing.Size(281, 77)
+        Me.btnCheckMdDdt.Size = New System.Drawing.Size(345, 78)
         Me.btnCheckMdDdt.TabIndex = 0
         Me.btnCheckMdDdt.Text = "Check and &Manage Mandatory Deduction"
         Me.btnCheckMdDdt.UseVisualStyleBackColor = False
@@ -69,9 +71,9 @@ Partial Class PayrollHomepage
         Me.btnOvertime.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnOvertime.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnOvertime.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnOvertime.Location = New System.Drawing.Point(258, 183)
+        Me.btnOvertime.Location = New System.Drawing.Point(258, 217)
         Me.btnOvertime.Name = "btnOvertime"
-        Me.btnOvertime.Size = New System.Drawing.Size(281, 77)
+        Me.btnOvertime.Size = New System.Drawing.Size(345, 78)
         Me.btnOvertime.TabIndex = 1
         Me.btnOvertime.Text = "Check &Overtime"
         Me.btnOvertime.UseVisualStyleBackColor = False
@@ -85,42 +87,56 @@ Partial Class PayrollHomepage
         Me.btnDeduction.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDeduction.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDeduction.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnDeduction.Location = New System.Drawing.Point(258, 261)
+        Me.btnDeduction.Location = New System.Drawing.Point(258, 300)
         Me.btnDeduction.Name = "btnDeduction"
-        Me.btnDeduction.Size = New System.Drawing.Size(281, 77)
+        Me.btnDeduction.Size = New System.Drawing.Size(345, 78)
         Me.btnDeduction.TabIndex = 2
         Me.btnDeduction.Text = "Check &Deduction"
         Me.btnDeduction.UseVisualStyleBackColor = False
         '
-        'Label1
-        '
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(280, 27)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(241, 32)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "HR Management"
-        '
         'lblLogin
         '
         Me.lblLogin.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblLogin.Location = New System.Drawing.Point(567, 446)
+        Me.lblLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin.Location = New System.Drawing.Point(631, 444)
         Me.lblLogin.Name = "lblLogin"
         Me.lblLogin.Size = New System.Drawing.Size(206, 34)
         Me.lblLogin.TabIndex = 5
         Me.lblLogin.Text = "Label2"
         Me.lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.HRMS.My.Resources.Resources.payroll
+        Me.PictureBox1.Location = New System.Drawing.Point(209, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(430, 116)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
+        '
+        'btnBack
+        '
+        Me.btnBack.BackColor = System.Drawing.Color.IndianRed
+        Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnBack.Location = New System.Drawing.Point(734, 12)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(103, 41)
+        Me.btnBack.TabIndex = 4
+        Me.btnBack.Text = "&Back"
+        Me.btnBack.UseVisualStyleBackColor = False
+        '
         'PayrollHomepage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(785, 489)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ClientSize = New System.Drawing.Size(849, 487)
+        Me.Controls.Add(Me.btnBack)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblLogin)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnDeduction)
         Me.Controls.Add(Me.btnOvertime)
         Me.Controls.Add(Me.btnCheckMdDdt)
@@ -128,6 +144,7 @@ Partial Class PayrollHomepage
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "PayrollHomepage"
         Me.Text = "Payroll"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -137,6 +154,7 @@ Partial Class PayrollHomepage
     Friend WithEvents btnCheckMdDdt As Button
     Friend WithEvents btnOvertime As Button
     Friend WithEvents btnDeduction As Button
-    Friend WithEvents Label1 As Label
     Friend WithEvents lblLogin As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnBack As Button
 End Class

@@ -32,11 +32,11 @@ Partial Class MDIManager
         Me.AccountManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewHRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateHRFetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportStaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimeAndAttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewTheLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportStaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -80,6 +80,7 @@ Partial Class MDIManager
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(211, 30)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
@@ -93,18 +94,28 @@ Partial Class MDIManager
         'AddNewHRToolStripMenuItem
         '
         Me.AddNewHRToolStripMenuItem.Name = "AddNewHRToolStripMenuItem"
-        Me.AddNewHRToolStripMenuItem.Size = New System.Drawing.Size(238, 30)
+        Me.AddNewHRToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
+        Me.AddNewHRToolStripMenuItem.Size = New System.Drawing.Size(298, 30)
         Me.AddNewHRToolStripMenuItem.Text = "Add New HR"
         '
         'UpdateHRFetailsToolStripMenuItem
         '
         Me.UpdateHRFetailsToolStripMenuItem.Name = "UpdateHRFetailsToolStripMenuItem"
-        Me.UpdateHRFetailsToolStripMenuItem.Size = New System.Drawing.Size(231, 30)
+        Me.UpdateHRFetailsToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.M), System.Windows.Forms.Keys)
+        Me.UpdateHRFetailsToolStripMenuItem.Size = New System.Drawing.Size(298, 30)
         Me.UpdateHRFetailsToolStripMenuItem.Text = "HR Management"
+        '
+        'ReportStaffToolStripMenuItem
+        '
+        Me.ReportStaffToolStripMenuItem.Name = "ReportStaffToolStripMenuItem"
+        Me.ReportStaffToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
+        Me.ReportStaffToolStripMenuItem.Size = New System.Drawing.Size(298, 30)
+        Me.ReportStaffToolStripMenuItem.Text = "Report (Staff)"
         '
         'TimeAndAttendanceToolStripMenuItem
         '
         Me.TimeAndAttendanceToolStripMenuItem.Name = "TimeAndAttendanceToolStripMenuItem"
+        Me.TimeAndAttendanceToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.T), System.Windows.Forms.Keys)
         Me.TimeAndAttendanceToolStripMenuItem.Size = New System.Drawing.Size(192, 29)
         Me.TimeAndAttendanceToolStripMenuItem.Text = "Time and Attendance"
         '
@@ -125,14 +136,9 @@ Partial Class MDIManager
         'LogOutToolStripMenuItem
         '
         Me.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem"
+        Me.LogOutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
         Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(89, 29)
         Me.LogOutToolStripMenuItem.Text = "Log Out"
-        '
-        'ReportStaffToolStripMenuItem
-        '
-        Me.ReportStaffToolStripMenuItem.Name = "ReportStaffToolStripMenuItem"
-        Me.ReportStaffToolStripMenuItem.Size = New System.Drawing.Size(238, 30)
-        Me.ReportStaffToolStripMenuItem.Text = "Report (Staff)"
         '
         'MDIManager
         '

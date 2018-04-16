@@ -76,23 +76,29 @@ Partial Class EmpHistoryPayroll
         '
         Me.btnRefresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnRefresh.AutoSize = True
-        Me.btnRefresh.Location = New System.Drawing.Point(693, 43)
+        Me.btnRefresh.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btnRefresh.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnRefresh.Location = New System.Drawing.Point(659, 27)
         Me.btnRefresh.Name = "btnRefresh"
-        Me.btnRefresh.Size = New System.Drawing.Size(96, 30)
+        Me.btnRefresh.Size = New System.Drawing.Size(130, 51)
         Me.btnRefresh.TabIndex = 30
-        Me.btnRefresh.Text = "Refresh"
-        Me.btnRefresh.UseVisualStyleBackColor = True
+        Me.btnRefresh.Text = "&Refresh"
+        Me.btnRefresh.UseVisualStyleBackColor = False
         '
         'btnPrint
         '
         Me.btnPrint.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnPrint.AutoSize = True
-        Me.btnPrint.Location = New System.Drawing.Point(691, 408)
+        Me.btnPrint.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnPrint.Location = New System.Drawing.Point(659, 403)
         Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(96, 30)
+        Me.btnPrint.Size = New System.Drawing.Size(128, 42)
         Me.btnPrint.TabIndex = 31
         Me.btnPrint.Text = "Print"
-        Me.btnPrint.UseVisualStyleBackColor = True
+        Me.btnPrint.UseVisualStyleBackColor = False
         '
         'doc
         '
@@ -113,6 +119,7 @@ Partial Class EmpHistoryPayroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.btnRefresh)

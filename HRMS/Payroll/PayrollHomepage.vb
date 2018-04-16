@@ -21,4 +21,8 @@
         lblLogin.Text = "[Login As : " & HRstaffid.hrname & "] ."
         MDIParent1.Text = "Human Resource Management System - Manager payroll report"
     End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        MDIParent1.ShowForm(HRHomepage)
+    End Sub
 End Class

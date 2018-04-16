@@ -16,4 +16,8 @@
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
         MDIStaff.ShowForm(StaffViewLeave)
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        MDIStaff.ShowForm(Attendance)
+    End Sub
 End Class

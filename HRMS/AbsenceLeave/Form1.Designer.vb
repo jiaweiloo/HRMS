@@ -46,9 +46,11 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.chooseDate)
         Me.GroupBox1.Controls.Add(Me.txtReason)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(28, 58)
+        Me.GroupBox1.Location = New System.Drawing.Point(32, 72)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(633, 340)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(712, 425)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Leave Details"
@@ -56,9 +58,9 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 31)
+        Me.Label1.Location = New System.Drawing.Point(10, 39)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 18)
+        Me.Label1.Size = New System.Drawing.Size(103, 22)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Welcome !"
         '
@@ -67,67 +69,74 @@ Partial Class Form1
         Me.cboDuration.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboDuration.FormattingEnabled = True
         Me.cboDuration.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        Me.cboDuration.Location = New System.Drawing.Point(344, 57)
+        Me.cboDuration.Location = New System.Drawing.Point(387, 71)
+        Me.cboDuration.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboDuration.Name = "cboDuration"
-        Me.cboDuration.Size = New System.Drawing.Size(121, 26)
-        Me.cboDuration.TabIndex = 4
+        Me.cboDuration.Size = New System.Drawing.Size(136, 30)
+        Me.cboDuration.TabIndex = 1
         '
         'lbl_People_ID
         '
         Me.lbl_People_ID.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.lbl_People_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_People_ID.Location = New System.Drawing.Point(11, 57)
+        Me.lbl_People_ID.Location = New System.Drawing.Point(12, 71)
         Me.lbl_People_ID.Name = "lbl_People_ID"
-        Me.lbl_People_ID.Size = New System.Drawing.Size(142, 23)
+        Me.lbl_People_ID.Size = New System.Drawing.Size(160, 28)
         Me.lbl_People_ID.TabIndex = 0
         '
         'lbl_Leave_ID
         '
         Me.lbl_Leave_ID.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.lbl_Leave_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_Leave_ID.Location = New System.Drawing.Point(181, 57)
+        Me.lbl_Leave_ID.Location = New System.Drawing.Point(204, 71)
         Me.lbl_Leave_ID.Name = "lbl_Leave_ID"
-        Me.lbl_Leave_ID.Size = New System.Drawing.Size(134, 23)
+        Me.lbl_Leave_ID.Size = New System.Drawing.Size(150, 28)
         Me.lbl_Leave_ID.TabIndex = 1
         '
         'chooseDate
         '
-        Me.chooseDate.Location = New System.Drawing.Point(12, 99)
+        Me.chooseDate.Location = New System.Drawing.Point(14, 124)
+        Me.chooseDate.Margin = New System.Windows.Forms.Padding(10, 11, 10, 11)
         Me.chooseDate.Name = "chooseDate"
         Me.chooseDate.TabIndex = 2
         '
         'txtReason
         '
         Me.txtReason.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtReason.Location = New System.Drawing.Point(344, 99)
+        Me.txtReason.Location = New System.Drawing.Point(387, 124)
+        Me.txtReason.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtReason.MaxLength = 50
         Me.txtReason.Multiline = True
         Me.txtReason.Name = "txtReason"
-        Me.txtReason.Size = New System.Drawing.Size(284, 139)
-        Me.txtReason.TabIndex = 1
+        Me.txtReason.Size = New System.Drawing.Size(319, 173)
+        Me.txtReason.TabIndex = 3
         '
         'btnCancel
         '
         Me.btnCancel.BackColor = System.Drawing.Color.IndianRed
+        Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCancel.Location = New System.Drawing.Point(540, 414)
+        Me.btnCancel.Location = New System.Drawing.Point(608, 518)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(121, 35)
-        Me.btnCancel.TabIndex = 10
+        Me.btnCancel.Size = New System.Drawing.Size(136, 44)
+        Me.btnCancel.TabIndex = 5
         Me.btnCancel.Text = "&Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
         'btnSubmit
         '
         Me.btnSubmit.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSubmit.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnSubmit.Location = New System.Drawing.Point(401, 414)
+        Me.btnSubmit.Location = New System.Drawing.Point(451, 518)
+        Me.btnSubmit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(134, 35)
-        Me.btnSubmit.TabIndex = 9
+        Me.btnSubmit.Size = New System.Drawing.Size(151, 44)
+        Me.btnSubmit.TabIndex = 4
         Me.btnSubmit.Text = "&Submit"
         Me.btnSubmit.UseVisualStyleBackColor = False
         '
@@ -139,11 +148,11 @@ Partial Class Form1
         'Form1
         '
         Me.AcceptButton = Me.btnSubmit
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(951, 526)
+        Me.ClientSize = New System.Drawing.Size(1070, 658)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSubmit)

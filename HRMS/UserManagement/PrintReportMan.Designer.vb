@@ -147,6 +147,7 @@ Partial Class PrintReportMan
         Me.AcceptButton = Me.btnPrint
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(646, 291)
         Me.Controls.Add(Me.cboDate)

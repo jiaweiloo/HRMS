@@ -32,18 +32,18 @@ Partial Class AttendanceHistory
         '
         Me.lblCount.AutoSize = True
         Me.lblCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblCount.Location = New System.Drawing.Point(22, 422)
+        Me.lblCount.Location = New System.Drawing.Point(25, 528)
         Me.lblCount.Name = "lblCount"
-        Me.lblCount.Size = New System.Drawing.Size(2, 19)
+        Me.lblCount.Size = New System.Drawing.Size(2, 22)
         Me.lblCount.TabIndex = 5
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 16.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(259, 24)
+        Me.Label1.Location = New System.Drawing.Point(291, 30)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(238, 35)
+        Me.Label1.Size = New System.Drawing.Size(282, 40)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Attendance History"
         '
@@ -57,24 +57,27 @@ Partial Class AttendanceHistory
         Me.dgvHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvHistory.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHistory.Location = New System.Drawing.Point(22, 62)
+        Me.dgvHistory.Location = New System.Drawing.Point(25, 78)
+        Me.dgvHistory.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dgvHistory.Name = "dgvHistory"
         Me.dgvHistory.ReadOnly = True
         Me.dgvHistory.RowTemplate.Height = 24
-        Me.dgvHistory.Size = New System.Drawing.Size(755, 348)
+        Me.dgvHistory.Size = New System.Drawing.Size(849, 435)
         Me.dgvHistory.TabIndex = 3
         '
         'AttendanceHistory
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Tan
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(900, 562)
         Me.Controls.Add(Me.lblCount)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvHistory)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "AttendanceHistory"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AttendanceHistory"
         CType(Me.dgvHistory, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

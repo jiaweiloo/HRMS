@@ -17,15 +17,13 @@
         Dim style As FontStyle
         style = FontStyle.Bold
         Dim timesNewRoman As Font = New Font("Times New Roman", 12, style)
-        Dim fore As Color = Color.GreenYellow
-        lblID.ForeColor = fore
-        lblName.ForeColor = fore
+        'Dim fore As Color = Color.DarkSeaGreen
+        'lblID.ForeColor = fore
+        'lblName.ForeColor = fore
         lblID.Font = timesNewRoman
         lblName.Font = timesNewRoman
 
         BindData()
-        MDIParent1.AddNewStaffToolStripMenuItem.Enabled = True
-        MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
     End Sub
 
     Private Sub StaffViewLeave_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
@@ -34,18 +32,16 @@
         Dim style As FontStyle
         style = FontStyle.Bold
         Dim timesNewRoman As Font = New Font("Times New Roman", 12, style)
-        Dim fore As Color = Color.GreenYellow
-        lblID.ForeColor = fore
-        lblName.ForeColor = fore
+        'Dim fore As Color = Color.GreenYellow
+        'lblID.ForeColor = fore
+        'lblName.ForeColor = fore
         lblID.Font = timesNewRoman
         lblName.Font = timesNewRoman
 
         BindData()
-        MDIParent1.AddNewStaffToolStripMenuItem.Enabled = True
-        MDIParent1.UpdateStaffDetailsToolStripMenuItem.Enabled = True
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
-        Me.Close()
+        MDIStaff.ShowForm(NormalStaffPage)
     End Sub
 End Class

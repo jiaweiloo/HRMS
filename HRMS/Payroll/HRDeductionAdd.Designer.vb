@@ -45,94 +45,105 @@ Partial Class HRDeductionAdd
         'cBoxFormat
         '
         Me.cBoxFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cBoxFormat.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cBoxFormat.FormattingEnabled = True
         Me.cBoxFormat.Items.AddRange(New Object() {"money", "percentage"})
         Me.cBoxFormat.Location = New System.Drawing.Point(317, 185)
         Me.cBoxFormat.Name = "cBoxFormat"
         Me.cBoxFormat.Size = New System.Drawing.Size(198, 28)
-        Me.cBoxFormat.TabIndex = 0
+        Me.cBoxFormat.TabIndex = 3
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(170, 38)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(111, 20)
+        Me.Label1.Size = New System.Drawing.Size(125, 20)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Deduction ID :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(230, 88)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(51, 20)
+        Me.Label2.Size = New System.Drawing.Size(57, 20)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Type :"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(223, 138)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(58, 20)
+        Me.Label3.Size = New System.Drawing.Size(65, 20)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Value :"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(221, 188)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(60, 20)
+        Me.Label4.Size = New System.Drawing.Size(66, 20)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Format"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(229, 238)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(52, 20)
+        Me.Label5.Size = New System.Drawing.Size(58, 20)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Date :"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(172, 288)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(109, 20)
+        Me.Label6.Size = New System.Drawing.Size(124, 20)
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Applied to ID :"
         '
         'txtValue
         '
+        Me.txtValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtValue.Location = New System.Drawing.Point(317, 138)
         Me.txtValue.Name = "txtValue"
         Me.txtValue.Size = New System.Drawing.Size(198, 26)
-        Me.txtValue.TabIndex = 7
+        Me.txtValue.TabIndex = 2
         '
         'txtType
         '
+        Me.txtType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtType.Location = New System.Drawing.Point(317, 88)
         Me.txtType.MaxLength = 30
         Me.txtType.Name = "txtType"
         Me.txtType.Size = New System.Drawing.Size(198, 26)
-        Me.txtType.TabIndex = 8
+        Me.txtType.TabIndex = 1
         '
         'cBoxPplID
         '
         Me.cBoxPplID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cBoxPplID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cBoxPplID.FormattingEnabled = True
         Me.cBoxPplID.Location = New System.Drawing.Point(317, 285)
         Me.cBoxPplID.Name = "cBoxPplID"
         Me.cBoxPplID.Size = New System.Drawing.Size(198, 28)
-        Me.cBoxPplID.TabIndex = 9
+        Me.cBoxPplID.TabIndex = 4
         '
         'lblID
         '
         Me.lblID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblID.Location = New System.Drawing.Point(317, 35)
         Me.lblID.Name = "lblID"
         Me.lblID.Size = New System.Drawing.Size(198, 26)
@@ -143,6 +154,7 @@ Partial Class HRDeductionAdd
         'lblDate
         '
         Me.lblDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDate.Location = New System.Drawing.Point(317, 235)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(198, 26)
@@ -153,35 +165,44 @@ Partial Class HRDeductionAdd
         'btnAdd
         '
         Me.btnAdd.AutoSize = True
-        Me.btnAdd.Location = New System.Drawing.Point(132, 336)
+        Me.btnAdd.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnAdd.Location = New System.Drawing.Point(198, 330)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(76, 30)
-        Me.btnAdd.TabIndex = 12
+        Me.btnAdd.Size = New System.Drawing.Size(98, 47)
+        Me.btnAdd.TabIndex = 5
         Me.btnAdd.Text = "&Add"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnAdd.UseVisualStyleBackColor = False
         '
         'btnReset
         '
         Me.btnReset.AutoSize = True
+        Me.btnReset.BackColor = System.Drawing.Color.Goldenrod
         Me.btnReset.CausesValidation = False
-        Me.btnReset.Location = New System.Drawing.Point(304, 336)
+        Me.btnReset.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReset.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnReset.Location = New System.Drawing.Point(317, 328)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(76, 30)
-        Me.btnReset.TabIndex = 13
+        Me.btnReset.Size = New System.Drawing.Size(99, 47)
+        Me.btnReset.TabIndex = 6
         Me.btnReset.Text = "&Reset"
-        Me.btnReset.UseVisualStyleBackColor = True
+        Me.btnReset.UseVisualStyleBackColor = False
         '
         'btnExit
         '
         Me.btnExit.AutoSize = True
+        Me.btnExit.BackColor = System.Drawing.Color.IndianRed
         Me.btnExit.CausesValidation = False
         Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnExit.Location = New System.Drawing.Point(476, 336)
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnExit.Location = New System.Drawing.Point(436, 328)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(76, 30)
-        Me.btnExit.TabIndex = 14
+        Me.btnExit.Size = New System.Drawing.Size(113, 47)
+        Me.btnExit.TabIndex = 7
         Me.btnExit.Text = "E&xit"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'err
         '
@@ -194,8 +215,9 @@ Partial Class HRDeductionAdd
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.CancelButton = Me.btnExit
-        Me.ClientSize = New System.Drawing.Size(684, 387)
+        Me.ClientSize = New System.Drawing.Size(677, 411)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnAdd)
@@ -211,6 +233,7 @@ Partial Class HRDeductionAdd
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cBoxFormat)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "HRDeductionAdd"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "HRDeductionAdd"

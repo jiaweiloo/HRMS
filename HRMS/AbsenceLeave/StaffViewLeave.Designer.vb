@@ -35,10 +35,10 @@ Partial Class StaffViewLeave
         '
         Me.lblName.AutoSize = True
         Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblName.Location = New System.Drawing.Point(521, 25)
+        Me.lblName.ForeColor = System.Drawing.Color.Brown
+        Me.lblName.Location = New System.Drawing.Point(586, 31)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(57, 18)
+        Me.lblName.Size = New System.Drawing.Size(70, 22)
         Me.lblName.TabIndex = 8
         Me.lblName.Text = "Label4"
         '
@@ -47,19 +47,19 @@ Partial Class StaffViewLeave
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(355, 25)
+        Me.Label3.Location = New System.Drawing.Point(399, 31)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(92, 18)
+        Me.Label3.Size = New System.Drawing.Size(109, 22)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Staff Name"
         '
         'lblID
         '
         Me.lblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblID.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblID.Location = New System.Drawing.Point(230, 26)
+        Me.lblID.ForeColor = System.Drawing.Color.Brown
+        Me.lblID.Location = New System.Drawing.Point(259, 32)
         Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(119, 29)
+        Me.lblID.Size = New System.Drawing.Size(134, 36)
         Me.lblID.TabIndex = 6
         Me.lblID.Text = "Label2"
         '
@@ -68,9 +68,9 @@ Partial Class StaffViewLeave
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(96, 26)
+        Me.Label1.Location = New System.Drawing.Point(108, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(69, 18)
+        Me.Label1.Size = New System.Drawing.Size(83, 22)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Staff ID:"
         '
@@ -82,33 +82,41 @@ Partial Class StaffViewLeave
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvstaffleave.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvstaffleave.Location = New System.Drawing.Point(12, 68)
+        Me.dgvstaffleave.Location = New System.Drawing.Point(14, 85)
+        Me.dgvstaffleave.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dgvstaffleave.Name = "dgvstaffleave"
         Me.dgvstaffleave.RowTemplate.Height = 24
-        Me.dgvstaffleave.Size = New System.Drawing.Size(750, 335)
+        Me.dgvstaffleave.Size = New System.Drawing.Size(844, 419)
         Me.dgvstaffleave.TabIndex = 9
         '
         'btnOK
         '
-        Me.btnOK.BackColor = System.Drawing.Color.Lime
-        Me.btnOK.Location = New System.Drawing.Point(687, 26)
+        Me.btnOK.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btnOK.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnOK.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOK.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnOK.Location = New System.Drawing.Point(752, 32)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(75, 36)
+        Me.btnOK.Size = New System.Drawing.Size(105, 45)
         Me.btnOK.TabIndex = 10
-        Me.btnOK.Text = "&OK"
+        Me.btnOK.Text = "E&xit"
         Me.btnOK.UseVisualStyleBackColor = False
         '
         'StaffViewLeave
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.ClientSize = New System.Drawing.Size(900, 562)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.dgvstaffleave)
         Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lblID)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "StaffViewLeave"
         Me.Text = "StaffViewLeave"
         CType(Me.dgvstaffleave, System.ComponentModel.ISupportInitialize).EndInit()

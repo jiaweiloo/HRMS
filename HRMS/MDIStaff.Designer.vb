@@ -33,9 +33,9 @@ Partial Class MDIStaff
         Me.LogoutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimeAttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ApplyLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PayrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewpayrollHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ApplyLeaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -64,47 +64,59 @@ Partial Class MDIStaff
         Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(205, 30)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(265, 30)
         Me.NewToolStripMenuItem.Text = "&New"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(202, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(262, 6)
         '
         'PrintSetupToolStripMenuItem
         '
         Me.PrintSetupToolStripMenuItem.Name = "PrintSetupToolStripMenuItem"
-        Me.PrintSetupToolStripMenuItem.Size = New System.Drawing.Size(205, 30)
+        Me.PrintSetupToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.PrintSetupToolStripMenuItem.Size = New System.Drawing.Size(265, 30)
         Me.PrintSetupToolStripMenuItem.Text = "Logout Lunch"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(202, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(262, 6)
         '
         'LogoutToolStripMenuItem1
         '
         Me.LogoutToolStripMenuItem1.Name = "LogoutToolStripMenuItem1"
-        Me.LogoutToolStripMenuItem1.Size = New System.Drawing.Size(205, 30)
+        Me.LogoutToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.LogoutToolStripMenuItem1.Size = New System.Drawing.Size(265, 30)
         Me.LogoutToolStripMenuItem1.Text = "&Logout"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(205, 30)
+        Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(265, 30)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'TimeAttendanceToolStripMenuItem
         '
         Me.TimeAttendanceToolStripMenuItem.Name = "TimeAttendanceToolStripMenuItem"
+        Me.TimeAttendanceToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.T), System.Windows.Forms.Keys)
         Me.TimeAttendanceToolStripMenuItem.Size = New System.Drawing.Size(157, 29)
         Me.TimeAttendanceToolStripMenuItem.Text = "Time Attendance"
+        '
+        'ApplyLeaveToolStripMenuItem
+        '
+        Me.ApplyLeaveToolStripMenuItem.Name = "ApplyLeaveToolStripMenuItem"
+        Me.ApplyLeaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
+        Me.ApplyLeaveToolStripMenuItem.Size = New System.Drawing.Size(120, 29)
+        Me.ApplyLeaveToolStripMenuItem.Text = "Apply Leave"
         '
         'PayrollToolStripMenuItem
         '
         Me.PayrollToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewpayrollHistoryToolStripMenuItem})
         Me.PayrollToolStripMenuItem.Name = "PayrollToolStripMenuItem"
+        Me.PayrollToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
         Me.PayrollToolStripMenuItem.Size = New System.Drawing.Size(77, 29)
         Me.PayrollToolStripMenuItem.Text = "Payroll"
         '
@@ -113,12 +125,6 @@ Partial Class MDIStaff
         Me.ViewpayrollHistoryToolStripMenuItem.Name = "ViewpayrollHistoryToolStripMenuItem"
         Me.ViewpayrollHistoryToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
         Me.ViewpayrollHistoryToolStripMenuItem.Text = "View &payroll history"
-        '
-        'ApplyLeaveToolStripMenuItem
-        '
-        Me.ApplyLeaveToolStripMenuItem.Name = "ApplyLeaveToolStripMenuItem"
-        Me.ApplyLeaveToolStripMenuItem.Size = New System.Drawing.Size(120, 29)
-        Me.ApplyLeaveToolStripMenuItem.Text = "Apply Leave"
         '
         'MDIStaff
         '

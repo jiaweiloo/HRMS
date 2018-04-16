@@ -57,7 +57,8 @@ Partial Class UpdateForm
         Me.dlgPreview = New System.Windows.Forms.PrintPreviewDialog()
         Me.lblJoin = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtHourlyPay = New System.Windows.Forms.TextBox()
+        Me.lblPass = New System.Windows.Forms.Label()
+        Me.txtHourlyPay = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -65,7 +66,7 @@ Partial Class UpdateForm
         '
         Me.lblhourpay.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblhourpay.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.lblhourpay.Location = New System.Drawing.Point(395, 449)
+        Me.lblhourpay.Location = New System.Drawing.Point(446, 448)
         Me.lblhourpay.Name = "lblhourpay"
         Me.lblhourpay.Size = New System.Drawing.Size(112, 28)
         Me.lblhourpay.TabIndex = 106
@@ -121,7 +122,7 @@ Partial Class UpdateForm
         Me.btnDelete.Location = New System.Drawing.Point(407, 523)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(92, 52)
-        Me.btnDelete.TabIndex = 11
+        Me.btnDelete.TabIndex = 12
         Me.btnDelete.Text = "&Delete"
         Me.btnDelete.UseVisualStyleBackColor = False
         '
@@ -153,7 +154,7 @@ Partial Class UpdateForm
         Me.cboDepart.Items.AddRange(New Object() {"IT Dept.", "HR Dept.", "Accounting Dept.", "Marketing Dept."})
         Me.cboDepart.Location = New System.Drawing.Point(309, 117)
         Me.cboDepart.Name = "cboDepart"
-        Me.cboDepart.Size = New System.Drawing.Size(273, 28)
+        Me.cboDepart.Size = New System.Drawing.Size(324, 28)
         Me.cboDepart.TabIndex = 1
         '
         'Label8
@@ -176,7 +177,7 @@ Partial Class UpdateForm
         Me.btnCancel.Location = New System.Drawing.Point(505, 523)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(87, 53)
-        Me.btnCancel.TabIndex = 12
+        Me.btnCancel.TabIndex = 13
         Me.btnCancel.Text = "&Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
@@ -189,7 +190,7 @@ Partial Class UpdateForm
         Me.btnUpdate.Location = New System.Drawing.Point(309, 523)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(94, 52)
-        Me.btnUpdate.TabIndex = 10
+        Me.btnUpdate.TabIndex = 11
         Me.btnUpdate.Text = "&Update"
         Me.btnUpdate.UseVisualStyleBackColor = False
         '
@@ -198,7 +199,7 @@ Partial Class UpdateForm
         Me.txtAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAddress.Location = New System.Drawing.Point(309, 408)
         Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(273, 26)
+        Me.txtAddress.Size = New System.Drawing.Size(324, 26)
         Me.txtAddress.TabIndex = 8
         '
         'txtEmail
@@ -206,7 +207,7 @@ Partial Class UpdateForm
         Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.Location = New System.Drawing.Point(309, 366)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(273, 26)
+        Me.txtEmail.Size = New System.Drawing.Size(324, 26)
         Me.txtEmail.TabIndex = 7
         '
         'GroupBox1
@@ -216,7 +217,7 @@ Partial Class UpdateForm
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(309, 282)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(273, 36)
+        Me.GroupBox1.Size = New System.Drawing.Size(324, 36)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         '
@@ -237,7 +238,7 @@ Partial Class UpdateForm
         Me.DateDOB.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateDOB.Location = New System.Drawing.Point(309, 242)
         Me.DateDOB.Name = "DateDOB"
-        Me.DateDOB.Size = New System.Drawing.Size(273, 26)
+        Me.DateDOB.Size = New System.Drawing.Size(324, 26)
         Me.DateDOB.TabIndex = 4
         '
         'lblStaffID
@@ -246,7 +247,7 @@ Partial Class UpdateForm
         Me.lblStaffID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblStaffID.Location = New System.Drawing.Point(309, 72)
         Me.lblStaffID.Name = "lblStaffID"
-        Me.lblStaffID.Size = New System.Drawing.Size(273, 33)
+        Me.lblStaffID.Size = New System.Drawing.Size(324, 33)
         Me.lblStaffID.TabIndex = 88
         '
         'Label10
@@ -335,7 +336,7 @@ Partial Class UpdateForm
         Me.txtName.Location = New System.Drawing.Point(309, 163)
         Me.txtName.Mask = "LLLLLLLLLLLLLLLLLL"
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(273, 26)
+        Me.txtName.Size = New System.Drawing.Size(324, 26)
         Me.txtName.TabIndex = 2
         '
         'txtPhone
@@ -344,7 +345,7 @@ Partial Class UpdateForm
         Me.txtPhone.Location = New System.Drawing.Point(309, 324)
         Me.txtPhone.Mask = "00000000009"
         Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(273, 26)
+        Me.txtPhone.Size = New System.Drawing.Size(324, 26)
         Me.txtPhone.TabIndex = 6
         '
         'txtIC
@@ -353,7 +354,7 @@ Partial Class UpdateForm
         Me.txtIC.Location = New System.Drawing.Point(309, 202)
         Me.txtIC.Mask = "000000-00-0000"
         Me.txtIC.Name = "txtIC"
-        Me.txtIC.Size = New System.Drawing.Size(273, 26)
+        Me.txtIC.Size = New System.Drawing.Size(324, 26)
         Me.txtIC.TabIndex = 3
         '
         'btnPrint
@@ -365,7 +366,7 @@ Partial Class UpdateForm
         Me.btnPrint.Location = New System.Drawing.Point(598, 524)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(104, 51)
-        Me.btnPrint.TabIndex = 13
+        Me.btnPrint.TabIndex = 14
         Me.btnPrint.Text = "&Print"
         Me.btnPrint.UseVisualStyleBackColor = False
         '
@@ -388,7 +389,7 @@ Partial Class UpdateForm
         Me.lblJoin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblJoin.Location = New System.Drawing.Point(309, 491)
         Me.lblJoin.Name = "lblJoin"
-        Me.lblJoin.Size = New System.Drawing.Size(273, 29)
+        Me.lblJoin.Size = New System.Drawing.Size(324, 29)
         Me.lblJoin.TabIndex = 110
         '
         'Label12
@@ -401,12 +402,23 @@ Partial Class UpdateForm
         Me.Label12.TabIndex = 109
         Me.Label12.Text = "Joined Date :"
         '
+        'lblPass
+        '
+        Me.lblPass.AutoSize = True
+        Me.lblPass.ForeColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.lblPass.Location = New System.Drawing.Point(668, 448)
+        Me.lblPass.Name = "lblPass"
+        Me.lblPass.Size = New System.Drawing.Size(0, 20)
+        Me.lblPass.TabIndex = 112
+        '
         'txtHourlyPay
         '
-        Me.txtHourlyPay.Location = New System.Drawing.Point(505, 451)
+        Me.txtHourlyPay.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHourlyPay.Location = New System.Drawing.Point(555, 452)
+        Me.txtHourlyPay.Mask = "009"
         Me.txtHourlyPay.Name = "txtHourlyPay"
-        Me.txtHourlyPay.Size = New System.Drawing.Size(77, 26)
-        Me.txtHourlyPay.TabIndex = 111
+        Me.txtHourlyPay.Size = New System.Drawing.Size(78, 26)
+        Me.txtHourlyPay.TabIndex = 10
         '
         'UpdateForm
         '
@@ -417,6 +429,7 @@ Partial Class UpdateForm
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(780, 592)
         Me.Controls.Add(Me.txtHourlyPay)
+        Me.Controls.Add(Me.lblPass)
         Me.Controls.Add(Me.lblJoin)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.btnPrint)
@@ -492,5 +505,6 @@ Partial Class UpdateForm
     Friend WithEvents dlgPreview As PrintPreviewDialog
     Friend WithEvents lblJoin As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents txtHourlyPay As TextBox
+    Friend WithEvents lblPass As Label
+    Friend WithEvents txtHourlyPay As MaskedTextBox
 End Class

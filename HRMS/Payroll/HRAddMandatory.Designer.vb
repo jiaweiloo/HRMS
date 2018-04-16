@@ -41,42 +41,47 @@ Partial Class HRAddMandatory
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(194, 57)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(34, 20)
+        Me.Label1.Size = New System.Drawing.Size(38, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(177, 124)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(51, 20)
+        Me.Label2.Size = New System.Drawing.Size(57, 20)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Type :"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(170, 191)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(58, 20)
+        Me.Label3.Size = New System.Drawing.Size(65, 20)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Value :"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(160, 258)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(68, 20)
+        Me.Label4.Size = New System.Drawing.Size(76, 20)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Format :"
         '
         'lblID
         '
         Me.lblID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblID.Location = New System.Drawing.Point(268, 51)
         Me.lblID.Name = "lblID"
         Me.lblID.Size = New System.Drawing.Size(232, 33)
@@ -87,6 +92,7 @@ Partial Class HRAddMandatory
         'cBoxFormat
         '
         Me.cBoxFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cBoxFormat.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cBoxFormat.FormattingEnabled = True
         Me.cBoxFormat.Items.AddRange(New Object() {"money", "percentage"})
         Me.cBoxFormat.Location = New System.Drawing.Point(268, 255)
@@ -96,6 +102,7 @@ Partial Class HRAddMandatory
         '
         'txtValue
         '
+        Me.txtValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtValue.Location = New System.Drawing.Point(268, 188)
         Me.txtValue.MaxLength = 50
         Me.txtValue.Name = "txtValue"
@@ -104,6 +111,7 @@ Partial Class HRAddMandatory
         '
         'txtType
         '
+        Me.txtType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtType.Location = New System.Drawing.Point(268, 121)
         Me.txtType.MaxLength = 50
         Me.txtType.Name = "txtType"
@@ -161,7 +169,8 @@ Partial Class HRAddMandatory
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.ClientSize = New System.Drawing.Size(660, 366)
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.ClientSize = New System.Drawing.Size(659, 385)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnAdd)
@@ -173,7 +182,9 @@ Partial Class HRAddMandatory
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "HRAddMandatory"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Add Mandatory Deduction"
         CType(Me.err, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

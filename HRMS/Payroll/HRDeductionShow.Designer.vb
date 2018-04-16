@@ -44,10 +44,11 @@ Partial Class HRDeductionShow
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(19, 63)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(106, 20)
+        Me.Label1.Size = New System.Drawing.Size(119, 20)
         Me.Label1.TabIndex = 31
         Me.Label1.Text = "&Search Type :"
         '
@@ -82,28 +83,33 @@ Partial Class HRDeductionShow
         '
         'txtType
         '
+        Me.txtType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtType.Location = New System.Drawing.Point(133, 60)
         Me.txtType.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtType.MaxLength = 30
         Me.txtType.Name = "txtType"
         Me.txtType.Size = New System.Drawing.Size(175, 26)
-        Me.txtType.TabIndex = 33
+        Me.txtType.TabIndex = 1
         '
         'btnAdd
         '
         Me.btnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnAdd.AutoSize = True
-        Me.btnAdd.Location = New System.Drawing.Point(658, 56)
+        Me.btnAdd.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnAdd.Location = New System.Drawing.Point(638, 45)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(131, 30)
-        Me.btnAdd.TabIndex = 34
-        Me.btnAdd.Text = "Add"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnAdd.Size = New System.Drawing.Size(151, 46)
+        Me.btnAdd.TabIndex = 2
+        Me.btnAdd.Text = "&Add"
+        Me.btnAdd.UseVisualStyleBackColor = False
         '
         'HRDeductionShow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.txtType)

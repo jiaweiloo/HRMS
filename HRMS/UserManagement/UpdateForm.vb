@@ -4,6 +4,8 @@ Public Class UpdateForm
     Public SelectedId As String
 
     Private Sub UpdateForm_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        Dim maxdate As System.TimeSpan = New TimeSpan(5479, 0, 0, 0, 0)
+        DateDOB.MaxDate = DateTime.Now.Subtract(maxdate)
         Dim db As New HRMS_DBLinq2DataContext()
         Dim a As People = db.Peoples.FirstOrDefault(Function(o) o.people_id = SelectedId)
 
@@ -23,6 +25,7 @@ Public Class UpdateForm
         lblextra.Text = a.extra_leave.ToString
         txtHourlyPay.Text = a.hourly_rates.ToString
         lblJoin.Text = a.joined_year.ToShortDateString
+        lblPass.Text = a.people_password
 
         Select Case a.department_name
             Case "IT Dept." : cboDepart.SelectedIndex = 0
@@ -65,6 +68,7 @@ Public Class UpdateForm
         id = lblStaffID.Text
         name = txtName.Text
         IC = If(txtIC.MaskCompleted, txtIC.Text, "")
+        hourlypay = If(txtHourlyPay.MaskCompleted, txtHourlyPay.Text, "")
         dob = DateDOB.Value.ToString("yyyy-MM-dd")
         If (radFemale.Checked = True) Then
             gender = "Female"
@@ -96,19 +100,23 @@ Public Class UpdateForm
             ctr = If(ctr, cboDepart)
         End If
         If IC = "" Then
-            err.AppendLine("- Please Correct IC Format")
+            err.AppendLine("- Please Enter Correct IC Format")
             ctr = If(ctr, txtIC)
         End If
         If phone = "" Then
-            err.AppendLine("- Please Correct Phone Format")
+            err.AppendLine("- Please Enter Correct Phone Format")
             ctr = If(ctr, txtPhone)
         End If
+        If hourlypay = "" Then
+            err.AppendLine("- Please Enter Correct Hourly Pay")
+            ctr = If(ctr, txtHourlyPay)
+        End If
         If email = "" Then
-            err.AppendLine("- Please Select Email")
+            err.AppendLine("- Please Enter Email")
             ctr = If(ctr, txtEmail)
         End If
         If address = "" Then
-            err.AppendLine("- Please Select Address")
+            err.AppendLine("- Please Enter Address")
             ctr = If(ctr, txtAddress)
         End If
         If err.Length > 0 Then
@@ -126,7 +134,7 @@ Public Class UpdateForm
                 Dim ppl As New People
                 ppl.people_id = lblStaffID.Text
                 ppl.people_index = Integer.Parse(lblIndex.Text)
-                ppl.people_password = txtIC.Text
+                ppl.people_password = lblPass.Text
                 ppl.people_name = txtName.Text
                 ppl.people_ic = txtIC.Text
                 ppl.people_DOB = DateDOB.Value.ToString("yyyy-MM-dd")
@@ -230,4 +238,6 @@ Public Class UpdateForm
         dlgPreview.Document = doc
         dlgPreview.ShowDialog(Me)
     End Sub
+
+
 End Class
